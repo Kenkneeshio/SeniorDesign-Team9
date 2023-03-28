@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC4416IMS-1
+D LTC4416IMS-1
+F http://cds.linear.com/docs/en/datasheet/4416fa.pdf
+$ENDCMP
+# end doc library
