@@ -1,0 +1,22 @@
+Circuit: * C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\Simulations\LTC3780 - LTSpice - 12V 5A\LTC3780.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Mar 30 01:49:15 2023
+Total elapsed time: 15.398 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1430507
+traniter = 1430491
+tranpoints = 531558
+accept = 388697
+rejected = 142861
+matrix size = 62
+fillins = 45
+solver = Normal
+Avg thread counts: 1.0/3.0/1.0/1.0
+Matrix Compiler1: 5.97 KB object code size  1.1/0.8/[0.3]
+Matrix Compiler2: off  [0.6]/0.6/0.7
+
