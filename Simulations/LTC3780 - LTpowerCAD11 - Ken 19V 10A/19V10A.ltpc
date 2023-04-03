@@ -8,18 +8,18 @@
       <PartName>LTC3780</PartName>
       <IcTa>25</IcTa>
       <LastSavedFilesCultureInfo>en-US</LastSavedFilesCultureInfo>
-      <SolutionAreamm2>1644.1</SolutionAreamm2>
+      <SolutionAreamm2>1648.7</SolutionAreamm2>
       <SolutionComponentCount>16</SolutionComponentCount>
       <SolutionMaxHeightmm>18.5</SolutionMaxHeightmm>
-      <TotalSolutionAreamm2>1644.1</TotalSolutionAreamm2>
-      <TotalSolutionPrice>13.9605</TotalSolutionPrice>
+      <TotalSolutionAreamm2>1648.7</TotalSolutionAreamm2>
+      <TotalSolutionPrice>18.40892</TotalSolutionPrice>
     </ConverterSpec>
   </ConverterSpecs>
   <ProgramUserInfos>
     <ProgramUserInfo>
-      <LastRecordedSyncDate>6/12/2013 12:00:00 AM</LastRecordedSyncDate>
+      <LastRecordedSyncDate>3/31/2023 12:00:00 AM</LastRecordedSyncDate>
       <ReleaseType>Customer</ReleaseType>
-      <InstallationDate>4/3/2023 12:00:00 AM</InstallationDate>
+      <InstallationDate>3/29/2023 12:00:00 AM</InstallationDate>
       <LTpowerCADVer>2</LTpowerCADVer>
       <LTpowerCADSubDesc>Release2</LTpowerCADSubDesc>
       <LTpowerCADUpdateVer>70</LTpowerCADUpdateVer>
@@ -106,7 +106,7 @@
       <CobDerated>0.00033</CobDerated>
       <CobVoltageRating>35</CobVoltageRating>
       <VoRipplePkPkMaxTargetPercent>1</VoRipplePkPkMaxTargetPercent>
-      <VoStepMaxTargetPercent>3</VoStepMaxTargetPercent>
+      <VoStepMaxTargetPercent>2.97174807448989</VoStepMaxTargetPercent>
       <TotalVoRippleMaxTargetPercent>3</TotalVoRippleMaxTargetPercent>
       <Coc>2.287752E-05</Coc>
       <ESRc>0.00591</ESRc>
@@ -128,7 +128,7 @@
       <OutputLCFilterSensingIsRemote>False</OutputLCFilterSensingIsRemote>
       <Cth>1E-08</Cth>
       <Cthp>4.7E-11</Cthp>
-      <Rth>100000</Rth>
+      <Rth>124000</Rth>
       <RfbTopActual>100000</RfbTopActual>
       <RfbBotActual>4420</RfbBotActual>
       <FcDesired>3000</FcDesired>
@@ -153,6 +153,8 @@
       <CurrentSensingConfigurationType>1</CurrentSensingConfigurationType>
       <SwitchingFreqDesired>201000</SwitchingFreqDesired>
       <Vfreq>0.54</Vfreq>
+      <Rfreq>1000000000</Rfreq>
+      <Rfreq2>1000000000</Rfreq2>
       <HasExtvcc>False</HasExtvcc>
       <LoadStepHigh>2.5</LoadStepHigh>
       <LoadStepSlewRate>10000000</LoadStepSlewRate>
@@ -166,8 +168,10 @@
       <RTOV_OVP>10000000</RTOV_OVP>
       <RBOV_OVP>10000000</RBOV_OVP>
       <RailNumber>1</RailNumber>
-      <BW>4.47</BW>
-      <PM>84.87</PM>
+      <BW>3.98</BW>
+      <PM>80.16</PM>
+      <DeltaVoLoadStep>236.240480755932</DeltaVoLoadStep>
+      <TotalDeltaVoLoadStepPercent>1.24337095134701</TotalDeltaVoLoadStepPercent>
       <FootprintClearanceFactor>1.5</FootprintClearanceFactor>
       <Mode>Boost</Mode>
       <ModeChanged>False</ModeChanged>
@@ -185,97 +189,116 @@
       <LTspiceLoopEngineEnabled>False</LTspiceLoopEngineEnabled>
       <Vforward>0.5</Vforward>
       <NumOfSchottky>1</NumOfSchottky>
-      <PartNameControlStage1>TPHR6503PL</PartNameControlStage1>
+      <PartNameControlStage1>TPWR6003PL</PartNameControlStage1>
       <NumFetsControlStage1>1</NumFetsControlStage1>
-      <RdsonControlStage1>0.00055</RdsonControlStage1>
-      <Rdson1ControlStage1>0.0006</Rdson1ControlStage1>
+      <RdsonControlStage1>0.0005</RdsonControlStage1>
+      <Rdson1ControlStage1>0.00055</Rdson1ControlStage1>
       <Vgs1ControlStage1>4.5</Vgs1ControlStage1>
       <Vgs2ControlStage1>10</Vgs2ControlStage1>
       <QgControlStage1>6.78E-08</QgControlStage1>
       <QgsControlStage1>2.4E-08</QgsControlStage1>
       <QgdControlStage1>1.6E-08</QgdControlStage1>
       <CossControlStage1>2.72E-09</CossControlStage1>
-      <Rdson2ControlStage1>0.00041</Rdson2ControlStage1>
+      <Rdson2ControlStage1>0.00036</Rdson2ControlStage1>
       <Qg1ControlStage1>5.2E-08</Qg1ControlStage1>
       <Qg2ControlStage1>1.1E-07</Qg2ControlStage1>
-      <VmillerControlStage1>3</VmillerControlStage1>
+      <VmillerControlStage1>2.9</VmillerControlStage1>
       <VthControlStage1>1.6</VthControlStage1>
       <RgControlStage1>0.6</RgControlStage1>
       <VendorControlStage1>TOSHIBA</VendorControlStage1>
       <VdssControlStage1>30</VdssControlStage1>
-      <VdiodeControlStage1>0.82</VdiodeControlStage1>
+      <VdiodeControlStage1>0.83</VdiodeControlStage1>
       <LengthControlStage1>5.2</LengthControlStage1>
       <WidthControlStage1>6.3</WidthControlStage1>
-      <HeightControlStage1>1</HeightControlStage1>
-      <PackageControlStage1>SOP Advance</PackageControlStage1>
-      <PriceControlStage1>1.02878</PriceControlStage1>
-      <CostControlStage1>1.02878</CostControlStage1>
-      <PartPriceControlStage1>1.02878</PartPriceControlStage1>
-      <PartNameSyncStage1>AONY36304_Q2</PartNameSyncStage1>
+      <HeightControlStage1>0.83</HeightControlStage1>
+      <PackageControlStage1>DSOP Advance</PackageControlStage1>
+      <PriceControlStage1>1.54</PriceControlStage1>
+      <CostControlStage1>1.54</CostControlStage1>
+      <PartPriceControlStage1>1.54</PartPriceControlStage1>
+      <PartNameSyncStage1>TPWR6003PL</PartNameSyncStage1>
       <NumFetsSyncStage1>1</NumFetsSyncStage1>
-      <RdsonSyncStage1>0.00246</RdsonSyncStage1>
-      <Rdson1SyncStage1>0.0026</Rdson1SyncStage1>
+      <RdsonSyncStage1>0.0005</RdsonSyncStage1>
+      <Rdson1SyncStage1>0.00055</Rdson1SyncStage1>
       <Vgs1SyncStage1>4.5</Vgs1SyncStage1>
       <Vgs2SyncStage1>10</Vgs2SyncStage1>
-      <QgSyncStage1>1.59E-08</QgSyncStage1>
-      <RgSyncStage1>2.3</RgSyncStage1>
-      <VdiodeSyncStage1>0.7</VdiodeSyncStage1>
-      <VendorSyncStage1>AOS</VendorSyncStage1>
+      <QgSyncStage1>6.78E-08</QgSyncStage1>
+      <RgSyncStage1>0.6</RgSyncStage1>
+      <VdiodeSyncStage1>0.83</VdiodeSyncStage1>
+      <VendorSyncStage1>TOSHIBA</VendorSyncStage1>
       <VdssSyncStage1>30</VdssSyncStage1>
-      <QgdSyncStage1>2.5E-09</QgdSyncStage1>
-      <CossSyncStage1>3.95E-10</CossSyncStage1>
-      <Rdson2SyncStage1>0.0021</Rdson2SyncStage1>
-      <Qg1SyncStage1>1.15E-08</Qg1SyncStage1>
-      <Qg2SyncStage1>2.75E-08</Qg2SyncStage1>
-      <QgsSyncStage1>1.15E-08</QgsSyncStage1>
-      <VmillerSyncStage1>3</VmillerSyncStage1>
-      <VthSyncStage1>1.5</VthSyncStage1>
-      <LengthSyncStage1>6.05</LengthSyncStage1>
-      <WidthSyncStage1>5.2</WidthSyncStage1>
-      <HeightSyncStage1>0.9</HeightSyncStage1>
-      <PackageSyncStage1>DFN5X6D</PackageSyncStage1>
-      <PartNameControlStage2>Si7884BDP</PartNameControlStage2>
+      <QgdSyncStage1>1.6E-08</QgdSyncStage1>
+      <CossSyncStage1>2.72E-09</CossSyncStage1>
+      <Rdson2SyncStage1>0.00036</Rdson2SyncStage1>
+      <Qg1SyncStage1>5.2E-08</Qg1SyncStage1>
+      <Qg2SyncStage1>1.1E-07</Qg2SyncStage1>
+      <QgsSyncStage1>2.4E-08</QgsSyncStage1>
+      <VmillerSyncStage1>2.9</VmillerSyncStage1>
+      <VthSyncStage1>1.6</VthSyncStage1>
+      <LengthSyncStage1>5.2</LengthSyncStage1>
+      <WidthSyncStage1>6.3</WidthSyncStage1>
+      <HeightSyncStage1>0.83</HeightSyncStage1>
+      <PackageSyncStage1>DSOP Advance</PackageSyncStage1>
+      <PriceSyncStage1>1.54</PriceSyncStage1>
+      <CostSyncStage1>1.54</CostSyncStage1>
+      <PartPriceSyncStage1>1.54</PartPriceSyncStage1>
+      <PartNameControlStage2>BSC026NE2LS5</PartNameControlStage2>
       <NumFetsControlStage2>1</NumFetsControlStage2>
-      <RdsonControlStage2>0.007</RdsonControlStage2>
-      <QgControlStage2>2.92E-08</QgControlStage2>
-      <QgsControlStage2>1.07E-08</QgsControlStage2>
-      <QgdControlStage2>3E-09</QgdControlStage2>
-      <CossControlStage2>3.35E-10</CossControlStage2>
-      <Rdson2ControlStage2>0.0062</Rdson2ControlStage2>
-      <Qg2ControlStage2>5.1E-08</Qg2ControlStage2>
-      <VmillerControlStage2>3.2</VmillerControlStage2>
-      <VthControlStage2>2</VthControlStage2>
-      <RgControlStage2>0.75</RgControlStage2>
-      <VendorControlStage2>Vishay</VendorControlStage2>
-      <VdssControlStage2>40</VdssControlStage2>
-      <VdiodeControlStage2>0.8</VdiodeControlStage2>
-      <LengthControlStage2>6.25</LengthControlStage2>
-      <WidthControlStage2>5.25</WidthControlStage2>
-      <HeightControlStage2>1.14</HeightControlStage2>
-      <PartNameSyncStage2>Si7884BDP</PartNameSyncStage2>
+      <RdsonControlStage2>0.00278</RdsonControlStage2>
+      <Rdson1ControlStage2>0.003</Rdson1ControlStage2>
+      <Vgs1ControlStage2>4.5</Vgs1ControlStage2>
+      <Vgs2ControlStage2>10</Vgs2ControlStage2>
+      <QgControlStage2>7.1E-09</QgControlStage2>
+      <QgsControlStage2>2E-09</QgsControlStage2>
+      <QgdControlStage2>1.4E-09</QgdControlStage2>
+      <CossControlStage2>3.9E-10</CossControlStage2>
+      <Rdson2ControlStage2>0.0022</Rdson2ControlStage2>
+      <Qg1ControlStage2>5.6E-09</Qg1ControlStage2>
+      <Qg2ControlStage2>1.1E-08</Qg2ControlStage2>
+      <VmillerControlStage2>2.6</VmillerControlStage2>
+      <VthControlStage2>1.5</VthControlStage2>
+      <RgControlStage2>0.7</RgControlStage2>
+      <VendorControlStage2>INFINEON</VendorControlStage2>
+      <VdssControlStage2>25</VdssControlStage2>
+      <VdiodeControlStage2>0.84</VdiodeControlStage2>
+      <LengthControlStage2>6.35</LengthControlStage2>
+      <WidthControlStage2>5.35</WidthControlStage2>
+      <HeightControlStage2>1.1</HeightControlStage2>
+      <PackageControlStage2>PG-TDSON-8</PackageControlStage2>
+      <PriceControlStage2>0.8572</PriceControlStage2>
+      <CostControlStage2>0.8572</CostControlStage2>
+      <PartPriceControlStage2>0.8572</PartPriceControlStage2>
+      <PartNameSyncStage2>BSC009NE2LS5I</PartNameSyncStage2>
       <NumFetsSyncStage2>1</NumFetsSyncStage2>
-      <RdsonSyncStage2>0.007</RdsonSyncStage2>
-      <QgSyncStage2>2.92E-08</QgSyncStage2>
-      <RgSyncStage2>0.75</RgSyncStage2>
-      <VdiodeSyncStage2>0.8</VdiodeSyncStage2>
-      <VendorSyncStage2>Vishay</VendorSyncStage2>
-      <VdssSyncStage2>40</VdssSyncStage2>
-      <QgdSyncStage2>3E-09</QgdSyncStage2>
-      <CossSyncStage2>3.35E-10</CossSyncStage2>
-      <Rdson2SyncStage2>0.0062</Rdson2SyncStage2>
-      <Qg2SyncStage2>5.1E-08</Qg2SyncStage2>
-      <QgsSyncStage2>1.07E-08</QgsSyncStage2>
-      <VmillerSyncStage2>3.2</VmillerSyncStage2>
-      <VthSyncStage2>2</VthSyncStage2>
-      <LengthSyncStage2>6.25</LengthSyncStage2>
-      <WidthSyncStage2>5.25</WidthSyncStage2>
-      <HeightSyncStage2>1.14</HeightSyncStage2>
-      <Efficiency>0.9871</Efficiency>
+      <RdsonSyncStage2>0.00098</RdsonSyncStage2>
+      <Rdson1SyncStage2>0.00105</Rdson1SyncStage2>
+      <Vgs1SyncStage2>4.5</Vgs1SyncStage2>
+      <Vgs2SyncStage2>10</Vgs2SyncStage2>
+      <QgSyncStage2>2.16E-08</QgSyncStage2>
+      <RgSyncStage2>1.1</RgSyncStage2>
+      <VdiodeSyncStage2>0.48</VdiodeSyncStage2>
+      <VendorSyncStage2>INFINEON</VendorSyncStage2>
+      <VdssSyncStage2>25</VdssSyncStage2>
+      <QgdSyncStage2>4.3E-09</QgdSyncStage2>
+      <CossSyncStage2>1.4E-09</CossSyncStage2>
+      <Rdson2SyncStage2>0.0008</Rdson2SyncStage2>
+      <Qg1SyncStage2>1.7E-08</Qg1SyncStage2>
+      <Qg2SyncStage2>3.4E-08</Qg2SyncStage2>
+      <QgsSyncStage2>5.7E-09</QgsSyncStage2>
+      <VmillerSyncStage2>2.3</VmillerSyncStage2>
+      <VthSyncStage2>1.6</VthSyncStage2>
+      <LengthSyncStage2>6.35</LengthSyncStage2>
+      <WidthSyncStage2>5.35</WidthSyncStage2>
+      <HeightSyncStage2>1.1</HeightSyncStage2>
+      <PackageSyncStage2>PG-TDSON-8</PackageSyncStage2>
+      <PriceSyncStage2>1.54</PriceSyncStage2>
+      <CostSyncStage2>1.54</CostSyncStage2>
+      <PartPriceSyncStage2>1.6698</PartPriceSyncStage2>
+      <Efficiency>0.9933</Efficiency>
       <VoutRipplePercent>0.0022439474</VoutRipplePercent>
-      <LossCurveA2>0.015753045</LossCurveA2>
-      <LossCurveA1>0.0633897064</LossCurveA1>
-      <LossCurveA0>0.2707609282</LossCurveA0>
-      <LossCurveR2>0.9998779519</LossCurveR2>
+      <LossCurveA2>0.0053032672</LossCurveA2>
+      <LossCurveA1>0.0538155858</LossCurveA1>
+      <LossCurveA0>0.1973395678</LossCurveA0>
+      <LossCurveR2>0.9958612692</LossCurveR2>
       <InputLCFilterEnabled>False</InputLCFilterEnabled>
       <NumCf_in>1</NumCf_in>
       <NumCd_in>1</NumCd_in>
