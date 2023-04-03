@@ -8,11 +8,11 @@
       <PartName>LTC3780</PartName>
       <IcTa>25</IcTa>
       <LastSavedFilesCultureInfo>en-US</LastSavedFilesCultureInfo>
-      <SolutionAreamm2>1019.8</SolutionAreamm2>
+      <SolutionAreamm2>1644.1</SolutionAreamm2>
       <SolutionComponentCount>16</SolutionComponentCount>
-      <SolutionMaxHeightmm>12.6</SolutionMaxHeightmm>
-      <TotalSolutionAreamm2>1019.8</TotalSolutionAreamm2>
-      <TotalSolutionPrice>5.23</TotalSolutionPrice>
+      <SolutionMaxHeightmm>18.5</SolutionMaxHeightmm>
+      <TotalSolutionAreamm2>1644.1</TotalSolutionAreamm2>
+      <TotalSolutionPrice>13.9605</TotalSolutionPrice>
     </ConverterSpec>
   </ConverterSpecs>
   <ProgramUserInfos>
@@ -47,92 +47,118 @@
       <NIc>1</NIc>
       <VinD>14</VinD>
       <Ta>25</Ta>
+      <InductorThetaWA>20.7</InductorThetaWA>
       <InductorRipplePercentDesired>20</InductorRipplePercentDesired>
-      <Lo>4.7E-06</Lo>
-      <DCR>0.00712</DCR>
-      <InductorManufacturer>TOKO</InductorManufacturer>
-      <InductorPartNumber>FDA1254-4R7M</InductorPartNumber>
-      <InductorLength>13.5</InductorLength>
-      <InductorWidth>12.6</InductorWidth>
-      <InductorHeight>5.4</InductorHeight>
-      <InductorCoreLoss>0.5</InductorCoreLoss>
-      <Cin>2.2E-05</Cin>
-      <CinESR>0.025</CinESR>
+      <Lo>6.8E-06</Lo>
+      <DCR>0.00088</DCR>
+      <InductorManufacturer>WURTH</InductorManufacturer>
+      <InductorPartNumber>7443640680B</InductorPartNumber>
+      <InductorLength>27</InductorLength>
+      <InductorWidth>28</InductorWidth>
+      <InductorHeight>18.5</InductorHeight>
+      <InductorIsat>36.3</InductorIsat>
+      <InductorIheat>47.5</InductorIheat>
+      <InductorTheat>50</InductorTheat>
+      <InductorCoreLoss>0.078</InductorCoreLoss>
+      <Cin>0.00027</Cin>
+      <CinESR>0.016</CinESR>
+      <CinESL>4.1E-09</CinESL>
       <NCin>1</NCin>
-      <CinManufacturer>SUNCON</CinManufacturer>
-      <CinPartNumber>50HVH56M</CinPartNumber>
-      <CinPackage>G</CinPackage>
-      <CinLength>10.5</CinLength>
-      <CinWidth>10.3</CinWidth>
-      <CinHeight>10.3</CinHeight>
+      <CinManufacturer>PANASONIC</CinManufacturer>
+      <CinPartNumber>25SEK270M</CinPartNumber>
+      <CinPackage>E12</CinPackage>
+      <CinLength>8</CinLength>
+      <CinWidth>8</CinWidth>
+      <CinHeight>12</CinHeight>
+      <CinAtHalfRated>0.00027</CinAtHalfRated>
+      <CinAtFullRated>0.00027</CinAtFullRated>
       <CinAtNoVoltage>0.00027</CinAtNoVoltage>
-      <CinCeramic>4.7E-06</CinCeramic>
-      <CinCeramicESR>0.005</CinCeramicESR>
+      <CinDerated>0.00027</CinDerated>
+      <CinVoltageRating>25</CinVoltageRating>
+      <CinCeramic>1.4344E-06</CinCeramic>
+      <CinCeramicESR>0.004</CinCeramicESR>
+      <CinCeramicESL>4.23E-10</CinCeramicESL>
       <NCinCeramic>3</NCinCeramic>
-      <CinCeramicManufacturer>AVX</CinCeramicManufacturer>
-      <CinCeramicPartNumber>12065C226KAT2A</CinCeramicPartNumber>
-      <CinCeramicPackage>1206</CinCeramicPackage>
-      <CinCeramicLength>3.2</CinCeramicLength>
-      <CinCeramicWidth>1.6</CinCeramicWidth>
-      <CinCeramicHeight>1.8</CinCeramicHeight>
+      <CinCeramicManufacturer>TAIYO YUDEN</CinCeramicManufacturer>
+      <CinCeramicPartNumber>TMK107BBJ106MA-T</CinCeramicPartNumber>
+      <CinCeramicPackage>0603</CinCeramicPackage>
+      <CinCeramicLength>1.6</CinCeramicLength>
+      <CinCeramicWidth>0.8</CinCeramicWidth>
+      <CinCeramicHeight>1</CinCeramicHeight>
+      <CinCeramicAtHalfRated>1.6E-06</CinCeramicAtHalfRated>
+      <CinCeramicAtFullRated>7E-07</CinCeramicAtFullRated>
       <CinCeramicAtNoVoltage>1E-05</CinCeramicAtNoVoltage>
+      <CinCeramicDerated>1.4344E-06</CinCeramicDerated>
+      <CinCeramicVoltageRating>25</CinCeramicVoltageRating>
       <Cob>0.00033</Cob>
-      <ESRb>0.016</ESRb>
-      <ESLb>1E-08</ESLb>
+      <ESRb>0.011</ESRb>
+      <ESLb>4.88E-09</ESLb>
       <Numb>2</Numb>
       <BulkCapacitorManufacturer>PANASONIC</BulkCapacitorManufacturer>
-      <BulkCapacitorPartNumber>16SVP330M</BulkCapacitorPartNumber>
-      <BulkCapacitorLength>10.3</BulkCapacitorLength>
-      <BulkCapacitorWidth>10.3</BulkCapacitorWidth>
-      <BulkCapacitorHeight>12.6</BulkCapacitorHeight>
-      <BulkCapacitorPackage>F12</BulkCapacitorPackage>
+      <BulkCapacitorPartNumber>EEHZU1V331P</BulkCapacitorPartNumber>
+      <BulkCapacitorLength>10</BulkCapacitorLength>
+      <BulkCapacitorWidth>10</BulkCapacitorWidth>
+      <BulkCapacitorHeight>12.8</BulkCapacitorHeight>
+      <BulkCapacitorPackage>G12</BulkCapacitorPackage>
+      <CobAtHalfRated>0.00033</CobAtHalfRated>
+      <CobAtFullRated>0.00033</CobAtFullRated>
       <CobAtNoVoltage>0.00033</CobAtNoVoltage>
+      <CobDerated>0.00033</CobDerated>
+      <CobVoltageRating>35</CobVoltageRating>
       <VoRipplePkPkMaxTargetPercent>1</VoRipplePkPkMaxTargetPercent>
       <VoStepMaxTargetPercent>3</VoStepMaxTargetPercent>
       <TotalVoRippleMaxTargetPercent>3</TotalVoRippleMaxTargetPercent>
-      <Coc>2.2E-05</Coc>
-      <ESRc>0.00255</ESRc>
-      <ESLc>1.07E-09</ESLc>
+      <Coc>2.287752E-05</Coc>
+      <ESRc>0.00591</ESRc>
+      <ESLc>1.92E-09</ESLc>
       <Numc>3</Numc>
       <CeramicCapacitorManufacturer>TDK</CeramicCapacitorManufacturer>
-      <CeramicCapacitorPartNumber>C3225X7R1C226M</CeramicCapacitorPartNumber>
-      <CeramicCapacitorLength>3.2</CeramicCapacitorLength>
-      <CeramicCapacitorWidth>2.5</CeramicCapacitorWidth>
-      <CeramicCapacitorHeight>1.7</CeramicCapacitorHeight>
-      <CeramicCapacitorPackage>1210</CeramicCapacitorPackage>
-      <CocAtNoVoltage>2.2E-05</CocAtNoVoltage>
+      <CeramicCapacitorPartNumber>CKG57NX5R1E476M500JH</CeramicCapacitorPartNumber>
+      <CeramicCapacitorLength>5.7</CeramicCapacitorLength>
+      <CeramicCapacitorWidth>5</CeramicCapacitorWidth>
+      <CeramicCapacitorHeight>5</CeramicCapacitorHeight>
+      <CeramicCapacitorPackage>2220</CeramicCapacitorPackage>
+      <CocAtHalfRated>3.2575E-05</CocAtHalfRated>
+      <CocAtFullRated>1.3926E-05</CocAtFullRated>
+      <CocAtNoVoltage>4.7E-05</CocAtNoVoltage>
+      <CocDerated>2.287752E-05</CocDerated>
+      <CocVoltageRating>25</CocVoltageRating>
       <OutputLCFilterEnabled>False</OutputLCFilterEnabled>
       <OutputLCFilterSensingIsLocal>False</OutputLCFilterSensingIsLocal>
       <OutputLCFilterSensingIsRemote>False</OutputLCFilterSensingIsRemote>
       <Cth>1E-08</Cth>
       <Cthp>4.7E-11</Cthp>
       <Rth>100000</Rth>
-      <RfbTopActual>113000</RfbTopActual>
-      <RfbBotActual>4990</RfbBotActual>
+      <RfbTopActual>100000</RfbTopActual>
+      <RfbBotActual>4420</RfbBotActual>
       <FcDesired>3000</FcDesired>
       <PhaseBoostDesired>10</PhaseBoostDesired>
       <PhaseMarginDesired>60</PhaseMarginDesired>
       <Ilim>0.14</Ilim>
       <HotSwapCurrentLimitThresholdFoldbackFactor>1</HotSwapCurrentLimitThresholdFoldbackFactor>
       <MarginIoLimit>150</MarginIoLimit>
-      <Rsense>0.009</Rsense>
-      <RsensePackage>2512</RsensePackage>
-      <RsenseLength>6.3</RsenseLength>
+      <RsenseManufacturer>PANASONIC</RsenseManufacturer>
+      <RsensePartNumber>ERJMS4HF6M0U</RsensePartNumber>
+      <Rsense>0.006</Rsense>
+      <RsenseTolerance>1</RsenseTolerance>
+      <RsensePowerRating>3</RsensePowerRating>
+      <RsenseType>METAL PLATE</RsenseType>
+      <RsensePackage>2512 (3W)</RsensePackage>
+      <RsenseLength>6.4</RsenseLength>
       <RsenseWidth>3.2</RsenseWidth>
-      <RsenseHeight>0.635</RsenseHeight>
+      <RsenseHeight>0.64</RsenseHeight>
       <SenseC>1.0000000949949E-07</SenseC>
       <SenseRp>10000000</SenseRp>
       <SenseRs>10000000</SenseRs>
       <CurrentSensingConfigurationType>1</CurrentSensingConfigurationType>
       <SwitchingFreqDesired>201000</SwitchingFreqDesired>
       <Vfreq>0.54</Vfreq>
-      <Rfreq>1000000000</Rfreq>
-      <Rfreq2>1000000000</Rfreq2>
       <HasExtvcc>False</HasExtvcc>
       <LoadStepHigh>2.5</LoadStepHigh>
       <LoadStepSlewRate>10000000</LoadStepSlewRate>
-      <ProjectName>DC686A Demo Board</ProjectName>
-      <ProjectDate>3-2005</ProjectDate>
+      <ProjectName>Ken 19V @ 10A</ProjectName>
+      <ProjectDate>04/02/23</ProjectDate>
+      <ProjectDesigner>Ken Ishio</ProjectDesigner>
       <VinStartUp>14</VinStartUp>
       <VSD_Desired>14</VSD_Desired>
       <VOV_Latch_Desired>14</VOV_Latch_Desired>
@@ -159,43 +185,55 @@
       <LTspiceLoopEngineEnabled>False</LTspiceLoopEngineEnabled>
       <Vforward>0.5</Vforward>
       <NumOfSchottky>1</NumOfSchottky>
-      <PartNameControlStage1>Si7884BDP</PartNameControlStage1>
+      <PartNameControlStage1>TPHR6503PL</PartNameControlStage1>
       <NumFetsControlStage1>1</NumFetsControlStage1>
-      <RdsonControlStage1>0.007</RdsonControlStage1>
-      <QgControlStage1>2.92E-08</QgControlStage1>
-      <QgsControlStage1>1.07E-08</QgsControlStage1>
-      <QgdControlStage1>3E-09</QgdControlStage1>
-      <CossControlStage1>3.35E-10</CossControlStage1>
-      <Rdson2ControlStage1>0.0062</Rdson2ControlStage1>
-      <Qg2ControlStage1>5.1E-08</Qg2ControlStage1>
-      <VmillerControlStage1>3.2</VmillerControlStage1>
-      <VthControlStage1>2</VthControlStage1>
-      <RgControlStage1>0.75</RgControlStage1>
-      <VendorControlStage1>Vishay</VendorControlStage1>
-      <VdssControlStage1>40</VdssControlStage1>
-      <VdiodeControlStage1>0.8</VdiodeControlStage1>
-      <LengthControlStage1>6.25</LengthControlStage1>
-      <WidthControlStage1>5.25</WidthControlStage1>
-      <HeightControlStage1>1.14</HeightControlStage1>
-      <PackageControlStage1>POWERPAK SO-8</PackageControlStage1>
-      <PartNameSyncStage1>Si7884BDP</PartNameSyncStage1>
+      <RdsonControlStage1>0.00055</RdsonControlStage1>
+      <Rdson1ControlStage1>0.0006</Rdson1ControlStage1>
+      <Vgs1ControlStage1>4.5</Vgs1ControlStage1>
+      <Vgs2ControlStage1>10</Vgs2ControlStage1>
+      <QgControlStage1>6.78E-08</QgControlStage1>
+      <QgsControlStage1>2.4E-08</QgsControlStage1>
+      <QgdControlStage1>1.6E-08</QgdControlStage1>
+      <CossControlStage1>2.72E-09</CossControlStage1>
+      <Rdson2ControlStage1>0.00041</Rdson2ControlStage1>
+      <Qg1ControlStage1>5.2E-08</Qg1ControlStage1>
+      <Qg2ControlStage1>1.1E-07</Qg2ControlStage1>
+      <VmillerControlStage1>3</VmillerControlStage1>
+      <VthControlStage1>1.6</VthControlStage1>
+      <RgControlStage1>0.6</RgControlStage1>
+      <VendorControlStage1>TOSHIBA</VendorControlStage1>
+      <VdssControlStage1>30</VdssControlStage1>
+      <VdiodeControlStage1>0.82</VdiodeControlStage1>
+      <LengthControlStage1>5.2</LengthControlStage1>
+      <WidthControlStage1>6.3</WidthControlStage1>
+      <HeightControlStage1>1</HeightControlStage1>
+      <PackageControlStage1>SOP Advance</PackageControlStage1>
+      <PriceControlStage1>1.02878</PriceControlStage1>
+      <CostControlStage1>1.02878</CostControlStage1>
+      <PartPriceControlStage1>1.02878</PartPriceControlStage1>
+      <PartNameSyncStage1>AONY36304_Q2</PartNameSyncStage1>
       <NumFetsSyncStage1>1</NumFetsSyncStage1>
-      <RdsonSyncStage1>0.007</RdsonSyncStage1>
-      <QgSyncStage1>2.92E-08</QgSyncStage1>
-      <RgSyncStage1>0.75</RgSyncStage1>
-      <VdiodeSyncStage1>0.8</VdiodeSyncStage1>
-      <VendorSyncStage1>Vishay</VendorSyncStage1>
-      <VdssSyncStage1>40</VdssSyncStage1>
-      <QgdSyncStage1>3E-09</QgdSyncStage1>
-      <CossSyncStage1>3.35E-10</CossSyncStage1>
-      <Rdson2SyncStage1>0.0062</Rdson2SyncStage1>
-      <Qg2SyncStage1>5.1E-08</Qg2SyncStage1>
-      <QgsSyncStage1>1.07E-08</QgsSyncStage1>
-      <VmillerSyncStage1>3.2</VmillerSyncStage1>
-      <VthSyncStage1>2</VthSyncStage1>
-      <LengthSyncStage1>6.25</LengthSyncStage1>
-      <WidthSyncStage1>5.25</WidthSyncStage1>
-      <HeightSyncStage1>1.14</HeightSyncStage1>
+      <RdsonSyncStage1>0.00246</RdsonSyncStage1>
+      <Rdson1SyncStage1>0.0026</Rdson1SyncStage1>
+      <Vgs1SyncStage1>4.5</Vgs1SyncStage1>
+      <Vgs2SyncStage1>10</Vgs2SyncStage1>
+      <QgSyncStage1>1.59E-08</QgSyncStage1>
+      <RgSyncStage1>2.3</RgSyncStage1>
+      <VdiodeSyncStage1>0.7</VdiodeSyncStage1>
+      <VendorSyncStage1>AOS</VendorSyncStage1>
+      <VdssSyncStage1>30</VdssSyncStage1>
+      <QgdSyncStage1>2.5E-09</QgdSyncStage1>
+      <CossSyncStage1>3.95E-10</CossSyncStage1>
+      <Rdson2SyncStage1>0.0021</Rdson2SyncStage1>
+      <Qg1SyncStage1>1.15E-08</Qg1SyncStage1>
+      <Qg2SyncStage1>2.75E-08</Qg2SyncStage1>
+      <QgsSyncStage1>1.15E-08</QgsSyncStage1>
+      <VmillerSyncStage1>3</VmillerSyncStage1>
+      <VthSyncStage1>1.5</VthSyncStage1>
+      <LengthSyncStage1>6.05</LengthSyncStage1>
+      <WidthSyncStage1>5.2</WidthSyncStage1>
+      <HeightSyncStage1>0.9</HeightSyncStage1>
+      <PackageSyncStage1>DFN5X6D</PackageSyncStage1>
       <PartNameControlStage2>Si7884BDP</PartNameControlStage2>
       <NumFetsControlStage2>1</NumFetsControlStage2>
       <RdsonControlStage2>0.007</RdsonControlStage2>
@@ -232,12 +270,12 @@
       <LengthSyncStage2>6.25</LengthSyncStage2>
       <WidthSyncStage2>5.25</WidthSyncStage2>
       <HeightSyncStage2>1.14</HeightSyncStage2>
-      <Efficiency>0.9737</Efficiency>
-      <VoutRipplePercent>0.0044405263</VoutRipplePercent>
-      <LossCurveA2>0.0377157441</LossCurveA2>
-      <LossCurveA1>0.0648242972</LossCurveA1>
-      <LossCurveA0>0.7071500558</LossCurveA0>
-      <LossCurveR2>0.9999659854</LossCurveR2>
+      <Efficiency>0.9871</Efficiency>
+      <VoutRipplePercent>0.0022439474</VoutRipplePercent>
+      <LossCurveA2>0.015753045</LossCurveA2>
+      <LossCurveA1>0.0633897064</LossCurveA1>
+      <LossCurveA0>0.2707609282</LossCurveA0>
+      <LossCurveR2>0.9998779519</LossCurveR2>
       <InputLCFilterEnabled>False</InputLCFilterEnabled>
       <NumCf_in>1</NumCf_in>
       <NumCd_in>1</NumCd_in>
@@ -247,22 +285,14 @@
       <Rd3>-1000000</Rd3>
       <PartPrice>5.23</PartPrice>
       <PartCost>5.23</PartCost>
+      <CeramicCapacitorPrice>2.145</CeramicCapacitorPrice>
+      <CinPrice>0.90225</CinPrice>
+      <CinCeramicPrice>0.12149</CinCeramicPrice>
+      <CeramicCapacitorCost>6.435</CeramicCapacitorCost>
+      <CinCost>0.90225</CinCost>
+      <CinCeramicCost>0.36447</CinCeramicCost>
       <PartFamily>Switching Regulator</PartFamily>
     </OutputRailData>
   </OutputRailDatas>
-  <NotationLabelControls>
-    <NotationLabelControl>
-      <Left>1260</Left>
-      <Top>556</Top>
-      <Width>512</Width>
-      <Height>40</Height>
-      <Text>Linear Technology Demo Board DC686A</Text>
-      <Background>#00FFFFFF</Background>
-      <FontFamily>Segoe UI</FontFamily>
-      <FontSize>20.25</FontSize>
-      <Foreground>#FF800000</Foreground>
-      <FontStyle>Normal</FontStyle>
-      <FontWeight>Bold</FontWeight>
-    </NotationLabelControl>
-  </NotationLabelControls>
+  <NotationLabelControls />
 </Root>
