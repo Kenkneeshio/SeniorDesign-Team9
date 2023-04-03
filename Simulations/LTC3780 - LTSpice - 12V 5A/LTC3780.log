@@ -2,21 +2,21 @@ Circuit: * C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\Simulations\LTC378
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Thu Mar 30 01:49:15 2023
-Total elapsed time: 15.398 seconds.
+Date: Mon Apr  3 16:24:13 2023
+Total elapsed time: 18.070 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 1430507
-traniter = 1430491
-tranpoints = 531558
-accept = 388697
-rejected = 142861
+totiter = 1377518
+traniter = 1377502
+tranpoints = 509076
+accept = 372264
+rejected = 136812
 matrix size = 62
 fillins = 45
 solver = Normal
 Avg thread counts: 1.0/3.0/1.0/1.0
-Matrix Compiler1: 5.97 KB object code size  1.1/0.8/[0.3]
-Matrix Compiler2: off  [0.6]/0.6/0.7
+Matrix Compiler1: 5.97 KB object code size  1.3/1.0/[0.8]
+Matrix Compiler2: 5.71 KB object code size  0.4/0.9/[0.4]
 
