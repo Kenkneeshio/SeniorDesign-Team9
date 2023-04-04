@@ -15,6 +15,15 @@
   )
 
 
+
+  (no_connect (at 193.04 58.42) (uuid 42c59f97-2398-48e5-ae42-357fe69ad5ac))
+  (no_connect (at 193.04 45.72) (uuid 58cdcab0-4e8d-41f7-8018-91f2cac10551))
+  (no_connect (at 193.04 52.07) (uuid 851f8940-3142-41d8-9c61-22513f8c5492))
+
+  (wire (pts (xy 193.04 52.07) (xy 200.66 52.07))
+    (stroke (width 0) (type default))
+    (uuid 0942f1ee-adf3-4c04-9619-b8a2c2082e33)
+  )
   (polyline (pts (xy 278.13 574.04) (xy 278.13 576.58))
     (stroke (width 0) (type default))
     (uuid 0df01ca2-ca8b-4a13-b040-62970e141d8f)
@@ -27,6 +36,11 @@
     (stroke (width 0) (type default))
     (uuid 1dd15b3c-238a-4c3d-b918-ff250879275b)
   )
+
+  (wire (pts (xy 193.04 58.42) (xy 200.66 58.42))
+    (stroke (width 0) (type default))
+    (uuid 55e6f7ac-2fb6-4b85-97d2-5c3ad340a4da)
+  )
   (polyline (pts (xy 815.34 276.86) (xy 815.34 279.4))
     (stroke (width 0) (type default))
     (uuid 5df85059-6376-4d0e-909a-dcc4708eec84)
@@ -34,6 +48,11 @@
   (polyline (pts (xy 276.86 576.58) (xy 278.13 576.58))
     (stroke (width 0) (type default))
     (uuid 8b16481c-828f-4cca-89f3-4777a0d23538)
+  )
+
+  (wire (pts (xy 193.04 45.72) (xy 200.66 45.72))
+    (stroke (width 0) (type default))
+    (uuid 96648554-4581-4160-a3bb-4206f873b20f)
   )
 
   (image (at 93.98 163.83) (scale 0.84197)
@@ -8063,23 +8082,27 @@
     )
   )
 
-  (sheet (at 200.66 36.83) (size 54.61 31.75) (fields_autoplaced)
+  (sheet (at 200.66 41.275) (size 23.495 22.86) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid c502224c-4356-4e96-bcfe-3f158512eab2)
-    (property "Sheetname" "19V Boost" (at 200.66 36.1184 0)
+    (property "Sheetname" "19V Boost" (at 200.66 40.5634 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "19V_Boost.kicad_sch" (at 200.66 69.1646 0)
+    (property "Sheetfile" "19V_Boost.kicad_sch" (at 200.66 64.7196 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (pin "Vin" input (at 200.66 45.72 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid a6a8f57b-f6b6-49bf-a9ef-6e7e7f35d043)
     )
+    (pin "Vout" output (at 200.66 52.07 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 499e452c-5a76-4fb6-8942-9939e9d4bb34)
+    )
     (pin "GND" bidirectional (at 200.66 58.42 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 7dc946e3-d89c-47b7-89df-bcb5ba04301d)
+      (uuid f93ccb29-c1b2-478b-805e-8e8096ce4482)
     )
     (instances
       (project "rps01"
