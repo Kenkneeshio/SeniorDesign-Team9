@@ -385,7 +385,9 @@
     "pinned_footprint_libs": [
       "Mechatronics Template"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "LTC3780-24-SSOP"
+    ]
   },
   "meta": {
     "filename": "rps01.kicad_pro",

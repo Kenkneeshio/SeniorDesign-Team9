@@ -8073,6 +8073,14 @@
     (property "Sheetfile" "19V_Boost.kicad_sch" (at 200.66 69.1646 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
+    (pin "Vin" input (at 200.66 45.72 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid a6a8f57b-f6b6-49bf-a9ef-6e7e7f35d043)
+    )
+    (pin "GND" bidirectional (at 200.66 58.42 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 7dc946e3-d89c-47b7-89df-bcb5ba04301d)
+    )
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "7"))
