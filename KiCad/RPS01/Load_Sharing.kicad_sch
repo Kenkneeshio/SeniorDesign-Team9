@@ -296,7 +296,6 @@
     )
   )
 
-
   (junction (at 182.88 104.14) (diameter 0) (color 0 0 0 0)
     (uuid 1b37b9c6-4fff-4eab-b2da-a0eab1d2189f)
   )
@@ -7494,13 +7493,13 @@
     )
     (pin "1" (uuid ed09515a-601d-42aa-b108-1fa35ee244e8))
     (pin "2" (uuid 2102c610-4726-4975-9a73-9a3ce8abc7be))
-    (pin "3" (uuid 6fbc2038-98f9-451f-8594-e55a0a4712f7))
     (pin "4" (uuid a4832ea9-b34e-4877-bf6e-03a1e35f64e9))
     (pin "5" (uuid 9c35f806-af32-48a8-a73f-32489843ff66))
     (pin "7" (uuid afdd9839-05e6-4c7e-b862-7e3c0e143476))
     (pin "8" (uuid 39bdd9ed-1417-4d80-9543-bfcc3de844dc))
     (pin "9" (uuid 51c30191-5f20-41b6-99ea-171677fca7a5))
     (pin "10" (uuid e3eae40e-2f46-4efd-8280-b9e481bc645b))
+    (pin "3" (uuid 6fbc2038-98f9-451f-8594-e55a0a4712f7))
     (pin "6" (uuid 81658bd0-2507-43ed-9f8a-6847265f205b))
     (instances
       (project "rps01"
