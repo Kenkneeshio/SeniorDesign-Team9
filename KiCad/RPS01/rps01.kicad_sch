@@ -114,9 +114,13 @@
     )
   )
 
+
   (junction (at 101.6 38.1) (diameter 0) (color 0 0 0 0)
     (uuid 4b7d214f-3307-4b13-b964-db7f5608dabd)
   )
+
+  (no_connect (at 200.66 45.72) (uuid d555fe9b-590a-472a-9b83-df927b65966c))
+  (no_connect (at 147.32 45.72) (uuid ec1f5ade-0e8c-4468-aee9-8ae17092b071))
 
   (wire (pts (xy 40.64 50.8) (xy 48.26 50.8))
     (stroke (width 0) (type default))
@@ -147,10 +151,6 @@
   (wire (pts (xy 226.06 48.26) (xy 233.68 48.26))
     (stroke (width 0) (type default))
     (uuid 735e3be9-0628-48c4-b43f-027182dcb328)
-  )
-  (wire (pts (xy 200.66 45.72) (xy 147.32 45.72))
-    (stroke (width 0) (type default))
-    (uuid 748b0092-2259-4d6f-abfe-cc05824d9544)
   )
   (polyline (pts (xy 276.86 576.58) (xy 278.13 576.58))
     (stroke (width 0) (type default))
@@ -8296,7 +8296,7 @@
     (property "Value" "Conn_01x02_Socket" (at 240.03 51.435 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 238.76 48.26 0)
+    (property "Footprint" "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" (at 238.76 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 238.76 48.26 0)
@@ -8392,7 +8392,7 @@
     (property "Sheetfile" "Load_Sharing.kicad_sch" (at 48.26 57.7346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (pin "Vout" input (at 91.44 38.1 0)
+    (pin "Vout" output (at 91.44 38.1 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 0ad683e4-742d-4fe7-94bb-c9b876101df5)
     )

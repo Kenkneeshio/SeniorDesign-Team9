@@ -2,3 +2,5 @@
 *.raw
 *.zip
 #auto_saved_files#
+_autosave-Load_Sharing.kicad_sch
+*autosave*
