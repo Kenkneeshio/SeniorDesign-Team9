@@ -1,3 +1,4 @@
 # ignore all .a files
 *.raw
 *.zip
+#auto_saved_files#
