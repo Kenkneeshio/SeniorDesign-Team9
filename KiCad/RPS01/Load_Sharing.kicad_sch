@@ -217,6 +217,7 @@
     )
   )
 
+
   (junction (at 128.27 85.09) (diameter 0) (color 0 0 0 0)
     (uuid 130316f9-ec28-4fcb-9cdf-fe3af5416a04)
   )
@@ -7198,7 +7199,7 @@
     )
   )
 
-  (hierarchical_label "Vout" (shape input) (at 187.96 104.14 0) (fields_autoplaced)
+  (hierarchical_label "Vout" (shape output) (at 187.96 104.14 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2a814a61-e639-49cf-bd14-550fff59a462)
   )
@@ -7220,7 +7221,7 @@
     (property "Value" "NP100P04PLG-E1-AY" (at 154.94 87.249 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "PRSS0004AL-A_REN" (at 132.08 93.98 0)
+    (property "Footprint" "Mechatronic Footprints:PRSS0004AL-A_REN" (at 132.08 93.98 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "NP100P04PLG-E1-AY" (at 132.08 93.98 0)
@@ -7248,7 +7249,7 @@
     (property "Value" "LTC4416EMS-1-TRPBF" (at 90.17 95.4786 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "MSOP-10_MS_LIT" (at 69.85 101.6 0)
+    (property "Footprint" "Mechatronic Footprints:MSOP-10_MS_LIT" (at 69.85 101.6 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "LTC4416EMS-1-TRPBF" (at 69.85 101.6 0)
@@ -7307,7 +7308,7 @@
     (property "Value" "NP100P04PLG-E1-AY" (at 154.94 108.839 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "PRSS0004AL-A_REN" (at 132.08 115.57 0)
+    (property "Footprint" "Mechatronic Footprints:PRSS0004AL-A_REN" (at 132.08 115.57 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "NP100P04PLG-E1-AY" (at 132.08 115.57 0)
