@@ -28,23 +28,23 @@ Gmin = 3.59913e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Heightened Def Con from 0.181997 to 0.181997
+Heightened Def Con from 0.182453 to 0.182453
 
-Date: Thu Apr  6 03:38:31 2023
-Total elapsed time: 0.134 seconds.
+Date: Fri Apr 14 14:04:27 2023
+Total elapsed time: 0.235 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 5066
-traniter = 4083
-tranpoints = 1565
-accept = 1424
-rejected = 142
-matrix size = 62
-fillins = 26
+totiter = 5019
+traniter = 4053
+tranpoints = 1552
+accept = 1412
+rejected = 141
+matrix size = 50
+fillins = 12
 solver = Normal
 Avg thread counts: 1.2/1.4/1.4/1.2
-Matrix Compiler1: 5.55 KB object code size  0.8/0.5/[0.2]
-Matrix Compiler2: 5.65 KB object code size  0.4/0.6/[0.3]
+Matrix Compiler1: 3.12 KB object code size  0.6/0.5/[0.3]
+Matrix Compiler2: off  [0.3]/0.5/0.5
 
