@@ -4040,31 +4040,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 114.3 63.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 39e06dbc-c888-4315-810a-372741ffc8a8)
-    (property "Reference" "#PWR016" (at 114.3 69.85 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 114.3 68.58 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 114.3 63.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 114.3 63.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ad523c99-2767-4635-b2aa-59337f717585))
-    (instances
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "#PWR016") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 55.88 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4b8636fe-cf5e-4a59-93e7-ff61143b8eb8)
