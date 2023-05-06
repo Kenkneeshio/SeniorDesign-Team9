@@ -211,6 +211,7 @@
     )
   )
 
+
   (junction (at 81.28 59.69) (diameter 0) (color 0 0 0 0)
     (uuid 74ff1426-acbe-4328-9365-2090eef535ae)
   )
@@ -4195,7 +4196,7 @@
   (symbol (lib_id "Device:R") (at 102.87 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a50c385b-16d4-4776-bd51-b606c8e5806a)
-    (property "Reference" "RL" (at 105.41 109.855 0)
+    (property "Reference" "RL1" (at 105.41 109.855 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "72.3k" (at 105.41 112.395 0)
@@ -4212,7 +4213,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "RL") (unit 1)
+          (reference "RL1") (unit 1)
         )
       )
     )
@@ -4221,7 +4222,7 @@
   (symbol (lib_id "Device:R") (at 85.09 59.69 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad2778e1-42f5-4389-add4-3473c58c966b)
-    (property "Reference" "Rs" (at 85.09 54.61 90)
+    (property "Reference" "Rs2" (at 85.09 54.61 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.5m" (at 85.09 57.15 90)
@@ -4238,7 +4239,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "Rs") (unit 1)
+          (reference "Rs2") (unit 1)
         )
       )
     )
