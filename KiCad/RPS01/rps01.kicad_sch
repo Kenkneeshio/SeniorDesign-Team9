@@ -779,7 +779,7 @@
     (uuid ebdd951d-4a51-42bd-8640-b3f0d37d3db8)
   )
 
-  (image (at 146.304 181.61) (scale 0.234338)
+  (image (at 87.122 170.942) (scale 0.532729)
     (uuid acf11b57-537e-4277-840a-2574237b4bee)
     (data
       iVBORw0KGgoAAAANSUhEUgAACHAAAAOdCAIAAABoc5CYAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4
@@ -8860,7 +8860,7 @@
     (property "Value" "MCP1755T-5002E/OT" (at 63.5 119.126 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "5V_500mA_Reg:SOT-23-5_MC_MCH" (at 33.02 125.984 0)
+    (property "Footprint" "Mechatronics 5VReg:SOT-23-5_MC_MCH" (at 33.02 125.984 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "MCP1755T-5002E/OT" (at 33.02 125.984 0)
