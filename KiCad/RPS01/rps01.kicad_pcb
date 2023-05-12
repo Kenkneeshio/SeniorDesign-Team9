@@ -196,7 +196,7 @@
 
   (footprint "Mechatronics AMASS XT90 Vertical:AMASS_XT90-M_1x02_P11.00mm_Vertical" (layer "F.Cu")
     (tstamp 01264319-f5d5-4f00-9bde-b638ee886b5f)
-    (at 74 114.75 90)
+    (at 41.474 108.076 90)
     (descr "AMASS male XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf")
     (tags "XT90 male vertical")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -266,7 +266,7 @@
 
   (footprint "Resistor_SMD:R_1210_3225Metric" (layer "F.Cu")
     (tstamp 079a6364-2ccf-43e3-b76a-d97795ee32a6)
-    (at -92.984 92.22)
+    (at 86.834 85.8)
     (descr "Resistor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -320,7 +320,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 084fa260-1eeb-4477-8d15-790b44259b18)
-    (at 48.0317 -43.9486)
+    (at 353.3397 42.9194)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -374,7 +374,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 0988d44a-b6c9-418b-9064-deee93f2ca68)
-    (at -88.0968 -39.0415)
+    (at 322.8813 112.232001)
     (tags "B340AE-13 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -501,10 +501,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -40.4512)
-          (xy -85.3536 -40.4512)
-          (xy -85.3536 -39.9051)
-          (xy -90.84 -39.9051)
+          (xy 320.1381 110.822301)
+          (xy 325.6245 110.822301)
+          (xy 325.6245 111.368401)
+          (xy 320.1381 111.368401)
         )
       )
     )
@@ -515,10 +515,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -38.1779)
-          (xy -85.3536 -38.1779)
-          (xy -85.3536 -37.6318)
-          (xy -90.84 -37.6318)
+          (xy 320.1381 113.095601)
+          (xy 325.6245 113.095601)
+          (xy 325.6245 113.641701)
+          (xy 320.1381 113.641701)
         )
       )
     )
@@ -529,10 +529,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -88.808 -39.9051)
-          (xy -87.3856 -39.9051)
-          (xy -87.3856 -38.1779)
-          (xy -88.808 -38.1779)
+          (xy 322.1701 111.368401)
+          (xy 323.5925 111.368401)
+          (xy 323.5925 113.095601)
+          (xy 322.1701 113.095601)
         )
       )
     )
@@ -540,7 +540,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 0bf6cdc2-0b00-4aa6-a42d-77d694592a1d)
-    (at 145.02735 -28.7506)
+    (at 319.4989 159.4471)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -681,7 +681,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 0edb072f-4f22-4694-aa7d-20965a58e01e)
-    (at 152.69555 -24.3035)
+    (at 327.1671 163.8942)
     (tags "B340AE-13 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -808,10 +808,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -25.7132)
-          (xy 155.43875 -25.7132)
-          (xy 155.43875 -25.1671)
-          (xy 149.95235 -25.1671)
+          (xy 324.4239 162.4845)
+          (xy 329.9103 162.4845)
+          (xy 329.9103 163.0306)
+          (xy 324.4239 163.0306)
         )
       )
     )
@@ -822,10 +822,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -23.4399)
-          (xy 155.43875 -23.4399)
-          (xy 155.43875 -22.8938)
-          (xy 149.95235 -22.8938)
+          (xy 324.4239 164.7578)
+          (xy 329.9103 164.7578)
+          (xy 329.9103 165.3039)
+          (xy 324.4239 165.3039)
         )
       )
     )
@@ -836,10 +836,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 151.98435 -25.1671)
-          (xy 153.40675 -25.1671)
-          (xy 153.40675 -23.4399)
-          (xy 151.98435 -23.4399)
+          (xy 326.4559 163.0306)
+          (xy 327.8783 163.0306)
+          (xy 327.8783 164.7578)
+          (xy 326.4559 164.7578)
         )
       )
     )
@@ -847,7 +847,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 0f06e258-f61f-4f4d-a031-e505aa09ff0d)
-    (at 0.4699 -25.5287)
+    (at 305.7779 61.3393)
     (tags "B340AE-13 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -974,10 +974,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -26.9384)
-          (xy 3.2131 -26.9384)
-          (xy 3.2131 -26.3923)
-          (xy -2.2733 -26.3923)
+          (xy 303.0347 59.9296)
+          (xy 308.5211 59.9296)
+          (xy 308.5211 60.4757)
+          (xy 303.0347 60.4757)
         )
       )
     )
@@ -988,10 +988,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -24.6651)
-          (xy 3.2131 -24.6651)
-          (xy 3.2131 -24.119)
-          (xy -2.2733 -24.119)
+          (xy 303.0347 62.2029)
+          (xy 308.5211 62.2029)
+          (xy 308.5211 62.749)
+          (xy 303.0347 62.749)
         )
       )
     )
@@ -1002,10 +1002,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -0.2413 -26.3923)
-          (xy 1.1811 -26.3923)
-          (xy 1.1811 -24.6651)
-          (xy -0.2413 -24.6651)
+          (xy 305.0667 60.4757)
+          (xy 306.4891 60.4757)
+          (xy 306.4891 62.2029)
+          (xy 305.0667 62.2029)
         )
       )
     )
@@ -1013,7 +1013,7 @@
 
   (footprint "LED_THT:LED_D5.0mm" (layer "F.Cu")
     (tstamp 116529a1-140e-4be6-9d0d-3e8abcbbc6ba)
-    (at -104.6906 23.821999)
+    (at 100.2734 120.525999)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -1069,7 +1069,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp 1230451e-6a8d-4bae-abb5-b55368c94d50)
-    (at -79.98 -42.09)
+    (at 330.9981 109.183501)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -1123,7 +1123,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 1258f56a-b944-4666-b4fa-3825d6ee99b5)
-    (at 36.7017 -63.9386)
+    (at 342.0097 22.9294)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -1264,7 +1264,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 159e5be6-7cec-4435-a2bc-6b7a0b3bac13)
-    (at 36.7017 -59.0886)
+    (at 342.0097 27.7794)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -1405,7 +1405,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 16b05dd6-2e7e-4f5b-be50-8801203b8aba)
-    (at 133.59235 -45.7506)
+    (at 308.0639 142.4471)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -1459,7 +1459,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 16f7c09b-3684-4bf5-9f97-d418050d1571)
-    (at 145.02735 -23.9006)
+    (at 319.4989 164.2971)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -1600,7 +1600,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 1cd96446-aa41-48a9-9f17-76b1197986a9)
-    (at -106.29 -58.37)
+    (at 304.6881 92.903501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -1654,7 +1654,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 1e456351-9690-4856-b574-0fcfe9ba7e01)
-    (at 133.59235 -42.4006)
+    (at 308.0639 145.7971)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -1708,7 +1708,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 1ee6fb7c-ef3f-4254-9e9e-02293e7f3072)
-    (at -72.5 -62.05)
+    (at 338.4781 89.223501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -1762,7 +1762,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 232dab78-c8db-46a5-95a3-9ac7601c9235)
-    (at 139.22235 -16.3706)
+    (at 313.6939 171.8271)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -1816,7 +1816,7 @@
 
   (footprint "Mechatronics 5V Reg:DPAK_STM" (layer "F.Cu")
     (tstamp 249a56da-07cf-4c0c-8b2e-8192838c9ff6)
-    (at -94.488 5.588)
+    (at 110.476 102.292)
     (tags "L78M05CDT-TR ")
     (property "Sheetfile" "rps01.kicad_sch")
     (property "Sheetname" "")
@@ -1943,7 +1943,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 26ace5fe-22dd-4d65-a109-253bba7683e7)
-    (at 133.59235 -52.4506)
+    (at 308.0639 135.7471)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -1997,7 +1997,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 2c1871fb-e28e-4550-9d7c-c249474f2c53)
-    (at 152.69555 -19.7221)
+    (at 327.1671 168.4756)
     (tags "B340AE-13 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -2124,10 +2124,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -21.1318)
-          (xy 155.43875 -21.1318)
-          (xy 155.43875 -20.5857)
-          (xy 149.95235 -20.5857)
+          (xy 324.4239 167.0659)
+          (xy 329.9103 167.0659)
+          (xy 329.9103 167.612)
+          (xy 324.4239 167.612)
         )
       )
     )
@@ -2138,10 +2138,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -18.8585)
-          (xy 155.43875 -18.8585)
-          (xy 155.43875 -18.3124)
-          (xy 149.95235 -18.3124)
+          (xy 324.4239 169.3392)
+          (xy 329.9103 169.3392)
+          (xy 329.9103 169.8853)
+          (xy 324.4239 169.8853)
         )
       )
     )
@@ -2152,10 +2152,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 151.98435 -20.5857)
-          (xy 153.40675 -20.5857)
-          (xy 153.40675 -18.8585)
-          (xy 151.98435 -18.8585)
+          (xy 326.4559 167.612)
+          (xy 327.8783 167.612)
+          (xy 327.8783 169.3392)
+          (xy 326.4559 169.3392)
         )
       )
     )
@@ -2163,7 +2163,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 2ed1c9b3-fe67-4884-9209-43ea0e29f6d3)
-    (at -98.594 80.31)
+    (at 81.224 73.89)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -2217,7 +2217,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 3018d2c0-dbda-40c4-931d-fe23a1f6fd2f)
-    (at -106.29 -61.72)
+    (at 304.6881 89.553501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -2271,7 +2271,7 @@
 
   (footprint "Mechatronics INA139:PW8" (layer "F.Cu")
     (tstamp 32fb7fc7-1678-4c69-a415-d66bd6c90e7e)
-    (at -98.0205 75.525001)
+    (at 81.7975 69.105001)
     (tags "INA139QPWRQ1 ")
     (property "Sheetfile" "Current_Sense.kicad_sch")
     (property "Sheetname" "Current Sense")
@@ -2410,7 +2410,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp 344f5315-5463-468b-b775-ebb91186a968)
-    (at -98.015 -36.17)
+    (at 312.9631 115.103501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "Unpolarized capacitor")
@@ -2443,7 +2443,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp 35244fec-9614-4d1a-a8a1-8e29acb87312)
-    (at 170.02735 -56.0506)
+    (at 344.4989 132.1471)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "Polarized capacitor")
@@ -2476,7 +2476,7 @@
 
   (footprint "Mechatronics LTC3780:SSOP-24_G_LIT" (layer "F.Cu")
     (tstamp 35744208-c697-4350-b8d4-2523776b6069)
-    (at 30.464 -78.824)
+    (at 332.994 51.054)
     (tags "LTC3780EG-TRPBF ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -2819,7 +2819,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 3590b467-941c-4cbf-a0f8-c75c0653c6b5)
-    (at 139.22235 -22.9506)
+    (at 313.6939 165.2471)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -2873,7 +2873,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 3a9cf62e-a9c0-4e7e-ab55-5a1106f09494)
-    (at 48.0317 -64.0486)
+    (at 353.3397 22.8194)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -2927,7 +2927,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 3ab571cd-b5d8-49a1-ae1f-d907e7756f3b)
-    (at -66.695 -77.72)
+    (at 344.2831 73.553501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -3068,7 +3068,7 @@
 
   (footprint "Button_Switch_THT:SW_PUSH_6mm" (layer "F.Cu")
     (tstamp 3c4edb2a-bef2-4c6a-8ade-5ee7342fcb6e)
-    (at -115.6906 22.071999)
+    (at 89.2734 118.775999)
     (descr "https://www.omron.com/ecb/products/pdf/en-b3f.pdf")
     (tags "tact sw push 6mm")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -3150,7 +3150,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp 3e0088ee-ba60-4fad-8cab-85456c095075)
-    (at 170.02735 -36.9506)
+    (at 344.4989 151.2471)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "Unpolarized capacitor")
@@ -3183,7 +3183,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp 3eb9cf81-0f83-4b93-a0ca-c81a8096d804)
-    (at 55.2017 -45.3486)
+    (at 360.5097 41.5194)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -3237,7 +3237,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 402bc578-6966-4992-a62d-af322fb94910)
-    (at -106.29 -51.67)
+    (at 304.6881 99.603501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -3291,7 +3291,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 41b6c961-f48b-45f9-b702-71bfa30e49de)
-    (at 0.4699 -34.6915)
+    (at 305.7779 52.1765)
     (tags "B340AE-13 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -3418,10 +3418,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -36.1012)
-          (xy 3.2131 -36.1012)
-          (xy 3.2131 -35.5551)
-          (xy -2.2733 -35.5551)
+          (xy 303.0347 50.7668)
+          (xy 308.5211 50.7668)
+          (xy 308.5211 51.3129)
+          (xy 303.0347 51.3129)
         )
       )
     )
@@ -3432,10 +3432,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -33.8279)
-          (xy 3.2131 -33.8279)
-          (xy 3.2131 -33.2818)
-          (xy -2.2733 -33.2818)
+          (xy 303.0347 53.0401)
+          (xy 308.5211 53.0401)
+          (xy 308.5211 53.5862)
+          (xy 303.0347 53.5862)
         )
       )
     )
@@ -3446,10 +3446,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -0.2413 -35.5551)
-          (xy 1.1811 -35.5551)
-          (xy 1.1811 -33.8279)
-          (xy -0.2413 -33.8279)
+          (xy 305.0667 51.3129)
+          (xy 306.4891 51.3129)
+          (xy 306.4891 53.0401)
+          (xy 305.0667 53.0401)
         )
       )
     )
@@ -3457,7 +3457,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 43780078-5e19-4b51-a520-b7fc1e93118c)
-    (at -104.4906 9.971999)
+    (at 100.4734 106.675999)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -3511,7 +3511,7 @@
 
   (footprint "Mechatronic Footprints:SOD123_DIO" (layer "F.Cu")
     (tstamp 439f4edd-b8de-4b02-b7cd-acbe18d26b85)
-    (at 159.57815 -13.9304)
+    (at 334.0497 174.2673)
     (tags "BZT52C4V7-13-F ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -3611,7 +3611,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp 4529c6d1-dab9-47bf-bb72-ccda31c0b815)
-    (at 160.81235 -17.8806)
+    (at 335.2839 170.3171)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -3665,7 +3665,7 @@
 
   (footprint "LED_SMD:LED_1206_3216Metric" (layer "F.Cu")
     (tstamp 4566769b-8e1e-49a3-b507-2576165c0a15)
-    (at 59.3117 -70.7286)
+    (at 364.6197 16.1394)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -3723,7 +3723,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 474021af-65c5-4641-b102-1debcb98cb73)
-    (at 152.69555 -15.1407)
+    (at 327.1671 173.057)
     (tags "B340AE-13 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -3850,10 +3850,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -16.5504)
-          (xy 155.43875 -16.5504)
-          (xy 155.43875 -16.0043)
-          (xy 149.95235 -16.0043)
+          (xy 324.4239 171.6473)
+          (xy 329.9103 171.6473)
+          (xy 329.9103 172.1934)
+          (xy 324.4239 172.1934)
         )
       )
     )
@@ -3864,10 +3864,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -14.2771)
-          (xy 155.43875 -14.2771)
-          (xy 155.43875 -13.731)
-          (xy 149.95235 -13.731)
+          (xy 324.4239 173.9206)
+          (xy 329.9103 173.9206)
+          (xy 329.9103 174.4667)
+          (xy 324.4239 174.4667)
         )
       )
     )
@@ -3878,10 +3878,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 151.98435 -16.0043)
-          (xy 153.40675 -16.0043)
-          (xy 153.40675 -14.2771)
-          (xy 151.98435 -14.2771)
+          (xy 326.4559 172.1934)
+          (xy 327.8783 172.1934)
+          (xy 327.8783 173.9206)
+          (xy 326.4559 173.9206)
         )
       )
     )
@@ -3889,7 +3889,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 48f462c4-bba7-469f-b0f9-b4fb728d8b00)
-    (at -88.0968 -34.4601)
+    (at 322.8813 116.813401)
     (tags "B340AE-13 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -4016,10 +4016,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -35.8698)
-          (xy -85.3536 -35.8698)
-          (xy -85.3536 -35.3237)
-          (xy -90.84 -35.3237)
+          (xy 320.1381 115.403701)
+          (xy 325.6245 115.403701)
+          (xy 325.6245 115.949801)
+          (xy 320.1381 115.949801)
         )
       )
     )
@@ -4030,10 +4030,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -33.5965)
-          (xy -85.3536 -33.5965)
-          (xy -85.3536 -33.0504)
-          (xy -90.84 -33.0504)
+          (xy 320.1381 117.677001)
+          (xy 325.6245 117.677001)
+          (xy 325.6245 118.223101)
+          (xy 320.1381 118.223101)
         )
       )
     )
@@ -4044,10 +4044,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -88.808 -35.3237)
-          (xy -87.3856 -35.3237)
-          (xy -87.3856 -33.5965)
-          (xy -88.808 -33.5965)
+          (xy 322.1701 115.949801)
+          (xy 323.5925 115.949801)
+          (xy 323.5925 117.677001)
+          (xy 322.1701 117.677001)
         )
       )
     )
@@ -4055,7 +4055,7 @@
 
   (footprint "Mechatronic Footprints:IND_410680_WRE" (layer "F.Cu")
     (tstamp 490a05d2-66af-43b8-b8d9-72593ebd3ceb)
-    (at 12.954 -56.388)
+    (at 318.262 30.48)
     (tags "74436410680 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -4165,7 +4165,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 4cb36f3f-21a4-453b-b107-33e973eb7f26)
-    (at -106.29 -78.47)
+    (at 304.6881 72.803501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -4219,7 +4219,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 4d947afb-b6dc-4218-a88f-92f0b9163df7)
-    (at 0.4699 -39.2729)
+    (at 305.7779 47.5951)
     (tags "B340AE-13 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -4346,10 +4346,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -40.6826)
-          (xy 3.2131 -40.6826)
-          (xy 3.2131 -40.1365)
-          (xy -2.2733 -40.1365)
+          (xy 303.0347 46.1854)
+          (xy 308.5211 46.1854)
+          (xy 308.5211 46.7315)
+          (xy 303.0347 46.7315)
         )
       )
     )
@@ -4360,10 +4360,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -38.4093)
-          (xy 3.2131 -38.4093)
-          (xy 3.2131 -37.8632)
-          (xy -2.2733 -37.8632)
+          (xy 303.0347 48.4587)
+          (xy 308.5211 48.4587)
+          (xy 308.5211 49.0048)
+          (xy 303.0347 49.0048)
         )
       )
     )
@@ -4374,10 +4374,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -0.2413 -40.1365)
-          (xy 1.1811 -40.1365)
-          (xy 1.1811 -38.4093)
-          (xy -0.2413 -38.4093)
+          (xy 305.0667 46.7315)
+          (xy 306.4891 46.7315)
+          (xy 306.4891 48.4587)
+          (xy 305.0667 48.4587)
         )
       )
     )
@@ -4385,7 +4385,7 @@
 
   (footprint "LED_SMD:LED_1206_3216Metric" (layer "F.Cu")
     (tstamp 50b38009-1010-4a51-a0ef-69db6a7e8be4)
-    (at -72.79 -42.84)
+    (at 338.1881 108.433501)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -4443,7 +4443,7 @@
 
   (footprint "Mechatronics LTC4416:MSOP-10_MS_LIT" (layer "F.Cu")
     (tstamp 51546e98-b052-42a0-9b0c-9339b8582133)
-    (at 87.064 83.392 -90)
+    (at 54.538 76.718 -90)
     (tags "LTC4416EMS-1-TRPBF ")
     (property "Sheetfile" "Load_Sharing.kicad_sch")
     (property "Sheetname" "Load Sharing")
@@ -4637,7 +4637,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 520ce9ae-6ae2-43db-920d-0e07b322f309)
-    (at -98.594 86.89)
+    (at 81.224 80.47)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -4691,7 +4691,7 @@
 
   (footprint "Mechatronic Footprints:LOWESRCAPMP7.6X4.3_3.1N_KEM" (layer "F.Cu")
     (tstamp 529b00c9-9034-4146-98cf-daf9c258ffae)
-    (at -77.797809 -47.514804)
+    (at 333.180291 103.758697)
     (tags "T521D475M063ATE075 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -4774,10 +4774,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -81.547001 -49.614)
-          (xy -74.048617 -49.614)
-          (xy -74.048617 -48.815602)
-          (xy -81.547001 -48.815602)
+          (xy 329.431099 101.659501)
+          (xy 336.929483 101.659501)
+          (xy 336.929483 102.457899)
+          (xy 329.431099 102.457899)
         )
       )
     )
@@ -4788,10 +4788,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -81.547001 -46.214006)
-          (xy -74.048617 -46.214006)
-          (xy -74.048617 -45.415608)
-          (xy -81.547001 -45.415608)
+          (xy 329.431099 105.059495)
+          (xy 336.929483 105.059495)
+          (xy 336.929483 105.857893)
+          (xy 329.431099 105.857893)
         )
       )
     )
@@ -4802,10 +4802,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -79.439005 -48.815602)
-          (xy -76.156613 -48.815602)
-          (xy -76.156613 -46.214006)
-          (xy -79.439005 -46.214006)
+          (xy 331.539095 102.457899)
+          (xy 334.821487 102.457899)
+          (xy 334.821487 105.059495)
+          (xy 331.539095 105.059495)
         )
       )
     )
@@ -4813,7 +4813,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 53b1431b-25c5-48d2-a40d-5e9155c3eafc)
-    (at 152.69555 -28.8849)
+    (at 327.1671 159.3128)
     (tags "B340AE-13 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -4940,10 +4940,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -30.2946)
-          (xy 155.43875 -30.2946)
-          (xy 155.43875 -29.7485)
-          (xy 149.95235 -29.7485)
+          (xy 324.4239 157.9031)
+          (xy 329.9103 157.9031)
+          (xy 329.9103 158.4492)
+          (xy 324.4239 158.4492)
         )
       )
     )
@@ -4954,10 +4954,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 149.95235 -28.0213)
-          (xy 155.43875 -28.0213)
-          (xy 155.43875 -27.4752)
-          (xy 149.95235 -27.4752)
+          (xy 324.4239 160.1764)
+          (xy 329.9103 160.1764)
+          (xy 329.9103 160.7225)
+          (xy 324.4239 160.7225)
         )
       )
     )
@@ -4968,10 +4968,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 151.98435 -29.7485)
-          (xy 153.40675 -29.7485)
-          (xy 153.40675 -28.0213)
-          (xy 151.98435 -28.0213)
+          (xy 326.4559 158.4492)
+          (xy 327.8783 158.4492)
+          (xy 327.8783 160.1764)
+          (xy 326.4559 160.1764)
         )
       )
     )
@@ -4979,7 +4979,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 56b5d8d8-13dc-4c65-90f2-0e252f98314a)
-    (at 48.0317 -67.3986)
+    (at 353.3397 19.4694)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -5033,7 +5033,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 5a925b55-a373-4fff-a47f-5027929de71d)
-    (at 36.7017 -68.7886)
+    (at 342.0097 18.0794)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -5174,7 +5174,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 5bf3ba5d-9367-44ee-b9f2-1164a4b49a45)
-    (at -98.594 90.18)
+    (at 81.224 83.76)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -5228,7 +5228,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 5c66b253-271a-447f-959c-245faed2dc3d)
-    (at -66.695 -63.17)
+    (at 344.2831 88.103501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -5369,7 +5369,7 @@
 
   (footprint "Mechatronic Footprints:LOWESRCAPMP7.6X4.3_3.1N_KEM" (layer "F.Cu")
     (tstamp 5c86a9ea-b815-44a8-8246-f81bce3c6c80)
-    (at 162.994541 -28.195404)
+    (at 337.466091 160.002296)
     (tags "T521D475M063ATE075 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -5452,10 +5452,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 159.245349 -30.2946)
-          (xy 166.743733 -30.2946)
-          (xy 166.743733 -29.496202)
-          (xy 159.245349 -29.496202)
+          (xy 333.716899 157.9031)
+          (xy 341.215283 157.9031)
+          (xy 341.215283 158.701498)
+          (xy 333.716899 158.701498)
         )
       )
     )
@@ -5466,10 +5466,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 159.245349 -26.894606)
-          (xy 166.743733 -26.894606)
-          (xy 166.743733 -26.096208)
-          (xy 159.245349 -26.096208)
+          (xy 333.716899 161.303094)
+          (xy 341.215283 161.303094)
+          (xy 341.215283 162.101492)
+          (xy 333.716899 162.101492)
         )
       )
     )
@@ -5480,10 +5480,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 161.353345 -29.496202)
-          (xy 164.635737 -29.496202)
-          (xy 164.635737 -26.894606)
-          (xy 161.353345 -26.894606)
+          (xy 335.824895 158.701498)
+          (xy 339.107287 158.701498)
+          (xy 339.107287 161.303094)
+          (xy 335.824895 161.303094)
         )
       )
     )
@@ -5491,7 +5491,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 62dce682-f80d-4fb9-a5ca-02336450c79c)
-    (at -72.5 -78.5)
+    (at 338.4781 72.773501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -5545,7 +5545,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 632b2582-2f31-4010-a0eb-f7bd3f8c2092)
-    (at 133.59235 -39.0506)
+    (at 308.0639 149.1471)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -5599,7 +5599,7 @@
 
   (footprint "Mechatronics AMASS XT90 Vertical:AMASS_XT90-M_1x02_P11.00mm_Vertical" (layer "F.Cu")
     (tstamp 66dc0d52-61c4-4892-93c6-9b249bacd4f2)
-    (at 74 55.25 -90)
+    (at 41.474 48.576 -90)
     (descr "AMASS male XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf")
     (tags "XT90 male vertical")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -5669,7 +5669,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 67c9419d-fd06-42ed-a935-f474cca944db)
-    (at -66.695 -68.02)
+    (at 344.2831 83.253501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -5810,7 +5810,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" (layer "F.Cu")
     (tstamp 6bb63139-a6b8-40c4-84fa-eebf8384e569)
-    (at -104.4906 13.121999)
+    (at 100.4734 109.825999)
     (descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=1.9mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 1.9mm 0.167W length 3.6mm diameter 1.6mm")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -5858,7 +5858,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 6e4b988e-38a8-4bbe-8299-cdec9aa19a3b)
-    (at 53.6617 -57.6186)
+    (at 358.9697 29.2494)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -5912,7 +5912,7 @@
 
   (footprint "Mechatronic Footprints:LOWESRCAPMP7.6X4.3_3.1N_KEM" (layer "F.Cu")
     (tstamp 7288c46d-a830-4699-960f-994ebd6297ae)
-    (at 10.768891 -38.583404)
+    (at 316.076891 48.284596)
     (tags "T521D475M063ATE075 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -5995,10 +5995,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 7.019699 -40.6826)
-          (xy 14.518083 -40.6826)
-          (xy 14.518083 -39.884202)
-          (xy 7.019699 -39.884202)
+          (xy 312.327699 46.1854)
+          (xy 319.826083 46.1854)
+          (xy 319.826083 46.983798)
+          (xy 312.327699 46.983798)
         )
       )
     )
@@ -6009,10 +6009,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 7.019699 -37.282606)
-          (xy 14.518083 -37.282606)
-          (xy 14.518083 -36.484208)
-          (xy 7.019699 -36.484208)
+          (xy 312.327699 49.585394)
+          (xy 319.826083 49.585394)
+          (xy 319.826083 50.383792)
+          (xy 312.327699 50.383792)
         )
       )
     )
@@ -6023,10 +6023,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 9.127695 -39.884202)
-          (xy 12.410087 -39.884202)
-          (xy 12.410087 -37.282606)
-          (xy 9.127695 -37.282606)
+          (xy 314.435695 46.983798)
+          (xy 317.718087 46.983798)
+          (xy 317.718087 49.585394)
+          (xy 314.435695 49.585394)
         )
       )
     )
@@ -6034,7 +6034,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 791507ec-2e22-4487-8456-40f7d1ad1151)
-    (at -93.7006 13.781999)
+    (at 111.2634 110.485999)
     (descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x03 2.54mm double row")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -6110,7 +6110,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 7b615b06-dd17-4fe0-9c2f-fab7465681e5)
-    (at 133.59235 -35.7006)
+    (at 308.0639 152.4971)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -6164,7 +6164,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 7bd84067-e021-491f-b83c-cd7914fe4f9d)
-    (at -72.5 -65.34)
+    (at 338.4781 85.933501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -6218,7 +6218,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 7ccc556b-4701-46cf-b72c-1bb2180ccdb0)
-    (at 139.22235 -29.5306)
+    (at 313.6939 158.6671)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -6272,7 +6272,7 @@
 
   (footprint "Mechatronic Footprints:IND_410680_WRE" (layer "F.Cu")
     (tstamp 7cce28d8-3f4a-4410-8438-593ba31a7980)
-    (at 154.04965 -46)
+    (at 328.5212 142.1977)
     (tags "74436410680 ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -6382,7 +6382,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 80478c39-3487-4d7a-8bb4-2a7b2276228e)
-    (at 133.59235 -55.8006)
+    (at 308.0639 132.3971)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -6436,7 +6436,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp 856751cf-881d-4ff3-b9f5-e933e368e64f)
-    (at -98.015 -45.72)
+    (at 312.9631 105.553501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "Polarized capacitor")
@@ -6469,7 +6469,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 888919af-da7d-4375-ac93-ec7e29100c09)
-    (at -72.5 -71.92)
+    (at 338.4781 79.353501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -6523,7 +6523,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 88c0e293-716e-47b5-8830-cf5ecc8a5fc0)
-    (at -92.964 85.09)
+    (at 86.854 78.67)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -6577,7 +6577,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 897b7f01-bc6a-4785-85e9-98dbf1831c3f)
-    (at -72.5 -68.63)
+    (at 338.4781 82.643501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -6631,7 +6631,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 8c6a2cba-43bc-494b-a289-0360edeeaf22)
-    (at 133.59235 -49.1006)
+    (at 308.0639 139.0971)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -6685,7 +6685,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 8ca3ae7f-f65b-4f2c-9c94-f2decc5b1423)
-    (at -66.695 -72.87)
+    (at 344.2831 78.403501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -6826,7 +6826,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp 8ec97e16-a948-4c71-a6e1-49b72b1902e9)
-    (at 0.4699 -30.1101)
+    (at 305.7779 56.7579)
     (tags "B340AE-13 ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -6953,10 +6953,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -31.5198)
-          (xy 3.2131 -31.5198)
-          (xy 3.2131 -30.9737)
-          (xy -2.2733 -30.9737)
+          (xy 303.0347 55.3482)
+          (xy 308.5211 55.3482)
+          (xy 308.5211 55.8943)
+          (xy 303.0347 55.8943)
         )
       )
     )
@@ -6967,10 +6967,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -2.2733 -29.2465)
-          (xy 3.2131 -29.2465)
-          (xy 3.2131 -28.7004)
-          (xy -2.2733 -28.7004)
+          (xy 303.0347 57.6215)
+          (xy 308.5211 57.6215)
+          (xy 308.5211 58.1676)
+          (xy 303.0347 58.1676)
         )
       )
     )
@@ -6981,10 +6981,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -0.2413 -30.9737)
-          (xy 1.1811 -30.9737)
-          (xy 1.1811 -29.2465)
-          (xy -0.2413 -29.2465)
+          (xy 305.0667 55.8943)
+          (xy 306.4891 55.8943)
+          (xy 306.4891 57.6215)
+          (xy 305.0667 57.6215)
         )
       )
     )
@@ -6992,7 +6992,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 8febc318-26de-4287-a263-f8f1c49891f2)
-    (at -106.29 -55.02)
+    (at 304.6881 96.253501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -7046,7 +7046,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 913aacab-75d2-4974-a55e-25360295e5d7)
-    (at 53.6617 -60.9086)
+    (at 358.9697 25.9594)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -7100,7 +7100,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 914b6247-797f-4448-a5cf-f9c03fa48889)
-    (at 139.22235 -19.6606)
+    (at 313.6939 168.5371)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -7154,7 +7154,7 @@
 
   (footprint "Mechatronics LTC3780:SSOP-24_G_LIT" (layer "F.Cu")
     (tstamp 96f96999-05f6-471b-8da1-a0a2c36a8680)
-    (at -36.9222 -56.57632)
+    (at 348.8182 113.29416)
     (tags "LTC3780EG-TRPBF ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -7497,7 +7497,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp 997674d1-d745-4798-bc6f-7559f5bef313)
-    (at 145.02735 -14.2006)
+    (at 319.4989 173.9971)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -7638,7 +7638,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 9e740db4-56a3-4579-9751-01e02a298e24)
-    (at -106.29 -75.12)
+    (at 304.6881 76.153501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -7692,7 +7692,7 @@
 
   (footprint "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (layer "F.Cu")
     (tstamp ab29ded5-c4e5-49f6-a685-0a427c57add4)
-    (at -93.0506 23.881999)
+    (at 111.9134 120.585999)
     (descr "JST PH series connector, B3B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -7806,7 +7806,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp ae63bc40-8d2e-43f8-81d9-1dfc1762fc75)
-    (at -88.0968 -43.6229)
+    (at 322.8813 107.650601)
     (tags "B340AE-13 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -7933,10 +7933,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -45.0326)
-          (xy -85.3536 -45.0326)
-          (xy -85.3536 -44.4865)
-          (xy -90.84 -44.4865)
+          (xy 320.1381 106.240901)
+          (xy 325.6245 106.240901)
+          (xy 325.6245 106.787001)
+          (xy 320.1381 106.787001)
         )
       )
     )
@@ -7947,10 +7947,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -42.7593)
-          (xy -85.3536 -42.7593)
-          (xy -85.3536 -42.2132)
-          (xy -90.84 -42.2132)
+          (xy 320.1381 108.514201)
+          (xy 325.6245 108.514201)
+          (xy 325.6245 109.060301)
+          (xy 320.1381 109.060301)
         )
       )
     )
@@ -7961,10 +7961,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -88.808 -44.4865)
-          (xy -87.3856 -44.4865)
-          (xy -87.3856 -42.7593)
-          (xy -88.808 -42.7593)
+          (xy 322.1701 106.787001)
+          (xy 323.5925 106.787001)
+          (xy 323.5925 108.514201)
+          (xy 322.1701 108.514201)
         )
       )
     )
@@ -7972,7 +7972,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp af216b08-a06b-4936-a435-4586830b0c73)
-    (at -106.29 -71.77)
+    (at 304.6881 79.503501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -8026,7 +8026,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp afa78f77-a40f-4777-808f-6711ff3efb7b)
-    (at 48.0317 -53.9986)
+    (at 353.3397 32.8694)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -8080,7 +8080,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp b30949cc-ec2e-4742-adf9-87f193a20007)
-    (at -79.98 -37.2)
+    (at 330.9981 114.073501)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -8134,7 +8134,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp b4823031-8e12-466f-bf70-6600d18b3e43)
-    (at 28.9317 -56.8886)
+    (at 334.2397 29.9794)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "Unpolarized capacitor")
@@ -8167,7 +8167,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp b4f355ce-812e-4f06-8a8a-96a6ead59366)
-    (at 48.0317 -60.6986)
+    (at 353.3397 26.1694)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -8221,7 +8221,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp b563dc4b-edfe-4349-8888-17392c5a3784)
-    (at 48.0317 -50.6486)
+    (at 353.3397 36.2194)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -8275,7 +8275,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp bdd8e1ea-0017-450c-815b-da34588e0795)
-    (at 133.59235 -32.3506)
+    (at 308.0639 155.8471)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -8329,7 +8329,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp c0f9eacc-543d-4e25-979f-e3e26c95bc77)
-    (at 53.6617 -64.1986)
+    (at 358.9697 22.6694)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -8383,7 +8383,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp c11c5163-52c3-46d5-bd69-ba870dd1cb56)
-    (at 53.6617 -70.7786)
+    (at 358.9697 16.0894)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -8437,7 +8437,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp c1e2d79a-3e47-4970-81d1-407c3215ad75)
-    (at 160.81235 -22.7706)
+    (at 335.2839 165.4271)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -8491,7 +8491,7 @@
 
   (footprint "Mechatronic Footprints:SOD123_DIO" (layer "F.Cu")
     (tstamp c3aeca9e-7c48-464e-8da5-645dcfcb8981)
-    (at -81.2142 -33.2498)
+    (at 329.7639 118.023701)
     (tags "BZT52C4V7-13-F ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -8591,7 +8591,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp c65b14ff-a8a1-49e7-bb6b-353f5d2a60c1)
-    (at 139.22235 -13.0806)
+    (at 313.6939 175.1171)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -8645,18 +8645,18 @@
 
   (footprint "Mechatronics Template:V0_PC100_Power_Board" (layer "F.Cu")
     (tstamp c8f44d30-d830-45c9-929a-b57f310c77c9)
-    (at 57.404 35.052)
+    (at 24.878 28.378)
     (property "Sheetfile" "rps01.kicad_sch")
     (property "Sheetname" "")
     (property "ki_description" "Generic connector, single row, 01x06, script generated")
     (property "ki_keywords" "connector")
     (path "/56ab22b9-cdd5-42ce-a3f6-b80471097a52")
     (attr through_hole)
-    (fp_text reference "J5" (at 0 -12.7 unlocked) (layer "F.SilkS")
+    (fp_text reference "J5" (at -0.254 -5.31 unlocked) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 64d41387-4fc0-4105-94e1-e3e97c08027b)
     )
-    (fp_text value "3x XT60 Template" (at 0 -11.2 unlocked) (layer "F.Fab")
+    (fp_text value "3x XT60 Template" (at -0.254 -3.81 unlocked) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp a8f8fd43-c2fc-4b15-b669-b24ca15dc75a)
     )
@@ -8680,7 +8680,7 @@
         (effects (font (size 3 3) (thickness 0.15)))
       (tstamp 74465d9c-7e6c-47b5-b27d-3a43db5b14dc)
     )
-    (fp_text user "XT60, +19V or VBATT and GND (OPTIONAL)" (at 202 71 unlocked) (layer "Cmts.User")
+    (fp_text user "XT60, VBATT and GND" (at 177.292 69.85 unlocked) (layer "Cmts.User")
         (effects (font (size 3 3) (thickness 0.15)))
       (tstamp 80b6a73c-2888-42f5-83ea-c140a2ecb621)
     )
@@ -8692,7 +8692,7 @@
         (effects (font (size 3 3) (thickness 0.15)))
       (tstamp eb3f30da-7fcd-46e2-ac30-44d33509c033)
     )
-    (fp_text user "${REFERENCE}" (at 0 -9.7 unlocked) (layer "F.Fab")
+    (fp_text user "${REFERENCE}" (at -0.254 -2.31 unlocked) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 118764d7-6c2d-40a2-b641-a74da0dd51f5)
     )
@@ -8876,7 +8876,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp cd2a1963-3175-4d12-aa67-ac7163633bf3)
-    (at 170.02735 -46.5006)
+    (at 344.4989 141.6971)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "Unpolarized capacitor")
@@ -8909,7 +8909,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp ce49786d-45c0-4c8c-9f07-6eaccf59dc56)
-    (at 139.22235 -26.2406)
+    (at 313.6939 161.9571)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -8963,7 +8963,7 @@
 
   (footprint "LED_SMD:LED_1206_3216Metric" (layer "F.Cu")
     (tstamp ceac93e2-93d9-4185-9f88-408a3a1a1f58)
-    (at 168.00235 -23.5206)
+    (at 342.4739 164.6771)
     (descr "LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -9021,7 +9021,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp d1a43114-3db7-4216-801e-56bc67976eab)
-    (at 48.0317 -47.2986)
+    (at 353.3397 39.5694)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -9075,7 +9075,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp d1edbd40-8d0d-4f3b-9fa0-142d180df41d)
-    (at -86.5006 13.781999)
+    (at 118.4634 110.485999)
     (descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x06 2.54mm single row")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -9147,7 +9147,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp d971bc94-6227-449b-81db-54bdb64197c3)
-    (at 48.0317 -57.3486)
+    (at 353.3397 29.5194)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -9201,7 +9201,7 @@
 
   (footprint "Mechatronics LTC3780:SSOP-24_G_LIT" (layer "F.Cu")
     (tstamp da3590eb-f177-4fc9-8982-0cc0ee23d58a)
-    (at 127 -23.368)
+    (at 348.8182 172.23232)
     (tags "LTC3780EG-TRPBF ")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
@@ -9544,7 +9544,7 @@
 
   (footprint "Mechatronics AMASS XT90 Vertical:AMASS_XT90-F_1x02_P11.00mm_Vertical" (layer "F.Cu")
     (tstamp dc1223d5-d2a0-423d-a3ae-d26fbedd1e02)
-    (at 74.11 78.996 -90)
+    (at 41.584 72.322 -90)
     (descr "AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf")
     (tags "XT90 female vertical")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -9614,7 +9614,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp dc6af93f-83b5-4ee1-b278-1757b2786d13)
-    (at -92.964 88.44)
+    (at 86.854 82.02)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -9668,7 +9668,7 @@
 
   (footprint "Resistor_SMD:R_2512_6332Metric" (layer "F.Cu")
     (tstamp ddf15c9d-a7a8-4159-8276-55dd0269289e)
-    (at 55.2017 -50.2386)
+    (at 360.5097 36.6294)
     (descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -9722,7 +9722,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp deca053d-c49e-47c7-a872-afbd986693bd)
-    (at -68.06 -53)
+    (at 342.9181 98.273501)
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
     (property "ki_description" "Unpolarized capacitor")
@@ -9755,7 +9755,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp def2037d-3bf2-4485-b4b0-09052efb10b0)
-    (at -106.29 -65.07)
+    (at 304.6881 86.203501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -9807,70 +9807,106 @@
     )
   )
 
-  (footprint "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" (layer "F.Cu")
+  (footprint "Connector_AMASS:AMASS_XT30PW-F_1x02_P2.50mm_Horizontal" (layer "F.Cu")
     (tstamp e0297fa5-0870-40e5-b11c-066eb1a60196)
-    (at -115.6625 -40.4)
-    (descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
-    (tags "XT60 female vertical")
+    (at 54.802 36.426)
+    (descr "Connector XT30 Horizontal PCB Female, https://www.tme.eu/en/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf")
+    (tags "RC Connector XT30")
     (property "Sheetfile" "rps01.kicad_sch")
     (property "Sheetname" "")
     (property "ki_description" "Generic connector, single row, 01x02, script generated")
     (property "ki_keywords" "connector")
     (path "/8044849b-ce76-4230-8793-e9486cc00b24")
     (attr through_hole)
-    (fp_text reference "J4" (at 3.6 -5.3 180) (layer "F.SilkS")
+    (fp_text reference "J4" (at 2.5 -15.5) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 0482c3c8-83d4-4a3d-92fb-19c4b9c283f2)
+      (tstamp bd096cd8-8e3b-4c60-9ab9-1d0cbc5500f4)
     )
-    (fp_text value "XT30PW Out Orin" (at 3.6 5.4) (layer "F.Fab")
+    (fp_text value "XT30PW Out Orin" (at 2.5 3.5) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp c3a9bfb1-afe0-428b-bb0f-6e9119df8f20)
+      (tstamp 010845d0-35eb-46a2-b8b7-57b5b7e3c2c9)
     )
-    (fp_text user "${REFERENCE}" (at 3.6 0.05) (layer "F.Fab")
+    (fp_text user "-" (at -3 0) (layer "F.SilkS")
+        (effects (font (size 1.5 1.5) (thickness 0.15)))
+      (tstamp 89c071d4-8cb0-4bd4-ac7e-c0b8e86cdb8f)
+    )
+    (fp_text user "+" (at 8 0) (layer "F.SilkS")
+        (effects (font (size 1.5 1.5) (thickness 0.15)))
+      (tstamp b52b088b-1898-45c6-abfa-58025ad4d492)
+    )
+    (fp_text user "${REFERENCE}" (at 2.5 -3) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp e70c58f2-102a-4bfc-a42c-310d0d93554e)
+      (tstamp 177c9a43-4859-40bc-abb6-36c95e94e5de)
     )
-    (fp_line (start -4.25 -1.6) (end -4.25 1.55)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 2d9ec031-005a-4495-b77a-baa393847f9b))
-    (fp_line (start -4.25 1.55) (end -1.4 4.15)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 1766573b-84ea-4bf4-9adc-a5e6c20d7f37))
-    (fp_line (start -1.4 -4.15) (end -4.25 -1.6)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp c2e381dc-8115-4821-8830-afda66e2d78c))
-    (fp_line (start -1.4 4.15) (end 11.45 4.15)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp f9bfff5a-8eff-4176-9230-9f2ec2e85e44))
-    (fp_line (start 11.45 -4.15) (end -1.4 -4.15)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp b11f311d-bd9b-40c9-96a5-045e99a870f3))
-    (fp_line (start 11.45 4.15) (end 11.45 -4.15)
-      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp bcb2644b-1bf9-4fc5-86f8-cd8d3e194d4e))
-    (fp_line (start -4.65 -1.85) (end -1.6 -4.6)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 85050c99-d1ce-4624-8809-b82c154be619))
-    (fp_line (start -4.65 1.85) (end -4.65 -1.85)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 086cb7a2-c07a-476f-aeee-fc6ec6ac4c3d))
-    (fp_line (start -1.6 -4.6) (end 11.85 -4.6)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp ab669f2a-78ab-4d41-9eb3-0db3a9571eaa))
-    (fp_line (start -1.6 4.6) (end -4.65 1.85)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp f3f41ae3-6399-451f-9f08-1523807448c5))
-    (fp_line (start 11.85 -4.6) (end 11.85 4.6)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 2ebafe11-3edd-4ba1-a8f9-e2de6904c4b7))
-    (fp_line (start 11.85 4.6) (end -1.6 4.6)
-      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp d18c92c8-cb33-4263-8967-1f8ae0c3c54f))
-    (fp_line (start -4.15 -1.55) (end -4.15 1.55)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 7f1a1b8b-6d9c-45b8-af82-391d8f5a2a99))
-    (fp_line (start -4.15 1.55) (end -1.4 4.05)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 32a6d8f0-593c-4f3e-a4a0-14047d8486a1))
-    (fp_line (start -1.4 -4.05) (end -4.15 -1.55)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 0181ba04-7ca1-4f75-8877-385638c58304))
-    (fp_line (start -1.4 4.05) (end 11.35 4.05)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 4b839b0c-e2ea-4f99-ae15-a51fde5d8248))
-    (fp_line (start 11.35 -4.05) (end -1.4 -4.05)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 537db686-77c8-4637-bbc2-0f27433b697b))
-    (fp_line (start 11.35 4.05) (end 11.35 -4.05)
-      (stroke (width 0.12) (type solid)) (layer "F.Fab") (tstamp 9ba4d198-687b-4ee4-902b-814235361c6d))
-    (pad "1" thru_hole roundrect (at 0 0) (size 6 6) (drill 4.5) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25)
-      (net 6 "/19V Boost/Vout") (pinfunction "Pin_1") (pintype "passive") (tstamp 5761f154-7787-4b3d-9a28-302eadfdc305))
-    (pad "2" thru_hole circle (at 7.2 0) (size 6 6) (drill 4.5) (layers "*.Cu" "*.Mask")
-      (net 2 "GND") (pinfunction "Pin_2") (pintype "passive") (tstamp 928b7f4f-55ee-4c5c-bef3-3a9302f8a003))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl"
+    (fp_line (start -3.26 -6.11) (end -2.56 -6.11)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp dbbdbad4-1537-4f72-a118-1677427a2aa1))
+    (fp_line (start -3.26 -3.89) (end 8.26 -3.89)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp d288ba2b-0b99-4c15-a50a-1d6af3ad3719))
+    (fp_line (start -2.56 -8.16) (end -2.56 -6.11)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 8c02aa97-6c5e-4f81-82b0-a0c5cb84bfac))
+    (fp_line (start -2.56 -8.16) (end -2.03 -8.16)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 0632cfee-e2da-46a2-b6c0-26e031722c54))
+    (fp_line (start -2.03 -14.16) (end -2.03 -8.16)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp b0924322-0036-47c1-9be0-e5625b6f37b7))
+    (fp_line (start -2.03 -14.16) (end 7 -14.16)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp c1207fe9-4b15-4804-8b57-f6115f41187a))
+    (fp_line (start 7.03 -14.16) (end 7.03 -8.16)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp b38aa10e-0539-4079-ba32-1535b7d38094))
+    (fp_line (start 7.03 -8.16) (end 7.56 -8.16)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp ccda99e6-9f1d-43ff-9ae6-83f4d52554a6))
+    (fp_line (start 7.56 -8.16) (end 7.56 -6.11)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 6e7038ca-6425-45e5-b06c-505fc491daf1))
+    (fp_line (start 7.56 -6.11) (end 8.26 -6.11)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 5876779f-f32b-4a90-acd9-b1a6ba21f4e5))
+    (fp_arc (start -3.321729 -3.903365) (mid -4.256653 -5.086124) (end -3.15 -6.11)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp ecd74f47-a59e-43c8-bf0f-13a66c6358ea))
+    (fp_arc (start 8.15 -6.11) (mid 9.26 -5) (end 8.15 -3.89)
+      (stroke (width 0.12) (type solid)) (layer "F.SilkS") (tstamp 665921bd-6657-4aab-8eae-773bda9be20b))
+    (fp_line (start -4.65 -8.55) (end -4.65 2.25)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 1d103a14-cad5-4828-b6f4-71c3b6a49be5))
+    (fp_line (start -4.65 -8.55) (end -2.42 -8.55)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 0b3a9201-6b42-4167-82f2-fdb6d725bbe6))
+    (fp_line (start -4.65 2.25) (end 9.65 2.25)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp b96c72e9-126b-4a39-a303-7eaeb71c4b55))
+    (fp_line (start -2.42 -14.55) (end -2.42 -8.55)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 93566632-92d9-4b23-b531-58c3c21a95da))
+    (fp_line (start -2.42 -14.55) (end 7.42 -14.55)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp a542630c-4f86-403f-a36d-6375e4d496d4))
+    (fp_line (start 7.42 -14.55) (end 7.42 -8.55)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp d5237feb-a9bc-499e-bec7-74ac77037f93))
+    (fp_line (start 7.42 -8.55) (end 9.65 -8.55)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp b775c00f-1ff2-4066-8390-438ea08e7749))
+    (fp_line (start 9.65 -8.55) (end 9.65 2.25)
+      (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 14392037-ce2a-4c12-96a7-a7f4dbf6444d))
+    (fp_line (start -3.15 -6) (end -2.45 -6)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp dde3518a-c760-46af-83f0-a32b0a1dad0b))
+    (fp_line (start -3.15 -4) (end 8.15 -4)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp e67eac22-bf88-4684-a88d-8e86aba9d5e4))
+    (fp_line (start -2.45 -8.05) (end -2.45 -6)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 85268237-5bc0-4eb4-b03e-aa927218b1e0))
+    (fp_line (start -2.45 -8.05) (end 7.45 -8.05)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 54fc59c9-6846-4d85-beeb-4199b54281e4))
+    (fp_line (start -1.92 -14.05) (end -1.92 -8.05)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 244f01be-c580-42c8-b7f9-e6470dfb31f8))
+    (fp_line (start -1.92 -14.05) (end 6.92 -14.05)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 04a6f752-f7c8-481e-836e-bbe7d4f0baf3))
+    (fp_line (start 6.92 -14.05) (end 6.92 -8.05)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp bde7dd9c-fe4b-4473-9615-08513191ce8e))
+    (fp_line (start 7.45 -8.05) (end 7.45 -6.05)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp f37f79f2-83ff-4a53-9adc-490b324012a1))
+    (fp_line (start 7.45 -6) (end 8.15 -6)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp b1bea0c6-3afa-46e7-9d13-6ab68fa7a362))
+    (fp_arc (start -3.15 -4) (mid -4.15 -5) (end -3.15 -6)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 7428cd33-1e78-46fa-9210-dad2615f7ff0))
+    (fp_arc (start 8.15 -6) (mid 9.15 -5) (end 8.15 -4)
+      (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 7da5171a-21af-48b6-8599-d55f4a13024f))
+    (pad "" thru_hole circle (at -3 -5 90) (size 1.4 1.4) (drill 1) (layers "*.Cu" "*.Mask") (tstamp de58b8f8-47b9-42c1-ba04-a9e39470af32))
+    (pad "" thru_hole circle (at 8 -5) (size 1.4 1.4) (drill 1) (layers "*.Cu" "*.Mask") (tstamp e6fd0364-2eef-41ae-8918-2f250f249468))
+    (pad "1" thru_hole rect (at 0 0) (size 3.5 3.5) (drill 1.9) (layers "*.Cu" "*.Mask")
+      (net 6 "/19V Boost/Vout") (pinfunction "Pin_1") (pintype "passive") (tstamp 9c2b09d7-b06a-4baa-a599-f56704656729))
+    (pad "2" thru_hole circle (at 5 0) (size 3.5 3.5) (drill 1.9) (layers "*.Cu" "*.Mask")
+      (net 2 "GND") (pinfunction "Pin_2") (pintype "passive") (tstamp fa39db5e-e6ac-494f-8b7e-4201868ca8e9))
+    (model "${KICAD6_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT30PW-F_1x02_P2.50mm_Horizontal.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -9879,7 +9915,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp e1d81764-398c-4d05-8e95-b03f48db40ce)
-    (at -79.9356 13.781999)
+    (at 125.0284 110.485999)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -9933,7 +9969,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp e8b0e950-64b5-4286-930b-444d71ebae2e)
-    (at -98.594 83.6)
+    (at 81.224 77.18)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Current_Sense.kicad_sch")
@@ -9987,7 +10023,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp ea59dfdc-7d5e-4bfd-becf-b223d7e2aeee)
-    (at -106.29 -68.42)
+    (at 304.6881 82.853501)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -10041,7 +10077,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp ebeaf900-27bd-4653-8c3e-d832a7a0c93d)
-    (at 133.59235 -59.1506)
+    (at 308.0639 129.0471)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
@@ -10095,7 +10131,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp ed28d050-ea24-4771-8672-3134505167c9)
-    (at 53.6617 -67.4886)
+    (at 358.9697 19.3794)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -10149,7 +10185,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp ed71b7d1-1352-45ff-b625-a5a81ac8d2b3)
-    (at 28.9317 -66.4386)
+    (at 334.2397 20.4294)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "Polarized capacitor")
@@ -10182,7 +10218,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp ee70a900-a922-4f0f-b56a-8a8abc9bd2cb)
-    (at 36.7017 -54.2386)
+    (at 342.0097 32.6294)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -10323,7 +10359,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp ef93127e-6ff0-43f9-8fc0-e870872c1eac)
-    (at 53.6617 -54.3286)
+    (at 358.9697 32.5394)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -10377,7 +10413,7 @@
 
   (footprint "Mechatronic Footprints:LargeCAPSCAPPRD350W60D800H1200" (layer "F.Cu")
     (tstamp f0727a72-2400-493a-b760-7729815b077b)
-    (at 28.9317 -47.3386)
+    (at 334.2397 39.5294)
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
     (property "ki_description" "Unpolarized capacitor")
@@ -10410,7 +10446,7 @@
 
   (footprint "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (layer "F.Cu")
     (tstamp f1786c84-4025-470b-85a5-4871411d6569)
-    (at -88.0968 -48.2043)
+    (at 322.8813 103.069201)
     (tags "B340AE-13 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -10537,10 +10573,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -49.614)
-          (xy -85.3536 -49.614)
-          (xy -85.3536 -49.0679)
-          (xy -90.84 -49.0679)
+          (xy 320.1381 101.659501)
+          (xy 325.6245 101.659501)
+          (xy 325.6245 102.205601)
+          (xy 320.1381 102.205601)
         )
       )
     )
@@ -10551,10 +10587,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -90.84 -47.3407)
-          (xy -85.3536 -47.3407)
-          (xy -85.3536 -46.7946)
-          (xy -90.84 -46.7946)
+          (xy 320.1381 103.932801)
+          (xy 325.6245 103.932801)
+          (xy 325.6245 104.478901)
+          (xy 320.1381 104.478901)
         )
       )
     )
@@ -10565,10 +10601,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy -88.808 -49.0679)
-          (xy -87.3856 -49.0679)
-          (xy -87.3856 -47.3407)
-          (xy -88.808 -47.3407)
+          (xy 322.1701 102.205601)
+          (xy 323.5925 102.205601)
+          (xy 323.5925 103.932801)
+          (xy 322.1701 103.932801)
         )
       )
     )
@@ -10576,7 +10612,7 @@
 
   (footprint "Mechatronic Footprints:Q1Q2TRANS_FDMC86520L" (layer "F.Cu")
     (tstamp f1fe0e0f-40d7-4595-9a62-4818c2e2923d)
-    (at 145.02735 -19.0506)
+    (at 319.4989 169.1471)
     (property "Sheetfile" "12V_Buck_Boost.kicad_sch")
     (property "Sheetname" "12V Buck Boost")
     (property "ki_description" "N-MOSFET transistor, drain/gate/source")
@@ -10717,7 +10753,7 @@
 
   (footprint "Mechatronic Footprints:IND_410680_WRE" (layer "F.Cu")
     (tstamp f68fb351-d1eb-4a1c-a5ee-7336632dcffb)
-    (at -85.8327 -65.3194)
+    (at 325.1454 85.954101)
     (tags "74436410680 ")
     (property "Sheetfile" "19V_Boost.kicad_sch")
     (property "Sheetname" "19V Boost")
@@ -10827,7 +10863,7 @@
 
   (footprint "Mechatronic Footprints:SOD123_DIO" (layer "F.Cu")
     (tstamp facb2997-7520-48a1-a9ea-940dc80a7e37)
-    (at 7.3525 -34.0984)
+    (at 312.6605 52.7696)
     (tags "BZT52C4V7-13-F ")
     (property "Sheetfile" "5V_Buck.kicad_sch")
     (property "Sheetname" "5V Buck")
@@ -10927,7 +10963,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp fae1944d-dbb1-49bb-be3a-05fcd96e0a95)
-    (at -72.5 -75.21)
+    (at 338.4781 76.063501)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "19V_Boost.kicad_sch")
@@ -10981,7 +11017,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp fc062fd4-345c-4dac-853b-c61437c33b34)
-    (at 48.0317 -70.7486)
+    (at 353.3397 16.1194)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "5V_Buck.kicad_sch")
@@ -11035,7 +11071,7 @@
 
   (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm" (layer "F.Cu")
     (tstamp fe13f742-5f9f-467a-85ef-9c617cac8e73)
-    (at -111.8906 14.221999)
+    (at 93.0734 110.925999)
     (descr "32-Lead Plastic Thin Quad Flatpack (PT) - 7x7x1.0 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "QFP 0.8")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -11165,7 +11201,7 @@
 
   (footprint "Mechatronics LTC3780:PRSS0004AL-A_REN" (layer "B.Cu")
     (tstamp 05ebd375-f6dd-4e28-a93a-12ca229d52a3)
-    (at 87.0242 70.75 -90)
+    (at 54.4982 64.076 -90)
     (tags "NP100P04PLG-E1-AY ")
     (property "Sheetfile" "Load_Sharing.kicad_sch")
     (property "Sheetname" "Load Sharing")
@@ -11290,7 +11326,7 @@
 
   (footprint "Mechatronics LTC3780:PRSS0004AL-A_REN" (layer "B.Cu")
     (tstamp 28d9798a-ebda-4d02-bd08-26482f89d6ee)
-    (at 87.0242 59.77 -90)
+    (at 54.4982 53.096 -90)
     (tags "NP100P04PLG-E1-AY ")
     (property "Sheetfile" "Load_Sharing.kicad_sch")
     (property "Sheetname" "Load Sharing")
@@ -11415,7 +11451,7 @@
 
   (footprint "Mechatronics LTC3780:PRSS0004AL-A_REN" (layer "B.Cu")
     (tstamp 5291e4d3-369d-441c-9310-374d1670f221)
-    (at 87.0242 97.87 -90)
+    (at 54.4982 91.196 -90)
     (tags "NP100P04PLG-E1-AY ")
     (property "Sheetfile" "Load_Sharing.kicad_sch")
     (property "Sheetname" "Load Sharing")
@@ -11540,7 +11576,7 @@
 
   (footprint "Mechatronics LTC3780:PRSS0004AL-A_REN" (layer "B.Cu")
     (tstamp ccc90cca-19f5-45d2-bf24-b898a0c85618)
-    (at 87.0242 110.75 -90)
+    (at 54.4982 104.076 -90)
     (tags "NP100P04PLG-E1-AY ")
     (property "Sheetfile" "Load_Sharing.kicad_sch")
     (property "Sheetname" "Load Sharing")
@@ -11663,7 +11699,7 @@
       (net 26 "/Load Sharing/V2") (pinfunction "FIN") (pintype "bidirectional") (tstamp 44b7c028-5147-4dbe-a7d7-66034bbd863e))
   )
 
-  (image (at 281.94 -76.2) (layer "Edge.Cuts")
+  (image (at 32.83 171.888) (layer "Edge.Cuts") (scale 0.0799404)
     (data
       iVBORw0KGgoAAAANSUhEUgAAA7gAAAOCCAIAAADSuunHAAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
       AB1MAAAdTAHcxBGXAAAgAElEQVR4nOy9d9xlVX3v//6utfbe5zxtZhgGEJFeFTtYsOvPFmNMbFGv
@@ -29848,7 +29884,7 @@
       Q5fCAAAAAElFTkSuQmCC
     )
   )
-  (image (at 172.72 -119.38) (layer "Edge.Cuts")
+  (image (at 60.452 172.974) (layer "Edge.Cuts") (scale 0.218089)
     (data
       iVBORw0KGgoAAAANSUhEUgAAAboAAAKWCAIAAACwE8sCAAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
       AB1MAAAdTAHcxBGXAAAgAElEQVR4nOydd7xtVXXvv2POudbe+5xbuPR6UWkiRUBAFFFsGLsiYsOS
@@ -33896,7 +33932,7 @@
       cNHlhQsXLnwTLrq8cOHChW/CRZcXLly48E34P90nnvQwH4JhAAAAAElFTkSuQmCC
     )
   )
-  (image (at 104.14 -104.14) (layer "Edge.Cuts")
+  (image (at 99.822 171.196) (layer "Edge.Cuts") (scale 0.158798)
     (data
       iVBORw0KGgoAAAANSUhEUgAAAXAAAAGMCAIAAABMK24KAAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
       AB1MAAAdTAHcxBGXAAAgAElEQVR4nOydeZidVZH/q84573pv39tL9o0sBJAlIYQ4UQmLCso2wDg/
@@ -34832,48 +34868,10 @@
       hfO9AAAAAElFTkSuQmCC
     )
   )
-  (gr_text "5V Buck" (at 47.3117 -75.3986) (layer "F.SilkS") (tstamp 35f54b12-9295-4ea3-8d63-4debad2ea3d2)
+  (gr_text "5V Buck" (at 352.6197 11.4694) (layer "F.SilkS") (tstamp 35f54b12-9295-4ea3-8d63-4debad2ea3d2)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
 
-  (group "" (id 17ba83c0-54d5-493a-bcbc-2684f4849def)
-    (members
-      0988d44a-b6c9-418b-9064-deee93f2ca68
-      1230451e-6a8d-4bae-abb5-b55368c94d50
-      1cd96446-aa41-48a9-9f17-76b1197986a9
-      1ee6fb7c-ef3f-4254-9e9e-02293e7f3072
-      3018d2c0-dbda-40c4-931d-fe23a1f6fd2f
-      344f5315-5463-468b-b775-ebb91186a968
-      3ab571cd-b5d8-49a1-ae1f-d907e7756f3b
-      402bc578-6966-4992-a62d-af322fb94910
-      48f462c4-bba7-469f-b0f9-b4fb728d8b00
-      4cb36f3f-21a4-453b-b107-33e973eb7f26
-      50b38009-1010-4a51-a0ef-69db6a7e8be4
-      529b00c9-9034-4146-98cf-daf9c258ffae
-      5c66b253-271a-447f-959c-245faed2dc3d
-      62dce682-f80d-4fb9-a5ca-02336450c79c
-      67c9419d-fd06-42ed-a935-f474cca944db
-      7bd84067-e021-491f-b83c-cd7914fe4f9d
-      856751cf-881d-4ff3-b9f5-e933e368e64f
-      888919af-da7d-4375-ac93-ec7e29100c09
-      897b7f01-bc6a-4785-85e9-98dbf1831c3f
-      8ca3ae7f-f65b-4f2c-9c94-f2decc5b1423
-      8febc318-26de-4287-a263-f8f1c49891f2
-      96f96999-05f6-471b-8da1-a0a2c36a8680
-      9e740db4-56a3-4579-9751-01e02a298e24
-      ae63bc40-8d2e-43f8-81d9-1dfc1762fc75
-      af216b08-a06b-4936-a435-4586830b0c73
-      b30949cc-ec2e-4742-adf9-87f193a20007
-      c3aeca9e-7c48-464e-8da5-645dcfcb8981
-      deca053d-c49e-47c7-a872-afbd986693bd
-      def2037d-3bf2-4485-b4b0-09052efb10b0
-      e0297fa5-0870-40e5-b11c-066eb1a60196
-      ea59dfdc-7d5e-4bfd-becf-b223d7e2aeee
-      f1786c84-4025-470b-85a5-4871411d6569
-      f68fb351-d1eb-4a1c-a5ee-7336632dcffb
-      fae1944d-dbb1-49bb-be3a-05fcd96e0a95
-    )
-  )
   (group "" (id 4ec474f6-088c-466a-8c30-34237b1b961b)
     (members
       0bf6cdc2-0b00-4aa6-a42d-77d694592a1d
@@ -34910,6 +34908,49 @@
       f1fe0e0f-40d7-4595-9a62-4818c2e2923d
     )
   )
+  (group "" (id 54943ecb-9a3f-4152-b730-95585346f0e7)
+    (members
+      0988d44a-b6c9-418b-9064-deee93f2ca68
+      1230451e-6a8d-4bae-abb5-b55368c94d50
+      1cd96446-aa41-48a9-9f17-76b1197986a9
+      1ee6fb7c-ef3f-4254-9e9e-02293e7f3072
+      3018d2c0-dbda-40c4-931d-fe23a1f6fd2f
+      344f5315-5463-468b-b775-ebb91186a968
+      3ab571cd-b5d8-49a1-ae1f-d907e7756f3b
+      402bc578-6966-4992-a62d-af322fb94910
+      48f462c4-bba7-469f-b0f9-b4fb728d8b00
+      4cb36f3f-21a4-453b-b107-33e973eb7f26
+      50b38009-1010-4a51-a0ef-69db6a7e8be4
+      529b00c9-9034-4146-98cf-daf9c258ffae
+      5c66b253-271a-447f-959c-245faed2dc3d
+      62dce682-f80d-4fb9-a5ca-02336450c79c
+      67c9419d-fd06-42ed-a935-f474cca944db
+      7bd84067-e021-491f-b83c-cd7914fe4f9d
+      856751cf-881d-4ff3-b9f5-e933e368e64f
+      888919af-da7d-4375-ac93-ec7e29100c09
+      897b7f01-bc6a-4785-85e9-98dbf1831c3f
+      8ca3ae7f-f65b-4f2c-9c94-f2decc5b1423
+      8febc318-26de-4287-a263-f8f1c49891f2
+      96f96999-05f6-471b-8da1-a0a2c36a8680
+      9e740db4-56a3-4579-9751-01e02a298e24
+      ae63bc40-8d2e-43f8-81d9-1dfc1762fc75
+      af216b08-a06b-4936-a435-4586830b0c73
+      b30949cc-ec2e-4742-adf9-87f193a20007
+      c3aeca9e-7c48-464e-8da5-645dcfcb8981
+      deca053d-c49e-47c7-a872-afbd986693bd
+      def2037d-3bf2-4485-b4b0-09052efb10b0
+      ea59dfdc-7d5e-4bfd-becf-b223d7e2aeee
+      f1786c84-4025-470b-85a5-4871411d6569
+      f68fb351-d1eb-4a1c-a5ee-7336632dcffb
+      fae1944d-dbb1-49bb-be3a-05fcd96e0a95
+    )
+  )
+  (group "" (id 71511ef3-1145-43d8-a659-0344e1217b0b)
+    (members
+      4ec474f6-088c-466a-8c30-34237b1b961b
+      da3590eb-f177-4fc9-8982-0cc0ee23d58a
+    )
+  )
   (group "" (id 7e1dc820-571a-4be4-ba05-6307da9fbe52)
     (members
       079a6364-2ccf-43e3-b76a-d97795ee32a6
@@ -34934,18 +34975,6 @@
       d1edbd40-8d0d-4f3b-9fa0-142d180df41d
       e1d81764-398c-4d05-8e95-b03f48db40ce
       fe13f742-5f9f-467a-85ef-9c617cac8e73
-    )
-  )
-  (group "" (id 912a6c06-d251-445e-8f2a-0890d616dba2)
-    (members
-      01264319-f5d5-4f00-9bde-b638ee886b5f
-      05ebd375-f6dd-4e28-a93a-12ca229d52a3
-      28d9798a-ebda-4d02-bd08-26482f89d6ee
-      51546e98-b052-42a0-9b0c-9339b8582133
-      5291e4d3-369d-441c-9310-374d1670f221
-      66dc0d52-61c4-4892-93c6-9b249bacd4f2
-      ccc90cca-19f5-45d2-bf24-b898a0c85618
-      dc1223d5-d2a0-423d-a3ae-d26fbedd1e02
     )
   )
   (group "" (id 2a097bd2-dc8e-4805-9dd9-4598c1db30fa)
@@ -34988,6 +35017,12 @@
       ee70a900-a922-4f0f-b56a-8a8abc9bd2cb
       f0727a72-2400-493a-b760-7729815b077b
       facb2997-7520-48a1-a9ea-940dc80a7e37
+    )
+  )
+  (group "" (id a7b03de4-c8cf-4e8f-a996-5d242b3e824e)
+    (members
+      35744208-c697-4350-b8d4-2523776b6069
+      974320c0-a730-4fb2-b799-9e023d8b2f79
     )
   )
 )
