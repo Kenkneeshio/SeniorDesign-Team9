@@ -1,6 +1,7 @@
 # ignore all .a files
 *.raw
 *.zip #enable lol
+*.tmp
 #auto_saved_files#
 _autosave-Load_Sharing.kicad_sch
 *autosave*
