@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 6.0,
-          "height": 7.6,
-          "width": 7.6
+          "drill": 3.9,
+          "height": 5.25,
+          "width": 5.25
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -428,7 +428,24 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "+BATT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/12V Buck Boost/Vout"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/5V Buck/Vout"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
