@@ -5,7 +5,15 @@
 #auto_saved_files#
 _autosave-Load_Sharing.kicad_sch
 *autosave*
+<<<<<<< Updated upstream
 *.zip
 *.zip
 *.zip
+*.zip
+=======
+KiCad/RPS01/\#auto_saved_files\#
+KiCad/RPS01/\#auto_saved_files\#
+>>>>>>> Stashed changes
+*.zip
+KiCad/RPS01/\#auto_saved_files\#
 *.zip
