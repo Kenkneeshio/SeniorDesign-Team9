@@ -1,18 +1,4 @@
-21591244605650741
-AMASS XT90 Vertical
-AMASS_XT90-F_1x02_P11.00mm_Vertical
-AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 female vertical
-0
-2
-2
-AMASS XT90 Vertical
-AMASS_XT90-M_1x02_P11.00mm_Vertical
-AMASS male XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 male vertical
-0
-2
-2
+21618132137810037
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -60731,6 +60717,202 @@ Yellow 5381 Series LED
 0
 2
 2
+Mechatronics AMASS XT60-XT30
+AMASS_MR30PW-FB_1x03_P3.50mm_Horizontal
+Connector XT30 Horizontal PCB Female, https://www.tme.eu/en/Document/5e47640ba39fa492dbd4c0f4c8ae7b93/MR30PW%20SPEC.pdf
+RC Connector XT30
+0
+5
+3
+Mechatronics AMASS XT60-XT30
+AMASS_MR30PW-M_1x03_P3.50mm_Horizontal
+Connector XT30 Horizontal PCB Male, https://www.tme.eu/en/Document/5e47640ba39fa492dbd4c0f4c8ae7b93/MR30PW%20SPEC.pdf
+RC Connector XT30
+0
+5
+3
+Mechatronics AMASS XT60-XT30
+AMASS_XT30PW-F_1x02_P2.50mm_Horizontal
+Connector XT30 Horizontal PCB Female, https://www.tme.eu/en/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf
+RC Connector XT30
+0
+4
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT30PW-M_1x02_P2.50mm_Horizontal
+Connector XT30 Horizontal PCB Male, https://www.tme.eu/en/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf
+RC Connector XT30
+0
+4
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT30U-F_1x02_P5.0mm_Vertical
+Connector XT30 Vertical Cable Female, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT30U-M_1x02_P5.0mm_Vertical
+Connector XT30 Vertical Cable Male, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT30UPB-F_1x02_P5.0mm_Vertical
+Connector XT30 Vertical PCB Female, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT30UPB-M_1x02_P5.0mm_Vertical
+Connector XT30 Vertical PCB Male, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT60-F_1x02_P7.20mm_Vertical
+AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
+XT60 female vertical
+0
+2
+2
+Mechatronics AMASS XT60-XT30
+AMASS_XT60-M_1x02_P7.20mm_Vertical
+AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
+XT60 female vertical
+0
+2
+2
+Mechatronics AMASS XT90 Vertical
+AMASS_XT90-F_1x02_P11.00mm_Vertical
+AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
+XT90 female vertical
+0
+2
+2
+Mechatronics AMASS XT90 Vertical
+AMASS_XT90-M_1x02_P11.00mm_Vertical
+AMASS male XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
+XT90 male vertical
+0
+2
+2
+Mechatronics INA139
+PW8
+
+INA139QPWRQ1 
+0
+8
+8
+Mechatronics INA139
+PW8-L
+
+INA139QPWRQ1 
+0
+8
+8
+Mechatronics INA139
+PW8-M
+
+INA139QPWRQ1 
+0
+8
+8
+Mechatronics LTC3780
+AMASS_XT90-F_1x02_P11.00mm_Vertical
+AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
+XT90 female vertical
+0
+2
+2
+Mechatronics LTC3780
+CR_SMA_320-340AE_DIO
+
+B340AE-13 
+0
+2
+2
+Mechatronics LTC3780
+IND_410680_WRE
+
+74436410680 
+0
+2
+2
+Mechatronics LTC3780
+LOWESRCAPMP7.6X4.3_3.1N_KEM
+
+T521D475M063ATE075 
+0
+2
+2
+Mechatronics LTC3780
+LargeCAPSCAPPRD350W60D800H1200
+
+
+0
+2
+2
+Mechatronics LTC3780
+MSOP-10_MS_LIT
+
+LTC4416EMS-1-TRPBF 
+0
+10
+10
+Mechatronics LTC3780
+PRSS0004AL-A_REN
+
+NP100P04PLG-E1-AY 
+0
+4
+4
+Mechatronics LTC3780
+Q1Q2TRANS_FDMC86520L
+
+
+0
+5
+5
+Mechatronics LTC3780
+SOD123_DIO
+
+BZT52C4V7-13-F 
+0
+2
+2
+Mechatronics LTC3780
+SSOP-24_G_LIT
+
+LTC3780EG-TRPBF 
+0
+24
+24
+Mechatronics LTC4416
+MSOP-10_MS_LIT
+
+LTC4416EMS-1-TRPBF 
+0
+10
+10
+Mechatronics LTC4416
+MSOP-10_MS_LIT-L
+
+LTC4416EMS-1-TRPBF 
+0
+10
+10
+Mechatronics LTC4416
+MSOP-10_MS_LIT-M
+
+LTC4416EMS-1-TRPBF 
+0
+10
+10
 Mechatronics Template
 EMBEDDED_BACKPLANE_V0x8
 
@@ -90096,73 +90278,3 @@ varistor
 0
 2
 2
-footprints
-AMASS_XT90-F_1x02_P11.00mm_Vertical
-AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 female vertical
-0
-2
-2
-footprints
-CR_SMA_320-340AE_DIO
-
-B340AE-13 
-0
-2
-2
-footprints
-IND_410680_WRE
-
-74436410680 
-0
-2
-2
-footprints
-LOWESRCAPMP7.6X4.3_3.1N_KEM
-
-T521D475M063ATE075 
-0
-2
-2
-footprints
-LargeCAPSCAPPRD350W60D800H1200
-
-
-0
-2
-2
-footprints
-MSOP-10_MS_LIT
-
-LTC4416EMS-1-TRPBF 
-0
-10
-10
-footprints
-PRSS0004AL-A_REN
-
-NP100P04PLG-E1-AY 
-0
-4
-4
-footprints
-Q1Q2TRANS_FDMC86520L
-
-
-0
-5
-5
-footprints
-SOD123_DIO
-
-BZT52C4V7-13-F 
-0
-2
-2
-footprints
-SSOP-24_G_LIT
-
-LTC3780EG-TRPBF 
-0
-24
-24
