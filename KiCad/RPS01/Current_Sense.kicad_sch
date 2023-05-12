@@ -4253,7 +4253,7 @@
     (property "Value" "INA139NA/250" (at 75.692 67.437 90)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Footprint" "INA139:PW8" (at 62.738 65.532 0)
+    (property "Footprint" "Mechatronics INA139:PW8" (at 62.738 65.532 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (at 64.262 65.532 0)
