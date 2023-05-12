@@ -520,6 +520,7 @@
     )
   )
 
+
   (junction (at 157.988 112.776) (diameter 0) (color 0 0 0 0)
     (uuid 1e726980-3e17-430c-8c54-48b604606844)
   )
@@ -8720,6 +8721,10 @@
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 2e98bc1a-6f48-46de-9d18-abd524d32c67)
   )
+  (text "Do not use +5V Label\n" (at 231.9782 122.047 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid fb42cd7c-e4bd-4f98-9241-a256125072de)
+  )
 
   (symbol (lib_id "power:GND") (at 104.14 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
@@ -8854,10 +8859,10 @@
   (symbol (lib_id "5V_500mA_Reg:MCP1755T-5002E_OT") (at 33.02 125.984 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 58efd724-268c-406c-be08-c0e3d4f54fa5)
-    (property "Reference" "U9" (at 63.5 116.586 0)
+    (property "Reference" "U9" (at 63.5 116.84 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Value" "MCP1755T-5002E/OT" (at 63.5 119.126 0)
+    (property "Value" "5V_500MA_REG" (at 63.5 119.38 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Footprint" "Mechatronics 5VReg:SOT-23-5_MC_MCH" (at 33.02 125.984 0)
