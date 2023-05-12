@@ -296,7 +296,6 @@
     )
   )
 
-
   (junction (at 182.88 104.14) (diameter 0) (color 0 0 0 0)
     (uuid 1b37b9c6-4fff-4eab-b2da-a0eab1d2189f)
   )
@@ -7486,7 +7485,7 @@
     (property "Value" "LTC4416EMS-1-TRPBF" (at 91.44 95.4786 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "Mechatronic Footprints:MSOP-10_MS_LIT" (at 91.44 119.38 0)
+    (property "Footprint" "LTC4416:MSOP-10_MS_LIT" (at 91.44 119.38 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "LTC4416EMS-1-TRPBF" (at 91.44 91.44 0)

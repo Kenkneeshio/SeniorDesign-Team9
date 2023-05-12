@@ -1,4 +1,4 @@
-21587880273211234
+21591244605650741
 AMASS XT90 Vertical
 AMASS_XT90-F_1x02_P11.00mm_Vertical
 AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
@@ -60731,6 +60731,20 @@ Yellow 5381 Series LED
 0
 2
 2
+Mechatronics Template
+EMBEDDED_BACKPLANE_V0x8
+
+
+0
+0
+0
+Mechatronics Template
+V0_PC100_Power_Board
+
+
+0
+6
+4
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
