@@ -11942,7 +11942,7 @@
     (property "Value" "LTC3780EG-TRPBF" (at 137.7442 85.6234 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "Mechatronics LTC3780:SSOP-24_G_LIT" (at 111.0742 89.4334 0)
+    (property "Footprint" "Mechatronic Footprints:LTC3780_SSOP-24_G_LIT" (at 111.0742 89.4334 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "LTC3780EG-TRPBF" (at 112.3442 85.6234 0)
