@@ -4184,7 +4184,7 @@
   (symbol (lib_id "Device:R") (at 62.23 38.1 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad2778e1-42f5-4389-add4-3473c58c966b)
-    (property "Reference" "Rs2" (at 62.23 33.02 90)
+    (property "Reference" "Rs_curren_sensor1" (at 62.23 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.5m" (at 62.23 35.56 90)
@@ -4201,7 +4201,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "Rs2") (unit 1)
+          (reference "Rs_curren_sensor1") (unit 1)
         )
       )
     )
