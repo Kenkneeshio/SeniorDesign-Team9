@@ -1,4 +1,4 @@
-21650199771621154
+21648513027614028
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -60956,6 +60956,27 @@ LargeCAPSCAPPRD350W60D800H1200
 2
 2
 Mechatronic Footprints
+MBRD20200CT_TO252-DPAK-TH_DIO
+
+MBRD20200CT-13 
+0
+3
+3
+Mechatronic Footprints
+MBRD20200CT_TO252-DPAK-TH_DIO-L
+
+MBRD20200CT-13 
+0
+3
+3
+Mechatronic Footprints
+MBRD20200CT_TO252-DPAK-TH_DIO-M
+
+MBRD20200CT-13 
+0
+3
+3
+Mechatronic Footprints
 PG-TDSON-8_INF
 
 BSC009NE2LS5IATMA1 
@@ -61026,34 +61047,6 @@ MCP1755T-5002E/OT
 5
 5
 Mechatronic Footprints
-V0_PC100_Power_Board
-
-
-0
-6
-4
-Mechatronics NMOS
-PG-TDSON-8_INF
-
-BSC009NE2LS5IATMA1 
-0
-8
-8
-Mechatronics NMOS
-PG-TDSON-8_INF_modified_ken
-
-BSC009NE2LS5IATMA1 
-0
-8
-8
-Mechatronics Template
-EMBEDDED_BACKPLANE_V0x8
-
-
-0
-0
-0
-Mechatronics Template
 V0_PC100_Power_Board
 
 
