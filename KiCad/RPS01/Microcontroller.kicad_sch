@@ -178,6 +178,45 @@
         )
       )
     )
+    (symbol "Device:R_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 0.762 0.508 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "R_Small" (at 0.762 -1.016 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "R resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Resistor, small symbol" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "R_Small_0_1"
+        (rectangle (start -0.762 1.778) (end 0.762 -1.778)
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_Small_1_1"
+        (pin passive line (at 0 2.54 270) (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -2.54 90) (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "MCU_Microchip_ATmega:ATmega328PB-A" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -12.7 36.83 0)
         (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -458,6 +497,10 @@
     (stroke (width 0) (type default))
     (uuid 1e1c7ab8-d4b1-4f95-b952-1c6dca217c2c)
   )
+  (wire (pts (xy 106.68 128.27) (xy 105.41 128.27))
+    (stroke (width 0) (type default))
+    (uuid 2216a4d1-c813-4242-a9f9-30d318d05845)
+  )
   (wire (pts (xy 105.41 138.43) (xy 108.966 138.43))
     (stroke (width 0) (type default))
     (uuid 26c573a1-c5cf-4eb6-996e-32f6e5c8a790)
@@ -465,6 +508,10 @@
   (wire (pts (xy 90.17 83.82) (xy 90.17 87.63))
     (stroke (width 0) (type default))
     (uuid 2a18bcb7-4ad9-4662-a99f-f3ac992e91aa)
+  )
+  (wire (pts (xy 106.68 130.81) (xy 105.41 130.81))
+    (stroke (width 0) (type default))
+    (uuid 2a597fb0-0a81-4d36-a56f-6f18b392a74e)
   )
   (wire (pts (xy 137.16 86.36) (xy 137.16 91.44))
     (stroke (width 0) (type default))
@@ -15587,7 +15634,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 15cdf0be-d4fd-4408-9db7-21cebf81f0bd)
   )
-  (hierarchical_label "SCL" (shape input) (at 105.664 125.73 0) (fields_autoplaced)
+  (hierarchical_label "SCL" (shape input) (at 106.68 130.81 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 4018cd1f-bc8e-4a4a-9f86-9add3c1ba8d3)
   )
@@ -15599,7 +15646,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 69c0093d-4478-40c5-adfe-4f97768422e8)
   )
-  (hierarchical_label "SDA" (shape input) (at 105.664 128.27 0) (fields_autoplaced)
+  (hierarchical_label "SDA" (shape input) (at 106.68 128.27 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 6e18bbfe-fa31-4599-aedb-f7d4a4db0481)
   )
@@ -15624,6 +15671,58 @@
     (uuid ecbd9df6-0731-4388-832d-f649b9c2f3b5)
   )
 
+  (symbol (lib_id "Device:R_Small") (at 72.39 143.51 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 145e054b-36e2-49a7-b974-2d7d5d8a097f)
+    (property "Reference" "R8" (at 60.96 139.7 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 60.96 142.24 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 72.39 143.51 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 72.39 143.51 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ab6e3133-92bb-4812-8f4e-3af96e7d2575))
+    (pin "2" (uuid 31719d0d-eb34-4d1a-bc47-96e2c84beced))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 72.39 146.05 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 19432b1c-59ea-4c68-a8f0-b2e2f105ae92)
+    (property "Reference" "R5" (at 55.88 148.59 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 55.88 151.13 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 72.39 146.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 72.39 146.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 411ca352-a6d9-465b-9bd2-413f99bca45f))
+    (pin "2" (uuid 1480a809-83e7-4a49-8b48-cda932b89a0c))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R5") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Switch:SW_Push_Open") (at 138.43 125.73 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 39911b06-e8bf-4c57-b1ea-21b032d9c4c0)
@@ -15644,6 +15743,11 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
+          (reference "SW1") (unit 1)
+        )
+      )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
           (reference "SW1") (unit 1)
         )
       )
@@ -15708,6 +15812,89 @@
           (reference "U8") (unit 1)
         )
       )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "U8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 107.95 118.11 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4a9e31b4-6769-46f9-a39f-8509483fd82c)
+    (property "Reference" "R4" (at 107.95 113.03 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 107.95 115.57 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 107.95 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0f999fe3-7e72-455c-b122-b4ec6a2552e3))
+    (pin "2" (uuid 6468171c-1d99-4aca-ba34-291483d6b4c0))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 107.95 123.19 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5ff84ded-4569-4a81-a643-fdcdd5f28415)
+    (property "Reference" "R1" (at 115.57 118.11 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 115.57 120.65 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 107.95 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8042e014-6d05-4dd1-a990-97f7def3d941))
+    (pin "2" (uuid 1d15f7f4-ba55-47a9-9b7a-d44d423ebef0))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 107.95 125.73 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 6132c2d6-ea5d-4ac8-ad43-c2fca8bfd09b)
+    (property "Reference" "R2" (at 115.57 123.19 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 115.57 125.73 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 107.95 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 873a623d-1688-4e20-bf5a-49ce72b78017))
+    (pin "2" (uuid b3c4e559-78bb-4edd-a26d-eeaa77ff8f52))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R2") (unit 1)
+        )
+      )
     )
   )
 
@@ -15730,6 +15917,11 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
           (reference "#PWR016") (unit 1)
         )
       )
@@ -15764,6 +15956,11 @@
           (reference "R6") (unit 1)
         )
       )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R6") (unit 1)
+        )
+      )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
           (reference "R1") (unit 1)
@@ -15795,9 +15992,40 @@
           (reference "R7") (unit 1)
         )
       )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R7") (unit 1)
+        )
+      )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
           (reference "R2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 107.95 120.65 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b90b87f1-9be4-4811-bd08-7b0f7acf2645)
+    (property "Reference" "R3" (at 127 114.3 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Small" (at 127 116.84 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 107.95 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid aca59d3e-6ef3-4809-a78c-b9de54295d92))
+    (pin "2" (uuid 6f5e48f2-6713-40d4-8f76-a268e2a28da5))
+    (instances
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -15822,6 +16050,11 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
+          (reference "#PWR018") (unit 1)
+        )
+      )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
           (reference "#PWR018") (unit 1)
         )
       )
@@ -15855,6 +16088,11 @@
           (reference "#PWR021") (unit 1)
         )
       )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "#PWR021") (unit 1)
+        )
+      )
     )
   )
 
@@ -15878,6 +16116,11 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
+          (reference "C3") (unit 1)
+        )
+      )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
           (reference "C3") (unit 1)
         )
       )
@@ -15907,11 +16150,20 @@
           (reference "D3") (unit 1)
         )
       )
+      (project "Microcontroller"
+        (path "/538e59c1-ac16-4b28-a829-64524591e386"
+          (reference "D3") (unit 1)
+        )
+      )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
           (reference "D1") (unit 1)
         )
       )
     )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
   )
 )
