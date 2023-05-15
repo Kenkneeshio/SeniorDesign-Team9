@@ -10972,7 +10972,7 @@
     (property "Value" "3x XT60 Template" (at 265.684 70.739 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Mechatronic Footprints:V0_PC100_Power_Board" (at 264.668 70.104 0)
+    (property "Footprint" "Mechatronics Template:V0_PC100_Power_Board_Ken" (at 264.668 70.104 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 264.668 70.104 0)
