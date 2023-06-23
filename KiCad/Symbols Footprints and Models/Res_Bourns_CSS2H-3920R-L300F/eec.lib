@@ -1,0 +1,49 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Bourns CSS2H-3920R-L300F
+#
+DEF CSS2H-3920R-L300F R 0 40 Y Y 1 L N
+F0 "R" 0 200 50 H V L CNN 
+F1 "CSS2H-3920R-L300F" 0 300 50 H V L CNN 
+F2 "Bourns-CSS2H-3920R-L300F-*" 0 400 50 H I L CNN 
+F3 "https://www.bourns.com/docs/Product-Datasheets/css2h-3920.pdf" 0 500 50 H I L CNN 
+F4 "Yes" 0 600 50 H I L CNN "automotive"
+F5 "Grade 0" 0 700 50 H I L CNN "automotive grade"
+F6 "Res" 0 800 50 H I L CNN "category"
+F7 "Metal Element" 0 900 50 H I L CNN "composition"
+F8 "Passive Components" 0 1000 50 H I L CNN "device class L1"
+F9 "Resistors" 0 1100 50 H I L CNN "device class L2"
+F10 "Chip SMD Resistors" 0 1200 50 H I L CNN "device class L3"
+F11 "RES 300 UOHM 1% 10W 3920" 0 1300 50 H I L CNN "digikey description"
+F12 "118-CSS2H-3920R-L300FCT-ND" 0 1400 50 H I L CNN "digikey part number"
+F13 "1.9mm" 0 1500 50 H I L CNN "height"
+F14 "Yes" 0 1600 50 H I L CNN "lead free"
+F15 "d52119d4d06de989" 0 1700 50 H I L CNN "library id"
+F16 "Bourns" 0 1800 50 H I L CNN "manufacturer"
+F17 "Currentsenseshunt 3920 R0003 1% 10W Tc50 / Tape & Reel - 13\\" Reel" 0 1900 50 H I L CNN "mouser description"
+F18 "652-CSS2H3920RL300F" 0 2000 50 H I L CNN "mouser part number"
+F19 "3920" 0 2100 50 H I L CNN "package"
+F20 "10W" 0 2200 50 H I L CNN "power rating"
+F21 "0.3mΩ" 0 2300 50 H I L CNN "resistance"
+F22 "Yes" 0 2400 50 H I L CNN "rohs"
+F23 "CSS2H-3920" 0 2500 50 H I L CNN "series"
+F24 "0.3mm" 0 2600 50 H I L CNN "standoff height"
+F25 "100ppm/°C" 0 2700 50 H I L CNN "temperature coefficient"
+F26 "+170°C" 0 2800 50 H I L CNN "temperature range high"
+F27 "-55°C" 0 2900 50 H I L CNN "temperature range low"
+F28 "1%" 0 3000 50 H I L CNN "tolerance"
+DRAW
+X 1 1 100 0 100 R 40 0 1 1 P 
+X 2 2 600 0 100 L 40 0 1 1 P 
+P 2 1 1 0 200 0 230 50 N
+P 2 1 1 0 230 50 280 -50 N
+P 2 1 1 0 280 -50 330 50 N
+P 2 1 1 0 330 50 380 -50 N
+P 2 1 1 0 380 -50 430 50 N
+P 2 1 1 0 430 50 480 -50 N
+P 2 1 1 0 480 -50 500 0 N
+ENDDRAW
+ENDDEF
+#
+# End Library
