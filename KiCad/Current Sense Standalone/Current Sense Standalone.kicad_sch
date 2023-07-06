@@ -386,7 +386,6 @@
     )
   )
 
-
   (junction (at 120.65 80.01) (diameter 0) (color 0 0 0 0)
     (uuid 49070d75-a8d7-459d-ace1-a2232df3b1d5)
   )
@@ -4620,6 +4619,19 @@
   (text "Positive battery terminal Red Wire Out" (at 104.14 76.2 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e70bbf13-1d78-4bc8-9be7-d95b343674b4)
+  )
+
+  (label "Vout" (at 250.19 85.09 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 7a7719d6-cd35-4f17-94d9-af856e0d69d2)
+  )
+  (label "Batt+" (at 148.5138 55.755 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid bd3ed83a-f524-44da-bb07-36d78387b93a)
+  )
+  (label "V-" (at 201.93 53.34 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid eebe0690-5c67-4302-8f69-198a400a36b4)
   )
 
   (symbol (lib_id "Connector:Conn_01x01_Pin") (at 167.5311 49.8673 0) (unit 1)
