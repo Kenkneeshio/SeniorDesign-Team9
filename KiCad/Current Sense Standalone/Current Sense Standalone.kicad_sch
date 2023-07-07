@@ -4621,6 +4621,10 @@
     (uuid e70bbf13-1d78-4bc8-9be7-d95b343674b4)
   )
 
+  (label "Batt-" (at 130.81 80.01 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 24f1e85e-bb34-4d74-bd90-792c71b05424)
+  )
   (label "Vout" (at 250.19 85.09 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7a7719d6-cd35-4f17-94d9-af856e0d69d2)
