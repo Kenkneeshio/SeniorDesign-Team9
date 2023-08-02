@@ -1,0 +1,84 @@
+
+**** 04/21/20 09:15:28 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC-TRAN"  [ C:\Macromodels\PSpice Library\^INA139\INA139_PSpice\ina139 test circuit-pspicefiles\schematic1\d
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC-TRAN.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ina139.lib" 
+* From [PSPICE NETLIST] section of C:\Users\a0282827\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN I_I1 0 25 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INA139 TEST CIRCUIT
+I_I1         IN- 0 DC 10Adc  
+V_VS         N01064 0 5Vdc
+R_R2         0 OUT  10k TC=0,0 
+R_R1         IN- IN+  10m TC=0,0 
+V_VCM         IN+ 0 35Vdc
+X_U1         IN+ IN- N01064 0 OUT INA139
+
+**** RESUMING DC-TRAN.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file "C:\Macromodels\PSpice Library\^INA139\INA139_PSpice\ina139.lib" has changed since index file ina139.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Tue Apr 21 09:13:14 2020 to Tue Apr 21 09:15:25 2020.
+
+INFO(ORPSIM-15422): Making new index file ina139.ind for library file ina139.lib.
+
+Index has 23 entries from 1 file(s).
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_5 used by X_U1.XU3.XR107 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_6 used by X_U1.XU3.XR107_2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_6 used by X_U1.XU3.XR107_3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit IDEAL_D_1 used by X_U1.XU3.XU9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit IDEAL_D_1 used by X_U1.XU3.XU8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit IDEAL_D_1 used by X_U1.XU3.XU2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit IDEAL_D_1 used by X_U1.XU3.XU1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_7 used by X_U1.XU3.XR107_4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit VCCS_LIMIT_3 used by X_U1.XU3.XU26 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit VCCS_LIMIT_4 used by X_U1.XU3.XU4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit VCVS_LIMIT_1 used by X_U1.XU3.XU20 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit VCVS_LIMIT_2 used by X_U1.XU3.XU19 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_7 used by X_U1.XU3.XR102 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_7 used by X_U1.XU3.XR101 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_8 used by X_U1.XU3.XR104 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit RNOISE_FREE_7 used by X_U1.XU3.XR103 is undefined
+
