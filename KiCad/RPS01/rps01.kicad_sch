@@ -11265,7 +11265,7 @@
     (property "Value" "JST_PH_TEMP_SENSOR_DAT" (at 171.45 138.2776 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 169.926 136.3726 0)
+    (property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (at 169.926 136.3726 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 169.926 136.3726 0)
