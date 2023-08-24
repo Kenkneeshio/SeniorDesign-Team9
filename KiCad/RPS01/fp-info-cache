@@ -1,4 +1,18 @@
-21692246386877785
+21655272072747548
+0PAL4100XP
+0PAL4100XP
+
+
+0
+2
+2
+0PAL4100XP
+0PAL4100XP_VERTICAL
+
+
+0
+2
+2
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -60851,6 +60865,13 @@ B340AE-13
 2
 2
 Mechatronic Footprints
+CSS2H-5930R
+
+
+0
+2
+2
+Mechatronic Footprints
 EMBEDDED_BACKPLANE_V0x8
 
 
@@ -61019,6 +61040,13 @@ LTC3780EUH-TRPBF
 33
 33
 Mechatronic Footprints
+SD2114_AVX
+
+SD2114S040S8R0 
+0
+2
+2
+Mechatronic Footprints
 SOD123_DIO
 
 BZT52C4V7-13-F 
@@ -61053,188 +61081,6 @@ V0_PC100_Power_Board
 0
 6
 4
-Mechatronics 5V Reg
-DPAK_STM
-
-L78M05CDT-TR 
-0
-3
-3
-Mechatronics 5V Reg
-DPAK_STM-L
-
-L78M05CDT-TR 
-0
-3
-3
-Mechatronics 5V Reg
-DPAK_STM-M
-
-L78M05CDT-TR 
-0
-3
-3
-Mechatronics AMASS XT90 Vertical
-AMASS_XT90-F_1x02_P11.00mm_Vertical
-AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 female vertical
-0
-2
-2
-Mechatronics AMASS XT90 Vertical
-AMASS_XT90-M_1x02_P11.00mm_Vertical
-AMASS male XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 male vertical
-0
-2
-2
-Mechatronics Cesr
-CAPMP7.6X4.3_3.1N_KEM
-
-T521D475M063ATE075 
-0
-2
-2
-Mechatronics Cesr
-CAPMP7.6X4.3_3.1N_KEM-L
-
-T521D475M063ATE075 
-0
-2
-2
-Mechatronics Cesr
-CAPMP7.6X4.3_3.1N_KEM-M
-
-T521D475M063ATE075 
-0
-2
-2
-Mechatronics INA139
-PW8
-
-INA139QPWRQ1 
-0
-8
-8
-Mechatronics INA139
-PW8-L
-
-INA139QPWRQ1 
-0
-8
-8
-Mechatronics INA139
-PW8-M
-
-INA139QPWRQ1 
-0
-8
-8
-Mechatronics LTC3780
-AMASS_XT90-F_1x02_P11.00mm_Vertical
-AMASS female XT90, through hole, vertical, https://www.tme.eu/Document/d66b125cc4d03b6a25077f0febb346da/XT90H%20SPEC.pdf
-XT90 female vertical
-0
-2
-2
-Mechatronics LTC3780
-CR_SMA_320-340AE_DIO
-
-B340AE-13 
-0
-2
-2
-Mechatronics LTC3780
-IND_410680_WRE
-
-74436410680 
-0
-2
-2
-Mechatronics LTC3780
-LOWESRCAPMP7.6X4.3_3.1N_KEM
-
-T521D475M063ATE075 
-0
-2
-2
-Mechatronics LTC3780
-LargeCAPSCAPPRD350W60D800H1200
-
-
-0
-2
-2
-Mechatronics LTC3780
-MSOP-10_MS_LIT
-
-LTC4416EMS-1-TRPBF 
-0
-10
-10
-Mechatronics LTC3780
-PRSS0004AL-A_REN
-
-NP100P04PLG-E1-AY 
-0
-4
-4
-Mechatronics LTC3780
-Q1Q2TRANS_FDMC86520L
-
-
-0
-5
-5
-Mechatronics LTC3780
-SOD123_DIO
-
-BZT52C4V7-13-F 
-0
-2
-2
-Mechatronics LTC3780
-SSOP-24_G_LIT
-
-LTC3780EG-TRPBF 
-0
-24
-24
-Mechatronics LTC4416
-MSOP-10_MS_LIT
-
-LTC4416EMS-1-TRPBF 
-0
-10
-10
-Mechatronics LTC4416
-MSOP-10_MS_LIT-L
-
-LTC4416EMS-1-TRPBF 
-0
-10
-10
-Mechatronics LTC4416
-MSOP-10_MS_LIT-M
-
-LTC4416EMS-1-TRPBF 
-0
-10
-10
-Mechatronics Sdiode
-SD2114_AVX
-
-SD2114S040S8R0 
-0
-2
-2
-Mechatronics Template
-V0_PC100_Power_Board_Ken
-
-
-0
-6
-6
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
