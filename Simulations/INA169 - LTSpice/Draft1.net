@@ -1,0 +1,11 @@
+* C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\Simulations\INA169 - LTSpice\Draft1.asc
+XU1 N002 N004 N001 0 N003 INA139
+RL N003 0 100k tol=1
+RS N002 N004 0.3m
+V1 N002 0 16.8V
+V2 N001 0 5
+I2 N004 0 PWL(0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 20 12 30 13 40 14 50 15 60 16 70 17 80 18 90 19 100 20 110 21 120)
+.tran 0 30 0
+.lib C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\Simulations\INA169 - LTSpice\symbol\ina139.lib
+.backanno
+.end
