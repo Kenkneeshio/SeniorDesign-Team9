@@ -1,4 +1,4 @@
-21758246723692011
+21758248840180441
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -60781,6 +60781,13 @@ Yellow 5381 Series LED
 2
 2
 Mechatronic Footprints
+0PAL1100XP_VERTICAL
+
+
+0
+2
+2
+Mechatronic Footprints
 0PAL4100XP
 
 
@@ -60789,13 +60796,6 @@ Mechatronic Footprints
 2
 Mechatronic Footprints
 0PAL4100XP_NO_HOLES
-
-
-0
-2
-2
-Mechatronic Footprints
-0PAL4100XP_VERTICAL
 
 
 0
