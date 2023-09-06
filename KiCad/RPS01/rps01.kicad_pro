@@ -518,18 +518,6 @@
     [
       "a2e49fe6-126d-427d-b045-54fb7f662aa7",
       "Microcontroller"
-    ],
-    [
-      "93cc267b-0a65-4adf-85d6-1b9641060d30",
-      "5V Buck"
-    ],
-    [
-      "a76e59d5-c318-4fb3-bab8-948e73d61efd",
-      "12V Buck Boost"
-    ],
-    [
-      "c502224c-4356-4e96-bcfe-3f158512eab2",
-      "19V Boost"
     ]
   ],
   "text_variables": {}
