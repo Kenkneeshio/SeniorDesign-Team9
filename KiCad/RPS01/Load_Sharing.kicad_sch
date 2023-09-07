@@ -7510,7 +7510,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a8a946f1-2865-4e98-af33-ce606608dcd9)
   )
-  (label "VS" (at 157.48 104.14 0) (fields_autoplaced)
+  (label "+BATT" (at 157.48 104.14 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d9a3840e-366b-47cf-b868-95c7d92fdb2b)
   )
