@@ -11730,6 +11730,23 @@
     )
   )
 
+  (sheet (at 218.186 42.164) (size 45.212 20.066) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 6ed54b0f-f89c-4a82-b1ab-c92c0c126d05)
+    (property "Sheetname" "Voltage Rails" (at 218.186 41.4524 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Rails.kicad_sch" (at 218.186 62.8146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "5"))
+      )
+    )
+  )
+
   (sheet (at 48.26 27.94) (size 27.94 27.94) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

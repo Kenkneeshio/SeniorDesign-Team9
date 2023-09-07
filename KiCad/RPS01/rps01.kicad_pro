@@ -518,6 +518,10 @@
     [
       "a2e49fe6-126d-427d-b045-54fb7f662aa7",
       "Microcontroller"
+    ],
+    [
+      "6ed54b0f-f89c-4a82-b1ab-c92c0c126d05",
+      "Voltage Rails"
     ]
   ],
   "text_variables": {}
