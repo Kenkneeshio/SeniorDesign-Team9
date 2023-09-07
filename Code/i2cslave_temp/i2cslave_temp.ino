@@ -3,7 +3,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define I2C_ADDRESS       0x8      // From sheet
+#define I2C_ADDRESS       0x1C      // From sheet
 
 uint8_t requested_data;
 
