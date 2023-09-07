@@ -518,14 +518,6 @@
     [
       "a2e49fe6-126d-427d-b045-54fb7f662aa7",
       "Microcontroller"
-    ],
-    [
-      "4d970347-1801-4758-afe7-859ae9ace1cb",
-      "Voltage Rails"
-    ],
-    [
-      "6540bc70-ce06-4003-b5fb-e98f10ec4b7e",
-      "Sensors"
     ]
   ],
   "text_variables": {}

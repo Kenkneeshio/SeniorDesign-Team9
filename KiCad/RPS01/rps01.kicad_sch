@@ -11730,40 +11730,6 @@
     )
   )
 
-  (sheet (at 211.074 53.848) (size 43.688 29.972) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 4d970347-1801-4758-afe7-859ae9ace1cb)
-    (property "Sheetname" "Voltage Rails" (at 211.074 53.1364 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Rails.kicad_sch" (at 211.074 84.4046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "5"))
-      )
-    )
-  )
-
-  (sheet (at 217.932 94.488) (size 42.164 15.494) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 6540bc70-ce06-4003-b5fb-e98f10ec4b7e)
-    (property "Sheetname" "Sensors" (at 217.932 93.7764 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Sensors.kicad_sch" (at 217.932 110.5666 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "6"))
-      )
-    )
-  )
-
   (sheet (at 48.26 27.94) (size 27.94 27.94) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
