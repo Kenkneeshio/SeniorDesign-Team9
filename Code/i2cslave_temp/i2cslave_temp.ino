@@ -3,7 +3,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define I2C_ADDRESS       0x1C      // From sheet
+#define I2C_ADDRESS       0x8      // From sheet
 
 uint8_t requested_data;
 
@@ -19,14 +19,14 @@ float voltages[VOLTAGE_SENSORS];
 float temperatures[TEMP_SENSORS];
 float currents[CURRENT_SENSORS];
 
-#define ONE_WIRE_BUS 4
+#define ONE_WIRE_BUS 5
 int numberOfDevices; // Number of temperature devices found
 OneWire oneWire(ONE_WIRE_BUS);//temp
 DallasTemperature sensors(&oneWire);//temp
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found device address
 
-const uint8_t testAddr1[8] = {0x28, 0xEE, 0x0A, 0x81, 0xE3, 0x37, 0x3C, 0xB2};
-const uint8_t testAddr2[8] = {0x28, 0xA9, 0x9A, 0x81, 0xE3, 0x07, 0x3C, 0xD8};
+const uint8_t testAddr1[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
+const uint8_t testAddr2[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
 const uint8_t testAddr3[8] = {0x28, 0x1F, 0x53, 0x81, 0xE3, 0xBC, 0x3C, 0x9D};
 
 
