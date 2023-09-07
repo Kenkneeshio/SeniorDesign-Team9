@@ -25,9 +25,9 @@ OneWire oneWire(ONE_WIRE_BUS);//temp
 DallasTemperature sensors(&oneWire);//temp
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found device address
 
-const uint8_t testAddr1[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
-const uint8_t testAddr2[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
-const uint8_t testAddr3[8] = {0x28, 0x1F, 0x53, 0x81, 0xE3, 0xBC, 0x3C, 0x9D};
+const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
+const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
+const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3};
 
 
 void setup()
@@ -64,21 +64,21 @@ void loop()
       if(sensors.getAddress(tempDeviceAddress, i)) {
         float tempC = sensors.getTempC(tempDeviceAddress);
         
-        if (memcmp(testAddr1, tempDeviceAddress, 8) == 0)
+        if (memcmp(temperatureProbe0_LONG, tempDeviceAddress, 8) == 0)
         {
           // device 0
                   temperatures[0] = tempC;
             Serial.print("Device 0 - Temp C: ");
             Serial.println(temperatures[0]);
         }
-        else if (memcmp(testAddr2, tempDeviceAddress, 8) == 0)
+        else if (memcmp(temperatureProbe1_LONG, tempDeviceAddress, 8) == 0)
         {
           // device 1
           temperatures[1] = tempC;
             Serial.print("Device 1 - Temp C: ");
             Serial.println(temperatures[1]);
         }    
-        else if (memcmp(testAddr3, tempDeviceAddress, 8) == 0)
+        else if (memcmp(temperatureProbe2_SHORT, tempDeviceAddress, 8) == 0)
         {
           // device 2
           temperatures[4] = tempC;
