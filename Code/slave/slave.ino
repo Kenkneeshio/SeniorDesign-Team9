@@ -50,6 +50,10 @@ byte *presentTemperature0;
 byte *presentTemperature1;
 byte *presentTemperature2;
 
+float presentTemperature0f;
+float presentTemperature1f;
+float presentTemperature2f;
+
 float value;
 
 /*
@@ -142,6 +146,15 @@ void requestEvent()
     Wire.write("Voltage"); // print the integer
     break;
   case TEMPERATURE_0:
+   presentTemperature0 = (byte *)&presentTemperature0f;
+//  Serial.print("data bytes:");
+//          Serial.print(presentTemperature0[0]);
+//          Serial.print(" ");
+//          Serial.print(presentTemperature0[1]);
+          //Serial.print(" ");
+          //Serial.print(presentTemperature0[2]);
+          //Serial.print(" ");
+          //Serial.println(presentTemperature0[3]);
     Wire.write(presentTemperature0[0]);
     Wire.write(presentTemperature0[1]);
     Wire.write(presentTemperature0[2]);
@@ -149,12 +162,30 @@ void requestEvent()
 
     break;
   case TEMPERATURE_1:
+  presentTemperature1 = (byte *)&presentTemperature1f;
+//  Serial.print("data bytes:");
+//          Serial.print(presentTemperature1[0]);
+//          Serial.print(" ");
+//          Serial.print(presentTemperature1[1]);
+//          Serial.print(" ");
+//          Serial.print(presentTemperature1[2]);
+//          Serial.print(" ");
+//          Serial.println(presentTemperature1[3]);
     Wire.write(presentTemperature1[0]);
     Wire.write(presentTemperature1[1]);
     Wire.write(presentTemperature1[2]);
     Wire.write(presentTemperature1[3]);
     break;
   case TEMPERATURE_2:
+  presentTemperature2 = (byte *)&presentTemperature2f;
+//  Serial.print("data bytes:");
+//          Serial.print(presentTemperature2[0]);
+//          Serial.print(" ");
+//          Serial.print(presentTemperature2[1]);
+//          Serial.print(" ");
+//          Serial.print(presentTemperature2[2]);
+//          Serial.print(" ");
+//          Serial.println(presentTemperature2[3]);
     Wire.write(presentTemperature2[0]);
     Wire.write(presentTemperature2[1]);
     Wire.write(presentTemperature2[2]);
@@ -183,7 +214,7 @@ void loop()
   static uint32_t millis_ctr = 0;
   //Serial.println("Requesting Temps");
 
-  if (millis() > millis_ctr + 500)
+  if (millis() > millis_ctr + 5000)
   {
     for (uint8_t i = 0; i < numberOfDevices; i++)
     {
@@ -196,28 +227,58 @@ void loop()
         {
           // device 0
           sensors.requestTemperatures();
-          float tempC0 = sensors.getTempC(tempDeviceAddress);
-          presentTemperature0 = (byte *)&tempC0;
-          Serial.print("Device 0 - Temp C: ");
-          Serial.println(tempC0);
+          presentTemperature0f = sensors.getTempC(tempDeviceAddress);
+          presentTemperature0 = (byte *)&presentTemperature0f;
+          Serial.print("Device ");
+          Serial.print(i);
+          Serial.print(" - Temp C: ");
+          Serial.println(presentTemperature0f);
+          // Serial.print("data bytes:");
+          // Serial.print(presentTemperature0[0]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature0[1]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature0[2]);
+          // Serial.print(" ");
+          // Serial.println(presentTemperature0[3]);
         }
         else if (memcmp(temperatureProbe1_LONG, tempDeviceAddress, 8) == 0)
         {
           // device 1
           sensors.requestTemperatures();
-          float tempC1 = sensors.getTempC(tempDeviceAddress);
-          presentTemperature1 = (byte *)&tempC1;
-          Serial.print("Device 1 - Temp C: ");
-          Serial.println(tempC1);
+          presentTemperature1f = sensors.getTempC(tempDeviceAddress);
+          presentTemperature1 = (byte *)&presentTemperature1f;
+          Serial.print("Device ");
+          Serial.print(i);
+          Serial.print(" - Temp C: ");
+          Serial.println(presentTemperature1f);
+          // Serial.print("data bytes:");
+          // Serial.print(presentTemperature1[0]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature1[1]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature1[2]);
+          // Serial.print(" ");
+          // Serial.println(presentTemperature1[3]);
         }
         else if (memcmp(temperatureProbe2_SHORT, tempDeviceAddress, 8) == 0)
         {
           // device 2
           sensors.requestTemperatures();
-          float tempC2 = sensors.getTempC(tempDeviceAddress);
-          presentTemperature2 = (byte *)&tempC2;
-          Serial.print("Device 2 - Temp C: ");
-          Serial.println(tempC2);
+          presentTemperature2f = sensors.getTempC(tempDeviceAddress);
+          presentTemperature2 = (byte *)&presentTemperature2f;
+          Serial.print("Device ");
+          Serial.print(i);
+          Serial.print(" - Temp C: ");
+          Serial.println(presentTemperature2f);
+          //           Serial.print("data bytes:");
+          // Serial.print(presentTemperature2[0]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature2[1]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature2[2]);
+          // Serial.print(" ");
+          // Serial.println(presentTemperature2[3]);
         }
         else
         {
