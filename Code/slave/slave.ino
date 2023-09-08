@@ -9,26 +9,25 @@
 
 // This example code is in the public domain.
 
-
 #include <Wire.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
-#define CURRENT_PIN       A0
-#define VOLTAGE_PIN       A1
+#define CURRENT_PIN A0
+#define VOLTAGE_PIN A1
 
-int I2C_ADDRESS = 8;      // From sheet
+int I2C_ADDRESS = 8; // From sheet
 
 int lastRequestedEvent = -1;
 
 // i2C Request codes. Each of these values are messages to the slave to request certain information.
-// These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call. 
+// These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call.
 const int CURRENT = 0;
 const int VOLTAGE = 1;
-const int TEMPERATURE_0 = 2;         
-const int TEMPERATURE_1 = 3;         
-const int TEMPERATURE_2 = 4;       
+const int TEMPERATURE_0 = 2;
+const int TEMPERATURE_1 = 3;
+const int TEMPERATURE_2 = 4;
 
 const float LOGIC_VOLTAGE = 5.08;
 const float VOLTAGE_DIVIDER_R2 = 510000;
@@ -36,26 +35,22 @@ const float VOLTAGE_DIVIDER_R1 = 12000000;
 const float SHUNT_RESISTOR = 0.01028;
 const int LOAD_RESISTOR = 5000;
 
-
 const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
 const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
 const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3};
 
-
 int numberOfDevices; // Number of temperature devices found
-OneWire oneWire(ONE_WIRE_BUS); 
-DallasTemperature sensors(&oneWire); 
+OneWire oneWire(ONE_WIRE_BUS);
+DallasTemperature sensors(&oneWire);
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found device address
-
 
 float presentCurrent = 0.0;
 float presentVoltage = 0.0;
-float presentTemperature0 = 0.0;
-float presentTemperature1 = 0.0;
-float presentTemperature2 = 0.0;
+byte *presentTemperature0;
+byte *presentTemperature1;
+byte *presentTemperature2;
 
 float value;
-
 
 /*
  * ADC2Current(float analogValue)
@@ -67,9 +62,9 @@ float value;
 float ADC2Current(float analogValue)
 {
   float value;
-  value = ((analogValue+1) / 1024 * LOGIC_VOLTAGE); // first convert the analog value based on the logic level voltage
+  value = ((analogValue + 1) / 1024 * LOGIC_VOLTAGE); // first convert the analog value based on the logic level voltage
   // then use the equation from the INA139 datasheet , where iS = (Vout * 1k) / (rs * rl)
-  value = (value *(1000)/((LOAD_RESISTOR) *(SHUNT_RESISTOR))); 
+  value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
   return value;
 }
 
@@ -83,9 +78,9 @@ float ADC2Current(float analogValue)
 float ADC2Voltage(float analogValue)
 {
   float value;
-  value = ((analogValue+1) / 1024 * LOGIC_VOLTAGE); // first convert the analog value based on the logic level voltage
+  value = ((analogValue + 1) / 1024 * LOGIC_VOLTAGE); // first convert the analog value based on the logic level voltage
   // then get back the input voltage from the voltage divider equation: Vin = Vout * (R2+R1)/R2
-  value = (value *(VOLTAGE_DIVIDER_R2 + VOLTAGE_DIVIDER_R1)/(VOLTAGE_DIVIDER_R2)); 
+  value = (value * (VOLTAGE_DIVIDER_R2 + VOLTAGE_DIVIDER_R1) / (VOLTAGE_DIVIDER_R2));
   return value;
 }
 
@@ -100,118 +95,138 @@ float requestVoltage()
 {
   Serial.println("Voltage requested.");
   presentVoltage = ADC2Voltage(analogRead(VOLTAGE_PIN));
-  return presentVoltage;  
+  return presentVoltage;
 }
 
 // function that executes whenever data is received from master
 // this function is registered as an event, see setup()
-void receiveEvent(int howMany) {
-  while (1 < Wire.available()) { // loop through all but the last
+void receiveEvent(int howMany)
+{
+  while (1 < Wire.available())
+  {                       // loop through all but the last
     char c = Wire.read(); // receive byte as a character
-    Serial.print(c);         // print the character
+    Serial.print(c);      // print the character
   }
-  lastRequestedEvent = Wire.read();    // receive byte as an integer
+  lastRequestedEvent = Wire.read(); // receive byte as an integer
   switch (lastRequestedEvent)
   {
-    case CURRENT:
-      Serial.println("Current");         // print the integer
-      break;
-    case VOLTAGE:
-      Serial.println("Voltage");         // print the integer
-      break;
-    case TEMPERATURE_0:
-      Serial.println("Temperature 0");         // print the integer
-      break;
-    case TEMPERATURE_1:
-      Serial.println("Temperature 1");         // print the integer
-      break;
-    case TEMPERATURE_2:
-      Serial.println("Temperature 2");         // print the integer
-      break;
+  case CURRENT:
+    Serial.println("Current"); // print the integer
+    break;
+  case VOLTAGE:
+    Serial.println("Voltage"); // print the integer
+    break;
+  case TEMPERATURE_0:
+    Serial.println("Temperature 0"); // print the integer
+    break;
+  case TEMPERATURE_1:
+    Serial.println("Temperature 1"); // print the integer
+    break;
+  case TEMPERATURE_2:
+    Serial.println("Temperature 2"); // print the integer
+    break;
   }
 }
- 
 
- // function that executes whenever data is requested by master
+// function that executes whenever data is requested by master
 // this function is registered as an event, see setup()
-void requestEvent() {
-  //Wire.write("hello "); // respond with message of 6 bytes
+void requestEvent()
+{
+  // Wire.write("hello "); // respond with message of 6 bytes
   switch (lastRequestedEvent)
   {
-    case CURRENT:
-      Wire.write("Current");         // print the integer
-      break;
-    case VOLTAGE:
-      Wire.write("Voltage");         // print the integer
-      break;
-    case TEMPERATURE_0:
-      Wire.write("Temperature 0");
-      //byte* x = (byte*)&presentTemperature0;
-      //Wire.write(x,sizeof(float));
-      break;
-    case TEMPERATURE_1:
-      Wire.write("Temperature 1");
-      break;
-    case TEMPERATURE_2:
-      Wire.write("Temperature 2");
-      break;
+  case CURRENT:
+    Wire.write("Current"); // print the integer
+    break;
+  case VOLTAGE:
+    Wire.write("Voltage"); // print the integer
+    break;
+  case TEMPERATURE_0:
+    Wire.write(presentTemperature0[0]);
+    Wire.write(presentTemperature0[1]);
+    Wire.write(presentTemperature0[2]);
+    Wire.write(presentTemperature0[3]);
+
+    break;
+  case TEMPERATURE_1:
+    Wire.write(presentTemperature1[0]);
+    Wire.write(presentTemperature1[1]);
+    Wire.write(presentTemperature1[2]);
+    Wire.write(presentTemperature1[3]);
+    break;
+  case TEMPERATURE_2:
+    Wire.write(presentTemperature2[0]);
+    Wire.write(presentTemperature2[1]);
+    Wire.write(presentTemperature2[2]);
+    Wire.write(presentTemperature2[3]);
+    break;
   }
 }
 
-void setup() {
-    // Set up Dallas Temperature Sensors
+void setup()
+{
+  // Set up Dallas Temperature Sensors
   sensors.begin(); // start up the dallas temperature library
-    numberOfDevices = sensors.getDeviceCount();
+  numberOfDevices = sensors.getDeviceCount();
 
-// Set up i2C Communication 
-  Wire.begin(I2C_ADDRESS);                // join i2c bus with address #8
+  // Set up i2C Communication
+  Wire.begin(I2C_ADDRESS);      // join i2c bus with address #8
   Wire.onReceive(receiveEvent); // register a receive on event
   Wire.onRequest(requestEvent); // register a request on event
 
-// Set up Serial Communication 
-  Serial.begin(9600);           // start serial for output
+  // Set up Serial Communication
+  Serial.begin(9600); // start serial for output
 }
 
-void loop() {
+void loop()
+{
   static uint32_t millis_ctr = 0;
+  //Serial.println("Requesting Temps");
 
-  if(millis() > millis_ctr + 5000){
-    for(uint8_t i=0; i < numberOfDevices; i++) {
+  if (millis() > millis_ctr + 500)
+  {
+    for (uint8_t i = 0; i < numberOfDevices; i++)
+    {
       // Search the wire for address
-      
-      if(sensors.getAddress(tempDeviceAddress, i)) {
-        float tempC = sensors.getTempC(tempDeviceAddress);
-        
+
+      if (sensors.getAddress(tempDeviceAddress, i))
+      {
+
         if (memcmp(temperatureProbe0_LONG, tempDeviceAddress, 8) == 0)
         {
           // device 0
-            presentTemperature0 = tempC;
-            Serial.print("Device 0 - Temp C: ");
-            Serial.println(presentTemperature0);
+          sensors.requestTemperatures();
+          float tempC0 = sensors.getTempC(tempDeviceAddress);
+          presentTemperature0 = (byte *)&tempC0;
+          Serial.print("Device 0 - Temp C: ");
+          Serial.println(tempC0);
         }
         else if (memcmp(temperatureProbe1_LONG, tempDeviceAddress, 8) == 0)
         {
           // device 1
-          presentTemperature1 = tempC;
-            Serial.print("Device 1 - Temp C: ");
-            Serial.println(presentTemperature1);
-        }    
+          sensors.requestTemperatures();
+          float tempC1 = sensors.getTempC(tempDeviceAddress);
+          presentTemperature1 = (byte *)&tempC1;
+          Serial.print("Device 1 - Temp C: ");
+          Serial.println(tempC1);
+        }
         else if (memcmp(temperatureProbe2_SHORT, tempDeviceAddress, 8) == 0)
         {
           // device 2
-          presentTemperature2 = tempC;
-            Serial.print("Device 3 - Temp C: ");
-            Serial.println(presentTemperature2);
+          sensors.requestTemperatures();
+          float tempC2 = sensors.getTempC(tempDeviceAddress);
+          presentTemperature2 = (byte *)&tempC2;
+          Serial.print("Device 2 - Temp C: ");
+          Serial.println(tempC2);
         }
-        else {
+        else
+        {
           Serial.println("No mattches :(");
         }
-      }   
+      }
     }
-    //delay(5000);
+    // delay(5000);
 
-    sensors.requestTemperatures();
-    Serial.println("Requesting Temps");
     millis_ctr = millis();
-}
+  }
 }
