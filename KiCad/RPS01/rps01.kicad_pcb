@@ -151,7 +151,7 @@
 
   (footprint "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (layer "F.Cu")
     (tstamp 00ac8958-e712-46a1-ba91-92107c8cd8d0)
-    (at 216.9 28.27)
+    (at 90.45 123.725)
     (descr "JST PH series connector, B3B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -335,7 +335,7 @@
 
   (footprint "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (layer "F.Cu")
     (tstamp 098eec21-e3d5-4bdd-ad70-2aecc670effe)
-    (at 216.9 34.82)
+    (at 130.875 123.55)
     (descr "JST PH series connector, B3B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -651,7 +651,7 @@
 
   (footprint "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (layer "F.Cu")
     (tstamp 1feb3228-0baa-4c69-8b5e-166c29750bc5)
-    (at 216.9 47.92)
+    (at 118 123.425)
     (descr "JST PH series connector, B3B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -765,7 +765,7 @@
 
   (footprint "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" (layer "F.Cu")
     (tstamp 2a1ffc1b-072e-4c27-ab13-fe8b77b58189)
-    (at 216.9 41.37)
+    (at 104.425 123.575)
     (descr "JST PH series connector, B3B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH side entry")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -1129,7 +1129,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 3c37f1db-ef00-4bbf-bd59-8c027d1cc54a)
-    (at 216.25 54.07)
+    (at 221.56 127.26)
     (descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x03 2.54mm double row")
     (property "Sheetfile" "rps01.kicad_sch")
@@ -1453,7 +1453,7 @@
 
   (footprint "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical" (layer "F.Cu")
     (tstamp 5d6f209e-c51c-44bf-a3c1-5415024b360d)
-    (at 242 116.095)
+    (at 228.475 61.225)
     (descr "Connector XT30 Vertical Cable Female, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf")
     (tags "RC Connector XT30")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -1601,7 +1601,7 @@
 
   (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm" (layer "F.Cu")
     (tstamp 694e77e3-75f1-4c75-b874-da93d9c75ffc)
-    (at 248.21 98.215)
+    (at 96.475 109.975)
     (descr "32-Lead Plastic Thin Quad Flatpack (PT) - 7x7x1.0 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "QFP 0.8")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -1785,7 +1785,7 @@
 
   (footprint "LED_SMD:LED_RGB_5050-6" (layer "F.Cu")
     (tstamp 6f5a7f21-aad6-4750-a44c-8d1af0f429da)
-    (at 234.2 108.765)
+    (at 196.375 118.55)
     (descr "http://cdn.sparkfun.com/datasheets/Components/LED/5060BRG4.pdf")
     (tags "RGB LED 5050-6")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -1903,7 +1903,7 @@
 
   (footprint "Mechatronic Footprints:5V_REGULATOR_DPAK_STM" (layer "F.Cu")
     (tstamp 7b8011e7-526c-4301-8079-65b127eb5b1f)
-    (at 248.0707 43.4401)
+    (at 214.089 74.4119)
     (tags "L78M05CDT-TR ")
     (property "Sheetfile" "rps01.kicad_sch")
     (property "Sheetname" "")
@@ -2339,7 +2339,7 @@
 
   (footprint "LED_SMD:LED_RGB_5050-6" (layer "F.Cu")
     (tstamp 9de43d0d-628c-4de5-a049-03de40a1a14a)
-    (at 258.5 78.87)
+    (at 195.675 131.525)
     (descr "http://cdn.sparkfun.com/datasheets/Components/LED/5060BRG4.pdf")
     (tags "RGB LED 5050-6")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -2899,7 +2899,7 @@
 
   (footprint "LED_SMD:LED_RGB_5050-6" (layer "F.Cu")
     (tstamp c2a09b5b-031a-41e7-aecf-91fbb4e05489)
-    (at 234.2 95.665)
+    (at 201.225 91.45)
     (descr "http://cdn.sparkfun.com/datasheets/Components/LED/5060BRG4.pdf")
     (tags "RGB LED 5050-6")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -3017,7 +3017,7 @@
 
   (footprint "LED_SMD:LED_RGB_5050-6" (layer "F.Cu")
     (tstamp c9cc6190-c06c-4629-9d56-5954e31eabb9)
-    (at 234.2 102.215)
+    (at 195.95 104.425)
     (descr "http://cdn.sparkfun.com/datasheets/Components/LED/5060BRG4.pdf")
     (tags "RGB LED 5050-6")
     (property "Sheetfile" "Microcontroller.kicad_sch")
@@ -3081,7 +3081,7 @@
 
   (footprint "Button_Switch_SMD:SW_SPST_PTS645" (layer "F.Cu")
     (tstamp ce45286c-32ab-4ad1-a393-d22731005d40)
-    (at 247.5 77.12)
+    (at 58.295 123.2)
     (descr "C&K Components SPST SMD PTS645 Series 6mm Tact Switch")
     (tags "SPST Button Switch")
     (property "Sheetfile" "Microcontroller.kicad_sch")
