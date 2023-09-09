@@ -522,6 +522,10 @@
     [
       "6ed54b0f-f89c-4a82-b1ab-c92c0c126d05",
       "Voltage Rails"
+    ],
+    [
+      "c06f7478-c874-4c9c-9b0f-f3b722914738",
+      "Logic Level Converter"
     ]
   ],
   "text_variables": {}

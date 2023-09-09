@@ -677,6 +677,10 @@
     (stroke (width 0) (type default))
     (uuid 1740e4c3-90b9-446f-9266-46ed3003bb21)
   )
+  (wire (pts (xy 69.2658 83.82) (xy 68.072 83.82))
+    (stroke (width 0) (type default))
+    (uuid 1d3cae41-060d-4eaf-af80-b69dcd805a77)
+  )
   (polyline (pts (xy 551.18 570.23) (xy 556.26 570.23))
     (stroke (width 0) (type default))
     (uuid 1dd15b3c-238a-4c3d-b918-ff250879275b)
@@ -774,6 +778,10 @@
   (wire (pts (xy 124.968 34.544) (xy 124.968 36.83))
     (stroke (width 0) (type default))
     (uuid 6164e551-6931-4310-9825-460fee3f4951)
+  )
+  (wire (pts (xy 69.2658 81.28) (xy 68.072 81.28))
+    (stroke (width 0) (type default))
+    (uuid 624d3e4a-c265-47e9-8283-746963650b75)
   )
   (wire (pts (xy 146.304 159.9438) (xy 146.304 159.7152))
     (stroke (width 0) (type default))
@@ -10925,6 +10933,31 @@
     )
   )
 
+  (symbol (lib_id "power:+BATT") (at 68.072 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2cfc6d50-90dc-432a-8461-316686c80c82)
+    (property "Reference" "#PWR042" (at 68.072 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+BATT" (at 68.072 76.962 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 68.072 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.072 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2a121880-6f85-41bb-9b9e-876ff86bd8c0))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
+          (reference "#PWR042") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:Conn_01x03_Pin") (at 171.5008 112.522 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 37099f64-38e7-40c5-9d48-6f0341045344)
@@ -11025,6 +11058,32 @@
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "#PWR022") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:Conn_01x02_Socket") (at 74.3458 83.82 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 6e7c8f30-0da9-4f5d-8776-217b51ccbc5c)
+    (property "Reference" "J21" (at 75.6158 83.185 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "XT90 ESC Output 2" (at 75.6158 80.645 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Mechatronic Footprints:AMASS_XT90-F_1x02_P11.00mm_Vertical" (at 74.3458 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 74.3458 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 10af2b33-3e33-4845-99a7-7312460edf43))
+    (pin "2" (uuid dcbc84c2-87c9-411c-9291-fe806d76b515))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
+          (reference "J21") (unit 1)
         )
       )
     )
@@ -11139,6 +11198,31 @@
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
           (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 68.072 83.82 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8c0c6e8b-1aa3-4692-b9c1-f985ae0695a6)
+    (property "Reference" "#PWR043" (at 68.072 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 68.072 88.9 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 68.072 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.072 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e8772dc7-e09c-4c50-8e00-e6e5625d08f7))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -11765,6 +11849,23 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 224.282 83.9978) (size 20.32 12.7508) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c06f7478-c874-4c9c-9b0f-f3b722914738)
+    (property "Sheetname" "Logic Level Converter" (at 224.282 83.2862 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "LLC.kicad_sch" (at 224.282 97.3332 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "6"))
       )
     )
   )
