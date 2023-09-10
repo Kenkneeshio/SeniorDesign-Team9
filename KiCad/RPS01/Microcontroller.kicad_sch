@@ -598,6 +598,7 @@
     )
   )
 
+
   (junction (at 91.694 106.426) (diameter 0) (color 0 0 0 0)
     (uuid 3499a262-ec89-40a0-ab72-8e65fb9fcb11)
   )
@@ -16265,13 +16266,13 @@
   (symbol (lib_id "Device:R_Small") (at 95.758 106.426 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 07c374a6-727e-4409-b8f9-611e608bd6b8)
-    (property "Reference" "R6" (at 95.758 102.362 90)
+    (property "Reference" "R7" (at 95.758 102.362 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 94.234 104.902 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 95.758 106.426 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 95.758 106.426 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.758 106.426 0)
@@ -16282,7 +16283,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -16291,7 +16292,7 @@
   (symbol (lib_id "Device:C_Small") (at 85.344 125.984 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0d13b0a4-4844-4f6d-8b5d-2b48e03db3e2)
-    (property "Reference" "C2" (at 78.486 125.1204 0)
+    (property "Reference" "C?" (at 78.486 125.1204 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 75.7428 127.9652 0)
@@ -16308,12 +16309,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C1") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -16322,7 +16323,7 @@
   (symbol (lib_id "power:GND") (at 177.1396 92.6084 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0fdd0c14-e459-4af0-a85a-4308498e987e)
-    (property "Reference" "#PWR015" (at 177.1396 98.9584 0)
+    (property "Reference" "#PWR?" (at 177.1396 98.9584 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 177.1396 98.298 0)
@@ -16338,7 +16339,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16352,7 +16353,7 @@
   (symbol (lib_id "power:GND") (at 164.1856 152.3492 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 13db6267-80ea-412b-8b76-39788d812743)
-    (property "Reference" "#PWR06" (at 157.8356 152.3492 0)
+    (property "Reference" "#PWR?" (at 157.8356 152.3492 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 159.8168 152.9842 90)
@@ -16368,7 +16369,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16382,13 +16383,13 @@
   (symbol (lib_id "2023-06-26_00-14-37:ADR02AUJZ-REEL7") (at 16.002 98.044 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 19b6290a-322a-4219-a313-fdc3d91dc78a)
-    (property "Reference" "U3" (at 46.482 89.2556 0)
+    (property "Reference" "U?" (at 46.482 89.2556 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "ADR02AUJZ-REEL7" (at 46.482 91.7956 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "footprints:UJ_5_ADI" (at 16.002 98.044 0)
+    (property "Footprint" "Mechatronics VREF:UJ_5_ADI" (at 16.002 98.044 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "ADR02AUJZ-REEL7" (at 16.002 98.044 0)
@@ -16402,7 +16403,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "U3") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "rps01"
@@ -16416,7 +16417,7 @@
   (symbol (lib_id "power:GND") (at 85.344 129.6416 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a987dbc-32eb-42a0-87e6-0777c82d8c7c)
-    (property "Reference" "#PWR09" (at 85.344 135.9916 0)
+    (property "Reference" "#PWR?" (at 85.344 135.9916 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 85.344 134.7216 0)
@@ -16432,7 +16433,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16446,7 +16447,7 @@
   (symbol (lib_id "power:GND") (at 199.8472 93.3704 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 23caff6a-8bad-43f2-86da-b9655cc8b56b)
-    (property "Reference" "#PWR016" (at 199.8472 99.7204 0)
+    (property "Reference" "#PWR?" (at 199.8472 99.7204 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 199.8472 98.1456 0)
@@ -16462,7 +16463,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16501,7 +16502,7 @@
   (symbol (lib_id "Device:C_Small") (at 91.694 112.522 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33231e6b-7661-4f32-ba24-c8a3cde4b37d)
-    (property "Reference" "C3" (at 95.25 111.8933 0)
+    (property "Reference" "C?" (at 95.25 111.8933 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 95.25 114.4333 0)
@@ -16518,12 +16519,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C3") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C2") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -16532,7 +16533,7 @@
   (symbol (lib_id "Device:C_Small") (at 205.74 147.828 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4d437999-6a46-42a4-a13e-864d3b7f93aa)
-    (property "Reference" "C1" (at 208.28 145.288 0)
+    (property "Reference" "C?" (at 208.28 145.288 0)
       (effects (font (size 0.5 0.5)) (justify left))
     )
     (property "Value" "100n" (at 208.28 146.558 0)
@@ -16549,12 +16550,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C1") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C7") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -16563,7 +16564,7 @@
   (symbol (lib_id "MCU_Microchip_ATmega:ATmega328P-A") (at 119.634 136.906 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4dcc0068-c774-4e33-8746-8b5620816c81)
-    (property "Reference" "U1" (at 121.5899 174.9044 0)
+    (property "Reference" "U?" (at 121.5899 174.9044 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ATmega328P-A" (at 121.5899 177.4444 0)
@@ -16610,7 +16611,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "U1") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "rps01"
@@ -16624,7 +16625,7 @@
   (symbol (lib_id "Device:C_Small") (at 119.634 89.154 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4f99dd58-bee5-4a5a-a67e-ea123e594425)
-    (property "Reference" "C2" (at 112.776 88.2904 0)
+    (property "Reference" "C?" (at 112.776 88.2904 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 110.0328 91.1352 0)
@@ -16641,12 +16642,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C3") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -16655,7 +16656,7 @@
   (symbol (lib_id "power:GND") (at 188.722 119.4816 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 57532c4e-1974-4528-acc1-bc49cff2035e)
-    (property "Reference" "#PWR04" (at 195.072 119.4816 0)
+    (property "Reference" "#PWR?" (at 195.072 119.4816 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 192.5828 120.1166 90)
@@ -16671,7 +16672,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16685,7 +16686,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x06") (at 171.958 154.432 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7ea604b4-ebef-4412-8cd5-693a0a737d74)
-    (property "Reference" "J2" (at 169.8752 166.4716 0)
+    (property "Reference" "J?" (at 169.8752 166.4716 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Serial" (at 168.6052 164.4396 0)
@@ -16706,7 +16707,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "J2") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "rps01"
@@ -16720,7 +16721,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x03_Counter_Clockwise") (at 178.308 117.602 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 86ec0088-53a3-4aa5-b52b-aaa94b7dee3e)
-    (property "Reference" "J1" (at 179.578 109.8296 0)
+    (property "Reference" "J?" (at 179.578 109.8296 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ISCP" (at 179.832 111.6076 0)
@@ -16741,7 +16742,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "rps01"
@@ -16755,7 +16756,7 @@
   (symbol (lib_id "power:GND") (at 16.002 102.616 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9332ae85-b983-4de1-b005-760ec35f3714)
-    (property "Reference" "#PWR08" (at 16.002 108.966 0)
+    (property "Reference" "#PWR?" (at 16.002 108.966 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 16.637 106.1212 90)
@@ -16771,7 +16772,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16785,7 +16786,7 @@
   (symbol (lib_id "Device:Crystal") (at 183.6928 77.4192 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 965e8a25-7184-4f1e-9cd9-b00857f968b9)
-    (property "Reference" "Y1" (at 183.6928 71.12 0)
+    (property "Reference" "Y?" (at 183.6928 71.12 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "16M" (at 183.6928 73.66 0)
@@ -16802,7 +16803,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "Y1") (unit 1)
+          (reference "Y?") (unit 1)
         )
       )
       (project "rps01"
@@ -16816,7 +16817,7 @@
   (symbol (lib_id "Device:C_Small") (at 176.9872 85.4456 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f200e4f-2fbb-4abe-a567-c6a9a355b093)
-    (property "Reference" "C4" (at 179.5272 82.9056 0)
+    (property "Reference" "C?" (at 179.5272 82.9056 0)
       (effects (font (size 0.5 0.5)) (justify left))
     )
     (property "Value" "22pF" (at 179.5272 84.1756 0)
@@ -16833,12 +16834,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C4") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C5") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -16847,7 +16848,7 @@
   (symbol (lib_id "power:GND") (at 91.694 116.84 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b55210c0-a5d9-4906-9479-1fef5351b64f)
-    (property "Reference" "#PWR010" (at 91.694 123.19 0)
+    (property "Reference" "#PWR?" (at 91.694 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 91.694 122.5296 0)
@@ -16863,7 +16864,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16877,7 +16878,7 @@
   (symbol (lib_id "power:GND") (at 119.634 177.1904 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ba73906a-20f7-419d-8b25-d67ebc4f87f8)
-    (property "Reference" "#PWR01" (at 119.634 183.5404 0)
+    (property "Reference" "#PWR?" (at 119.634 183.5404 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 119.634 182.2704 0)
@@ -16893,7 +16894,7 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
@@ -16907,7 +16908,7 @@
   (symbol (lib_id "Device:C_Small") (at 130.81 89.154 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bbca6219-22fa-44a1-9ee3-f6ae0a428d73)
-    (property "Reference" "C2" (at 123.952 88.2904 0)
+    (property "Reference" "C?" (at 123.952 88.2904 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 121.2088 91.1352 0)
@@ -16924,12 +16925,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C4") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -16938,7 +16939,7 @@
   (symbol (lib_id "Device:C_Small") (at 199.898 85.6488 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fdad1d70-7e62-4d82-a48b-044e9c3655a4)
-    (property "Reference" "C5" (at 202.438 83.1088 0)
+    (property "Reference" "C?" (at 202.438 83.1088 0)
       (effects (font (size 0.5 0.5)) (justify left))
     )
     (property "Value" "22p" (at 202.438 84.3788 0)
@@ -16955,12 +16956,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "C5") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C6") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )

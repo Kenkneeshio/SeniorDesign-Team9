@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid a8a45277-d8cf-42cf-8d77-31bb122a57e4)
+  (uuid 8fc2ec08-ad57-4935-8c58-0b8d1e2c07ab)
 
   (paper "A4")
 
@@ -442,7 +442,7 @@
   (symbol (lib_id "Connector:Conn_01x04_Pin") (at 202.184 59.69 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0d2e7caf-c811-4871-82e8-c63080af101a)
-    (property "Reference" "J22" (at 203.2 57.785 0)
+    (property "Reference" "J?" (at 203.2 57.785 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Display" (at 203.2 60.325 0)
@@ -461,10 +461,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J22") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "J23") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
           (reference "J15") (unit 1)
@@ -476,7 +476,7 @@
   (symbol (lib_id "power:GND") (at 194.818 64.516 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1940d379-eb42-44f1-9328-09eb10af7916)
-    (property "Reference" "#PWR031" (at 194.818 70.866 0)
+    (property "Reference" "#PWR?" (at 194.818 70.866 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.818 70.104 0)
@@ -492,13 +492,13 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -507,7 +507,7 @@
   (symbol (lib_id "Device:R") (at 126.3904 55.0164 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c35b347-7684-4209-bda1-3e716fc8499e)
-    (property "Reference" "R1" (at 120.0404 55.0164 90)
+    (property "Reference" "R?" (at 120.0404 55.0164 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150 Blue" (at 124.1044 51.8668 90)
@@ -524,20 +524,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R5") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R24") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -546,7 +546,7 @@
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 137.2108 68.9864 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b24c2b5f-531b-4cbc-8d71-3693879fd886)
-    (property "Reference" "J22" (at 138.3284 74.0156 90)
+    (property "Reference" "J?" (at 138.3284 74.0156 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "RGB LED" (at 138.2776 71.9836 90)
@@ -567,7 +567,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "J22") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
           (reference "J14") (unit 1)
@@ -579,7 +579,7 @@
   (symbol (lib_id "power:GND") (at 139.7 62.2808 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ceb258fa-c992-4811-974e-34f66caedadb)
-    (property "Reference" "#PWR015" (at 139.7 55.9308 0)
+    (property "Reference" "#PWR?" (at 139.7 55.9308 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 139.7 58.5724 0)
@@ -595,15 +595,15 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
     )
@@ -612,7 +612,7 @@
   (symbol (lib_id "Device:R") (at 134.8232 53.7464 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d07045fb-bf89-427f-9338-d3a0a1cba7bd)
-    (property "Reference" "R1" (at 141.478 52.7304 90)
+    (property "Reference" "R?" (at 141.478 52.7304 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100 RED" (at 138.5316 52.578 90)
@@ -629,20 +629,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R25") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -651,7 +651,7 @@
   (symbol (lib_id "Device:R") (at 146.9136 53.6956 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e26fe691-a292-43fb-b6f3-27fcb39d0bf5)
-    (property "Reference" "R1" (at 153.1112 53.594 90)
+    (property "Reference" "R?" (at 153.1112 53.594 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150 Green" (at 144.6276 50.546 90)
@@ -668,20 +668,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R6") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R26") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )

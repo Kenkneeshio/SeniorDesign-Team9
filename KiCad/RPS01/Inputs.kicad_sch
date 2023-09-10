@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid 9b141aaf-a742-45ee-98bb-147f9432cb7e)
+  (uuid 00b2f2f2-5839-44cc-9e88-ca8f85707a39)
 
   (paper "A4")
 
@@ -142,6 +142,7 @@
     )
   )
 
+
   (junction (at 59.69 51.816) (diameter 0) (color 0 0 0 0)
     (uuid 432067f8-f402-4b94-8086-4f0efc310710)
   )
@@ -273,7 +274,7 @@
   (symbol (lib_id "power:GND") (at 78.74 44.196 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 128ac536-9f96-4750-bbee-492fd27834cc)
-    (property "Reference" "#PWR03" (at 78.74 50.546 0)
+    (property "Reference" "#PWR?" (at 78.74 50.546 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 78.74 49.53 0)
@@ -289,20 +290,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "#PWR0105") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -311,7 +312,7 @@
   (symbol (lib_id "power:GND") (at 78.994 66.548 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3e7daa3d-7896-4505-af87-2bfef969386b)
-    (property "Reference" "#PWR03" (at 78.994 72.898 0)
+    (property "Reference" "#PWR?" (at 78.994 72.898 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 78.994 71.882 0)
@@ -327,20 +328,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "#PWR0105") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -349,7 +350,7 @@
   (symbol (lib_id "Device:R") (at 67.564 74.168 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f02d8bb-4f30-49b1-a714-38a5ad0b6d95)
-    (property "Reference" "R4" (at 67.564 69.088 90)
+    (property "Reference" "R?" (at 67.564 69.088 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10K" (at 67.564 71.628 90)
@@ -366,20 +367,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R3") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "R29") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -388,7 +389,7 @@
   (symbol (lib_id "Device:R") (at 67.31 51.816 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6977e290-b366-456a-987b-e0c7e0a14b0e)
-    (property "Reference" "R4" (at 67.31 46.736 90)
+    (property "Reference" "R?" (at 67.31 46.736 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10K" (at 67.31 49.276 90)
@@ -405,20 +406,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R3") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "R28") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -427,7 +428,7 @@
   (symbol (lib_id "Switch:SW_Push_Open") (at 70.104 66.548 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7edbc544-3349-462a-bfa4-e457a3bbf3d0)
-    (property "Reference" "SW1" (at 70.104 62.23 0)
+    (property "Reference" "SW?" (at 70.104 62.23 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Display Button" (at 70.104 64.77 0)
@@ -444,12 +445,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
           (reference "SW2") (unit 1)
@@ -457,7 +458,7 @@
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
     )
@@ -466,7 +467,7 @@
   (symbol (lib_id "Switch:SW_Push_Open") (at 69.85 44.196 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ff919923-9eb4-4445-ba7e-791067a4efdd)
-    (property "Reference" "SW1" (at 69.85 39.37 0)
+    (property "Reference" "SW?" (at 69.85 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "RST" (at 69.85 41.91 0)
@@ -483,12 +484,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
           (reference "SW1") (unit 1)
@@ -496,7 +497,7 @@
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
     )

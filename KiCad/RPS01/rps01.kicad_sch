@@ -374,10 +374,6 @@
     (stroke (width 0) (type default))
     (uuid 494b7369-006e-42bd-82c6-eacfa15acb16)
   )
-  (wire (pts (xy 252.222 31.496) (xy 251.0282 31.496))
-    (stroke (width 0) (type default))
-    (uuid 4aa65d09-073c-48eb-acad-348592b2968c)
-  )
   (wire (pts (xy 243.078 102.108) (xy 258.826 102.108))
     (stroke (width 0) (type default))
     (uuid 4d477976-5994-4a33-b3c3-2bf01a4ee52d)
@@ -419,13 +415,13 @@
     (stroke (width 0) (type default))
     (uuid 6595710c-b1f0-4fe3-8aa6-f51f27457d1f)
   )
-  (wire (pts (xy 250.952 31.496) (xy 230.124 31.496))
-    (stroke (width 0) (type default))
-    (uuid 6a07126f-eecc-4604-ba93-ffc96a24fecb)
-  )
   (wire (pts (xy 253.746 106.426) (xy 253.746 119.634))
     (stroke (width 0) (type default))
     (uuid 6e6bbce1-aaa3-4338-91be-e0500f51ea51)
+  )
+  (wire (pts (xy 230.124 31.496) (xy 252.222 31.496))
+    (stroke (width 0) (type default))
+    (uuid 771d45b3-7cb4-41ed-8c6c-cfa3cbaa7859)
   )
   (wire (pts (xy 52.324 115.57) (xy 100.838 115.57))
     (stroke (width 0) (type default))
@@ -620,7 +616,7 @@
     (uuid 3d83486f-6ff7-487f-815b-74a7e5cc1f49)
     (data
       iVBORw0KGgoAAAANSUhEUgAAAr0AAAORCAIAAABwX412AAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
-      ABJ0AAASdAHeZh94AAAgAElEQVR4nOy9eXxU5d02fp85s+9ZyAbZAyRsISQBkkASQEBAVssij1Zc
+      ABJcAAASXAFoxDaJAAAgAElEQVR4nOy9eXxU5d02fp85s+9ZyAbZAyRsISQBkkASQEBAVssij1Zc
       61arPn2q1VZbW1v7aBdrrXWpWnEFEdEIgigalkASYjZIAmQhe0gymf3MmZkz5/3j+s39mbc1fnx/
       VVF6X3/wCZMz59znPpP5btf3+nJz8ucTBgYGBgYGBoYvAcXFXgADAwMDAwPDdwbMb2BgYGBgYGD4
       smB+AwMDAwMDA8OXBfMbGBgYGBgYGL4smN/AwMDAwMDA8GXB/AYGBgYGBgaGLwvmNzAwMDAwMDB8
@@ -4731,7 +4727,7 @@
     (uuid 73af164d-beef-4dbc-94b7-74281706e070)
     (data
       iVBORw0KGgoAAAANSUhEUgAAAeoAAAN9CAIAAADT862/AAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
-      ABJ0AAASdAHeZh94AAAgAElEQVR4nOy9ebhkVXX3/11r732GGu7tCVpkHkWgGW1klKDvm/g65hej
+      ABJcAAASXAFoxDaJAAAgAElEQVR4nOy9ebhkVXX3/11r732GGu7tCVpkHkWgGW1klKDvm/g65hej
       MSaOKIgCzqJGg1EciAMEFHHAIUHEMb7GJBgHIoMyI6M02EwNtIzd996qOsPee63fH6fqdhOHN+QN
       3dyX83nuc59+qs89depU1fess/Za30XDwTq0tLS0tCw0eHMfQEtLS0vLf4VWvltaWloWJK18t7S0
       tCxIWvluaWlpWZC08t3S0tKyIGnlu6WlpWVB0sp3S0tLy4Kkle+WlpaWBUkr3y0tLS0Lkla+W1pa
@@ -17358,7 +17354,7 @@
     (effects (font (size 4 4)) (justify left bottom))
     (uuid 14133756-830b-4833-89da-b599d5a9a4dc)
   )
-  (text "Notes:\nOverall need to check for errors. ERC?\nMissing 2 PCB THT TEMP Sensors\nFootprints needs to be updated\nShunt 1 Footprint?\nBuck Converters need to be updated"
+  (text "Notes:\nOverall need to check for errors. ERC?\nBuck Converters need to be updated"
     (at 19.558 18.542 0)
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 226417b4-de98-47f3-b44a-b9fa31746f36)
@@ -17584,7 +17580,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 263.906 99.568 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7593e329-474e-4e75-9944-baf37f9d51ad)
-    (property "Reference" "J5" (at 265.43 100.203 0)
+    (property "Reference" "J?" (at 265.43 100.203 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XT30 3.3V" (at 265.43 102.743 0)
@@ -17601,7 +17597,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "J5") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "J9") (unit 1)
@@ -17639,7 +17635,7 @@
   (symbol (lib_id "power:GND") (at 261.112 108.204 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7919f22c-17de-43ca-8f83-cb5bca48cdef)
-    (property "Reference" "#PWR050" (at 261.112 114.554 0)
+    (property "Reference" "#PWR?" (at 261.112 114.554 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 261.112 112.7662 0)
@@ -17655,7 +17651,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "#PWR07") (unit 1)
@@ -17667,7 +17663,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 263.144 134.874 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f451323-2a90-40cc-886e-6f5cd761a4f7)
-    (property "Reference" "J14" (at 264.16 135.509 0)
+    (property "Reference" "J?" (at 264.16 135.509 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XT30 12V" (at 264.16 138.049 0)
@@ -17684,7 +17680,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "J14") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "J7") (unit 1)
@@ -17721,7 +17717,7 @@
   (symbol (lib_id "power:GND") (at 262.128 90.932 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid af482b9e-6b57-46b4-8d66-483a2fb4aed1)
-    (property "Reference" "#PWR048" (at 262.128 97.282 0)
+    (property "Reference" "#PWR?" (at 262.128 97.282 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 262.128 96.266 0)
@@ -17737,7 +17733,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "#PWR09") (unit 1)
@@ -17755,7 +17751,7 @@
     (property "Value" "IIC Connector" (at 256.54 154.813 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 255.524 154.178 0)
+    (property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" (at 255.524 154.178 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 255.524 154.178 0)
@@ -17801,7 +17797,7 @@
   (symbol (lib_id "power:GND") (at 261.366 126.746 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bfbed9b1-02e3-4686-8d29-e7b7ee55c14d)
-    (property "Reference" "#PWR051" (at 261.366 133.096 0)
+    (property "Reference" "#PWR?" (at 261.366 133.096 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 261.366 131.5364 0)
@@ -17817,7 +17813,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "#PWR08") (unit 1)
@@ -17829,7 +17825,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 263.652 117.094 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dbd4b911-b08f-4f77-a1d3-82f3865db692)
-    (property "Reference" "J13" (at 265.43 117.729 0)
+    (property "Reference" "J?" (at 265.43 117.729 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XT30 5V" (at 265.43 120.269 0)
@@ -17846,7 +17842,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "J13") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
           (reference "J8") (unit 1)
@@ -18054,21 +18050,21 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 749ca6c7-5c1a-48d0-b9d7-4b8d8e700206)
     )
-    (pin "19V" bidirectional (at 232.918 112.776 0)
+    (pin "+5V" bidirectional (at 232.918 100.33 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 7e6970ca-c6d4-4d68-a50b-ab2357e23070)
+      (uuid 132f869f-eec9-4476-92a2-8ac876ed6be7)
     )
-    (pin "3.3V" bidirectional (at 232.918 94.234 0)
+    (pin "+12V" bidirectional (at 232.918 106.172 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid ff9d2c8a-28e7-4b6a-8094-623c259066ae)
+      (uuid 13aa3b6d-3787-49e3-871e-cbcb80b0bb95)
     )
-    (pin "5V" bidirectional (at 232.918 100.33 0)
+    (pin "+3.3V" bidirectional (at 232.918 94.234 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 0c08cbe4-19b4-4c76-91b0-20ffe78954de)
+      (uuid 834b4e1a-a062-40e4-8862-430c754639ea)
     )
-    (pin "12V" bidirectional (at 232.918 106.172 0)
+    (pin "+19V" bidirectional (at 232.918 112.776 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 8c7413b9-4436-478e-ad0f-72cddf1dd7ce)
+      (uuid d245fcac-4409-40b3-af27-ebd981dabfdf)
     )
     (instances
       (project "rps01"

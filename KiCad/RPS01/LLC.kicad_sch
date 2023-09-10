@@ -325,6 +325,7 @@
     )
   )
 
+
   (junction (at 163.83 97.79) (diameter 0) (color 0 0 0 0)
     (uuid 0265122f-d6a3-4bd5-ad1b-ed5aa05f2f1d)
   )
@@ -1397,13 +1398,13 @@
   (symbol (lib_id "Device:R") (at 165.1 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 166c6441-1d4b-48ca-8225-752a8bec39c4)
-    (property "Reference" "R16" (at 167.64 127 0)
+    (property "Reference" "R21" (at 167.64 127 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 167.64 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 163.322 128.27 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 163.322 128.27 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 128.27 0)
@@ -1414,7 +1415,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R16") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -1423,7 +1424,7 @@
   (symbol (lib_id "power:GND") (at 187.96 143.764 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 280136b0-74c1-4522-98c6-a43f21b1bef6)
-    (property "Reference" "#PWR01" (at 187.96 150.114 0)
+    (property "Reference" "#PWR?" (at 187.96 150.114 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 187.96 148.844 0)
@@ -1439,12 +1440,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
           (reference "#PWR042") (unit 1)
@@ -1456,13 +1457,13 @@
   (symbol (lib_id "Device:R_Small") (at 156.718 150.368 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c6f1e3b-0cc4-4e76-808a-e20765642a6d)
-    (property "Reference" "R14" (at 156.718 146.05 90)
+    (property "Reference" "R19" (at 156.718 146.05 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 156.718 148.59 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 156.718 150.368 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 156.718 150.368 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 156.718 150.368 0)
@@ -1473,7 +1474,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R14") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -1482,13 +1483,13 @@
   (symbol (lib_id "Device:R") (at 147.32 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 85113432-16a4-4569-81d1-08f81391d0ae)
-    (property "Reference" "R11" (at 149.86 88.9 0)
+    (property "Reference" "R16" (at 149.86 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 149.86 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 145.542 90.17 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 145.542 90.17 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 147.32 90.17 0)
@@ -1499,7 +1500,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R11") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -1560,13 +1561,13 @@
   (symbol (lib_id "Device:R") (at 147.32 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aac73722-e517-4c2e-9249-4c7539713bed)
-    (property "Reference" "R12" (at 149.86 127 0)
+    (property "Reference" "R17" (at 149.86 127 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 149.86 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 145.542 128.27 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 145.542 128.27 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 147.32 128.27 0)
@@ -1577,7 +1578,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R12") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -1586,7 +1587,7 @@
   (symbol (lib_id "power:GND") (at 186.944 107.4928 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bd1a2e59-8258-4caf-8e8f-aa74cae2e93e)
-    (property "Reference" "#PWR01" (at 186.944 113.8428 0)
+    (property "Reference" "#PWR?" (at 186.944 113.8428 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 186.944 112.5728 0)
@@ -1602,12 +1603,12 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
           (reference "#PWR041") (unit 1)
@@ -1644,13 +1645,13 @@
   (symbol (lib_id "Device:R") (at 163.83 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5fb1971-61b5-4daa-9590-4f5f56865891)
-    (property "Reference" "R15" (at 166.37 88.9 0)
+    (property "Reference" "R20" (at 166.37 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 166.37 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 162.052 90.17 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 162.052 90.17 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 163.83 90.17 0)
@@ -1661,7 +1662,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R15") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -1670,13 +1671,13 @@
   (symbol (lib_id "Device:R_Small") (at 155.956 111.506 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ddfeff8e-aae5-4b68-9f9c-0a785f741b32)
-    (property "Reference" "R13" (at 155.956 106.68 90)
+    (property "Reference" "R18" (at 155.956 106.68 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 155.956 109.22 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 155.956 111.506 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 155.956 111.506 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 155.956 111.506 0)
@@ -1687,7 +1688,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R13") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -1696,7 +1697,7 @@
   (symbol (lib_id "Device:R") (at 187.96 139.7 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e616b659-6ea4-4934-998c-256ab047b7a6)
-    (property "Reference" "R4" (at 193.04 139.7 90)
+    (property "Reference" "R?" (at 193.04 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7K" (at 190.3984 139.7 90)
@@ -1713,20 +1714,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R8") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R18") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1735,7 +1736,7 @@
   (symbol (lib_id "Device:R") (at 186.944 101.6 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fa1ef88e-dd24-4e51-ba78-3bf6bd119f0c)
-    (property "Reference" "R4" (at 181.864 101.6 90)
+    (property "Reference" "R?" (at 181.864 101.6 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7K" (at 184.404 101.6 90)
@@ -1752,20 +1753,20 @@
     (instances
       (project "MCU2"
         (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R7") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R17") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
       (project "M_MUC"
         (path "/8f0e16c9-4bd2-4a25-a569-54925ece9d23"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )

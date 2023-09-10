@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid b4063893-9259-4dfc-8509-5b1cd658975e)
+  (uuid b8b97262-d026-4110-8bb6-fc1bb3eebdb7)
 
   (paper "A4")
 
@@ -226,8 +226,12 @@
     )
   )
 
+
   (junction (at 129.794 59.944) (diameter 0) (color 0 0 0 0)
     (uuid 640f22a9-f905-4a61-9a26-cc65f4c91d1a)
+  )
+  (junction (at 147.574 124.46) (diameter 0) (color 0 0 0 0)
+    (uuid 8d2fbc5e-ca1d-432f-a517-19dfbacec487)
   )
   (junction (at 137.414 141.7826) (diameter 0) (color 0 0 0 0)
     (uuid cf119f23-8bc3-4eb4-a7ad-73c094618c32)
@@ -273,10 +277,6 @@
     (stroke (width 0) (type default))
     (uuid 27527ca7-29b5-4973-aacb-31370587d0bc)
   )
-  (wire (pts (xy 156.464 118.11) (xy 160.782 118.11))
-    (stroke (width 0) (type default))
-    (uuid 30e8a9ec-5098-48d0-8a3a-2f43f3a3642a)
-  )
   (wire (pts (xy 137.414 125.9998) (xy 147.574 125.9998))
     (stroke (width 0) (type default))
     (uuid 3b7cee07-d2e8-4c9f-b252-a74d68d1001b)
@@ -293,7 +293,7 @@
     (stroke (width 0) (type default))
     (uuid 4ff44a8d-c764-482a-bb73-e3ebd8e26e9c)
   )
-  (wire (pts (xy 147.574 125.9998) (xy 159.004 125.9998))
+  (wire (pts (xy 147.574 124.46) (xy 159.004 124.46))
     (stroke (width 0) (type default))
     (uuid 63fa5289-fe64-4046-b1c8-73b5629c4495)
   )
@@ -309,13 +309,25 @@
     (stroke (width 0) (type default))
     (uuid 6cded5a5-3e2a-4bea-8a58-1ef21d09a000)
   )
+  (wire (pts (xy 160.782 117.856) (xy 160.782 118.11))
+    (stroke (width 0) (type default))
+    (uuid 6edbbdc1-c6ba-4372-acde-5f3b0274aea9)
+  )
   (wire (pts (xy 137.414 125.984) (xy 137.414 125.9998))
     (stroke (width 0) (type default))
     (uuid 750828f3-d9e3-498c-9622-41f060c09b37)
   )
+  (wire (pts (xy 147.574 117.856) (xy 160.782 117.856))
+    (stroke (width 0) (type default))
+    (uuid 7922e9c9-12d6-4fce-b524-fc22b7a3997a)
+  )
   (wire (pts (xy 139.7 59.944) (xy 165.354 59.944))
     (stroke (width 0) (type default))
     (uuid 7b1d4734-70a5-40a6-928d-5feb561ec418)
+  )
+  (wire (pts (xy 147.574 124.46) (xy 147.574 125.9998))
+    (stroke (width 0) (type default))
+    (uuid 8a7119f3-da74-4a2e-8835-c6b5e7711bfd)
   )
   (wire (pts (xy 147.574 141.7826) (xy 137.414 141.7826))
     (stroke (width 0) (type default))
@@ -328,10 +340,6 @@
   (wire (pts (xy 121.412 59.944) (xy 129.794 59.944))
     (stroke (width 0) (type default))
     (uuid 959f0dff-8459-4b6c-a2f3-d01f70995d97)
-  )
-  (wire (pts (xy 156.464 125.984) (xy 156.464 118.11))
-    (stroke (width 0) (type default))
-    (uuid 9957fc2b-c687-4de0-a09a-e8682e84267c)
   )
   (wire (pts (xy 130.81 48.006) (xy 129.794 48.006))
     (stroke (width 0) (type default))
@@ -377,11 +385,15 @@
     (stroke (width 0) (type default))
     (uuid dca3f278-7d0b-4a06-840e-2af865cb397c)
   )
+  (wire (pts (xy 147.574 124.46) (xy 147.574 117.856))
+    (stroke (width 0) (type default))
+    (uuid df6b516a-bdce-4b2a-a3dd-469d4e7c3241)
+  )
   (wire (pts (xy 139.7 48.006) (xy 139.7 59.944))
     (stroke (width 0) (type default))
     (uuid e7254c71-9719-43ca-8b49-6ff5100ccb0a)
   )
-  (wire (pts (xy 159.004 125.9998) (xy 159.004 125.984))
+  (wire (pts (xy 159.004 124.46) (xy 159.004 124.4442))
     (stroke (width 0) (type default))
     (uuid ee548e8d-0147-4a30-9d04-4135713cbe4c)
   )
@@ -406,7 +418,7 @@
     )
   )
 
-  (hierarchical_label "VSIG" (shape input) (at 159.004 125.984 0) (fields_autoplaced)
+  (hierarchical_label "VSIG" (shape input) (at 159.004 124.4442 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0ec500ab-b83b-4824-a7bc-2bce83862965)
   )
@@ -422,7 +434,7 @@
   (symbol (lib_id "power:GND") (at 137.414 143.764 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0d7fb57c-2c6b-442a-a3b8-74afd30e7272)
-    (property "Reference" "#PWR040" (at 137.414 150.114 0)
+    (property "Reference" "#PWR?" (at 137.414 150.114 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 137.414 148.9964 0)
@@ -438,10 +450,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
     )
@@ -450,7 +462,7 @@
   (symbol (lib_id "Device:R") (at 137.414 133.604 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1cdf79c9-124b-4825-b028-1a30b2914c2d)
-    (property "Reference" "RL1" (at 139.7 132.969 0)
+    (property "Reference" "RL?" (at 139.7 132.969 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100k" (at 139.7 135.509 0)
@@ -467,10 +479,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "RL1") (unit 1)
+          (reference "RL?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R22") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -479,7 +491,7 @@
   (symbol (lib_id "INA139:INA139QPWRQ1") (at 134.874 66.294 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a01ee253-a036-4c84-b8f0-d7347b99c3ff)
-    (property "Reference" "U12" (at 141.224 93.599 90)
+    (property "Reference" "U?" (at 141.224 93.599 90)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Value" "INA139QPWRQ1" (at 141.224 96.139 90)
@@ -502,10 +514,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "U12") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "U16") (unit 1)
+          (reference "U18") (unit 1)
         )
       )
     )
@@ -514,7 +526,7 @@
   (symbol (lib_id "Device:R") (at 134.62 48.006 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bf4be11d-2134-451c-80c8-8c3270e26f51)
-    (property "Reference" "R1" (at 134.62 43.18 90)
+    (property "Reference" "R?" (at 134.62 43.18 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.2 1206" (at 134.62 45.72 90)
@@ -531,10 +543,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R27") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -543,7 +555,7 @@
   (symbol (lib_id "Device:C") (at 147.574 133.604 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c60a5f4a-8a83-43f4-93a8-13dbac84702f)
-    (property "Reference" "Cf_1" (at 151.13 132.969 0)
+    (property "Reference" "Cf_?" (at 151.13 132.969 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "80p" (at 151.13 135.509 0)
@@ -560,10 +572,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "Cf_1") (unit 1)
+          (reference "Cf_?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "C24") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -572,7 +584,7 @@
   (symbol (lib_id "power:GND") (at 106.934 77.724 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c65c0a04-6d32-447b-bee5-09cc83d29879)
-    (property "Reference" "#PWR030" (at 106.934 84.074 0)
+    (property "Reference" "#PWR?" (at 106.934 84.074 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 106.934 82.804 0)
@@ -588,10 +600,10 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
     )
