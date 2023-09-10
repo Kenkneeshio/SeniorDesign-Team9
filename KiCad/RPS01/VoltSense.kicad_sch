@@ -1,0 +1,36 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 2030a554-90d1-4f8c-a933-9a0d062b4e7a)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (wire (pts (xy 82.042 80.01) (xy 123.952 80.01))
+    (stroke (width 0) (type default))
+    (uuid 89c498a8-9a3a-4b4c-a609-cc71367b8a63)
+  )
+  (wire (pts (xy 82.042 77.47) (xy 123.952 77.47))
+    (stroke (width 0) (type default))
+    (uuid 8a3f239c-0c16-44c5-bbfe-bfe1d288d435)
+  )
+
+  (hierarchical_label "VIN2" (shape bidirectional) (at 82.042 77.47 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 094718c5-b460-44e3-80c3-99b2948d8b38)
+  )
+  (hierarchical_label "VIN1" (shape bidirectional) (at 82.042 80.01 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 5bd19489-ae7a-4f2f-bb25-4c978ece9db5)
+  )
+  (hierarchical_label "VSIG1" (shape bidirectional) (at 123.952 77.47 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 6f8a4b0b-f23d-47b1-ab86-2007ff502fd9)
+  )
+  (hierarchical_label "VSIG2" (shape bidirectional) (at 123.952 80.01 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a110f36f-b275-4ad7-9ef1-4443c0b2ebac)
+  )
+)

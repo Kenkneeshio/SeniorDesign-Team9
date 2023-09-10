@@ -513,7 +513,7 @@
     ],
     [
       "13e150ee-6c46-47a5-9c09-3749eb0dcbfe",
-      "Current Sense"
+      "Current Sense 1"
     ],
     [
       "a2e49fe6-126d-427d-b045-54fb7f662aa7",
@@ -521,7 +521,7 @@
     ],
     [
       "6ed54b0f-f89c-4a82-b1ab-c92c0c126d05",
-      "Voltage Rails"
+      "Voltage Regulator Rails"
     ],
     [
       "c06f7478-c874-4c9c-9b0f-f3b722914738",
@@ -530,6 +530,14 @@
     [
       "70788b2e-4f8b-415f-94db-6db5f6e45c82",
       "Temperature Sensors"
+    ],
+    [
+      "86aa0a4b-8e23-451d-9b8a-c1446d1d5d38",
+      "Volt Sense"
+    ],
+    [
+      "66639be3-b7af-4c3b-a889-0b5ac725a84a",
+      "Displays and Indicators"
     ]
   ],
   "text_variables": {}
