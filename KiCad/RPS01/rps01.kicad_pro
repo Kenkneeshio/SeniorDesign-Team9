@@ -513,7 +513,7 @@
     ],
     [
       "13e150ee-6c46-47a5-9c09-3749eb0dcbfe",
-      "Current Sense 1"
+      "Current Sense Total"
     ],
     [
       "a2e49fe6-126d-427d-b045-54fb7f662aa7",
@@ -538,6 +538,10 @@
     [
       "66639be3-b7af-4c3b-a889-0b5ac725a84a",
       "Displays and Indicators"
+    ],
+    [
+      "83d3dc76-6aeb-422d-8708-14a32de244f0",
+      "Current Sense Rails"
     ]
   ],
   "text_variables": {}
