@@ -526,6 +526,10 @@
     [
       "c06f7478-c874-4c9c-9b0f-f3b722914738",
       "Logic Level Converter"
+    ],
+    [
+      "70788b2e-4f8b-415f-94db-6db5f6e45c82",
+      "Temperature Sensors"
     ]
   ],
   "text_variables": {}
