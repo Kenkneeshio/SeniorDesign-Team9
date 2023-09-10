@@ -68,7 +68,6 @@
   )
 
 
-
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 227.33 98.298 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 98cf9027-9661-4520-9feb-4c31dd1fea51)
