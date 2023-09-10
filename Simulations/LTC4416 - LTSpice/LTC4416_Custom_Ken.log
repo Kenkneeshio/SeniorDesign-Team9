@@ -2,49 +2,40 @@ Circuit: * C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\Simulations\LTC441
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
-Increasing initial diagonal Gmin to 100
-Increasing initial diagonal Gmin to 1000
-Increasing initial diagonal Gmin to 10000
-Increasing initial diagonal Gmin to 100000
-Gmin = 100000
-Gmin = 10737.4
-Gmin = 1152.92
-Gmin = 123.794
-Gmin = 13.2923
-Gmin = 1.42725
-Gmin = 0.15325
-Gmin = 0.016455
-Gmin = 0.00176685
-Gmin = 0.000189714
-Gmin = 2.03704e-05
-Gmin = 2.18725e-06
-Gmin = 2.34854e-07
-Gmin = 2.52173e-08
-Gmin = 2.70769e-09
-Gmin = 2.90735e-10
-Gmin = 3.12175e-11
-Gmin = 3.35195e-12
-Gmin = 3.59913e-13
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Heightened Def Con from 0.182453 to 0.182453
 
-Date: Fri Apr 14 14:04:27 2023
-Total elapsed time: 0.235 seconds.
+Date: Sun Sep 10 04:28:32 2023
+Total elapsed time: 0.102 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 5019
-traniter = 4053
-tranpoints = 1552
-accept = 1412
-rejected = 141
-matrix size = 50
-fillins = 12
+totiter = 2629
+traniter = 2269
+tranpoints = 1101
+accept = 1088
+rejected = 13
+matrix size = 54
+fillins = 6
 solver = Normal
-Avg thread counts: 1.2/1.4/1.4/1.2
-Matrix Compiler1: 3.12 KB object code size  0.6/0.5/[0.3]
-Matrix Compiler2: off  [0.3]/0.5/0.5
+Avg thread counts: 1.3/1.6/1.6/1.3
+Matrix Compiler1: 3.02 KB object code size  0.7/0.6/[0.2]
+Matrix Compiler2: 4.19 KB object code size  0.3/0.5/[0.3]
 

@@ -542,6 +542,14 @@
     [
       "83d3dc76-6aeb-422d-8708-14a32de244f0",
       "Current Sense Rails"
+    ],
+    [
+      "423e72dd-bb18-4d03-a22d-0f9c41f98256",
+      "Button and Inputs"
+    ],
+    [
+      "577d3fc4-735f-4981-a3a1-4300f23b9ae6",
+      "Probe Testing Points"
     ]
   ],
   "text_variables": {}
