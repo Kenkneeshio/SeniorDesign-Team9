@@ -17354,8 +17354,8 @@
     (effects (font (size 4 4)) (justify left bottom))
     (uuid 14133756-830b-4833-89da-b599d5a9a4dc)
   )
-  (text "Notes:\nOverall need to check for errors. ERC?\nBuck Converters need to be updated"
-    (at 19.558 18.542 0)
+  (text "Notes:\nOverall need to check for errors. ERC?\n19V BUCKBOOST need to be updated\nGLOBAL LABEL VSHUNT+ npt connected ERC ERROR???"
+    (at -18.796 14.224 0)
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 226417b4-de98-47f3-b44a-b9fa31746f36)
   )
