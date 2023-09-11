@@ -181,23 +181,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "global_label_dangling|2707640|876300|69692bcf-7ffd-476c-8743-c3b4fe675923|00000000-0000-0000-0000-000000000000|||",
-      "label_dangling|350520|274320|e100bd02-b211-49cd-ba4e-0655c8f2d634|00000000-0000-0000-0000-000000000000|||",
-      "multiple_net_names|1018540|497840|51183580-8a89-4db3-9ea3-a7c0895aba34|6f8a4b0b-f23d-47b1-ab86-2007ff502fd9|||",
-      "multiple_net_names|1226820|977900|a0f4edc2-66ec-475e-82f3-81c34563e188|2ffdc7a8-c34c-43fb-95b3-6eb293c5d647|||",
-      "multiple_net_names|1239520|1358900|a975a22d-1c76-46c2-b0d1-6d1fcaf5dd8d|5475e032-d830-471b-916d-5920bb417707|||",
-      "multiple_net_names|1361440|1005840|ad171402-bdd6-413b-81f7-6f652eb4ff86|e9730912-e36c-477b-a35d-f6d2a7bebaec|||",
-      "multiple_net_names|1397000|355600|058c670b-c66b-470f-ab15-4d539d605e88|9e00a5a8-1610-4b1f-beb6-84f04e25e8d6|||",
-      "multiple_net_names|1574800|739140|3b9faf2f-84bc-4d95-9a96-62566c6671cd|a110f36f-b275-4ad7-9ef1-4443c0b2ebac|||",
-      "multiple_net_names|1590040|1244442|aff4d7dc-4b62-4fa2-9532-2bbf47150f9e|0ec500ab-b83b-4824-a7bc-2bce83862965|||",
-      "multiple_net_names|2021840|1427480|c8ab878f-6a86-4d19-b027-3928670b11b0|7a52c037-7ebd-4dca-a0d6-a498d401c19e|||",
-      "multiple_net_names|215900|218440|b54c519d-cab5-4a93-8ed7-4d05165054ee|5675e75a-2c3e-43eb-9599-17f2a8dd8af5|||",
-      "multiple_net_names|596900|477520|5327f5b0-5216-4b20-ab0b-df94f336db5f|1e385f97-45f4-4b09-85d4-ec6b88bf96df|||",
-      "multiple_net_names|599440|701040|204cc524-72d0-4a95-a393-a727fb12cf44|7ed952cc-9716-49d0-b988-7cfa0e0ca785|||",
-      "multiple_net_names|741680|370840|acaf03a4-13cd-40bd-a2aa-ec11c9db795e|5675e75a-2c3e-43eb-9599-17f2a8dd8af5|||",
-      "multiple_net_names|850900|355600|09d0cc96-0299-4ec7-9725-df7ec4f995d7|f7b80e6b-c31a-4d95-a329-f7c095913458|||"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
