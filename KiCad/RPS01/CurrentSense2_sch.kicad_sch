@@ -453,7 +453,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -482,7 +482,7 @@
           (reference "RL?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R33") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -517,7 +517,7 @@
           (reference "U?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "U18") (unit 1)
+          (reference "U19") (unit 1)
         )
       )
     )
@@ -529,10 +529,10 @@
     (property "Reference" "R?" (at 134.62 43.18 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "0.2 1206" (at 134.62 45.72 90)
+    (property "Value" "0.2" (at 134.62 45.72 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Mechatronic Footprints:CSS2H-5930R" (at 134.62 49.784 90)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 134.62 49.784 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 134.62 48.006 0)
@@ -546,7 +546,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R32") (unit 1)
+          (reference "R_S4") (unit 1)
         )
       )
     )
@@ -575,7 +575,7 @@
           (reference "Cf_?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "C13") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -603,7 +603,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )

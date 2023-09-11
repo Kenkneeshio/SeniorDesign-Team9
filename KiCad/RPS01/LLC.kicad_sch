@@ -283,6 +283,58 @@
         )
       )
     )
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+5V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -334,6 +386,9 @@
   )
   (junction (at 137.16 135.89) (diameter 0) (color 0 0 0 0)
     (uuid 34232295-65fd-4519-aa20-1fbbbbfdc1bf)
+  )
+  (junction (at 130.048 63.5) (diameter 0) (color 0 0 0 0)
+    (uuid 3dc04fe7-c3ab-49c5-9c5e-416880785189)
   )
   (junction (at 165.1 135.89) (diameter 0) (color 0 0 0 0)
     (uuid 4ff40ab7-3669-4984-a1ef-30168ed55e35)
@@ -406,6 +461,10 @@
   (wire (pts (xy 154.178 150.368) (xy 137.16 150.368))
     (stroke (width 0) (type default))
     (uuid 5ac73c19-22c8-4cae-a632-4d9ea5e3a7a9)
+  )
+  (wire (pts (xy 127 63.5) (xy 130.048 63.5))
+    (stroke (width 0) (type default))
+    (uuid 5dacaa03-8a7a-4a27-9690-981fbb2541d9)
   )
   (wire (pts (xy 186.944 105.41) (xy 186.944 107.4928))
     (stroke (width 0) (type default))
@@ -1367,6 +1426,36 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid d4d3f07f-9177-4ae4-a2ad-f5a2a30871a1)
   )
+  (hierarchical_label "IIC VOLT" (shape input) (at 127 63.5 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid dbe6a102-741a-4852-9488-42cc0f4a95bd)
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 130.048 60.96 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 05be7113-54a1-4dc2-99a5-e46ecc9373e6)
+    (property "Reference" "R17" (at 131.826 60.325 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "0" (at 131.826 62.865 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 130.048 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 130.048 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 110a9dab-f0b8-43f3-83cb-ec8457dd1e7d))
+    (pin "2" (uuid 0dc14c77-2a34-4d26-a0b1-b3db1715de9f))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
+          (reference "R17") (unit 1)
+        )
+      )
+    )
+  )
 
   (symbol (lib_id "Transistor_FET:BSS138") (at 156.21 95.25 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
@@ -1398,7 +1487,7 @@
   (symbol (lib_id "Device:R") (at 165.1 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 166c6441-1d4b-48ca-8225-752a8bec39c4)
-    (property "Reference" "R21" (at 167.64 127 0)
+    (property "Reference" "R24" (at 167.64 127 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 167.64 129.54 0)
@@ -1415,7 +1504,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R21") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -1448,7 +1537,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -1457,7 +1546,7 @@
   (symbol (lib_id "Device:R_Small") (at 156.718 150.368 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c6f1e3b-0cc4-4e76-808a-e20765642a6d)
-    (property "Reference" "R19" (at 156.718 146.05 90)
+    (property "Reference" "R26" (at 156.718 146.05 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 156.718 148.59 90)
@@ -1474,7 +1563,33 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R19") (unit 1)
+          (reference "R26") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 130.048 66.04 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 7b23e73f-b378-417d-8312-22b9f127468a)
+    (property "Reference" "R18" (at 131.572 65.405 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "0" (at 131.572 67.945 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 130.048 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 130.048 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2af8628f-ab86-469f-9e38-d6d787d81b7f))
+    (pin "2" (uuid ca2a4754-72b2-4ca7-a630-ffad00679c51))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -1483,7 +1598,7 @@
   (symbol (lib_id "Device:R") (at 147.32 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 85113432-16a4-4569-81d1-08f81391d0ae)
-    (property "Reference" "R16" (at 149.86 88.9 0)
+    (property "Reference" "R19" (at 149.86 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 149.86 91.44 0)
@@ -1500,7 +1615,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R16") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -1509,7 +1624,7 @@
   (symbol (lib_id "power:+3.3V") (at 147.32 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 965dc2eb-7657-4791-beb8-f8191f6b7d2e)
-    (property "Reference" "#PWR040" (at 147.32 124.46 0)
+    (property "Reference" "#PWR066" (at 147.32 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 147.32 115.57 0)
@@ -1525,7 +1640,32 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR066") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 130.048 68.58 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a0a9b201-9d49-4772-8255-dddc4cec7749)
+    (property "Reference" "#PWR063" (at 130.048 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 130.048 74.168 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 130.048 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 130.048 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fd72e32e-fbe2-4a36-9574-2f1b4cd9ef1a))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
+          (reference "#PWR063") (unit 1)
         )
       )
     )
@@ -1561,7 +1701,7 @@
   (symbol (lib_id "Device:R") (at 147.32 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aac73722-e517-4c2e-9249-4c7539713bed)
-    (property "Reference" "R17" (at 149.86 127 0)
+    (property "Reference" "R23" (at 149.86 127 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 149.86 129.54 0)
@@ -1578,7 +1718,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R17") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -1611,7 +1751,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
     )
@@ -1620,7 +1760,7 @@
   (symbol (lib_id "power:+3.3V") (at 147.32 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d2b646e5-a431-464e-a394-bf0fbade1447)
-    (property "Reference" "#PWR039" (at 147.32 83.82 0)
+    (property "Reference" "#PWR064" (at 147.32 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 147.32 74.93 0)
@@ -1636,7 +1776,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
     )
@@ -1668,10 +1808,35 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 130.048 58.42 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid dca5d619-53cb-4c50-90f1-df406b230578)
+    (property "Reference" "#PWR062" (at 130.048 62.23 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 130.048 54.102 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 130.048 58.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 130.048 58.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0e5ede8a-a760-4ea3-986e-40e174666912))
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
+          (reference "#PWR062") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R_Small") (at 155.956 111.506 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ddfeff8e-aae5-4b68-9f9c-0a785f741b32)
-    (property "Reference" "R18" (at 155.956 106.68 90)
+    (property "Reference" "R22" (at 155.956 106.68 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 155.956 109.22 90)
@@ -1688,7 +1853,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R18") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -1722,7 +1887,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R23") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
       (project "M_MUC"
@@ -1761,7 +1926,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "R22") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
       (project "M_MUC"

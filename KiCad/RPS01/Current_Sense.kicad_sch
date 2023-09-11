@@ -4228,7 +4228,7 @@
   (symbol (lib_id "power:GND") (at 81.28 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2c1db486-2655-4f20-9647-00c0155637e9)
-    (property "Reference" "#PWR012" (at 81.28 59.69 0)
+    (property "Reference" "#PWR014" (at 81.28 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 81.28 58.42 0)
@@ -4244,7 +4244,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -4253,7 +4253,7 @@
   (symbol (lib_id "Device:R") (at 108.966 22.86 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3b9ae997-35b6-4b4f-9146-84c96fe054c4)
-    (property "Reference" "R5" (at 108.966 17.78 90)
+    (property "Reference" "R_S1" (at 108.966 17.78 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.3m" (at 108.966 20.32 90)
@@ -4270,7 +4270,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "R5") (unit 1)
+          (reference "R_S1") (unit 1)
         )
       )
     )
@@ -4305,7 +4305,7 @@
   (symbol (lib_id "power:GND") (at 111.76 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8e37b087-2126-4a4d-a00b-21f8dae0b5af)
-    (property "Reference" "#PWR013" (at 111.76 125.73 0)
+    (property "Reference" "#PWR015" (at 111.76 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.76 124.6124 0)
@@ -4321,7 +4321,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -4362,7 +4362,7 @@
   (symbol (lib_id "Device:R") (at 111.76 109.22 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fe4c99d9-81b3-42e1-8234-4d1776e44aee)
-    (property "Reference" "R6" (at 114.3 108.585 0)
+    (property "Reference" "R5" (at 114.3 108.585 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100k" (at 114.3 111.125 0)
@@ -4379,7 +4379,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "R6") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )

@@ -498,7 +498,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -532,7 +532,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R29") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
       (project "M_MUC"
@@ -570,7 +570,7 @@
           (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "J14") (unit 1)
+          (reference "J16") (unit 1)
         )
       )
     )
@@ -603,7 +603,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
     )
@@ -637,7 +637,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R30") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
       (project "M_MUC"
@@ -676,7 +676,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R31") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
       (project "M_MUC"
