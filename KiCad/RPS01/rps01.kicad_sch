@@ -18413,6 +18413,23 @@
     )
   )
 
+  (sheet (at 147.32 167.64) (size 16.51 24.13) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 96f82f26-4568-4e3f-8290-ab5bfa59ce28)
+    (property "Sheetname" "Symbols Labels" (at 147.32 166.9284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "symbol_labels.kicad_sch" (at 147.32 192.3546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "rps01"
+        (path "/14930f15-c0a0-4b55-93e6-b112548415f6" (page "13"))
+      )
+    )
+  )
+
   (sheet (at 100.838 90.17) (size 32.766 64.77) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
