@@ -3,7 +3,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// Data wire is plugged into port 4 on the Arduino
+// change the pin when you use jason's board
 #define ONE_WIRE_BUS 4
 //#define temp1 28EE0A81E3373CB2
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
