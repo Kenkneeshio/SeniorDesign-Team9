@@ -3716,8 +3716,8 @@
     (property "Datasheet" "~" (at 187.198 191.262 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e286158e-58db-4dc9-ae2e-29bac1561609))
-    (pin "2" (uuid fdc824b9-1145-42a7-a4fc-135876b36003))
+    (pin "1" (uuid 39578755-033e-4ae3-ad8b-ca1bd127e847))
+    (pin "2" (uuid 8e99a72f-6f18-412b-a317-ff96e285226f))
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
@@ -5169,8 +5169,8 @@
     (property "Datasheet" "~" (at 198.628 192.532 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dd424871-6dce-417e-b30e-4056db87735a))
-    (pin "2" (uuid a656b50a-2c4d-48b6-bbaf-2ba91e8d3fd5))
+    (pin "1" (uuid 716c76c6-7aa2-4719-b99a-93fd05a13606))
+    (pin "2" (uuid 0dd572a2-fd4e-40db-9ed7-98eb122c53ca))
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
@@ -5788,7 +5788,7 @@
     (property "Value" "100k" (at 268.732 156.464 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "LED_SMD:LED_1206_3216Metric" (at 262.89 159.512 90)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 262.89 159.512 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 264.668 159.512 0)
