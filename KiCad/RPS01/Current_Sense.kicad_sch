@@ -4351,7 +4351,7 @@
     (property "Reference" "C1" (at 125.73 108.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "80p" (at 125.73 111.125 0)
+    (property "Value" "82p" (at 125.73 111.125 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 122.8852 113.03 0)
