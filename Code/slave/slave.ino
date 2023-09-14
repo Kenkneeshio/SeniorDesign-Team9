@@ -23,36 +23,40 @@ int lastRequestedEvent = -1;
 
 // i2C Request codes. Each of these values are messages to the slave to request certain information.
 // These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call.
-const int CURRENT = 0;
-const int VOLTAGE = 1;
-const int TEMPERATURE_0 = 2;
-const int TEMPERATURE_1 = 3;
-const int TEMPERATURE_2 = 4;
+const int CURRENT_0 = 0;
+const int CURRENT_1 = 1;
+const int VOLTAGE_0 = 2;
+const int VOLTAGE_1 = 3;
+const int TEMPERATURE_0 = 4;
+const int TEMPERATURE_1 = 5;
+const int TEMPERATURE_2 = 6;
+const int TEMPERATURE_3 = 7;
 
 const float LOGIC_VOLTAGE = 5.08;
 const float VOLTAGE_DIVIDER_R2 = 510000;
-const float VOLTAGE_DIVIDER_R1 = 12000000;
+const float VOLTAGE_DIVIDER_R1 = 1200000;
 const float SHUNT_RESISTOR = 0.01028;
 const int LOAD_RESISTOR = 5000;
 
 const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
 const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
 const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3};
+const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59};
 
 int numberOfDevices; // Number of temperature devices found
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found device address
 
-float presentCurrent = 0.0;
-float presentVoltage = 0.0;
-byte *presentTemperature0;
-byte *presentTemperature1;
-byte *presentTemperature2;
+float presentCurrent0 = 0.0;
+float presentCurrent1 = 0.0;
+float presentVoltage0 = 0.0;
+float presentVoltage1 = 0.0;
 
 float presentTemperature0f;
 float presentTemperature1f;
 float presentTemperature2f;
+float presentTemperature3f;
 
 float value;
 
@@ -82,24 +86,24 @@ float ADC2Current(float analogValue)
 float ADC2Voltage(float analogValue)
 {
   float value;
-  value = ((analogValue + 1) / 1024 * LOGIC_VOLTAGE); // first convert the analog value based on the logic level voltage
+  value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
   // then get back the input voltage from the voltage divider equation: Vin = Vout * (R2+R1)/R2
   value = (value * (VOLTAGE_DIVIDER_R2 + VOLTAGE_DIVIDER_R1) / (VOLTAGE_DIVIDER_R2));
   return value;
 }
 
-float requestCurrent()
+float requestCurrent0()
 {
   Serial.println("Current requested.");
-  presentCurrent = ADC2Current(analogRead(CURRENT_PIN));
-  return presentCurrent;
+  presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN));
+  return presentCurrent0;
 }
 
-float requestVoltage()
+float requestVoltage0()
 {
   Serial.println("Voltage requested.");
-  presentVoltage = ADC2Voltage(analogRead(VOLTAGE_PIN));
-  return presentVoltage;
+  presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN));
+  return presentVoltage0;
 }
 
 // function that executes whenever data is received from master
@@ -114,11 +118,17 @@ void receiveEvent(int howMany)
   lastRequestedEvent = Wire.read(); // receive byte as an integer
   switch (lastRequestedEvent)
   {
-  case CURRENT:
-    Serial.println("Current"); // print the integer
+  case CURRENT_0:
+    Serial.println("Current 0"); // print the integer
     break;
-  case VOLTAGE:
-    Serial.println("Voltage"); // print the integer
+  case CURRENT_1:
+    Serial.println("Current 1"); // print the integer
+    break;
+  case VOLTAGE_0:
+    Serial.println("Voltage 0"); // print the integer
+    break;
+  case VOLTAGE_1:
+    Serial.println("Voltage 1"); // print the integer
     break;
   case TEMPERATURE_0:
     Serial.println("Temperature 0"); // print the integer
@@ -129,6 +139,9 @@ void receiveEvent(int howMany)
   case TEMPERATURE_2:
     Serial.println("Temperature 2"); // print the integer
     break;
+  case TEMPERATURE_3:
+    Serial.println("Temperature 3"); // print the integer
+    break;
   }
 }
 
@@ -136,60 +149,58 @@ void receiveEvent(int howMany)
 // this function is registered as an event, see setup()
 void requestEvent()
 {
-  // Wire.write("hello "); // respond with message of 6 bytes
+  byte *data;
   switch (lastRequestedEvent)
   {
-  case CURRENT:
-    Wire.write("Current"); // print the integer
+  case CURRENT_0:
+    Wire.write("Current 0"); // print the integer
     break;
-  case VOLTAGE:
-    Wire.write("Voltage"); // print the integer
+  case CURRENT_1:
+    Wire.write("Current 1"); // print the integer
+    break;
+  case VOLTAGE_1:
+    Wire.write("Voltage 0"); // print the integer
+    break;
+  case VOLTAGE_0:
+    Wire.write("Voltage 1"); // print the integer
     break;
   case TEMPERATURE_0:
-   presentTemperature0 = (byte *)&presentTemperature0f;
+   data = (byte *)&presentTemperature0f;
 //  Serial.print("data bytes:");
-//          Serial.print(presentTemperature0[0]);
+//          Serial.print(data[0]);
 //          Serial.print(" ");
-//          Serial.print(presentTemperature0[1]);
+//          Serial.print(data[1]);
           //Serial.print(" ");
-          //Serial.print(presentTemperature0[2]);
+          //Serial.print(data[2]);
           //Serial.print(" ");
-          //Serial.println(presentTemperature0[3]);
-    Wire.write(presentTemperature0[0]);
-    Wire.write(presentTemperature0[1]);
-    Wire.write(presentTemperature0[2]);
-    Wire.write(presentTemperature0[3]);
+          //Serial.println(data[3]);
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
 
     break;
   case TEMPERATURE_1:
-  presentTemperature1 = (byte *)&presentTemperature1f;
-//  Serial.print("data bytes:");
-//          Serial.print(presentTemperature1[0]);
-//          Serial.print(" ");
-//          Serial.print(presentTemperature1[1]);
-//          Serial.print(" ");
-//          Serial.print(presentTemperature1[2]);
-//          Serial.print(" ");
-//          Serial.println(presentTemperature1[3]);
-    Wire.write(presentTemperature1[0]);
-    Wire.write(presentTemperature1[1]);
-    Wire.write(presentTemperature1[2]);
-    Wire.write(presentTemperature1[3]);
+    data = (byte *)&presentTemperature1f;
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
     break;
   case TEMPERATURE_2:
-  presentTemperature2 = (byte *)&presentTemperature2f;
-//  Serial.print("data bytes:");
-//          Serial.print(presentTemperature2[0]);
-//          Serial.print(" ");
-//          Serial.print(presentTemperature2[1]);
-//          Serial.print(" ");
-//          Serial.print(presentTemperature2[2]);
-//          Serial.print(" ");
-//          Serial.println(presentTemperature2[3]);
-    Wire.write(presentTemperature2[0]);
-    Wire.write(presentTemperature2[1]);
-    Wire.write(presentTemperature2[2]);
-    Wire.write(presentTemperature2[3]);
+    data = (byte *)&presentTemperature2f;
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
+    break;
+    
+   case TEMPERATURE_3:
+    data = (byte *)&presentTemperature3f;
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
     break;
   }
 }
@@ -228,7 +239,6 @@ void loop()
           // device 0
           sensors.requestTemperatures();
           presentTemperature0f = sensors.getTempC(tempDeviceAddress);
-          presentTemperature0 = (byte *)&presentTemperature0f;
           Serial.print("Device ");
           Serial.print(i);
           Serial.print(" - Temp C: ");
@@ -247,7 +257,6 @@ void loop()
           // device 1
           sensors.requestTemperatures();
           presentTemperature1f = sensors.getTempC(tempDeviceAddress);
-          presentTemperature1 = (byte *)&presentTemperature1f;
           Serial.print("Device ");
           Serial.print(i);
           Serial.print(" - Temp C: ");
@@ -266,7 +275,24 @@ void loop()
           // device 2
           sensors.requestTemperatures();
           presentTemperature2f = sensors.getTempC(tempDeviceAddress);
-          presentTemperature2 = (byte *)&presentTemperature2f;
+          Serial.print("Device ");
+          Serial.print(i);
+          Serial.print(" - Temp C: ");
+          Serial.println(presentTemperature2f);
+          //           Serial.print("data bytes:");
+          // Serial.print(presentTemperature2[0]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature2[1]);
+          // Serial.print(" ");
+          // Serial.print(presentTemperature2[2]);
+          // Serial.print(" ");
+          // Serial.println(presentTemperature2[3]);
+        }
+        else if (memcmp(temperatureProbe3_SHORT, tempDeviceAddress, 8) == 0)
+        {
+          // device 2
+          sensors.requestTemperatures();
+          presentTemperature3f = sensors.getTempC(tempDeviceAddress);
           Serial.print("Device ");
           Serial.print(i);
           Serial.print(" - Temp C: ");
