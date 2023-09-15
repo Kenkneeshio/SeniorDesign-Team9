@@ -17,6 +17,8 @@
 #define CURRENT_PIN A0
 #define VOLTAGE_PIN A1
 
+int led = 13;
+
 int I2C_ADDRESS = 8; // From sheet
 
 int lastRequestedEvent = -1;
@@ -32,9 +34,10 @@ const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
 
-const float LOGIC_VOLTAGE = 5.08;
-const float VOLTAGE_DIVIDER_R2 = 510000;
-const float VOLTAGE_DIVIDER_R1 = 1200000;
+//const float LOGIC_VOLTAGE = 5.08;
+const float LOGIC_VOLTAGE = 4.4;
+const float VOLTAGE_DIVIDER_R2 = 504000;
+const float VOLTAGE_DIVIDER_R1 = 1223000;
 const float SHUNT_RESISTOR = 0.01028;
 const int LOAD_RESISTOR = 5000;
 
@@ -94,7 +97,7 @@ float ADC2Voltage(float analogValue)
 
 float requestCurrent0()
 {
-  Serial.println("Current requested.");
+  //Serial.println("Current requested.");
   presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN));
   return presentCurrent0;
 }
@@ -153,15 +156,31 @@ void requestEvent()
   switch (lastRequestedEvent)
   {
   case CURRENT_0:
-    Wire.write("Current 0"); // print the integer
+    data = (byte *)&presentCurrent0;
+    //Wire.write("Current 0"); // print the integer
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
     break;
   case CURRENT_1:
-    Wire.write("Current 1"); // print the integer
-    break;
-  case VOLTAGE_1:
-    Wire.write("Voltage 0"); // print the integer
+    //Wire.write("Current 1"); // print the integer
+    data = (byte *)&presentCurrent1;
+    //Wire.write("Current 0"); // print the integer
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
     break;
   case VOLTAGE_0:
+    //Wire.write("Voltage 0"); // print the integer
+    data = (byte *)&presentVoltage0;
+    Wire.write(data[0]);
+    Wire.write(data[1]);
+    Wire.write(data[2]);
+    Wire.write(data[3]);
+    break;
+  case VOLTAGE_1:
     Wire.write("Voltage 1"); // print the integer
     break;
   case TEMPERATURE_0:
@@ -218,6 +237,9 @@ void setup()
 
   // Set up Serial Communication
   Serial.begin(9600); // start serial for output
+
+  pinMode(led, OUTPUT);
+
 }
 
 void loop()
@@ -227,6 +249,9 @@ void loop()
 
   if (millis() > millis_ctr + 5000)
   {
+    presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN));
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN));
+
     for (uint8_t i = 0; i < numberOfDevices; i++)
     {
       // Search the wire for address

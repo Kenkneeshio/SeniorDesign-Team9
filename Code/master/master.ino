@@ -59,15 +59,90 @@ void loop()
 
   switch (lastRequestedEvent)
   {
-  case CURRENT_0:
+    case CURRENT_0:
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    while (Wire.available())
+    { // peripheral may send less than requested
+      // byte c[4] = Wire.read(); // receive a byte as character
+      int i = 0;
+      while (i < 4)
+      {                     // peripheral may send less than requested
+        a[i] = Wire.read(); // receive a byte as character
+        i++;
+        // Serial.println(i);         // print the character
+      }
+
+      union Temp
+      {
+        byte temp_byte[4];
+        float temp_float;
+      } Temp_union;
+          // Serial.print("data bytes:");
+          // Serial.print(a[0]);
+          // Serial.print(" ");
+          // Serial.print(a[1]);
+          // Serial.print(" ");
+          // Serial.print(a[2]);
+          // Serial.print(" ");
+          // Serial.println(a[3]);
+      Temp_union.temp_byte[0] = a[0];
+      Temp_union.temp_byte[1] = a[1];
+      Temp_union.temp_byte[2] = a[2];
+      Temp_union.temp_byte[3] = a[3];
+      if (Temp_union.temp_float > 0)
+      {
+        presentCurrent0 = Temp_union.temp_float;
+        Serial.print("Current 0: ");
+        Serial.println(presentCurrent0);
+      }
+    }
+    break;
   case CURRENT_1:
-  case VOLTAGE_0:
   case VOLTAGE_1:
     Wire.requestFrom(I2C_ADDRESS, 7); // request 6 bytes from slave device #8    
     while (Wire.available())
     {                       // slave may send less than requested
       char c = Wire.read(); // receive a byte as character
       Serial.print(c);      // print the character
+    }
+    break;
+
+    case VOLTAGE_0:
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    while (Wire.available())
+    { // peripheral may send less than requested
+      // byte c[4] = Wire.read(); // receive a byte as character
+      int i = 0;
+      while (i < 4)
+      {                     // peripheral may send less than requested
+        a[i] = Wire.read(); // receive a byte as character
+        i++;
+        // Serial.println(i);         // print the character
+      }
+
+      union Temp
+      {
+        byte temp_byte[4];
+        float temp_float;
+      } Temp_union;
+//          Serial.print("data bytes:");
+//          Serial.print(a[0]);
+//          Serial.print(" ");
+//          Serial.print(a[1]);
+//           Serial.print(" ");
+//           Serial.print(a[2]);
+//           Serial.print(" ");
+//           Serial.println(a[3]);
+      Temp_union.temp_byte[0] = a[0];
+      Temp_union.temp_byte[1] = a[1];
+      Temp_union.temp_byte[2] = a[2];
+      Temp_union.temp_byte[3] = a[3];
+      if (Temp_union.temp_float > 0)
+      {
+        presentVoltage0 = Temp_union.temp_float;
+        Serial.print("Voltage 0: ");
+        Serial.println(presentVoltage0);
+      }
     }
     break;
   case TEMPERATURE_0:
@@ -116,7 +191,7 @@ void loop()
       int i = 0;
       while (i < 4)
       {                     // peripheral may send less than requested
-        b[i] = Wire.read(); // receive a byte as character
+        a[i] = Wire.read(); // receive a byte as character
         i++;
         // Serial.println(i);         // print the character
       }
@@ -154,7 +229,7 @@ void loop()
       int i = 0;
       while (i < 4)
       {                     // peripheral may send less than requested
-        c[i] = Wire.read(); // receive a byte as character
+        a[i] = Wire.read(); // receive a byte as character
         i++;
         // Serial.println(i);         // print the character
       }

@@ -12,7 +12,7 @@
 // Pin 13 has the LED on Teensy 3.0
 // give it a name:
 int led = 13;
-int analogPin = A0; // potentiometer wiper (middle terminal) connected to analog pin 3
+int analogPin = A1; // potentiometer wiper (middle terminal) connected to analog pin 3
                     // outside leads to ground and +5V
 float val = 0;  // variable to store the value read
 float volt = 0;
