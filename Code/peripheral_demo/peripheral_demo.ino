@@ -7,7 +7,7 @@
 
 uint8_t requested_data;
 
-// i2C Request codes. Each of these values are messages to the slave to request certain information.
+// i2C Request codes. Each of these values are messages to the device to request certain information.
 // These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call. 
 #define CURRENT           0
 #define VOLTAGE           1

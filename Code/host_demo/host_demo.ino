@@ -1,15 +1,15 @@
 /*
- * MASTER_DEMO
- * Description: This code is example master code that can run on an arduino to demonstrate 
+ * host_DEMO
+ * Description: This code is example host code that can run on an arduino to demonstrate 
  * the capabilities of the Senior Design Team 9 microcontroller board.
- * It will ask for updates every 500 ms over i2C, and perform the calculation on the master. 
+ * It will ask for updates every 500 ms over i2C, and perform the calculation on the host. 
  */
 
 #include <Wire.h> // i2C Library
 
 #define I2C_ADDRESS       0x1C      // From sponsors requirements. They use 0x1C as the i2C address. 
 
-// i2C Request codes. Each of these values are messages to the slave to request certain information.
+// i2C Request codes. Each of these values are messages to the device to request certain information.
 // These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call. 
 #define CURRENT           0
 #define VOLTAGE           1
@@ -36,7 +36,7 @@ int loadResistor = 5000;
 
 
 void setup() {
-  Wire.begin(I2C_ADDRESS);        // join i2c bus (address optional for master)
+  Wire.begin(I2C_ADDRESS);        // join i2c bus (address optional for host)
   Serial.begin(9600);  // start serial for output
 
 }
@@ -90,7 +90,7 @@ float ADC2Voltage(float analogValue)
 
 /*
  * requestVoltage(void)
- * Description: Requests voltage from slave on specified i2C address.
+ * Description: Requests voltage from peripheral on specified i2C address.
  * The variable presentVoltage will be updated after this function is called.
  * Param: None
  */
@@ -124,7 +124,7 @@ void requestVoltage()
 
 /*
  * requestCurrent(void)
- * Description: Requests current from slave on specified i2C address.
+ * Description: Requests current from peripheral on specified i2C address.
  * The variable presentCurrent will be updated after this function is called.
  * Param: None
  */
@@ -158,7 +158,7 @@ void requestCurrent()
 
 /*
  * requestTemperature(void)
- * Description: Requests temperature from slave on specified i2C address.
+ * Description: Requests temperature from peripheral on specified i2C address.
  * The variable presentTemperature will be updated after this function is called.
  * Param: None
  */
