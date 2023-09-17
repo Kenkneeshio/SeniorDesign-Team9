@@ -7,5 +7,5 @@ void loop() {
 delay(100);
 }
 void receiveEvent(int bytes) {
-Wire.write("hello "); // respond with message of 6 bytes as expected by master
+Wire.write("hello "); // respond with message of 6 bytes as expected by host
 }

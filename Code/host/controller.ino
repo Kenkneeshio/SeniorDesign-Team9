@@ -1,13 +1,4 @@
-// Wire Master Writer
-// by Nicholas Zambetti <http://www.zambetti.com>
 
-// Demonstrates use of the Wire library
-// Writes data to an I2C/TWI slave device
-// Refer to the "Wire Slave Receiver" example for use with this
-
-// Created 29 March 2006
-
-// This example code is in the public domain.
 
 #include <Wire.h>
 #include <OneWire.h>
@@ -15,7 +6,7 @@
 
 int I2C_ADDRESS = 8; // From sheet
 
-// i2C Request codes. Each of these values are messages to the slave to request certain information.
+// i2C Request codes. Each of these values are messages to the peripheral to request certain information.
 // These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call.
 const int CURRENT_0 = 0;
 const int CURRENT_1 = 1;
@@ -40,7 +31,7 @@ float presentTemperature3 = 0.0;
 
 void setup()
 {
-  Wire.begin(); // join i2c bus (address optional for master)
+  Wire.begin(); // join i2c bus (address optional for host)
   Serial.begin(9600);
 }
 byte a[4];
@@ -60,7 +51,7 @@ void loop()
   switch (lastRequestedEvent)
   {
     case CURRENT_0:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
@@ -99,16 +90,16 @@ void loop()
     break;
   case CURRENT_1:
   case VOLTAGE_1:
-    Wire.requestFrom(I2C_ADDRESS, 7); // request 6 bytes from slave device #8    
+    Wire.requestFrom(I2C_ADDRESS, 7); // request 6 bytes from peripheral device #8    
     while (Wire.available())
-    {                       // slave may send less than requested
+    {                       // peripheral may send less than requested
       char c = Wire.read(); // receive a byte as character
       Serial.print(c);      // print the character
     }
     break;
 
     case VOLTAGE_0:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
@@ -146,7 +137,7 @@ void loop()
     }
     break;
   case TEMPERATURE_0:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
@@ -184,7 +175,7 @@ void loop()
     }
     break;
   case TEMPERATURE_1:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
@@ -222,7 +213,7 @@ void loop()
     }
     break;
   case TEMPERATURE_2:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
@@ -260,7 +251,7 @@ void loop()
     }
     break;
    case TEMPERATURE_3:
-    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from slave device #8
+    Wire.requestFrom(I2C_ADDRESS, 6); // request 6 bytes from peripheral device #8
     while (Wire.available())
     { // peripheral may send less than requested
       // byte c[4] = Wire.read(); // receive a byte as character
