@@ -540,7 +540,7 @@
       "netlist": "",
       "specctra_dsn": "",
       "step": "rps01.step",
-      "vrml": "3d/rps01.wrl"
+      "vrml": "../../../../../Downloads/rps01.wrl"
     },
     "page_layout_descr_file": ""
   },
