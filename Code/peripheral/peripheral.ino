@@ -11,6 +11,9 @@
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
 #define CURRENT_PIN A0
 #define VOLTAGE_PIN A1
+#define 5V_RAIL_IN XX
+#define 3V_RAIL_IN XY
+#define 19V_RAIL_IN YX
 
 int led = 13; // LED is assigned to pin 13
 
@@ -30,7 +33,19 @@ const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
 //////////////////////////////////////////////////////////
-
+// LED PIN ASSIGNMENTS
+const int LED_PIN_RED   = 11;
+const int LED_PIN_GREEN = 12;
+const int LED_PIN_BLUE  = 13;
+const int RED = 0;
+const int GREEN = 1;
+const int BLUE = 2;
+const int PINK = 3;
+const int TEAL = 4;
+const int LIGHT_BLUE = 5;
+const int WHITE = 6;
+const int OFF = 7;
+//////////////////////////////////////////////////////////
 // const float LOGIC_VOLTAGE = 5.08;
 const float LOGIC_VOLTAGE = 4.4;
 const float VOLTAGE_DIVIDER_R2 = 504000;
@@ -106,177 +121,16 @@ float ADC2Voltage(float analogValue)
   return value;
 }
 
-// function that executes whenever data is received from controller
-// this function is registered as an event, see setup()
-void receiveEvent(int howMany)
+//////////////////////////////////////////////////////////
+/*
+ * CollectTemperatureInformation(void)
+ * Description: 
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
+void CollectTemperatureInformation(void)
 {
-  while (1 < Wire.available())
-  {                       // loop through all but the last
-    char c = Wire.read(); // receive byte as a character
-    Serial.print(c);      // print the character
-  }
-  lastRequestedEvent = Wire.read(); // receive byte as an integer
-
-  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
-  {
-    switch (lastRequestedEvent)
-    {
-    case CURRENT_0:
-      Serial.println("Current 0");
-      break;
-    case CURRENT_1:
-      Serial.println("Current 1");
-      break;
-    case VOLTAGE_0:
-      Serial.println("Voltage 0");
-      break;
-    case VOLTAGE_1:
-      Serial.println("Voltage 1");
-      break;
-    case TEMPERATURE_0:
-      Serial.println("Temperature 0");
-      break;
-    case TEMPERATURE_1:
-      Serial.println("Temperature 1");
-      break;
-    case TEMPERATURE_2:
-      Serial.println("Temperature 2");
-      break;
-    case TEMPERATURE_3:
-      Serial.println("Temperature 3");
-      break;
-    }
-  }
-}
-
-// function that executes whenever data is requested by master
-// this function is registered as an event, see setup()
-void requestEvent()
-{
-  // Since all of the data we are reading is in floats, we have to send
-  // the values in a total of four bytes, one at a time. On the controller end,
-  // it will have to reconstruct the float from the bytes sent.
-
-  byte *data;
-  switch (lastRequestedEvent)
-  {
-  case CURRENT_0:
-    data = (byte *)&presentCurrent0;
-    // Wire.write("Current 0"); // print the integer
-    //  Wire.write(data[0]);
-    //  Wire.write(data[1]);
-    //  Wire.write(data[2]);
-    //  Wire.write(data[3]);
-    break;
-  case CURRENT_1:
-    // Wire.write("Current 1"); // print the integer
-    data = (byte *)&presentCurrent1;
-    // Wire.write("Current 0"); // print the integer
-    //  Wire.write(data[0]);
-    //  Wire.write(data[1]);
-    //  Wire.write(data[2]);
-    //  Wire.write(data[3]);
-    break;
-  case VOLTAGE_0:
-    // Wire.write("Voltage 0"); // print the integer
-    data = (byte *)&presentVoltage0;
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-    break;
-  case VOLTAGE_1:
-    data = (byte *)&presentVoltage1;
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-    break;
-  case TEMPERATURE_0:
-    data = (byte *)&presentTemperature0f;
-    // Serial.print("data bytes:");
-    // Serial.print(data[0]);
-    // Serial.print(" ");
-    // Serial.print(data[1]);
-    // Serial.print(" ");
-    // Serial.print(data[2]);
-    // Serial.print(" ");
-    // Serial.println(data[3]);
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-
-    break;
-  case TEMPERATURE_1:
-    data = (byte *)&presentTemperature1f;
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-    break;
-  case TEMPERATURE_2:
-    data = (byte *)&presentTemperature2f;
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-    break;
-
-  case TEMPERATURE_3:
-    data = (byte *)&presentTemperature3f;
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-    break;
-  }
-  if (debug)
-  {
-    Serial.print("data bytes:");
-    Serial.print(data[0]);
-    Serial.print(" ");
-    Serial.print(data[1]);
-    Serial.print(" ");
-    Serial.print(data[2]);
-    Serial.print(" ");
-    Serial.println(data[3]);
-  }
-
-  Wire.write(data[0]);
-  Wire.write(data[1]);
-  Wire.write(data[2]);
-  Wire.write(data[3]);
-}
-
-void setup()
-{
-  // Set up Dallas Temperature Sensors
-  sensors.begin(); // start up the dallas temperature library
-  numberOfDevices = sensors.getDeviceCount();
-
-  // Set up i2C Communication
-  Wire.begin(I2C_ADDRESS);      // join i2c bus with address #8
-  Wire.onReceive(receiveEvent); // register a receive on event
-  Wire.onRequest(requestEvent); // register a request on event
-
-  // Set up Serial Communication
-  Serial.begin(9600); // start serial for output
-
-  pinMode(led, OUTPUT);
-}
-
-void loop()
-{
-  static uint32_t millis_ctr = 0;
-  // Serial.println("Requesting Temps");
-
-  if (millis() > millis_ctr + 5000)
-  {
-    presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN));
-    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN));
-
-    for (uint8_t i = 0; i < numberOfDevices; i++)
+  for (uint8_t i = 0; i < numberOfDevices; i++)
     {
       // Search the wire for address
 
@@ -357,10 +211,239 @@ void loop()
         }
         else
         {
-          Serial.println("No mattches :(");
+          Serial.println("No matches :(");
         }
       }
     }
+}
+
+//////////////////////////////////////////////////////////
+/*
+ * SetLEDState(int colour)
+ * Description: Sets LED
+ * Param: int colour
+ */
+//////////////////////////////////////////////////////////
+
+void SetLEDColour(int colour)
+{
+  switch (colour)
+  {
+  case RED:
+    digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
+    break;
+  case GREEN:
+    digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+    break;
+  case BLUE:
+    digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+    break;
+  case PINK:
+    digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+    break;
+  case TEAL:
+    digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+    break;
+  case LIGHT_BLUE:
+    digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
+    break;
+  case WHITE:
+    digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
+    break;
+  case OFF:
+    digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
+    break;
+  }
+}
+
+// function that executes whenever data is received from controller
+// this function is registered as an event, see setup()
+void receiveEvent(int howMany)
+{
+  while (1 < Wire.available())
+  {                       // loop through all but the last
+    char c = Wire.read(); // receive byte as a character
+    Serial.print(c);      // print the character
+  }
+  lastRequestedEvent = Wire.read(); // receive byte as an integer
+
+  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
+  {
+    switch (lastRequestedEvent)
+    {
+    case CURRENT_0:
+      Serial.println("Current 0");
+      break;
+    case CURRENT_1:
+      Serial.println("Current 1");
+      break;
+    case VOLTAGE_0:
+      Serial.println("Voltage 0");
+      break;
+    case VOLTAGE_1:
+      Serial.println("Voltage 1");
+      break;
+    case TEMPERATURE_0:
+      Serial.println("Temperature 0");
+      break;
+    case TEMPERATURE_1:
+      Serial.println("Temperature 1");
+      break;
+    case TEMPERATURE_2:
+      Serial.println("Temperature 2");
+      break;
+    case TEMPERATURE_3:
+      Serial.println("Temperature 3");
+      break;
+    }
+  }
+}
+
+// function that executes whenever data is requested by master
+// this function is registered as an event, see setup()
+void requestEvent()
+{
+  // Since all of the data we are reading is in floats, we have to send
+  // the values in a total of four bytes, one at a time. On the controller end,
+  // it will have to reconstruct the float from the bytes sent.
+
+  byte *data;
+  switch (lastRequestedEvent)
+  {
+  case CURRENT_0:
+    data = (byte *)&presentCurrent0; // casting as a byte pointer to address of variable
+    // Wire.write("Current 0"); // print the integer
+    //  Wire.write(data[0]);
+    //  Wire.write(data[1]);
+    //  Wire.write(data[2]);
+    //  Wire.write(data[3]);
+    break;
+  case CURRENT_1:
+    // Wire.write("Current 1"); // print the integer
+    data = (byte *)&presentCurrent1; // casting as a byte pointer to address of variable
+    // Wire.write("Current 0"); // print the integer
+    //  Wire.write(data[0]);
+    //  Wire.write(data[1]);
+    //  Wire.write(data[2]);
+    //  Wire.write(data[3]);
+    break;
+  case VOLTAGE_0:
+    // Wire.write("Voltage 0"); // print the integer
+    data = (byte *)&presentVoltage0; // casting as a byte pointer to address of variable
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+    break;
+  case VOLTAGE_1:
+    data = (byte *)&presentVoltage1; // casting as a byte pointer to address of variable
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+    break;
+  case TEMPERATURE_0:
+    data = (byte *)&presentTemperature0f; // casting as a byte pointer to address of variable
+    // Serial.print("data bytes:");
+    // Serial.print(data[0]);
+    // Serial.print(" ");
+    // Serial.print(data[1]);
+    // Serial.print(" ");
+    // Serial.print(data[2]);
+    // Serial.print(" ");
+    // Serial.println(data[3]);
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+
+    break;
+  case TEMPERATURE_1:
+    data = (byte *)&presentTemperature1f; // casting as a byte pointer to address of variable
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+    break;
+  case TEMPERATURE_2:
+    data = (byte *)&presentTemperature2f; // casting as a byte pointer to address of variable
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+    break;
+
+  case TEMPERATURE_3:
+    data = (byte *)&presentTemperature3f; // casting as a byte pointer to address of variable
+    // Wire.write(data[0]);
+    // Wire.write(data[1]);
+    // Wire.write(data[2]);
+    // Wire.write(data[3]);
+    break;
+  }
+  if (debug)
+  {
+    Serial.print("data bytes:");
+    Serial.print(data[0]);
+    Serial.print(" ");
+    Serial.print(data[1]);
+    Serial.print(" ");
+    Serial.print(data[2]);
+    Serial.print(" ");
+    Serial.println(data[3]);
+  }
+
+  // because a float is four bytes, we have to send each byte one at a time
+  Wire.write(data[0]);
+  Wire.write(data[1]);
+  Wire.write(data[2]);
+  Wire.write(data[3]);
+}
+
+void setup()
+{
+  // Set up Dallas Temperature Sensors
+  sensors.begin();                            // start up the dallas temperature library
+  numberOfDevices = sensors.getDeviceCount(); // number of temperatures
+
+  // Set up i2C Communication
+  Wire.begin(I2C_ADDRESS);      // join i2c bus with address #8
+  Wire.onReceive(receiveEvent); // register a receive on event
+  Wire.onRequest(requestEvent); // register a request on event
+
+  // Set up Serial Communication
+  Serial.begin(9600); // start serial for output
+
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  static uint32_t millis_ctr = 0;
+  // Serial.println("Requesting Temps");
+
+  if (millis() > millis_ctr + 1000)
+  {
+    presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    CollectTemperatureInformation();
+    
     // delay(5000);
 
     millis_ctr = millis();

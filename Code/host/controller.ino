@@ -1,8 +1,8 @@
 
 
 #include <Wire.h>
-#include <OneWire.h>
-#include <DallasTemperature.h>
+// #include <OneWire.h>
+// #include <DallasTemperature.h>
 
 int I2C_ADDRESS = 8; // From sheet
 
@@ -28,24 +28,25 @@ float presentTemperature1 = 0.0;
 float presentTemperature2 = 0.0;
 float presentTemperature3 = 0.0;
 
+byte transmissionData = 0; // variable for sending data across the i2c bus
 
 void setup()
 {
   Wire.begin(); // join i2c bus (address optional for host)
   Serial.begin(9600);
 }
-byte a[4];
+byte a[4]; // stores the temporary byte information coming from the i2c peripheral float values 
 byte b[4];
 byte c[4];
 
-byte x = 0;
+
 void loop()
 {
-  lastRequestedEvent = (int)x;
+  lastRequestedEvent = (int)transmissionData; // explain what this is doing
   Serial.print("Requesting: ");
-  Serial.println(x);
+  Serial.println(transmissionData);
   Wire.beginTransmission(I2C_ADDRESS); // transmit to device #8
-  Wire.write(x);                       // sends one byte
+  Wire.write(transmissionData);                       // sends one byte
   Wire.endTransmission();              // stop transmitting
 
   switch (lastRequestedEvent)
@@ -63,7 +64,7 @@ void loop()
         // Serial.println(i);         // print the character
       }
 
-      union Temp
+      union Temp // search up more about this , used to combine the 4 bytes received into a full float variable
       {
         byte temp_byte[4];
         float temp_float;
@@ -80,7 +81,8 @@ void loop()
       Temp_union.temp_byte[1] = a[1];
       Temp_union.temp_byte[2] = a[2];
       Temp_union.temp_byte[3] = a[3];
-      if (Temp_union.temp_float > 0)
+
+      if (Temp_union.temp_float >= 0)
       {
         presentCurrent0 = Temp_union.temp_float;
         Serial.print("Current 0: ");
@@ -292,8 +294,8 @@ void loop()
 
 
   Serial.println(" ");
-  x++;
-  if (x > 7)
-    x = 0;
+  transmissionData++;
+  if (transmissionData > 7)
+    transmissionData = 0;
   delay(2000);
 }
