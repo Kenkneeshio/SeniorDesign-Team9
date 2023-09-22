@@ -693,7 +693,7 @@
     (property "Reference" "Cf_?" (at 151.13 132.969 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "80p" (at 151.13 135.509 0)
+    (property "Value" "0.1u" (at 151.13 135.509 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 148.5392 137.414 0)
