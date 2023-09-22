@@ -265,10 +265,15 @@
       (net 1 "GND") (pinfunction "Pin_1") (pintype "passive") (tstamp 5c7cc4fe-9ce8-4b19-8f25-af98fd2b6ef4))
     (pad "2" thru_hole circle (at 5 0 90) (size 4 4) (drill 2.7) (layers "*.Cu" "*.Mask")
       (net 28 "+12V") (pinfunction "Pin_2") (pintype "passive") (tstamp ebae18b1-a8e6-4f3f-98ef-183c8badcf55))
-    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl"
+    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl" hide
       (offset (xyz 0 0 0))
       (scale (xyz 0.6944 0.6944 0.6944))
       (rotate (xyz 0 0 0))
+    )
+    (model "C:/Users/tomix/Documents/GitHub/SeniorDesign-Team9/CAD Models/xt30-f/User Library-xt30-f.STEP"
+      (offset (xyz 2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -180))
     )
   )
 
@@ -6844,10 +6849,15 @@
       (net 1 "GND") (pinfunction "Pin_1") (pintype "passive") (tstamp e384bb51-cebc-4b4a-8763-49bd801c902c))
     (pad "2" thru_hole circle (at 5 0 90) (size 4 4) (drill 2.7) (layers "*.Cu" "*.Mask")
       (net 26 "+3.3V") (pinfunction "Pin_2") (pintype "passive") (tstamp 546d46a3-6ec8-48e5-bab5-40faf8ceff88))
-    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl"
+    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl" hide
       (offset (xyz 0 0 0))
       (scale (xyz 0.6944 0.6944 0.6944))
       (rotate (xyz 0 0 0))
+    )
+    (model "C:/Users/tomix/Documents/GitHub/SeniorDesign-Team9/CAD Models/xt30-f/User Library-xt30-f.STEP"
+      (offset (xyz 2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -180))
     )
   )
 
@@ -7479,10 +7489,15 @@
       (net 1 "GND") (pinfunction "Pin_1") (pintype "passive") (tstamp 1574832e-48f5-4cc3-8138-c1eb98e62fea))
     (pad "2" thru_hole circle (at 5 0 90) (size 4 4) (drill 2.7) (layers "*.Cu" "*.Mask")
       (net 7 "+5V") (pinfunction "Pin_2") (pintype "passive") (tstamp ca8e2eba-19e8-43a4-b3d6-db0cad237652))
-    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl"
+    (model "${KICAD7_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60-F_1x02_P7.2mm_Vertical.wrl" hide
       (offset (xyz 0 0 0))
       (scale (xyz 0.6944 0.6944 0.6944))
       (rotate (xyz 0 0 0))
+    )
+    (model "C:/Users/tomix/Documents/GitHub/SeniorDesign-Team9/CAD Models/xt30-f/User Library-xt30-f.STEP"
+      (offset (xyz 2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -180))
     )
   )
 
@@ -12121,6 +12136,16 @@
       (net 53 "+19V") (pintype "passive") (tstamp af2a577d-cd76-4a85-8719-e53d496c18ec))
     (pad "2" smd rect (at 4.35 0) (size 4.1 2) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pintype "passive") (tstamp f6fb721f-be54-4584-8bfc-53088a35670a))
+    (model ":KICAD7_3DMODEL_DIR:Capacitor_SMD.3dshapes/C_Elec_10x10.2.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model ":KICAD7_3DMODEL_DIR:Capacitor_SMD.3dshapes/CP_Elec_10x12.6.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Mechatronics Fuses:0154Series_LTF" (layer "F.Cu")
@@ -17605,6 +17630,11 @@
       (net 53 "+19V") (pintype "passive") (tstamp c1f21dc7-9d84-4fd5-87c3-6d68c74c7339))
     (pad "2" smd rect (at 4.35 0) (size 4.1 2) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pintype "passive") (tstamp 8616efb6-e4d5-46b5-96c3-689631890f36))
+    (model ":KICAD7_3DMODEL_DIR:Capacitor_SMD.3dshapes/CP_Elec_10x12.6.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Mechatronics TestP:CONN1_RCU-0C_TEC" (layer "F.Cu")
@@ -31614,7 +31644,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp aa1acc01-15d4-4054-9101-66e5de226e96)
     (pts (xy 71.599179 82.24008) (xy 71.384379 58.47488))
     (height -46.830349)
-    (gr_text "23.7662 mm" (at 25.813296 70.770341 -89.48215044) (layer "Dwgs.User") (tstamp 93dcd76b-d86e-4c7d-8f88-2cb7cb9a389e)
+    (gr_text "23.7662 mm" (at 25.813296 70.770341 -89.48215044) (layer "Dwgs.User") (tstamp aa1acc01-15d4-4054-9101-66e5de226e96)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
@@ -31623,7 +31653,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp ae247283-46ae-4454-a310-756d9dbc7d91)
     (pts (xy 71.384379 63.30088) (xy 85.5 63))
     (height -32.237685)
-    (gr_text "14.1188 mm" (at 77.73068 29.770337 1.221097023) (layer "Dwgs.User") (tstamp 4bdc7b2e-fdf6-4212-b9b6-48d2e3d919b8)
+    (gr_text "14.1188 mm" (at 77.73068 29.770337 1.221097023) (layer "Dwgs.User") (tstamp ae247283-46ae-4454-a310-756d9dbc7d91)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
@@ -31650,7 +31680,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp f63896e5-5c43-4d22-8d66-242ec446aa7b)
     (pts (xy 96.824179 41.10168) (xy 135.524179 41.00168))
     (height -8.697288)
-    (gr_text "38.7001 mm" (at 116.148733 31.204425 0.1480507803) (layer "Dwgs.User") (tstamp d5363a57-c638-4720-b5a6-bf77276b12ca)
+    (gr_text "38.7001 mm" (at 116.148733 31.204425 0.1480507803) (layer "Dwgs.User") (tstamp f63896e5-5c43-4d22-8d66-242ec446aa7b)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
