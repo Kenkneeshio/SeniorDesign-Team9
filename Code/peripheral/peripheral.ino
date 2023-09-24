@@ -11,9 +11,9 @@
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
 #define CURRENT_PIN A0
 #define VOLTAGE_PIN A1
-#define 5V_RAIL_IN XX
-#define 3V_RAIL_IN XY
-#define 19V_RAIL_IN YX
+//#define 5V_RAIL_IN XX
+//#define 3V_RAIL_IN XY
+//#define 19V_RAIL_IN YX
 
 int led = 13; // LED is assigned to pin 13
 
@@ -37,14 +37,15 @@ const int TEMPERATURE_3 = 7;
 const int LED_PIN_RED   = 11;
 const int LED_PIN_GREEN = 12;
 const int LED_PIN_BLUE  = 13;
-const int RED = 0;
-const int GREEN = 1;
-const int BLUE = 2;
-const int PINK = 3;
-const int TEAL = 4;
-const int LIGHT_BLUE = 5;
-const int WHITE = 6;
-const int OFF = 7;
+/////////////////////////////////////
+const int RED = 0; // COMMUNICATION
+const int GREEN = 1; // ALL GOOD
+const int BLUE = 2; // BATTERY 1 BAD
+const int PINK = 3; // BATTERY 2 BAD
+const int LIGHT_BLUE = 4; // TEMPERATURE FAULT 
+const int ORANGE = 5;  //TWO BATTERY ARE NOT BALANCED
+const int WHITE = 6;  //CURRENT 1
+const int OFF = 7;   //
 //////////////////////////////////////////////////////////
 // const float LOGIC_VOLTAGE = 5.08;
 const float LOGIC_VOLTAGE = 4.4;
@@ -58,8 +59,11 @@ const int LOAD_RESISTOR = 5000;
 // Do not change the short serial numbers, as you will need to desolder them from the board.
 const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
 const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
-const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3};
-const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59};
+//const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; //on demo board
+//const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; //on demo board
+
+const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x3A, 0x81, 0x81, 0xE3, 0xF1, 0x3C, 0x0F};
+const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2};
 //////////////////////////////////////////////////////////
 
 int numberOfDevices; // Number of temperature devices found
@@ -80,6 +84,17 @@ float presentTemperature1f;
 float presentTemperature2f;
 float presentTemperature3f;
 //////////////////////////////////////////////////////////
+
+//
+float timeSinceReceived;
+float timeSinceRequested;
+
+
+bool BATTERY1_FALUT = false;
+bool BATTERY2_FALUT = false;
+bool COMMUNICATION_FAULT = false;
+bool CURRENT_FAULT = false;
+
 
 bool debug = false;
 
@@ -249,12 +264,12 @@ void SetLEDColour(int colour)
     digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
     break;
-  case TEAL:
+  case LIGHT_BLUE:
     digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
     break;
-  case LIGHT_BLUE:
+  case ORANGE:
     digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
@@ -282,7 +297,8 @@ void receiveEvent(int howMany)
     Serial.print(c);      // print the character
   }
   lastRequestedEvent = Wire.read(); // receive byte as an integer
-
+  timeSinceReceived = millis();
+  SetLEDColour(OFF); // If we receive something, then set it off 
   if (debug) // if debug is enabled, print out the last requested event type to serial monitor
   {
     switch (lastRequestedEvent)
@@ -322,7 +338,7 @@ void requestEvent()
   // Since all of the data we are reading is in floats, we have to send
   // the values in a total of four bytes, one at a time. On the controller end,
   // it will have to reconstruct the float from the bytes sent.
-
+  timeSinceRequested = millis();
   byte *data;
   switch (lastRequestedEvent)
   {
@@ -443,7 +459,34 @@ void loop()
     presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation();
-    
+    if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
+    {
+      // Battery should not be less than 12V or greater than 16.8V
+      millis_ctr = millis();
+      while(millis() < millis_ctr + 500) // Keep LED on for 500ms
+      {
+          SetLEDColour(BLUE);
+      }
+    }
+    else if(12 > presentVoltage1 || presentVoltage1 > 16.8) // if battery voltage is greater than zero but less than 16.8
+    {
+      // Battery should not be less than 12V or greater than 16.8V
+      millis_ctr = millis();
+      while(millis() < millis_ctr + 500) // Keep LED on for 500ms
+      {
+          SetLEDColour(PINK);
+      }
+    }
+    else if(millis() > timeSinceReceived + 2500)
+    {
+        // time has passed 2.5 seconds since the last received value
+        // this should have changed by now 
+        SetLEDColour(RED); // Set the led red to indicate haven't received a command
+    }
+    else // this should be the last case if no error was reported
+    {
+      SetLEDColour(GREEN);
+    }
     // delay(5000);
 
     millis_ctr = millis();

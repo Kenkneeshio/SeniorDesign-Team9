@@ -22,17 +22,17 @@
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
 
-const int PIN_RED   = 11;
-const int PIN_GREEN = 12;
-const int PIN_BLUE  = 13;
+const int PIN_RED   = 3;
+const int PIN_GREEN = 10;
+const int PIN_BLUE  = 9;
 
 int i = 0;
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(13, OUTPUT);
+  pinMode(PIN_RED, OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+  pinMode(PIN_BLUE, OUTPUT);
 
 }
 
@@ -82,7 +82,7 @@ void loop() {
     break;
   }
   i++;
-  if(i > 7)
+  if(i > 5)
     i = 0;
-  delay(1000);                       // wait for a second
+  delay(200);                       // wait for a second
 }

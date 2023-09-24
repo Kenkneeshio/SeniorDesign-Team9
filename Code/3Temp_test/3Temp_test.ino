@@ -4,7 +4,7 @@
 #include <DallasTemperature.h>
 
 // change the pin when you use jason's board
-#define ONE_WIRE_BUS 4
+#define ONE_WIRE_BUS 5
 //#define temp1 28EE0A81E3373CB2
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
@@ -19,7 +19,7 @@ DeviceAddress tempDeviceAddress; // We'll use this variable to store a found dev
 DeviceAddress deviceAddresses;
 void setup(void) {
 
-  deviceAddresses[0] = 0x28EE0A81E3373CB2;
+  //deviceAddresses[0] = 0x28EE0A81E3373CB2;
   // start serial port
   Serial.begin(9600);
   
@@ -56,28 +56,28 @@ void loop(void) {
   sensors.requestTemperatures(); // Send the command to get temperatures
   
   // Loop through each device, print out temperature data
-  // for(int i=0;i<numberOfDevices; i++) {
-  //   // Search the wire for address
-  //   if(sensors.getAddress(tempDeviceAddress, i)){
+  for(int i=0;i<numberOfDevices; i++) {
+     // Search the wire for address
+     if(sensors.getAddress(tempDeviceAddress, i)){
 		
-	// 	// Output the device ID
-	// 	Serial.print("Temperature for device: ");
-	// 	Serial.println(i,DEC);
+	 	// Output the device ID
+	 	Serial.print("Temperature for device: ");
+	 	Serial.println(i,DEC);
 
-  //   // Print the data
-  //   float tempC = sensors.getTempC(tempDeviceAddress);
-  //   Serial.print("Temp C: ");
-  //   Serial.print(tempC);
-  //   Serial.print(" Temp F: ");
-  //   Serial.println(DallasTemperature::toFahrenheit(tempC)); // Converts tempC to Fahrenheit
-  //   } 	
-  // }
+     // Print the data
+     float tempC = sensors.getTempC(tempDeviceAddress);
+     Serial.print("Temp C: ");
+     Serial.print(tempC);
+     Serial.print(" Temp F: ");
+     Serial.println(DallasTemperature::toFahrenheit(tempC)); // Converts tempC to Fahrenheit
+     } 	
+   }
 
-  float tempC = sensors.getTempC(deviceAddresses);
-    Serial.print("Temp C: ");
-    Serial.print(tempC);
-    Serial.print(" Temp F: ");
-    Serial.println(DallasTemperature::toFahrenheit(tempC)); // Converts tempC to Fahrenheit
+//  float tempC = sensors.getTempC(deviceAddresses);
+//    Serial.print("Temp C: ");
+//    Serial.print(tempC);
+//    Serial.print(" Temp F: ");
+//    Serial.println(DallasTemperature::toFahrenheit(tempC)); // Converts tempC to Fahrenheit
   delay(5000);
 }
 
