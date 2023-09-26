@@ -34,15 +34,15 @@ const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
 //////////////////////////////////////////////////////////
 // LED PIN ASSIGNMENTS
-const int LED_PIN_RED   = 11;
-const int LED_PIN_GREEN = 12;
-const int LED_PIN_BLUE  = 13;
+const int LED_PIN_RED   = 3;
+const int LED_PIN_GREEN = 10;
+const int LED_PIN_BLUE  = 9;
 /////////////////////////////////////
 const int RED = 0; // COMMUNICATION
 const int GREEN = 1; // ALL GOOD
 const int BLUE = 2; // BATTERY 1 BAD
-const int PINK = 3; // BATTERY 2 BAD
-const int LIGHT_BLUE = 4; // TEMPERATURE FAULT 
+const int PURPLE = 3; // BATTERY 2 BAD
+const int TEAL = 4; // TEMPERATURE FAULT 
 const int ORANGE = 5;  //TWO BATTERY ARE NOT BALANCED
 const int WHITE = 6;  //CURRENT 1
 const int OFF = 7;   //
@@ -96,7 +96,7 @@ bool COMMUNICATION_FAULT = false;
 bool CURRENT_FAULT = false;
 
 
-bool debug = false;
+bool debug = true;
 
 float value;
 
@@ -259,17 +259,17 @@ void SetLEDColour(int colour)
     digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
     break;
-  case PINK:
+  case ORANGE:
     digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
     break;
-  case LIGHT_BLUE:
+  case PURPLE:
     digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
     break;
-  case ORANGE:
+  case TEAL:
     digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
@@ -446,7 +446,10 @@ void setup()
   // Set up Serial Communication
   Serial.begin(9600); // start serial for output
 
-  pinMode(led, OUTPUT);
+  pinMode(LED_PIN_RED, OUTPUT);
+    pinMode(LED_PIN_GREEN, OUTPUT);
+    pinMode(LED_PIN_BLUE, OUTPUT);
+  SetLEDRainbow(8000); // play this LED sequence for 8 seconds, then jump in main loop
 }
 
 void loop()
@@ -465,30 +468,99 @@ void loop()
       millis_ctr = millis();
       while(millis() < millis_ctr + 500) // Keep LED on for 500ms
       {
-          SetLEDColour(BLUE);
+        if(debug)
+          Serial.println("Battery 1 Error");
+        SetLEDColour(BLUE);
       }
     }
-    else if(12 > presentVoltage1 || presentVoltage1 > 16.8) // if battery voltage is greater than zero but less than 16.8
+    if(12 > presentVoltage1 || presentVoltage1 > 16.8) // if battery voltage is greater than zero but less than 16.8
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
       while(millis() < millis_ctr + 500) // Keep LED on for 500ms
       {
-          SetLEDColour(PINK);
+        if(debug)
+          Serial.println("Battery 2 Error");
+        SetLEDColour(PURPLE);
       }
     }
-    else if(millis() > timeSinceReceived + 2500)
-    {
-        // time has passed 2.5 seconds since the last received value
-        // this should have changed by now 
-        SetLEDColour(RED); // Set the led red to indicate haven't received a command
-    }
+//    if(millis() > timeSinceReceived + 2500)
+//    {
+//        // time has passed 2.5 seconds since the last received value
+//        // this should have changed by now 
+//        SetLEDColour(RED); // Set the led red to indicate haven't received a command
+//    }
     else // this should be the last case if no error was reported
     {
-      SetLEDColour(GREEN);
+      if(debug)
+        Serial.println("No other Error detected");
+      SetLEDColour(WHITE);
     }
     // delay(5000);
 
     millis_ctr = millis();
   }
+}
+
+
+void SetLEDRainbow(float duration)
+{
+  float millis_ctr = millis(); // counter value from clock
+  int i = 0; // variable used for incrementing LED state
+    while (millis() < millis_ctr + duration) // Keep LED on for 500ms
+    {
+        
+        switch (i)
+        {
+        case 0:
+            digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
+            break;
+        case 1:
+            digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+            break;
+        case 2:
+            digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+            break;
+        case 3:
+            digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+            break;
+        case 4:
+            digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+            break;
+        case 5:
+            digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
+            break;
+        case 6:
+            digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
+            break;
+        case 7:
+            digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+            digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
+            break;
+        }
+        i++;
+        if (i > 5)
+            i = 0;
+        
+        float millis_ctr2 = millis();
+        while(millis() < millis_ctr2 + 200)
+        {
+            // wait for 200 ms and do nothing
+        }
+}
 }
