@@ -5,8 +5,8 @@
 //////////////////////////////////////////////////////////
 
 #include <Wire.h> // used for i2c communication
-#include <OneWire.h>
-#include <DallasTemperature.h>
+#include <OneWire.h> // used for temperature sensor one wire 
+#include <DallasTemperature.h> // temperature sensor library
 
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
 #define CURRENT_PIN A0
@@ -15,10 +15,9 @@
 //#define 3V_RAIL_IN XY
 //#define 19V_RAIL_IN YX
 
-int led = 13; // LED is assigned to pin 13
-
+//////////////////////////////////////////////////////////
+// i2C ASSIGNMENTS
 int I2C_ADDRESS = 8; // Example i2C address
-
 int lastRequestedEvent = -1; // This is the last requested event stored. This could be any one of the codes below:
 //////////////////////////////////////////////////////////
 // i2C Request codes. Each of these values are messages to the device to request certain information.
@@ -38,7 +37,8 @@ const int LED_PIN_RED   = 3;
 const int LED_PIN_GREEN = 10;
 const int LED_PIN_BLUE  = 9;
 /////////////////////////////////////
-const int RED = 0; // COMMUNICATION
+// LED SYSTEM HEALTH CONDITIONS
+const int RED = 0; // COMMUNICATION LOSS
 const int GREEN = 1; // ALL GOOD
 const int BLUE = 2; // BATTERY 1 BAD
 const int PURPLE = 3; // BATTERY 2 BAD
@@ -85,9 +85,13 @@ float presentTemperature2f;
 float presentTemperature3f;
 //////////////////////////////////////////////////////////
 
-//
+//////////////////////////////////////////////////////////
+// Time Values
+// These values store how long it was in  milisceonds since the last communication with the host.
 float timeSinceReceived;
 float timeSinceRequested;
+int LED_KEEP_ON_TIME = 500; // keep any LED state on for 500ms
+int LED_RAINBOW_DURATION = 1000; // keep any LED state on for 500ms
 
 
 bool BATTERY1_FALUT = false;
@@ -95,10 +99,12 @@ bool BATTERY2_FALUT = false;
 bool COMMUNICATION_FAULT = false;
 bool CURRENT_FAULT = false;
 
-
+//////////////////////////////////////////////////////////
+// Debug
+// Enable this for logging of all messages to the Serial monitor. 
 bool debug = true;
 
-float value;
+//float value;
 
 //////////////////////////////////////////////////////////
 /*
@@ -145,88 +151,77 @@ float ADC2Voltage(float analogValue)
 //////////////////////////////////////////////////////////
 void CollectTemperatureInformation(void)
 {
-  for (uint8_t i = 0; i < numberOfDevices; i++)
+  // loop through all of the known number of temperature sensors. See setup(). 
+  for (uint8_t i = 0; i < numberOfDevices; i++) 
     {
       // Search the wire for address
-
+      // at each index in our loop, check the address of the given sensor.
+      // the variable tempDeviceAddress is used here to store this information.
       if (sensors.getAddress(tempDeviceAddress, i))
       {
-
-        if (memcmp(temperatureProbe0_LONG, tempDeviceAddress, 8) == 0)
+        // if we find a match with a probe, then request the temperature, and store it.
+        // using the memcmp function was the best method to compare the serial number array of a known
+        // address of a temp sensor, and the one we are currently trying to compare it to.
+        if (memcmp(temperatureProbe0_LONG, tempDeviceAddress, 8) == 0) 
         {
-          // device 0
           sensors.requestTemperatures();
-          presentTemperature0f = sensors.getTempC(tempDeviceAddress);
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature0f);
-          // Serial.print("data bytes:");
-          // Serial.print(presentTemperature0[0]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature0[1]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature0[2]);
-          // Serial.print(" ");
-          // Serial.println(presentTemperature0[3]);
+          presentTemperature0f = sensors.getTempC(tempDeviceAddress); // request temperature in celsius 
+          if(debug)
+          {
+            Serial.print("Device ");
+            Serial.print(i);
+            Serial.print(" - Temp C: ");
+            Serial.println(presentTemperature0f);
+          }
         }
         else if (memcmp(temperatureProbe1_LONG, tempDeviceAddress, 8) == 0)
         {
-          // device 1
           sensors.requestTemperatures();
           presentTemperature1f = sensors.getTempC(tempDeviceAddress);
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature1f);
-          // Serial.print("data bytes:");
-          // Serial.print(presentTemperature1[0]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature1[1]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature1[2]);
-          // Serial.print(" ");
-          // Serial.println(presentTemperature1[3]);
+          if(debug)
+          {
+            Serial.print("Device ");
+            Serial.print(i);
+            Serial.print(" - Temp C: ");
+            Serial.println(presentTemperature1f);
+          }
         }
         else if (memcmp(temperatureProbe2_SHORT, tempDeviceAddress, 8) == 0)
         {
-          // device 2
           sensors.requestTemperatures();
           presentTemperature2f = sensors.getTempC(tempDeviceAddress);
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature2f);
-          //           Serial.print("data bytes:");
-          // Serial.print(presentTemperature2[0]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature2[1]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature2[2]);
-          // Serial.print(" ");
-          // Serial.println(presentTemperature2[3]);
+          if(debug)
+          {
+            Serial.print("Device ");
+            Serial.print(i);
+            Serial.print(" - Temp C: ");
+            Serial.println(presentTemperature2f);
+          }
         }
         else if (memcmp(temperatureProbe3_SHORT, tempDeviceAddress, 8) == 0)
         {
-          // device 2
           sensors.requestTemperatures();
           presentTemperature3f = sensors.getTempC(tempDeviceAddress);
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature2f);
-          //           Serial.print("data bytes:");
-          // Serial.print(presentTemperature2[0]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature2[1]);
-          // Serial.print(" ");
-          // Serial.print(presentTemperature2[2]);
-          // Serial.print(" ");
-          // Serial.println(presentTemperature2[3]);
+          if(debug)
+          {
+            Serial.print("Device ");
+            Serial.print(i);
+            Serial.print(" - Temp C: ");
+            Serial.println(presentTemperature3f);
+          }
         }
         else
         {
-          Serial.println("No matches :(");
+          // if no temperature sensors are detected, then turn on the TEAL LED for 500ms to indicate an issue,
+          // then pass on the led cycle to the next state 
+          float temperature_ctr = millis();
+          while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
+          {
+            
+            SetLEDColour(TEAL);
+          }
+          if(debug)
+              Serial.println("WARNING: No known Temperature Sensors found. Double check connections.");
         }
       }
     }
@@ -287,8 +282,18 @@ void SetLEDColour(int colour)
   }
 }
 
-// function that executes whenever data is received from controller
-// this function is registered as an event, see setup()
+
+//////////////////////////////////////////////////////////
+/*
+ * requestEvent()
+ * Description: receiveEvent is a unique i2C function, that is called when the peripheral
+ * receives data from the host. In our particular application, we are supposed
+ * to read a byte as an integer, and use this integer to determine what type of 
+ * measurement the host desires when we receive a requestEvent. For more on this, see requestEvent(). 
+ * Param: int howMany
+ */
+//////////////////////////////////////////////////////////
+
 void receiveEvent(int howMany)
 {
   while (1 < Wire.available())
@@ -298,7 +303,15 @@ void receiveEvent(int howMany)
   }
   lastRequestedEvent = Wire.read(); // receive byte as an integer
   timeSinceReceived = millis();
-  SetLEDColour(OFF); // If we receive something, then set it off 
+  
+  // if a message is detected, then turn on the TEAL LED for 500ms to indicate an issue,
+  // then pass on the led cycle to the next state 
+  float temperature_ctr = millis();
+  while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
+  {
+    SetLEDColour(WHITE);
+  }
+
   if (debug) // if debug is enabled, print out the last requested event type to serial monitor
   {
     switch (lastRequestedEvent)
@@ -331,12 +344,20 @@ void receiveEvent(int howMany)
   }
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * requestEvent()
+ * Description: 
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
+
 // function that executes whenever data is requested by master
 // this function is registered as an event, see setup()
 void requestEvent()
 {
   // Since all of the data we are reading is in floats, we have to send
-  // the values in a total of four bytes, one at a time. On the controller end,
+  // the values in a total of four bytes, one at a time. On the host end,
   // it will have to reconstruct the float from the bytes sent.
   timeSinceRequested = millis();
   byte *data;
@@ -344,76 +365,31 @@ void requestEvent()
   {
   case CURRENT_0:
     data = (byte *)&presentCurrent0; // casting as a byte pointer to address of variable
-    // Wire.write("Current 0"); // print the integer
-    //  Wire.write(data[0]);
-    //  Wire.write(data[1]);
-    //  Wire.write(data[2]);
-    //  Wire.write(data[3]);
     break;
   case CURRENT_1:
-    // Wire.write("Current 1"); // print the integer
     data = (byte *)&presentCurrent1; // casting as a byte pointer to address of variable
-    // Wire.write("Current 0"); // print the integer
-    //  Wire.write(data[0]);
-    //  Wire.write(data[1]);
-    //  Wire.write(data[2]);
-    //  Wire.write(data[3]);
     break;
   case VOLTAGE_0:
-    // Wire.write("Voltage 0"); // print the integer
     data = (byte *)&presentVoltage0; // casting as a byte pointer to address of variable
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
     break;
   case VOLTAGE_1:
     data = (byte *)&presentVoltage1; // casting as a byte pointer to address of variable
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
     break;
   case TEMPERATURE_0:
     data = (byte *)&presentTemperature0f; // casting as a byte pointer to address of variable
-    // Serial.print("data bytes:");
-    // Serial.print(data[0]);
-    // Serial.print(" ");
-    // Serial.print(data[1]);
-    // Serial.print(" ");
-    // Serial.print(data[2]);
-    // Serial.print(" ");
-    // Serial.println(data[3]);
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
-
     break;
   case TEMPERATURE_1:
     data = (byte *)&presentTemperature1f; // casting as a byte pointer to address of variable
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
     break;
   case TEMPERATURE_2:
     data = (byte *)&presentTemperature2f; // casting as a byte pointer to address of variable
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
     break;
 
   case TEMPERATURE_3:
     data = (byte *)&presentTemperature3f; // casting as a byte pointer to address of variable
-    // Wire.write(data[0]);
-    // Wire.write(data[1]);
-    // Wire.write(data[2]);
-    // Wire.write(data[3]);
     break;
   }
-  if (debug)
+  if (debug) // if debug enabled, the hex of the code about to be sent will print 
   {
     Serial.print("data bytes:");
     Serial.print(data[0]);
@@ -443,33 +419,40 @@ void setup()
   Wire.onReceive(receiveEvent); // register a receive on event
   Wire.onRequest(requestEvent); // register a request on event
 
-  // Set up Serial Communication
-  Serial.begin(9600); // start serial for output
+  if(debug)
+  {
+    // Set up Serial Communication.
+    // Putting the Serial monitor here should help the MCU resetting when the com port is accessed. 
+    Serial.begin(9600); // start serial for output
+  }
+  
 
+// Set the LEDs to output mode
   pinMode(LED_PIN_RED, OUTPUT);
-    pinMode(LED_PIN_GREEN, OUTPUT);
-    pinMode(LED_PIN_BLUE, OUTPUT);
-  SetLEDRainbow(8000); // play this LED sequence for 8 seconds, then jump in main loop
+  pinMode(LED_PIN_GREEN, OUTPUT);
+  pinMode(LED_PIN_BLUE, OUTPUT);
+  SetLEDRainbow(LED_RAINBOW_DURATION); // play this LED sequence for LED_RAINBOW_DURATION seconds, then jump in main loop
 }
 
 void loop()
 {
-  static uint32_t millis_ctr = 0;
+  static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock. 
   // Serial.println("Requesting Temps");
 
   if (millis() > millis_ctr + 1000)
   {
     presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
-    CollectTemperatureInformation();
+    CollectTemperatureInformation(); // call the temperature collecting function
+
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
-      while(millis() < millis_ctr + 500) // Keep LED on for 500ms
+      while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
         if(debug)
-          Serial.println("Battery 1 Error");
+          Serial.println("Battery 1 Error: under or overvoltage");
         SetLEDColour(BLUE);
       }
     }
@@ -477,10 +460,10 @@ void loop()
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
-      while(millis() < millis_ctr + 500) // Keep LED on for 500ms
+      while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
         if(debug)
-          Serial.println("Battery 2 Error");
+          Serial.println("Battery 2 Error: under or overvoltage");
         SetLEDColour(PURPLE);
       }
     }
@@ -542,25 +525,15 @@ void SetLEDRainbow(float duration)
             digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
             digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
             break;
-        case 6:
-            digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
-            digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
-            digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
-            break;
-        case 7:
-            digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
-            digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
-            digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
-            break;
         }
         i++;
-        if (i > 5)
+        if (i > 5) // if we hit the end of our cases then reset to red 
             i = 0;
         
         float millis_ctr2 = millis();
         while(millis() < millis_ctr2 + 200)
         {
-            // wait for 200 ms and do nothing
+            // wait for 200 ms and do nothing, getting around delay()
         }
 }
 }
