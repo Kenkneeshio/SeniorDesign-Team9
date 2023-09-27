@@ -432,8 +432,8 @@ void setup()
     // Putting the Serial monitor here should help the MCU resetting when the com port is accessed. 
     Serial.begin(9600); // start serial for output
     BootScreen();
-    digitalWrite(6, HIGH);//enable input 1
-    digitalWrite(7, LOW);//enable input 2
+    //digitalWrite(6, HIGH);//enable input 1
+    //digitalWrite(7, LOW);//enable input 2
   // Set up Dallas Temperature Sensors
   Serial.println("Starting DallasTemperature Library....");
   sensors.begin();                            // start up the dallas temperature library
