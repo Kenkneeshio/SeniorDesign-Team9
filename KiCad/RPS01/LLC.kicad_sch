@@ -1570,7 +1570,7 @@
   )
 
   (symbol (lib_id "Device:R_Small") (at 130.048 66.04 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 7b23e73f-b378-417d-8312-22b9f127468a)
     (property "Reference" "R18" (at 131.572 65.405 0)
       (effects (font (size 1.27 1.27)) (justify right))
