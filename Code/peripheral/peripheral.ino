@@ -154,10 +154,11 @@ float ADC2Voltage(float analogValue)
 //////////////////////////////////////////////////////////
 void CollectTemperatureInformation(void)
 {
+  sensors.begin();
   Serial.print("deviceCount: ");
   Serial.println(sensors.getDeviceCount());
-  if(sensors.getDeviceCount() < numberOfDevices)
-  {
+  //uint8_t p_device = sensors.getDeviceCount();
+  if(sensors.getDeviceCount() < numberOfDevices){
     // if we lost a temperature sensor, then turn on the ORANGE LED for 500ms to indicate an issue,
           // then pass on the led cycle to the next state 
           float temperature_ctr = millis();
@@ -233,6 +234,8 @@ void CollectTemperatureInformation(void)
           
         }
       }
+      
+      
     }
 }
 
