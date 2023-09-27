@@ -9,8 +9,11 @@
 #include <DallasTemperature.h> // temperature sensor library
 
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
-#define CURRENT_PIN A0
-#define VOLTAGE_PIN A1
+#define VOLTAGE0_PIN A0
+#define VOLTAGE1_PIN A1
+#define CURRENT0_PIN A2
+#define CURRENT1_PIN A3
+
 //#define 5V_RAIL_IN XX
 //#define 3V_RAIL_IN XY
 //#define 19V_RAIL_IN YX
@@ -102,7 +105,7 @@ bool CURRENT_FAULT = false;
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor. 
-bool debug = true;
+bool debug = debug;
 
 //float value;
 
@@ -151,6 +154,21 @@ float ADC2Voltage(float analogValue)
 //////////////////////////////////////////////////////////
 void CollectTemperatureInformation(void)
 {
+  Serial.print("deviceCount: ");
+  Serial.println(sensors.getDeviceCount());
+  if(sensors.getDeviceCount() < numberOfDevices)
+  {
+    // if we lost a temperature sensor, then turn on the ORANGE LED for 500ms to indicate an issue,
+          // then pass on the led cycle to the next state 
+          float temperature_ctr = millis();
+          while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
+          {
+            
+            SetLEDColour(ORANGE);
+          }
+          Serial.println("WARNING: Lost connection to one or more temperature sensors. Double check connections.");
+  }
+
   // loop through all of the known number of temperature sensors. See setup(). 
   for (uint8_t i = 0; i < numberOfDevices; i++) 
     {
@@ -212,16 +230,7 @@ void CollectTemperatureInformation(void)
         }
         else
         {
-          // if no temperature sensors are detected, then turn on the TEAL LED for 500ms to indicate an issue,
-          // then pass on the led cycle to the next state 
-          float temperature_ctr = millis();
-          while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
-          {
-            
-            SetLEDColour(TEAL);
-          }
-          if(debug)
-              Serial.println("WARNING: No known Temperature Sensors found. Double check connections.");
+          
         }
       }
     }
@@ -298,19 +307,25 @@ void receiveEvent(int howMany)
 {
   while (1 < Wire.available())
   {                       // loop through all but the last
+    
     char c = Wire.read(); // receive byte as a character
     Serial.print(c);      // print the character
+    if(c == "RESET")
+    lastRequestedEvent = -1;
+    
   }
+
+  
   lastRequestedEvent = Wire.read(); // receive byte as an integer
   timeSinceReceived = millis();
   
-  // if a message is detected, then turn on the TEAL LED for 500ms to indicate an issue,
-  // then pass on the led cycle to the next state 
-  float temperature_ctr = millis();
-  while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
-  {
-    SetLEDColour(WHITE);
-  }
+//  // if a message is detected, then turn on the TEAL LED for 500ms to indicate an issue,
+//  // then pass on the led cycle to the next state 
+//  float temperature_ctr = millis();
+//  while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
+//  {
+//    SetLEDColour(WHITE);
+//  }
 
   if (debug) // if debug is enabled, print out the last requested event type to serial monitor
   {
@@ -410,28 +425,49 @@ void requestEvent()
 
 void setup()
 {
-  // Set up Dallas Temperature Sensors
-  sensors.begin();                            // start up the dallas temperature library
-  numberOfDevices = sensors.getDeviceCount(); // number of temperatures
-
-  // Set up i2C Communication
-  Wire.begin(I2C_ADDRESS);      // join i2c bus with address #8
-  Wire.onReceive(receiveEvent); // register a receive on event
-  Wire.onRequest(requestEvent); // register a request on event
-
-  if(debug)
-  {
-    // Set up Serial Communication.
+      // Set up Serial Communication.
     // Putting the Serial monitor here should help the MCU resetting when the com port is accessed. 
     Serial.begin(9600); // start serial for output
-  }
+    BootScreen();
+    
+  // Set up Dallas Temperature Sensors
+  Serial.println("Starting DallasTemperature Library....");
+  sensors.begin();                            // start up the dallas temperature library
+  Serial.println("Finding DallasTemperature devices....");
+  numberOfDevices = sensors.getDeviceCount(); // number of temperatures
+  DisplayDallasTemperatureSerialNumbers();
+  Serial.println("Done.");
+
+  WaitFor(150);
+  // Set up i2C Communication
+  Serial.print("Joining i2C Address:");
+  Serial.print(I2C_ADDRESS);
+  Serial.print(".....");
+  Wire.begin(I2C_ADDRESS);      // join i2c bus with address #8
+  Serial.println("Done.");
+    WaitFor(150);
+
+  Serial.print("Setting i2C ReceiveEvent....");
+  Wire.onReceive(receiveEvent); // register a receive on event
+  Serial.println("Done.");
+    WaitFor(150);
+
+  Serial.print("Setting i2C RequestEvent....");
+  Wire.onRequest(requestEvent); // register a request on event
+  Serial.println("Done.");
+
+
+
   
 
 // Set the LEDs to output mode
+  Serial.print("Setting LED Outputs...");
   pinMode(LED_PIN_RED, OUTPUT);
   pinMode(LED_PIN_GREEN, OUTPUT);
   pinMode(LED_PIN_BLUE, OUTPUT);
+    Serial.println("Done.");
   SetLEDRainbow(LED_RAINBOW_DURATION); // play this LED sequence for LED_RAINBOW_DURATION seconds, then jump in main loop
+    Serial.println("Entering loop...");
 }
 
 void loop()
@@ -441,18 +477,20 @@ void loop()
 
   if (millis() > millis_ctr + 1000)
   {
-    presentCurrent0 = ADC2Current(analogRead(CURRENT_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation(); // call the temperature collecting function
 
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
+      
+          Serial.println("Battery 1 Error: under or overvoltage");
       while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
-        if(debug)
-          Serial.println("Battery 1 Error: under or overvoltage");
         SetLEDColour(BLUE);
       }
     }
@@ -460,23 +498,25 @@ void loop()
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
+      
+          Serial.println("Battery 2 Error: under or overvoltage");
       while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
-        if(debug)
-          Serial.println("Battery 2 Error: under or overvoltage");
-        SetLEDColour(PURPLE);
+        
+        SetLEDColour(GREEN);
       }
     }
-//    if(millis() > timeSinceReceived + 2500)
-//    {
-//        // time has passed 2.5 seconds since the last received value
-//        // this should have changed by now 
-//        SetLEDColour(RED); // Set the led red to indicate haven't received a command
-//    }
+    if(millis() > timeSinceReceived + 2500)
+    {
+        // time has passed 2.5 seconds since the last received value
+        // this should have changed by now 
+        SetLEDColour(RED); // Set the led red to indicate haven't received a command
+        Serial.println("Communication to Host: BAD");
+    }
     else // this should be the last case if no error was reported
     {
-      if(debug)
-        Serial.println("No other Error detected");
+      
+        Serial.println("Communication to Host: OK");
       SetLEDColour(WHITE);
     }
     // delay(5000);
@@ -536,4 +576,37 @@ void SetLEDRainbow(float duration)
             // wait for 200 ms and do nothing, getting around delay()
         }
 }
+}
+
+void DisplayDallasTemperatureSerialNumbers(void)
+{
+  for(uint8_t i=0; i < numberOfDevices; i++) {
+      // Search the wire for address
+      if(sensors.getAddress(tempDeviceAddress, i))
+      {
+        for (uint8_t i = 0; i < 8; i++) {
+            if (tempDeviceAddress[i] < 16) Serial.print("0");
+              Serial.print(tempDeviceAddress[i], HEX);
+        }
+            Serial.println(" ");
+
+      }
+    }
+}
+
+void BootScreen(void)
+{
+  Serial.println("//////////////////////////////////////////////////////////");
+    Serial.println("SDSU Senior Design Team 9 - Robot Power System");
+    Serial.println("Boot");
+      Serial.println("//////////////////////////////////////////////////////////");
+}
+
+void WaitFor(float milliseconds)
+{
+    float waitCounter = millis();
+        while(millis() < waitCounter + milliseconds)
+        {
+            // wait for 200 ms and do nothing, getting around delay()
+        }
 }
