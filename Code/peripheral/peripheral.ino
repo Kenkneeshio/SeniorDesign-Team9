@@ -52,8 +52,10 @@ const int OFF = 7;   //
 //////////////////////////////////////////////////////////
 // const float LOGIC_VOLTAGE = 5.08;
 const float LOGIC_VOLTAGE = 4.4;
-const float VOLTAGE_DIVIDER_R2 = 504000;
-const float VOLTAGE_DIVIDER_R1 = 1223000;
+const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
+const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
+const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
+const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
 const float SHUNT_RESISTOR = 0.01028;
 const int LOAD_RESISTOR = 5000;
 
