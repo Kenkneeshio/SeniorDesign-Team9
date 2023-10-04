@@ -105,7 +105,7 @@ bool CURRENT_FAULT = false;
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor. 
-bool debug = true;
+bool debug = debug;
 
 //float value;
 
@@ -507,7 +507,7 @@ void loop()
       while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
         
-        SetLEDColour(PURPLE);
+        SetLEDColour(GREEN);
       }
     }
     if(millis() > timeSinceReceived + 2500)
@@ -521,7 +521,7 @@ void loop()
     {
       
         Serial.println("Communication to Host: OK");
-      SetLEDColour(GREEN);
+      SetLEDColour(WHITE);
     }
     // delay(5000);
 
