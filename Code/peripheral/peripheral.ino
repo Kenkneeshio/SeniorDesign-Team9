@@ -51,7 +51,7 @@ const int WHITE = 6;  //CURRENT 1
 const int OFF = 7;   //
 //////////////////////////////////////////////////////////
 // const float LOGIC_VOLTAGE = 5.08;
-const float LOGIC_VOLTAGE = 4.4;
+const float LOGIC_VOLTAGE = 4.981;
 const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
 const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
 const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
@@ -131,19 +131,30 @@ float ADC2Current(float analogValue)
 
 //////////////////////////////////////////////////////////
 /*
- * ADC2Voltage(float analogValue)
+ * ADC2Voltage(float analogValue, int batteryNumber)
  * Description: Converts a given analog value from an ADC to the correct voltage based
  * on the voltage divider resistor values, and output voltage from the ADC to recover the input.
- * Param: analogValue - ADC value
+ * Param: analogValue - ADC 
+ *        batteryNumber - battery number. Can be either 1 or 2. 
  */
 //////////////////////////////////////////////////////////
 
-float ADC2Voltage(float analogValue)
+float ADC2Voltage(float analogValue, int batteryNumber)
 {
   float value;
   value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
-  // then get back the input voltage from the voltage divider equation: Vin = Vout * (R2+R1)/R2
-  value = (value * (VOLTAGE_DIVIDER_R2 + VOLTAGE_DIVIDER_R1) / (VOLTAGE_DIVIDER_R2));
+  // then get back the input voltage from the voltage divider equation: Vin = Vout * (R2+R1)/
+  switch(batteryNumber)
+  {
+    case 1:
+      value = (value * (BATT1_VOLTAGE_DIVIDER_R2 + BATT1_VOLTAGE_DIVIDER_R1) / (BATT1_VOLTAGE_DIVIDER_R2));
+    break;
+
+    case 2:
+      value = (value * (BATT2_VOLTAGE_DIVIDER_R2 + BATT2_VOLTAGE_DIVIDER_R1) / (BATT2_VOLTAGE_DIVIDER_R2));
+    break;
+  }
+  
   return value;
 }
 
@@ -484,9 +495,9 @@ void loop()
   if (millis() > millis_ctr + 1000)
   {
     presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN, 1)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN, 2)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation(); // call the temperature collecting function
 
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
