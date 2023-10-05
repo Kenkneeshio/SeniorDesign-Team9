@@ -18,6 +18,7 @@ const int TEMPERATURE_0 = 4;
 const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
+const int SYSTEM_NOP = 99;
 
 //////////////////////////////////////////////////////////
 // Present Values
@@ -62,405 +63,415 @@ void setup()
 
 void loop()
 {
-  lastRequestedEvent = (int)transmissionData; // explain what this is doing
-  Serial.print("Requesting: ");
-  Serial.println(transmissionData);
-  Wire.beginTransmission(I2C_ADDRESS); // transmit to our intended device along the bus
-  Wire.write(transmissionData);        // send the currently requested sensing value
-  Wire.endTransmission();              // now stop transmitting
-
-  switch (lastRequestedEvent)
+  static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock.
+  if (millis() > millis_ctr + 10000) // take a measurement every 10 seconds. 
   {
-  case CURRENT_0:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
 
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+    lastRequestedEvent = (int)transmissionData; // explain what this is doing
+    Serial.print("Requesting: ");
+    Serial.println(transmissionData);
+    Wire.beginTransmission(I2C_ADDRESS); // transmit to our intended device along the bus
+    Wire.write(transmissionData);        // send the currently requested sensing value
+    Wire.endTransmission();              // now stop transmitting
+
+    switch (lastRequestedEvent)
+    {
+    case CURRENT_0:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    union floatByte current;
-    current.byteVal[0] = data[0];
-    current.byteVal[1] = data[1];
-    current.byteVal[2] = data[2];
-    current.byteVal[3] = data[3];
-    if (!isnan(current.floatVal) && current.floatVal > 0)
-    {
-      presentCurrent0 = current.floatVal;
-      Serial.print("Current 0: ");
-      Serial.println(presentCurrent0);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    break;
-  case CURRENT_1:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
 
-    union floatByte current1;
-    current1.byteVal[0] = data[0];
-    current1.byteVal[1] = data[1];
-    current1.byteVal[2] = data[2];
-    current1.byteVal[3] = data[3];
-    if (!isnan(current1.floatVal) && current1.floatVal > 0)
-    {
-      presentCurrent1 = current1.floatVal;
-      Serial.print("Current 1: ");
-      Serial.println(presentCurrent1);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    break;
-
-  case VOLTAGE_0:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      union floatByte current;
+      current.byteVal[0] = data[0];
+      current.byteVal[1] = data[1];
+      current.byteVal[2] = data[2];
+      current.byteVal[3] = data[3];
+      if (!isnan(current.floatVal) && current.floatVal > 0)
+      {
+        presentCurrent0 = current.floatVal;
+        Serial.print("Current 0: ");
+        Serial.println(presentCurrent0);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    union floatByte voltage;
-    voltage.byteVal[0] = data[0];
-    voltage.byteVal[1] = data[1];
-    voltage.byteVal[2] = data[2];
-    voltage.byteVal[3] = data[3];
-    if (!isnan(voltage.floatVal) && voltage.floatVal > 0)
-    {
-      presentVoltage0 = voltage.floatVal;
-      Serial.print("Voltage 0: ");
-      Serial.println(presentVoltage0);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    break;
-
-  case VOLTAGE_1:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
 
-    union floatByte voltage1;
-    voltage1.byteVal[0] = data[0];
-    voltage1.byteVal[1] = data[1];
-    voltage1.byteVal[2] = data[2];
-    voltage1.byteVal[3] = data[3];
-    if (!isnan(voltage1.floatVal) && voltage1.floatVal > 0)
-    {
-      presentVoltage1 = voltage1.floatVal;
-      Serial.print("Voltage 1: ");
-      Serial.println(presentVoltage1);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
+      break;
+    case CURRENT_1:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
 
-    break;
-
-  case TEMPERATURE_0:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    union floatByte temperature0;
-    temperature0.byteVal[0] = data[0];
-    temperature0.byteVal[1] = data[1];
-    temperature0.byteVal[2] = data[2];
-    temperature0.byteVal[3] = data[3];
-    if (!isnan(temperature0.floatVal) && temperature0.floatVal > 0)
-    {
-      presentTemperature0 = temperature0.floatVal;
-      Serial.print("Temperature 0: ");
-      Serial.println(presentTemperature0);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-    break;
-  case TEMPERATURE_1:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
 
-    union floatByte temperature1;
-    temperature1.byteVal[0] = data[0];
-    temperature1.byteVal[1] = data[1];
-    temperature1.byteVal[2] = data[2];
-    temperature1.byteVal[3] = data[3];
-    if (!isnan(temperature1.floatVal) && temperature1.floatVal > 0)
-    {
-      presentTemperature1 = temperature1.floatVal;
-      Serial.print("Temperature 1: ");
-      Serial.println(presentTemperature1);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-    break;
-  case TEMPERATURE_2:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      union floatByte current1;
+      current1.byteVal[0] = data[0];
+      current1.byteVal[1] = data[1];
+      current1.byteVal[2] = data[2];
+      current1.byteVal[3] = data[3];
+      if (!isnan(current1.floatVal) && current1.floatVal > 0)
+      {
+        presentCurrent1 = current1.floatVal;
+        Serial.print("Current 1: ");
+        Serial.println(presentCurrent1);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-
-    union floatByte temperature2;
-    temperature2.byteVal[0] = data[0];
-    temperature2.byteVal[1] = data[1];
-    temperature2.byteVal[2] = data[2];
-    temperature2.byteVal[3] = data[3];
-    if (!isnan(temperature2.floatVal) && temperature2.floatVal > 0)
-    {
-      presentTemperature2 = temperature2.floatVal;
-      Serial.print("Temperature 2: ");
-      Serial.println(presentTemperature2);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-    break;
-  case TEMPERATURE_3:
-    Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
-    while (Wire.available())
-    { // peripheral may send less than requested
-      int i = 0;
-      while (i < 4)
-      {                        // peripheral may send less than requested
-        data[i] = Wire.read(); // receive a byte as character
-        i++;
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
       }
-    }
-    if (debug) // if debug enabled, the hex of the code about to be sent will print
-    {
-      Serial.print("data bytes:");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
+
+      break;
+
+    case VOLTAGE_0:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte voltage;
+      voltage.byteVal[0] = data[0];
+      voltage.byteVal[1] = data[1];
+      voltage.byteVal[2] = data[2];
+      voltage.byteVal[3] = data[3];
+      if (!isnan(voltage.floatVal) && voltage.floatVal > 0)
+      {
+        presentVoltage0 = voltage.floatVal;
+        Serial.print("Voltage 0: ");
+        Serial.println(presentVoltage0);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      break;
+
+    case VOLTAGE_1:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte voltage1;
+      voltage1.byteVal[0] = data[0];
+      voltage1.byteVal[1] = data[1];
+      voltage1.byteVal[2] = data[2];
+      voltage1.byteVal[3] = data[3];
+      if (!isnan(voltage1.floatVal) && voltage1.floatVal > 0)
+      {
+        presentVoltage1 = voltage1.floatVal;
+        Serial.print("Voltage 1: ");
+        Serial.println(presentVoltage1);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      break;
+
+    case TEMPERATURE_0:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 4 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte temperature0;
+      temperature0.byteVal[0] = data[0];
+      temperature0.byteVal[1] = data[1];
+      temperature0.byteVal[2] = data[2];
+      temperature0.byteVal[3] = data[3];
+      if (!isnan(temperature0.floatVal) && temperature0.floatVal > 0)
+      {
+        presentTemperature0 = temperature0.floatVal;
+        Serial.print("Temperature 0: ");
+        Serial.println(presentTemperature0);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+      break;
+    case TEMPERATURE_1:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte temperature1;
+      temperature1.byteVal[0] = data[0];
+      temperature1.byteVal[1] = data[1];
+      temperature1.byteVal[2] = data[2];
+      temperature1.byteVal[3] = data[3];
+      if (!isnan(temperature1.floatVal) && temperature1.floatVal > 0)
+      {
+        presentTemperature1 = temperature1.floatVal;
+        Serial.print("Temperature 1: ");
+        Serial.println(presentTemperature1);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+      break;
+    case TEMPERATURE_2:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte temperature2;
+      temperature2.byteVal[0] = data[0];
+      temperature2.byteVal[1] = data[1];
+      temperature2.byteVal[2] = data[2];
+      temperature2.byteVal[3] = data[3];
+      if (!isnan(temperature2.floatVal) && temperature2.floatVal > 0)
+      {
+        presentTemperature2 = temperature2.floatVal;
+        Serial.print("Temperature 2: ");
+        Serial.println(presentTemperature2);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+      break;
+    case TEMPERATURE_3:
+      Wire.requestFrom(I2C_ADDRESS, 4); // request 6 bytes from peripheral device #8
+      while (Wire.available())
+      { // peripheral may send less than requested
+        int i = 0;
+        while (i < 4)
+        {                        // peripheral may send less than requested
+          data[i] = Wire.read(); // receive a byte as character
+          i++;
+        }
+      }
+      if (debug) // if debug enabled, the hex of the code about to be sent will print
+      {
+        Serial.print("data bytes:");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+
+      union floatByte temperature3;
+      temperature3.byteVal[0] = data[0];
+      temperature3.byteVal[1] = data[1];
+      temperature3.byteVal[2] = data[2];
+      temperature3.byteVal[3] = data[3];
+      if (!isnan(temperature3.floatVal) && temperature3.floatVal > 0)
+      {
+        presentTemperature3 = temperature3.floatVal;
+        Serial.print("Temperature 3: ");
+        Serial.println(presentTemperature3);
+      }
+      else
+      {
+        Serial.println("Invalid Data received: ");
+        Serial.print(data[0]);
+        Serial.print(" ");
+        Serial.print(data[1]);
+        Serial.print(" ");
+        Serial.print(data[2]);
+        Serial.print(" ");
+        Serial.println(data[3]);
+      }
+      break;
     }
 
-    union floatByte temperature3;
-    temperature3.byteVal[0] = data[0];
-    temperature3.byteVal[1] = data[1];
-    temperature3.byteVal[2] = data[2];
-    temperature3.byteVal[3] = data[3];
-    if (!isnan(temperature3.floatVal) && temperature3.floatVal > 0)
-    {
-      presentTemperature3 = temperature3.floatVal;
-      Serial.print("Temperature 3: ");
-      Serial.println(presentTemperature3);
-    }
-    else
-    {
-      Serial.println("Invalid Data received: ");
-      Serial.print(data[0]);
-      Serial.print(" ");
-      Serial.print(data[1]);
-      Serial.print(" ");
-      Serial.print(data[2]);
-      Serial.print(" ");
-      Serial.println(data[3]);
-    }
-    break;
+    Serial.println(" ");
+    transmissionData++;
+    if (transmissionData > 7) // if the requested measurement is above 7 (our limit) reset to zero
+      transmissionData = 0;
+
+    WaitFor(2000); // wait for 2 seconds before requesting another measurement
+
+    millis_ctr = millis();
   }
-
-  Serial.println(" ");
-  transmissionData++;
-  if (transmissionData > 7)
-    transmissionData = 0;
-
-  float millis_ctr2 = millis();
-  while (millis() < millis_ctr2 + 2000)
+  else
   {
-    // wait for 200 ms and do nothing, getting around delay()
+    // while waiting for another measurement, send the NOP command to ensure that the remote device knows we have connection.
+    Wire.beginTransmission(I2C_ADDRESS); // transmit to our intended device along the bus
+    Wire.write(SYSTEM_NOP);        // send the currently requested sensing value
+    Wire.endTransmission();              // now stop transmitting
+    WaitFor(100); // delay for 100 ms 
   }
-  // delay(2000);
 }
 
 void BootScreen(void)
@@ -470,4 +481,13 @@ void BootScreen(void)
   Serial.println("Boot - Host Demonstration");
   Serial.println("Please connect RPS01 to SDA, SCL, and GND.");
   Serial.println("//////////////////////////////////////////////////////////");
+}
+
+void WaitFor(float milliseconds)
+{
+  float waitCounter = millis();
+  while (millis() < waitCounter + milliseconds)
+  {
+    // wait for 200 ms and do nothing, getting around delay()
+  }
 }

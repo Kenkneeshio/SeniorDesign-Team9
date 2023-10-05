@@ -34,6 +34,7 @@ const int TEMPERATURE_0 = 4;
 const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
+const int SYSTEM_NOP = 99;
 //////////////////////////////////////////////////////////
 // LED PIN ASSIGNMENTS
 const int LED_PIN_RED   = 3;
@@ -331,17 +332,16 @@ void receiveEvent(int howMany)
     
   }
 
-  
-  lastRequestedEvent = Wire.read(); // receive byte as an integer
-  timeSinceReceived = millis();
-  
-//  // if a message is detected, then turn on the TEAL LED for 500ms to indicate an issue,
-//  // then pass on the led cycle to the next state 
-//  float temperature_ctr = millis();
-//  while(millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
-//  {
-//    SetLEDColour(WHITE);
-//  }
+  if(Wire.read() == SYSTEM_NOP) // if we receive the system NOP command, just update the time recevied variable only
+  {
+      timeSinceReceived = millis();
+  }
+  else if(Wire.read() != -1) // but if we get data we are expecting, then store that requested event 
+  {
+    lastRequestedEvent = Wire.read(); // receive byte as an integer
+    timeSinceReceived = millis();
+  }
+
 
   if (debug) // if debug is enabled, print out the last requested event type to serial monitor
   {
@@ -495,9 +495,9 @@ void loop()
   if (millis() > millis_ctr + 1000)
   {
     presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN, 1)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN),1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN, 2)); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN),2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation(); // call the temperature collecting function
 
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
