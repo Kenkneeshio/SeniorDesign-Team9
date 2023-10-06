@@ -328,12 +328,17 @@ void receiveEvent(int howMany)
     char c = Wire.read(); // receive byte as a character
     Serial.print(c);      // print the character
     if(c == "RESET")
-    lastRequestedEvent = -1;
+    {
+      Serial.println("RESET Command");
+      lastRequestedEvent = -1;
+    }
+    
     
   }
 
   if(Wire.read() == SYSTEM_NOP) // if we receive the system NOP command, just update the time recevied variable only
   {
+      Serial.println("NOP Command");
       timeSinceReceived = millis();
   }
   else if(Wire.read() != -1) // but if we get data we are expecting, then store that requested event 
