@@ -19,7 +19,7 @@ const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
 const int SYSTEM_NOP = 99;
-
+const int SYSTEM_RESET_VAL = 100;
 //////////////////////////////////////////////////////////
 // Present Values
 // These floats represent the present current, voltage, or temperature value
@@ -47,7 +47,7 @@ union floatByte // two different data types in one area of memory.
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor.
-bool debug = false;
+bool debug = true;
 
 void setup()
 {
@@ -57,7 +57,7 @@ void setup()
 
   // When the host resets, or powers on, tell the peripheral to reset it's stored value of the requested measurement.
   Wire.beginTransmission(I2C_ADDRESS); // transmit to our intended device along the bus
-  Wire.write("RESET");                 // send the currently requested sensing value
+  Wire.write(SYSTEM_RESET_VAL);                 // send the currently requested sensing value
   Wire.endTransmission();              // now stop transmitting
 }
 
@@ -460,7 +460,7 @@ void loop()
     if (transmissionData > 7) // if the requested measurement is above 7 (our limit) reset to zero
       transmissionData = 0;
 
-    WaitFor(2000); // wait for 2 seconds before requesting another measurement
+    //WaitFor(2000); // wait for 2 seconds before requesting another measurement
 
     millis_ctr = millis();
   }
@@ -470,7 +470,7 @@ void loop()
     Wire.beginTransmission(I2C_ADDRESS); // transmit to our intended device along the bus
     Wire.write(SYSTEM_NOP);        // send the currently requested sensing value
     Wire.endTransmission();              // now stop transmitting
-    WaitFor(100); // delay for 100 ms 
+    WaitFor(1000); // delay for 100 ms 
   }
 }
 

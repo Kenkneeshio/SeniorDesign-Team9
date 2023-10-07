@@ -35,6 +35,7 @@ const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
 const int SYSTEM_NOP = 99;
+const int SYSTEM_RESET_VAL = 100;
 //////////////////////////////////////////////////////////
 // LED PIN ASSIGNMENTS
 const int LED_PIN_RED   = 3;
@@ -68,10 +69,10 @@ const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0
 //const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; //on demo board
 //const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; //on demo board
 
-const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x3A, 0x81, 0x81, 0xE3, 0xF1, 0x3C, 0x0F};
+//const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x3A, 0x81, 0x81, 0xE3, 0xF1, 0x3C, 0x0F};
+const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39};
 const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2};
 //////////////////////////////////////////////////////////
-
 int numberOfDevices; // Number of temperature devices found
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
@@ -322,62 +323,67 @@ void SetLEDColour(int colour)
 
 void receiveEvent(int howMany)
 {
-  while (1 < Wire.available())
-  {                       // loop through all but the last
-    
-    char c = Wire.read(); // receive byte as a character
-    Serial.print(c);      // print the character
-    if(c == "RESET")
-    {
-      Serial.println("RESET Command");
-      lastRequestedEvent = -1;
-    }
-    
-    
-  }
+//  while (1 < Wire.available())
+//  {                       // loop through all but the last
+//    
+//    char c = Wire.read(); // receive byte as a character
+//    Serial.print(c);      // print the character
+//    if(c == "R")
+//    {
+//      lastRequestedEvent = -1;
+//    }
+//  }
 
-  if(Wire.read() == SYSTEM_NOP) // if we receive the system NOP command, just update the time recevied variable only
+  int wireRead = Wire.read();
+
+  if(wireRead == SYSTEM_RESET_VAL)
   {
-      Serial.println("NOP Command");
+    Serial.println("RESET Command");
+    SetLEDColour(OFF);
+    lastRequestedEvent = -1;
+  }
+  if(wireRead == SYSTEM_NOP) // if we receive the system NOP command, just update the time recevied variable only
+  {
+      //Serial.println("NOP Command");
       timeSinceReceived = millis();
   }
-  else if(Wire.read() != -1) // but if we get data we are expecting, then store that requested event 
+  else //if(Wire.read() != -1) but if we get data we are expecting, then store that requested event 
   {
-    lastRequestedEvent = Wire.read(); // receive byte as an integer
+    lastRequestedEvent = wireRead; // receive byte as an integer
     timeSinceReceived = millis();
   }
 
 
-  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
-  {
-    switch (lastRequestedEvent)
-    {
-    case CURRENT_0:
-      Serial.println("Current 0");
-      break;
-    case CURRENT_1:
-      Serial.println("Current 1");
-      break;
-    case VOLTAGE_0:
-      Serial.println("Voltage 0");
-      break;
-    case VOLTAGE_1:
-      Serial.println("Voltage 1");
-      break;
-    case TEMPERATURE_0:
-      Serial.println("Temperature 0");
-      break;
-    case TEMPERATURE_1:
-      Serial.println("Temperature 1");
-      break;
-    case TEMPERATURE_2:
-      Serial.println("Temperature 2");
-      break;
-    case TEMPERATURE_3:
-      Serial.println("Temperature 3");
-      break;
-    }
-  }
+//  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
+//  {
+//    switch (lastRequestedEvent)
+//    {
+//    case CURRENT_0:
+//      Serial.println("Current 0");
+//      break;
+//    case CURRENT_1:
+//      Serial.println("Current 1");
+//      break;
+//    case VOLTAGE_0:
+//      Serial.println("Voltage 0");
+//      break;
+//    case VOLTAGE_1:
+//      Serial.println("Voltage 1");
+//      break;
+//    case TEMPERATURE_0:
+//      Serial.println("Temperature 0");
+//      break;
+//    case TEMPERATURE_1:
+//      Serial.println("Temperature 1");
+//      break;
+//    case TEMPERATURE_2:
+//      Serial.println("Temperature 2");
+//      break;
+//    case TEMPERATURE_3:
+//      Serial.println("Temperature 3");
+//      break;
+//    }
+//  }
 }
 
 //////////////////////////////////////////////////////////
@@ -427,7 +433,7 @@ void requestEvent()
   }
   if (debug) // if debug enabled, the hex of the code about to be sent will print 
   {
-    Serial.print("data bytes:");
+    Serial.print("write: ");
     Serial.print(data[0]);
     Serial.print(" ");
     Serial.print(data[1]);
@@ -504,13 +510,31 @@ void loop()
     presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN),2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation(); // call the temperature collecting function
-
+//    if(debug)
+//    {
+//      Serial.print("Current 0: ");
+//      Serial.println(presentCurrent0);
+//      Serial.print("Current 1: ");
+//      Serial.println(presentCurrent1);
+//      Serial.print("Voltage 0: ");
+//      Serial.println(presentVoltage0);
+//      Serial.print("Voltage 1: ");
+//      Serial.println(presentVoltage1);
+//      Serial.print("Temperature 0: ");
+//      Serial.println(presentTemperature0f);
+//      Serial.print("Temperature 1: ");
+//      Serial.println(presentTemperature1f);
+//      Serial.print("Temperature 2: ");
+//      Serial.println(presentTemperature2f);
+//      Serial.print("Temperature 3: ");
+//      Serial.println(presentTemperature3f);
+//    }
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
     {
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
       
-          Serial.println("Battery 1 Error: under or overvoltage");
+          //Serial.println("Battery 1 Error: under or overvoltage");
       while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
         SetLEDColour(BLUE);
@@ -521,7 +545,7 @@ void loop()
       // Battery should not be less than 12V or greater than 16.8V
       millis_ctr = millis();
       
-          Serial.println("Battery 2 Error: under or overvoltage");
+          //Serial.println("Battery 2 Error: under or overvoltage");
       while(millis() < millis_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
       {
         
@@ -533,12 +557,12 @@ void loop()
         // time has passed 2.5 seconds since the last received value
         // this should have changed by now 
         SetLEDColour(RED); // Set the led red to indicate haven't received a command
-        Serial.println("Communication to Host: BAD");
+        //Serial.println("Communication to Host: BAD");
     }
     else // this should be the last case if no error was reported
     {
       
-        Serial.println("Communication to Host: OK");
+        //Serial.println("Communication to Host: OK");
       SetLEDColour(GREEN);
     }
     // delay(5000);
