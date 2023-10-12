@@ -73,19 +73,22 @@ const int LOAD_RESISTOR = 5000;
 // Do not change the short serial numbers, as you will need to desolder them from the board.
 // const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
 // const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
-const uint8_t temperatureProbe0_LONG[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; // on demo board
-const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; // on demo board
+//const uint8_t temperatureProbe0_LONG[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; // on demo board
+//const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; // on demo board
 
 // const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x3A, 0x81, 0x81, 0xE3, 0xF1, 0x3C, 0x0F};
-const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39};
-const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2};
+//const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39};
+//const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2};
 //////////////////////////////////////////////////////////
 int tempSensorsAtBoot; // Number of temperature devices found
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-DeviceAddress DallasTemperatureDevice; // We'll use this variable to store a found device address
+DeviceAddress DallasTemperatureDevice; // Temporary device address variable for use with the getAddress function. 
 
-DeviceAddress DallasTemperatureDevic2e = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; // We'll use this variable to store a found device address
+DeviceAddress temperatureProbe0_LONG = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; // Serial Number for External Temperature Probe
+DeviceAddress temperatureProbe1_LONG = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; // Serial Number for External Temperature Probe
+DeviceAddress temperatureProbe2_SHORT = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39}; // Serial Number for Internal Temperature Probe
+DeviceAddress temperatureProbe3_SHORT = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2}; // Serial Number for Internal Temperature Probe
 
 
 //////////////////////////////////////////////////////////
@@ -194,68 +197,60 @@ void CollectTemperatureInformation(void)
   // loop through all of the known number of temperature sensors. See setup().
   for (uint8_t i = 0; i < tempSensorsAtBoot; i++)
   {
+
     // Search the wire for address
     // at each index in our loop, check the address of the given sensor.
     // sensors.getAddress will first search for a dallas device at the index in the internal wire array, and if it finds one,
     // then it returns true, and puts the address for that found device in the DallasTemperatureDevice variable.
-    if (sensors.getAddress(DallasTemperatureDevice, i))
+
+    sensors.requestTemperatures();
+    presentTemperature0f = sensors.getTempC(temperatureProbe0_LONG); // request temperature in celsius
+    if(presentTemperature0f == DEVICE_DISCONNECTED_C)
     {
-      // if we find a match with a probe, then request the temperature, and store it.
-      // using the memcmp function was the best method to compare the serial number array of a known
-      // address of a temp sensor, and the one we are currently trying to compare it to.
-      // if memcmp finds that the block of information is the same, it will return zero. 
-      if (memcmp(temperatureProbe0_LONG, DallasTemperatureDevice, 8) == 0)
-      {
-        sensors.requestTemperatures();
-        presentTemperature0f = sensors.getTempC(DallasTemperatureDevice); // request temperature in celsius
-        if (debug)
-        {
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature0f);
-        }
-      }
-      else if (memcmp(temperatureProbe1_LONG, DallasTemperatureDevice, 8) == 0)
-      {
-        sensors.requestTemperatures();
-        presentTemperature1f = sensors.getTempC(DallasTemperatureDevice);
-        if (debug)
-        {
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature1f);
-        }
-      }
-      else if (memcmp(temperatureProbe2_SHORT, DallasTemperatureDevice, 8) == 0)
-      {
-        sensors.requestTemperatures();
-        presentTemperature2f = sensors.getTempC(DallasTemperatureDevice);
-        if (debug)
-        {
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature2f);
-        }
-      }
-      else if (memcmp(temperatureProbe3_SHORT, DallasTemperatureDevice, 8) == 0)
-      {
-        sensors.requestTemperatures();
-        presentTemperature3f = sensors.getTempC(DallasTemperatureDevice);
-        if (debug)
-        {
-          Serial.print("Device ");
-          Serial.print(i);
-          Serial.print(" - Temp C: ");
-          Serial.println(presentTemperature3f);
-        }
-      }
-      else
-      {
-      }
+      presentTemperature0f = 0.0f;
+      SetLEDColour(ORANGE);
+      return;
     }
+
+    sensors.requestTemperatures();
+    presentTemperature1f = sensors.getTempC(temperatureProbe1_LONG); // request temperature in celsius
+    if(presentTemperature1f == DEVICE_DISCONNECTED_C)
+    {
+      presentTemperature1f = 0.0f;
+      SetLEDColour(ORANGE);
+      return;
+    }
+
+    sensors.requestTemperatures();
+    presentTemperature2f = sensors.getTempC(temperatureProbe2_SHORT); // request temperature in celsius
+    if(presentTemperature2f == DEVICE_DISCONNECTED_C)
+    {
+      presentTemperature2f = 0.0f;
+      SetLEDColour(ORANGE);
+      return;
+    }
+
+    sensors.requestTemperatures();
+    presentTemperature3f = sensors.getTempC(temperatureProbe3_SHORT); // request temperature in celsius
+    if(presentTemperature3f == DEVICE_DISCONNECTED_C)
+    {
+      presentTemperature3f = 0.0f;
+      SetLEDColour(ORANGE);
+      return;
+    }
+
+
+    if (debug)
+     {
+          Serial.print("Probe 0 - Temp C: ");
+          Serial.println(presentTemperature0f);
+          Serial.print("Probe 1 - Temp C: ");
+          Serial.println(presentTemperature1f);
+          Serial.print("Probe 2 - Temp C: ");
+          Serial.println(presentTemperature2f);
+          Serial.print("Probe 3 - Temp C: ");
+          Serial.println(presentTemperature3f);
+     }
   }
 }
 
