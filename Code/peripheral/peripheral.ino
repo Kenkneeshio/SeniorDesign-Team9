@@ -9,10 +9,21 @@
 #include <DallasTemperature.h> // temperature sensor library
 
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
-#define VOLTAGE0_PIN A0
-#define VOLTAGE1_PIN A1
-#define CURRENT0_PIN A2
+//////////////////////////////
+// FINAL BOARD PINS
+//#define VOLTAGE0_PIN A0 
+//#define VOLTAGE1_PIN A1
+//#define CURRENT0_PIN A2
+//#define CURRENT1_PIN A3
+/////////////////////////////
+
+//////////////////////////////
+// PROTO BOARD PINS
+#define VOLTAGE0_PIN A0 
+#define VOLTAGE1_PIN A2
+#define CURRENT0_PIN A1
 #define CURRENT1_PIN A3
+/////////////////////////////
 
 //#define 5V_RAIL_IN XX
 //#define 3V_RAIL_IN XY
@@ -34,8 +45,8 @@ const int TEMPERATURE_0 = 4;
 const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
-const int SYSTEM_NOP = 99;
-const int SYSTEM_RESET_VAL = 100;
+const int SYSTEM_NOP = 100;
+const int SYSTEM_RESET_VAL = 101;
 //////////////////////////////////////////////////////////
 // LED PIN ASSIGNMENTS
 const int LED_PIN_RED   = 3;
@@ -64,10 +75,10 @@ const int LOAD_RESISTOR = 5000;
 //////////////////////////////////////////////////////////
 // DallasTemperature Sensor Serial Numbers
 // Do not change the short serial numbers, as you will need to desolder them from the board.
-const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
-const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
-//const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; //on demo board
-//const uint8_t temperatureProbe3_SHORT[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; //on demo board
+//const uint8_t temperatureProbe0_LONG[8] = {0x28, 0x75, 0x56, 0x81, 0xE3, 0xD5, 0x3C, 0xAB};
+//const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B};
+const uint8_t temperatureProbe0_LONG[8] = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; //on demo board
+const uint8_t temperatureProbe1_LONG[8] = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; //on demo board
 
 //const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x3A, 0x81, 0x81, 0xE3, 0xF1, 0x3C, 0x0F};
 const uint8_t temperatureProbe2_SHORT[8] = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39};
@@ -170,8 +181,8 @@ float ADC2Voltage(float analogValue, int batteryNumber)
 void CollectTemperatureInformation(void)
 {
   sensors.begin();
-  Serial.print("deviceCount: ");
-  Serial.println(sensors.getDeviceCount());
+//  Serial.print("deviceCount: ");
+//  Serial.println(sensors.getDeviceCount());
   //uint8_t p_device = sensors.getDeviceCount();
   if(sensors.getDeviceCount() < numberOfDevices){
     // if we lost a temperature sensor, then turn on the ORANGE LED for 500ms to indicate an issue,
@@ -431,17 +442,17 @@ void requestEvent()
     data = (byte *)&presentTemperature3f; // casting as a byte pointer to address of variable
     break;
   }
-  if (debug) // if debug enabled, the hex of the code about to be sent will print 
-  {
-    Serial.print("write: ");
-    Serial.print(data[0]);
-    Serial.print(" ");
-    Serial.print(data[1]);
-    Serial.print(" ");
-    Serial.print(data[2]);
-    Serial.print(" ");
-    Serial.println(data[3]);
-  }
+//  if (debug) // if debug enabled, the hex of the code about to be sent will print 
+//  {
+//    Serial.print("write: ");
+//    Serial.print(data[0]);
+//    Serial.print(" ");
+//    Serial.print(data[1]);
+//    Serial.print(" ");
+//    Serial.print(data[2]);
+//    Serial.print(" ");
+//    Serial.println(data[3]);
+//  }
 
   // because a float is four bytes, we have to send each byte one at a time
   Wire.write(data[0]);
@@ -510,25 +521,18 @@ void loop()
     presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN)); // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN),2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     CollectTemperatureInformation(); // call the temperature collecting function
-//    if(debug)
-//    {
-//      Serial.print("Current 0: ");
-//      Serial.println(presentCurrent0);
-//      Serial.print("Current 1: ");
-//      Serial.println(presentCurrent1);
-//      Serial.print("Voltage 0: ");
-//      Serial.println(presentVoltage0);
-//      Serial.print("Voltage 1: ");
-//      Serial.println(presentVoltage1);
-//      Serial.print("Temperature 0: ");
-//      Serial.println(presentTemperature0f);
-//      Serial.print("Temperature 1: ");
-//      Serial.println(presentTemperature1f);
-//      Serial.print("Temperature 2: ");
-//      Serial.println(presentTemperature2f);
-//      Serial.print("Temperature 3: ");
-//      Serial.println(presentTemperature3f);
-//    }
+    if(debug)
+    {
+      Serial.print("Current 0: ");
+      Serial.println(presentCurrent0);
+      Serial.print("Current 1: ");
+      Serial.println(presentCurrent1);
+      Serial.print("Voltage 0: ");
+      Serial.println(presentVoltage0);
+      Serial.print("Voltage 1: ");
+      Serial.println(presentVoltage1);
+
+    }
     if(12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
     {
       // Battery should not be less than 12V or greater than 16.8V

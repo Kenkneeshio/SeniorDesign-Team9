@@ -18,8 +18,8 @@ const int TEMPERATURE_0 = 4;
 const int TEMPERATURE_1 = 5;
 const int TEMPERATURE_2 = 6;
 const int TEMPERATURE_3 = 7;
-const int SYSTEM_NOP = 99;
-const int SYSTEM_RESET_VAL = 100;
+const int SYSTEM_NOP = 100;
+const int SYSTEM_RESET_VAL = 101;
 //////////////////////////////////////////////////////////
 // Present Values
 // These floats represent the present current, voltage, or temperature value
