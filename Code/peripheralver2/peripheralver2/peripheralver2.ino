@@ -85,11 +85,10 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 DeviceAddress DallasTemperatureDevice; // Temporary device address variable for use with the getAddress function. 
 
-DeviceAddress temperatureProbe0_LONG = {0x28, 0xFE, 0x8D, 0x81, 0xE3, 0x73, 0x3C, 0xD3}; // Serial Number for External Temperature Probe
-DeviceAddress temperatureProbe1_LONG = {0x28, 0x9C, 0x56, 0x81, 0xE3, 0xD9, 0x3C, 0x59}; // Serial Number for External Temperature Probe
+DeviceAddress temperatureProbe0_LONG = {0x28, 0x0D, 0x7E, 0x81, 0xE3, 0x69, 0x3C, 0x1B}; // Serial Number for External Temperature Probe
+DeviceAddress temperatureProbe1_LONG = {0x28, 0x47, 0x3F, 0x81, 0xE3, 0x9F, 0x3C, 0xB6}; // Serial Number for External Temperature Probe
 DeviceAddress temperatureProbe2_SHORT = {0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39}; // Serial Number for Internal Temperature Probe
 DeviceAddress temperatureProbe3_SHORT = {0x28, 0x26, 0x2F, 0x81, 0xE3, 0x6C, 0x3C, 0xF2}; // Serial Number for Internal Temperature Probe
-
 
 //////////////////////////////////////////////////////////
 // Present Values
@@ -195,9 +194,7 @@ void CollectTemperatureInformation(void)
   }
 
   // loop through all of the known number of temperature sensors. See setup().
-  for (uint8_t i = 0; i < tempSensorsAtBoot; i++)
-  {
-
+  
     // Search the wire for address
     // at each index in our loop, check the address of the given sensor.
     // sensors.getAddress will first search for a dallas device at the index in the internal wire array, and if it finds one,
@@ -208,39 +205,27 @@ void CollectTemperatureInformation(void)
     if(presentTemperature0f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature0f = 0.0f;
-      SetLEDColour(ORANGE);
-      return;
     }
 
-    sensors.requestTemperatures();
     presentTemperature1f = sensors.getTempC(temperatureProbe1_LONG); // request temperature in celsius
     if(presentTemperature1f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature1f = 0.0f;
-      SetLEDColour(ORANGE);
-      return;
     }
 
-    sensors.requestTemperatures();
     presentTemperature2f = sensors.getTempC(temperatureProbe2_SHORT); // request temperature in celsius
     if(presentTemperature2f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature2f = 0.0f;
-      SetLEDColour(ORANGE);
-      return;
     }
 
-    sensors.requestTemperatures();
     presentTemperature3f = sensors.getTempC(temperatureProbe3_SHORT); // request temperature in celsius
     if(presentTemperature3f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature3f = 0.0f;
-      SetLEDColour(ORANGE);
-      return;
     }
 
-
-    if (debug)
+  if (debug)
      {
           Serial.print("Probe 0 - Temp C: ");
           Serial.println(presentTemperature0f);
@@ -251,7 +236,6 @@ void CollectTemperatureInformation(void)
           Serial.print("Probe 3 - Temp C: ");
           Serial.println(presentTemperature3f);
      }
-  }
 }
 
 //////////////////////////////////////////////////////////
@@ -453,6 +437,13 @@ void setup()
   Serial.println("Finding DallasTemperature devices....");
   tempSensorsAtBoot = sensors.getDeviceCount(); // number of temperatures
   DisplayDallasTemperatureSerialNumbers();
+  Serial.println("Done.");
+
+  Serial.print("Setting probes to 12 bit resolution....");
+  sensors.setResolution(temperatureProbe0_LONG, 12);
+  sensors.setResolution(temperatureProbe1_LONG, 12);
+  sensors.setResolution(temperatureProbe2_SHORT, 12);
+  sensors.setResolution(temperatureProbe3_SHORT, 12);
   Serial.println("Done.");
 
   WaitFor(150);
