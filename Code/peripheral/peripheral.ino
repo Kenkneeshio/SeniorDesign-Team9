@@ -492,7 +492,7 @@ void loop()
 {
   static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock.
 
-  if (millis() > millis_ctr + 1000)
+  if (millis() > millis_ctr + 10)
   {
     presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage

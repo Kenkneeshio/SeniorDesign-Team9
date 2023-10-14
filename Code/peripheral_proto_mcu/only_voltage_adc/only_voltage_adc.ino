@@ -11,18 +11,18 @@
 #define ONE_WIRE_BUS 5 // THE DIGITAL PIN THAT THE TEMPERATURE SENSORS ARE CONNECTED TO
 //////////////////////////////
 // FINAL BOARD PINS
-#define VOLTAGE0_PIN A0
-#define VOLTAGE1_PIN A1
-#define CURRENT0_PIN A2
-#define CURRENT1_PIN A3 // Reserved for later
+//#define VOLTAGE0_PIN A0
+//#define VOLTAGE1_PIN A1
+//#define CURRENT0_PIN A2
+//#define CURRENT1_PIN A3
 /////////////////////////////
 
 //////////////////////////////
 // PROTO BOARD PINS
-// #define VOLTAGE0_PIN A0
-// #define VOLTAGE1_PIN A2
-// #define CURRENT0_PIN A1
-// #define CURRENT1_PIN A3
+ #define VOLTAGE0_PIN A0
+ #define VOLTAGE1_PIN A2
+ #define CURRENT0_PIN A1
+ #define CURRENT1_PIN A3
 /////////////////////////////
 
 //////////////////////////////////////////////////////////
@@ -34,7 +34,7 @@ int lastRequestedEvent = -1; // This is the last requested event stored. This co
 // These codes must be sent first along Wire.write() before initiating a Wire.requestFrom() function call.
 //////////////////////////////////////////////////////////
 const int CURRENT_0 = 0;
-const int CURRENT_1 = 1; // Reserved for later
+const int CURRENT_1 = 1;
 const int VOLTAGE_0 = 2;
 const int VOLTAGE_1 = 3;
 const int TEMPERATURE_0 = 4;
@@ -54,20 +54,19 @@ const int RED = 0;    // COMMUNICATION LOSS
 const int GREEN = 1;  // ALL GOOD
 const int BLUE = 2;   // BATTERY 1 BAD
 const int PURPLE = 3; // BATTERY 2 BAD
-const int TEAL = 4;   // RESERVED
-const int YELLOW = 5; // TEMPERATURE FAULT
-const int WHITE = 6;  // BOOT SEQUENCE INDICATOR
+const int TEAL = 4;   // TEMPERATURE FAULT
+const int ORANGE = 5; // TWO BATTERY ARE NOT BALANCED
+const int WHITE = 6;  // CURRENT 1
 const int OFF = 7;    //
 //////////////////////////////////////////////////////////
 // const float LOGIC_VOLTAGE = 5.08;
-//const float LOGIC_VOLTAGE = 4.9743;
-const float LOGIC_VOLTAGE = 4.32;
+const float LOGIC_VOLTAGE = 5.154;
 const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
 const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
-const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
-const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
-const float SHUNT_RESISTOR = 0.000335781952;
-const float LOAD_RESISTOR = 99648;
+const float BATT1_VOLTAGE_DIVIDER_R2 = 500570;
+const float BATT1_VOLTAGE_DIVIDER_R1 = 996720 + 201050;
+const float SHUNT_RESISTOR = 0.003337292873;
+const float LOAD_RESISTOR = 10018;
 
 //////////////////////////////////////////////////////////
 // DallasTemperature Sensor Serial Numbers
@@ -89,7 +88,7 @@ DeviceAddress DallasTemperatureDevice; // Temporary device address variable for 
 // These floats represent the present current, voltage, or temperature value
 // from the ADC.
 float presentCurrent0 = 0.0;
-float presentCurrent1 = 0.0; // Reserved for later
+float presentCurrent1 = 0.0;
 float presentVoltage0 = 0.0;
 float presentVoltage1 = 0.0;
 float presentTemperature0f = 0.0;
@@ -104,7 +103,12 @@ float presentTemperature3f = 0.0;
 float timeSinceReceived;
 float timeSinceRequested;
 int LED_KEEP_ON_TIME = 500;      // keep any LED state on for 500ms
+int LED_RAINBOW_DURATION = 1000; // keep any LED state on for 500ms
 
+bool BATTERY1_FALUT = false;
+bool BATTERY2_FALUT = false;
+bool COMMUNICATION_FAULT = false;
+bool CURRENT_FAULT = false;
 
 //////////////////////////////////////////////////////////
 // Debug
@@ -172,12 +176,12 @@ void CollectTemperatureInformation(void)
   sensors.begin(); // must call sensors.begin() each time to reinitalize how many sensors are on the bus
   if (sensors.getDeviceCount() < tempSensorsAtBoot)
   {
-    // if we lost a temperature sensor, then turn on the YELLOW LED for 500ms to indicate an issue,
+    // if we lost a temperature sensor, then turn on the ORANGE LED for 500ms to indicate an issue,
     // then pass on the led cycle to the next state
     float temperature_ctr = millis();
     while (millis() < temperature_ctr + (float)LED_KEEP_ON_TIME) // Keep LED on for 500ms
     {
-      SetLEDColour(YELLOW);
+      SetLEDColour(ORANGE);
     }
     Serial.println("WARNING: Lost connection to one or more temperature sensors. Double check connections.");
   }
@@ -254,7 +258,7 @@ void SetLEDColour(int colour)
     digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
     break;
-  case YELLOW:
+  case ORANGE:
     digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
     digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
@@ -299,6 +303,8 @@ void receiveEvent(int howMany)
 
   if (wireRead == SYSTEM_RESET_VAL)
   {
+    Serial.println("RESET Command");
+    SetLEDColour(OFF);
     lastRequestedEvent = -1;
     timeSinceReceived = millis(); // update the time since we last received a command
   }
@@ -313,36 +319,36 @@ void receiveEvent(int howMany)
     timeSinceReceived = millis(); // update the time since we last received a command
   }
 
-//  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
-//  {
-//    switch (lastRequestedEvent)
-//    {
-//    case CURRENT_0:
-//      Serial.println("Current 0");
-//      break;
-//    case CURRENT_1:
-//      Serial.println("Current 1");
-//      break;
-//    case VOLTAGE_0:
-//      Serial.println("Voltage 0");
-//      break;
-//    case VOLTAGE_1:
-//      Serial.println("Voltage 1");
-//      break;
-//    case TEMPERATURE_0:
-//      Serial.println("Temperature 0");
-//      break;
-//    case TEMPERATURE_1:
-//      Serial.println("Temperature 1");
-//      break;
-//    case TEMPERATURE_2:
-//      Serial.println("Temperature 2");
-//      break;
-//    case TEMPERATURE_3:
-//      Serial.println("Temperature 3");
-//      break;
-//    }
-//  }
+  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
+  {
+    switch (lastRequestedEvent)
+    {
+    case CURRENT_0:
+      Serial.println("Current 0");
+      break;
+    case CURRENT_1:
+      Serial.println("Current 1");
+      break;
+    case VOLTAGE_0:
+      Serial.println("Voltage 0");
+      break;
+    case VOLTAGE_1:
+      Serial.println("Voltage 1");
+      break;
+    case TEMPERATURE_0:
+      Serial.println("Temperature 0");
+      break;
+    case TEMPERATURE_1:
+      Serial.println("Temperature 1");
+      break;
+    case TEMPERATURE_2:
+      Serial.println("Temperature 2");
+      break;
+    case TEMPERATURE_3:
+      Serial.println("Temperature 3");
+      break;
+    }
+  }
 }
 
 //////////////////////////////////////////////////////////
@@ -367,7 +373,7 @@ void requestEvent()
   case CURRENT_0:
     data = (byte *)&presentCurrent0; // casting as a byte pointer to address of variable
     break;
-  case CURRENT_1: // Reserved for later
+  case CURRENT_1:
     data = (byte *)&presentCurrent1; // casting as a byte pointer to address of variable
     break;
   case VOLTAGE_0:
@@ -391,17 +397,17 @@ void requestEvent()
     break;
   }
 
-  // if (debug) // if debug enabled, the hex of the code about to be sent will print
-  // {
-  //   Serial.print("write: ");
-  //   Serial.print(data[0]);
-  //   Serial.print(" ");
-  //   Serial.print(data[1]);
-  //   Serial.print(" ");
-  //   Serial.print(data[2]);
-  //   Serial.print(" ");
-  //   Serial.println(data[3]);
-  // }
+  if (debug) // if debug enabled, the hex of the code about to be sent will print
+  {
+    Serial.print("write: ");
+    Serial.print(data[0]);
+    Serial.print(" ");
+    Serial.print(data[1]);
+    Serial.print(" ");
+    Serial.print(data[2]);
+    Serial.print(" ");
+    Serial.println(data[3]);
+  }
 
   // because a float is four bytes, we have to send each byte one at a time
   Wire.write(data[0]);
@@ -412,44 +418,82 @@ void requestEvent()
 
 void setup()
 {
-  // First set up LED state
-  SetupLEDPins();
   // Set up Serial Communication.
   // Putting the Serial monitor here should help the MCU resetting when the com port is accessed.
   Serial.begin(9600); // start serial for output
   BootScreen();
-  // Set up the Dallas Temperature sensors
-  SetupDallasTemperatureSensors();
-  //WaitFor(150); // let system catch up 
+  // digitalWrite(6, HIGH);//enable input 1
+  // digitalWrite(7, LOW);//enable input 2
+  // Set up Dallas Temperature Sensors
+  Serial.println("Starting DallasTemperature Library....");
+  sensors.begin(); // start up the dallas temperature library
+  Serial.println("Finding DallasTemperature devices....");
+  tempSensorsAtBoot = sensors.getDeviceCount(); // number of temperatures
+  DisplayDallasTemperatureSerialNumbers();
+  Serial.println("Done.");
+
+  Serial.print("Setting probes to 12 bit resolution....");
+  sensors.setResolution(temperatureProbe0_LONG, 12);
+  sensors.setResolution(temperatureProbe1_LONG, 12);
+  sensors.setResolution(temperatureProbe2_SHORT, 12);
+  sensors.setResolution(temperatureProbe3_SHORT, 12);
+  Serial.println("Done.");
+
+  WaitFor(150);
   // Set up i2C Communication
-  SetupI2CCommunication();
-  //WaitFor(150); // let system catch up 
-  Serial.println("Entering main loop...");
+  Serial.print("Joining i2C Address:");
+  Serial.print(I2C_ADDRESS);
+  Serial.print(".....");
+  Wire.begin(I2C_ADDRESS); // join i2c bus with address #8
+  Serial.println("Done.");
+  WaitFor(150);
+
+  Serial.print("Setting i2C ReceiveEvent....");
+  Wire.onReceive(receiveEvent); // register a receive on event
+  Serial.println("Done.");
+  WaitFor(150);
+
+  Serial.print("Setting i2C RequestEvent....");
+  Wire.onRequest(requestEvent); // register a request on event
+  Serial.println("Done.");
+
+  // Set the LEDs to output mode
+  Serial.print("Setting LED Outputs...");
+  pinMode(LED_PIN_RED, OUTPUT);
+  pinMode(LED_PIN_GREEN, OUTPUT);
+  pinMode(LED_PIN_BLUE, OUTPUT);
+  Serial.println("Done.");
+  SetLEDRainbow(LED_RAINBOW_DURATION); // play this LED sequence for LED_RAINBOW_DURATION seconds, then jump in main loop
+  Serial.println("Entering loop...");
 }
 
 void loop()
 {
   static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock.
 
-  if (millis() > millis_ctr)
+  if (millis() > millis_ctr + 1000)
   {
-    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
+//    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
-    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
-    
-    CollectTemperatureInformation();                            // call the temperature collecting function
-    CheckBattery1Voltage(millis_ctr);                           // call the function to check battery one's health
-    CheckBattery2Voltage(millis_ctr);                            // call the function to check battery two's health
-    CheckHostCommunication();                                   // call the function to check the communication state with the host
+//    presentCurrent1 = ADC2Current(analogRead(CURRENT1_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
+//    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+//    
+//    CollectTemperatureInformation();                            // call the temperature collecting function
+//    CheckBattery1Voltage(millis_ctr);                           // call the function to check battery one's health
+//    CheckBattery2Voltage(millis_ctr);                            // call the function to check battery two's health
+//    CheckHostCommunication();                                   // call the function to check the communication state with the host
 
     if (debug)
     {
-      Serial.print("Current 0: ");
-      Serial.println(presentCurrent0);
+//      Serial.print("Current 0: ");
+//      Serial.println(presentCurrent0);
+      //Serial.print("Current 1: ");
+      //Serial.println(presentCurrent1);
       Serial.print("Voltage 0: ");
       Serial.println(presentVoltage0);
-      Serial.print("Voltage 1: ");
-      Serial.println(presentVoltage1);
+            Serial.println(analogRead(VOLTAGE0_PIN));
+//      Serial.print("Voltage 1: ");
+//      Serial.println(presentVoltage1);
     }
 
     millis_ctr = millis();
@@ -504,7 +548,56 @@ void CheckHostCommunication()
   }
 }
 
+void SetLEDRainbow(float duration)
+{
+  float millis_ctr = millis();             // counter value from clock
+  int i = 0;                               // variable used for incrementing LED state
+  while (millis() < millis_ctr + duration) // Keep LED on for 500ms
+  {
+    switch (i)
+    {
+    case 0:
+      digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, LOW);  // turn the LED on (HIGH is the voltage level)
+      break;
+    case 1:
+      digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+      break;
+    case 2:
+      digitalWrite(LED_PIN_RED, LOW);   // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+      break;
+    case 3:
+      digitalWrite(LED_PIN_RED, HIGH);   // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, LOW);   // turn the LED on (HIGH is the voltage level)
+      break;
+    case 4:
+      digitalWrite(LED_PIN_RED, HIGH);  // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, LOW); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+      break;
+    case 5:
+      digitalWrite(LED_PIN_RED, LOW);    // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_GREEN, HIGH); // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_PIN_BLUE, HIGH);  // turn the LED on (HIGH is the voltage level)
+      break;
+    }
+    i++;
+    if (i > 5) // if we hit the end of our cases then reset to red
+      i = 0;
 
+    float millis_ctr2 = millis();
+    while (millis() < millis_ctr2 + 200)
+    {
+      // wait for 200 ms and do nothing, getting around delay()
+    }
+  }
+}
 
 void DisplayDallasTemperatureSerialNumbers(void)
 {
@@ -521,51 +614,6 @@ void DisplayDallasTemperatureSerialNumbers(void)
       Serial.println(" ");
     }
   }
-}
-
-void SetupLEDPins(void)
-{
-    // Set the LEDs to output mode
-  Serial.print("Setting LED Outputs...");
-  pinMode(LED_PIN_RED, OUTPUT);
-  pinMode(LED_PIN_GREEN, OUTPUT);
-  pinMode(LED_PIN_BLUE, OUTPUT);
-  Serial.println("Done.");
-  SetLEDColour(WHITE); 
-}
-
-void SetupDallasTemperatureSensors(void)
-{
-  // Set up Dallas Temperature Sensors
-  Serial.println("Starting DallasTemperature Library....");
-  sensors.begin(); // start up the dallas temperature library
-  Serial.println("Finding DallasTemperature devices....");
-  tempSensorsAtBoot = sensors.getDeviceCount(); // number of temperatures
-  DisplayDallasTemperatureSerialNumbers();
-  Serial.println("Done.");
-  Serial.print("Setting probes to 12 bit resolution....");
-  sensors.setResolution(temperatureProbe0_LONG, 12);
-  sensors.setResolution(temperatureProbe1_LONG, 12);
-  sensors.setResolution(temperatureProbe2_SHORT, 12);
-  sensors.setResolution(temperatureProbe3_SHORT, 12);
-  Serial.println("Done.");
-}
-
-void SetupI2CCommunication(void)
-{
-  Serial.print("Joining i2C Address:");
-  Serial.print(I2C_ADDRESS);
-  Serial.print(".....");
-  Wire.begin(I2C_ADDRESS); // join i2c bus with address #8
-  Serial.println("Done.");
-  //WaitFor(150); // let system catch up 
-  Serial.print("Setting i2C ReceiveEvent....");
-  Wire.onReceive(receiveEvent); // register a receive on event
-  Serial.println("Done.");
-  //WaitFor(150); // let system catch up 
-  Serial.print("Setting i2C RequestEvent....");
-  Wire.onRequest(requestEvent); // register a request on event
-  Serial.println("Done.");
 }
 
 void BootScreen(void)

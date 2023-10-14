@@ -38,6 +38,8 @@ byte transmissionData = 0; // variable for sending data across the i2c bus
 byte data[4];              // stores the temporary byte information coming from the i2c peripheral float values
 int lastRequestedEvent = -1;
 
+int MEASUREMENT_INTERVAL = 500;
+
 union floatByte // two different data types in one area of memory.
 {
   byte byteVal[4];
@@ -64,7 +66,7 @@ void setup()
 void loop()
 {
   static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock.
-  if (millis() > millis_ctr + 10000) // take a measurement every 10 seconds. 
+  if (millis() > millis_ctr + MEASUREMENT_INTERVAL) // take a measurement every 10 seconds. 
   {
 
     lastRequestedEvent = (int)transmissionData; // explain what this is doing
