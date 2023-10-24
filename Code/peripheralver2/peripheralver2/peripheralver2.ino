@@ -101,17 +101,14 @@ float presentTemperature3f = 0.0;
 //////////////////////////////////////////////////////////
 // Time Values
 // These values store how long it was in  milisceonds since the last communication with the host.
-float timeSinceReceived;
-float timeSinceRequested;
+float timeSinceCommunicated;
 int LED_KEEP_ON_TIME = 500;      // keep any LED state on for 500ms
-
+int TIME_SINCE_COMMUNICATION_INTERVAL = 2500; // 2.5 seconds
 
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor.
 bool debug = true;
-
-// float value;
 
 //////////////////////////////////////////////////////////
 /*
@@ -163,7 +160,9 @@ float ADC2Voltage(float analogValue, int batteryNumber)
 //////////////////////////////////////////////////////////
 /*
  * CollectTemperatureInformation(void)
- * Description:
+ * Description: This function will reinitialize how many sensors are on the bus, and get the number of them to compare with the amount at boot.
+ * If there are fewer, then the diagnostic LED is set to yellow for 500ms. After this check, each known serial number probe gets the temperature
+ * collected from and stored into a global variable for that measurement. 
  * Param:
  */
 //////////////////////////////////////////////////////////
@@ -181,13 +180,12 @@ void CollectTemperatureInformation(void)
     }
     Serial.println("WARNING: Lost connection to one or more temperature sensors. Double check connections.");
   }
-
-  // loop through all of the known number of temperature sensors. See setup().
   
-    // Search the wire for address
-    // at each index in our loop, check the address of the given sensor.
-    // sensors.getAddress will first search for a dallas device at the index in the internal wire array, and if it finds one,
-    // then it returns true, and puts the address for that found device in the DallasTemperatureDevice variable.
+    // First have the library tell sensors to collect measurements. 
+    // Then obtain the temperature in celsius by passing the serial number as a parameter. 
+    // Store this value into the respective global variable.
+    // Finally, check the value if it is the disconnected value of -127.
+    // If it is, then reset the value to zero.
 
     sensors.requestTemperatures();
     presentTemperature0f = sensors.getTempC(temperatureProbe0_LONG); // request temperature in celsius
@@ -230,7 +228,7 @@ void CollectTemperatureInformation(void)
 //////////////////////////////////////////////////////////
 /*
  * SetLEDState(int colour)
- * Description: Sets LED
+ * Description: Sets LED color based on input parameter. Refer to top of code for reference. 
  * Param: int colour
  */
 //////////////////////////////////////////////////////////
@@ -285,10 +283,8 @@ void SetLEDColour(int colour)
 //////////////////////////////////////////////////////////
 /*
  * requestEvent()
- * Description: receiveEvent is a unique i2C function, that is called when the peripheral
- * receives data from the host. In our particular application, we are supposed
- * to read a byte as an integer, and use this integer to determine what type of
- * measurement the host desires when we receive a requestEvent. For more on this, see requestEvent().
+ * Description: The i2C interrupt function that is called when the host sends data to the peripheral.
+ * Here we are checking to see what type of command it is. 
  * Param: int howMany
  */
 //////////////////////////////////////////////////////////
@@ -297,20 +293,20 @@ void receiveEvent(int howMany)
 {
   int wireRead = Wire.read(); // read the data from the Wire bus
 
-  if (wireRead == SYSTEM_RESET_VAL)
+  if (wireRead == SYSTEM_RESET_VAL) // if we receive the reset command, make sure to reset the lastrequestedevent to -1. 
   {
     lastRequestedEvent = -1;
-    timeSinceReceived = millis(); // update the time since we last received a command
+    timeSinceCommunicated = millis(); // update the time since we last received a command
   }
   if (wireRead == SYSTEM_NOP) // if we receive the system NOP command, just update the time recevied variable only
   {
     // Serial.println("NOP Command");
-    timeSinceReceived = millis(); // update the time since we last received a command
+    timeSinceCommunicated = millis(); // update the time since we last received a command
   }
   else // if(Wire.read() != -1) but if we get data we are expecting, then store that requested event
   {
     lastRequestedEvent = wireRead; 
-    timeSinceReceived = millis(); // update the time since we last received a command
+    timeSinceCommunicated = millis(); // update the time since we last received a command
   }
 
 //  if (debug) // if debug is enabled, print out the last requested event type to serial monitor
@@ -348,19 +344,16 @@ void receiveEvent(int howMany)
 //////////////////////////////////////////////////////////
 /*
  * requestEvent()
- * Description:
+ * Description: The i2C interrupt function that is called when the host requests data from the peripheral.
  * Param:
  */
 //////////////////////////////////////////////////////////
-
-// function that executes whenever data is requested by master
-// this function is registered as an event, see setup()
 void requestEvent()
 {
   // Since all of the data we are reading is in floats, we have to send
   // the values in a total of four bytes, one at a time. On the host end,
   // it will have to reconstruct the float from the bytes sent.
-  timeSinceRequested = millis();
+  timeSinceCommunicated = millis();  // update the time since we last received a command
   byte *data;
   switch (lastRequestedEvent)
   {
@@ -410,6 +403,12 @@ void requestEvent()
   Wire.write(data[3]);
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * setup()
+ * Description: Sets up the functionality of the firmware. This includes the LEDS, Serial, Temperature sensors, and the i2C communication.
+ */
+//////////////////////////////////////////////////////////
 void setup()
 {
   // First set up LED state
@@ -427,13 +426,19 @@ void setup()
   Serial.println("Entering main loop...");
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * loop()
+ * Description: The main loop. A timer is created to continually collect data and check validity of data.
+ */
+//////////////////////////////////////////////////////////
 void loop()
 {
   static uint32_t millis_ctr = 0; // To not use delay(), we use a timer counter based on the clock.
 
   if (millis() > millis_ctr)
   {
-    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentCurrent0 = ADC2Current(118);    // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     
@@ -456,6 +461,14 @@ void loop()
   }
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * CheckBattery1Voltage()
+ * Description: This function checks the battery voltage to determine if it is undervoltage or overvoltage.
+ * If there is an error, then the LED is set to blue for 500ms.
+ * Param: uint32_t counter
+ */
+//////////////////////////////////////////////////////////
 void CheckBattery1Voltage(uint32_t counter)
 {
   if (12 > presentVoltage0 || presentVoltage0 > 16.8) // if battery voltage is greater than zero but less than 16.8
@@ -471,6 +484,14 @@ void CheckBattery1Voltage(uint32_t counter)
   }
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * CheckBattery2Voltage()
+ * Description: This function checks the battery voltage to determine if it is undervoltage or overvoltage.
+ * If there is an error, then the LED is set to blue for 500ms.
+ * Param: uint32_t counter
+ */
+//////////////////////////////////////////////////////////
 void CheckBattery2Voltage(uint32_t counter)
 {
   if (12 > presentVoltage1 || presentVoltage1 > 16.8) // if battery voltage is greater than zero but less than 16.8
@@ -487,9 +508,17 @@ void CheckBattery2Voltage(uint32_t counter)
   }
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * CheckHostCommunication()
+ * Description: This function checks the last time the device has received a command from the host.
+ * If there is an error, then the LED is set to RED for 500ms. Otherwise, the LED is set to GREEN.
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void CheckHostCommunication()
 {
-  if (millis() > timeSinceReceived + 2500)
+  if (millis() > timeSinceCommunicated + TIME_SINCE_COMMUNICATION_INTERVAL)
   {
     // time has passed 2.5 seconds since the last received value.
     // this should have changed by now, but it has not, so indicate an error occured
@@ -505,7 +534,14 @@ void CheckHostCommunication()
 }
 
 
-
+//////////////////////////////////////////////////////////
+/*
+ * DisplayDallasTemperatureSerialNumbers()
+ * Description: A modified function from the DallasTemperature example library to print the serial numbers
+ * of each sensor found on the bus. 
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void DisplayDallasTemperatureSerialNumbers(void)
 {
   for (uint8_t i = 0; i < tempSensorsAtBoot; i++)
@@ -523,6 +559,14 @@ void DisplayDallasTemperatureSerialNumbers(void)
   }
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * DisplayDallasTemperatureSerialNumbers()
+ * Description: A modified function from the DallasTemperature example library to print the serial numbers
+ * of each sensor found on the bus. 
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void SetupLEDPins(void)
 {
     // Set the LEDs to output mode
@@ -534,6 +578,14 @@ void SetupLEDPins(void)
   SetLEDColour(WHITE); 
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * SetupDallasTemperatureSensors()
+ * Description: Sets up the temperature sensors by obtaining device count, displaying the sensor serial numbers
+ * and setting the resolution.
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void SetupDallasTemperatureSensors(void)
 {
   // Set up Dallas Temperature Sensors
@@ -551,6 +603,13 @@ void SetupDallasTemperatureSensors(void)
   Serial.println("Done.");
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * SetupI2CCommunication()
+ * Description: Sets up the i2C functionality. This includes joining the address, and the interrupt functions.
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void SetupI2CCommunication(void)
 {
   Serial.print("Joining i2C Address:");
@@ -568,6 +627,13 @@ void SetupI2CCommunication(void)
   Serial.println("Done.");
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * BootScreen()
+ * Description: Prints boot screen logo.
+ * Param: 
+ */
+//////////////////////////////////////////////////////////
 void BootScreen(void)
 {
   Serial.println("//////////////////////////////////////////////////////////");
@@ -576,6 +642,13 @@ void BootScreen(void)
   Serial.println("//////////////////////////////////////////////////////////");
 }
 
+//////////////////////////////////////////////////////////
+/*
+ * WaitFor()
+ * Description: A timer function to create a timer for X amount of milliseconds.
+ * Param: float milliseconds
+ */
+//////////////////////////////////////////////////////////
 void WaitFor(float milliseconds)
 {
   float waitCounter = millis();
