@@ -59,15 +59,13 @@ const int YELLOW = 5; // TEMPERATURE FAULT
 const int WHITE = 6;  // BOOT SEQUENCE INDICATOR
 const int OFF = 7;    //
 //////////////////////////////////////////////////////////
-// const float LOGIC_VOLTAGE = 5.08;
-//const float LOGIC_VOLTAGE = 4.9743;
-const float LOGIC_VOLTAGE = 4.32;
+const float LOGIC_VOLTAGE = 4.979;
 const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
 const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
 const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
 const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
-const float SHUNT_RESISTOR = 0.000335781952;
-const float LOAD_RESISTOR = 99648;
+const float SHUNT_RESISTOR = 0.000339290391;
+const float LOAD_RESISTOR = 150186;
 
 //////////////////////////////////////////////////////////
 // DallasTemperature Sensor Serial Numbers
@@ -438,7 +436,7 @@ void loop()
 
   if (millis() > millis_ctr)
   {
-    presentCurrent0 = ADC2Current(118);    // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
     presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     
@@ -449,7 +447,9 @@ void loop()
 
     if (debug)
     {
-      Serial.print("Current 0: ");
+//      Serial.print("Current 0 ADC: ");
+//      Serial.println(analogRead(CURRENT0_PIN));
+      Serial.print("Current 0 Conversion: ");
       Serial.println(presentCurrent0);
       Serial.print("Voltage 0: ");
       Serial.println(presentVoltage0);
