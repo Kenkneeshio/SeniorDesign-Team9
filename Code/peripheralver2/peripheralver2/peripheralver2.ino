@@ -120,9 +120,10 @@ bool debug = true;
 float ADC2Current(float analogValue)
 {
   float value;
-  value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
+    value = 0.0922 * analogValue + 0.891; 
+  //value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
   // then use the equation from the INA139 datasheet , where iS = (Vout * 1k) / (rs * rl)
-  value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
+  //value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
   return value;
 }
 
@@ -447,8 +448,8 @@ void loop()
 
     if (debug)
     {
-//      Serial.print("Current 0 ADC: ");
-//      Serial.println(analogRead(CURRENT0_PIN));
+      Serial.print("Current 0 ADC: ");
+      Serial.println(analogRead(CURRENT0_PIN));
       Serial.print("Current 0 Conversion: ");
       Serial.println(presentCurrent0);
       Serial.print("Voltage 0: ");
