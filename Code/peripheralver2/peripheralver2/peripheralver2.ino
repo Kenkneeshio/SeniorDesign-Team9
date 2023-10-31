@@ -67,6 +67,13 @@ const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
 const float SHUNT_RESISTOR = 0.000339290391;
 const float LOAD_RESISTOR = 150186;
 
+const float CURRENT_GAIN = 0.9523809524;
+const float CURRENT_OFFSET = 1.085714286;
+const float BATT1_GAIN = 1.023454158;
+const float BATT1_OFFSET = -0.291684435;
+const float BATT2_GAIN = 1.021276596;
+const float BATT2_OFFSET = -0.2553191489;
+
 //////////////////////////////////////////////////////////
 // DallasTemperature Sensor Serial Numbers
 // Do not change the short serial numbers, as you will need to desolder them from the board.
@@ -120,10 +127,10 @@ bool debug = true;
 float ADC2Current(float analogValue)
 {
   float value;
-    value = 0.0922 * analogValue + 0.891; 
-  //value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
+  value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
   // then use the equation from the INA139 datasheet , where iS = (Vout * 1k) / (rs * rl)
-  //value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
+  value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
+  value = CURRENT_GAIN * value + CURRENT_OFFSET; 
   return value;
 }
 
@@ -145,11 +152,17 @@ float ADC2Voltage(float analogValue, int batteryNumber)
   switch (batteryNumber)
   {
   case 1:
+//    Serial.print("Battery 1 ADC: ");
+//    Serial.println(analogValue);
     value = (value * (BATT1_VOLTAGE_DIVIDER_R2 + BATT1_VOLTAGE_DIVIDER_R1) / (BATT1_VOLTAGE_DIVIDER_R2));
+    value = BATT1_GAIN * value + BATT1_OFFSET;
     break;
 
   case 2:
+//    Serial.print("Battery 2 ADC: ");
+//    Serial.println(analogValue);
     value = (value * (BATT2_VOLTAGE_DIVIDER_R2 + BATT2_VOLTAGE_DIVIDER_R1) / (BATT2_VOLTAGE_DIVIDER_R2));
+    value = BATT2_GAIN * value + BATT2_OFFSET;
     break;
   }
 
@@ -211,17 +224,17 @@ void CollectTemperatureInformation(void)
       presentTemperature3f = 0.0f;
     }
 
-  if (debug)
-     {
-          Serial.print("Battery 1 - Temp C: ");
-          Serial.println(presentTemperature0f);
-          Serial.print("Battery 2 - Temp C: ");
-          Serial.println(presentTemperature1f);
-          Serial.print("Heatsink - Temp C: ");
-          Serial.println(presentTemperature2f);
-          Serial.print("Enclosure - Temp C: ");
-          Serial.println(presentTemperature3f);
-     }
+//  if (debug)
+//     {
+//          Serial.print("Battery 1 - Temp C: ");
+//          Serial.println(presentTemperature0f);
+//          Serial.print("Battery 2 - Temp C: ");
+//          Serial.println(presentTemperature1f);
+//          Serial.print("Heatsink - Temp C: ");
+//          Serial.println(presentTemperature2f);
+//          Serial.print("Enclosure - Temp C: ");
+//          Serial.println(presentTemperature3f);
+//     }
 }
 
 //////////////////////////////////////////////////////////
@@ -448,8 +461,8 @@ void loop()
 
     if (debug)
     {
-      Serial.print("Current 0 ADC: ");
-      Serial.println(analogRead(CURRENT0_PIN));
+      //Serial.print("Current 0 ADC: ");
+      //Serial.println(analogRead(CURRENT0_PIN));
       Serial.print("Current 0 Conversion: ");
       Serial.println(presentCurrent0);
       Serial.print("Voltage 0: ");
