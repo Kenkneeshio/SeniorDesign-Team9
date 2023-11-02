@@ -103,6 +103,9 @@ float presentTemperature2f = 0.0;
 float presentTemperature3f = 0.0;
 //////////////////////////////////////////////////////////
 
+  unsigned long start;
+  unsigned long stop2;
+
 //////////////////////////////////////////////////////////
 // Time Values
 // These values store how long it was in  milisceonds since the last communication with the host.
@@ -180,7 +183,6 @@ float ADC2Voltage(float analogValue, int batteryNumber)
 //////////////////////////////////////////////////////////
 void CollectTemperatureInformation(void)
 {
-  sensors.begin(); // must call sensors.begin() each time to reinitalize how many sensors are on the bus
   if (sensors.getDeviceCount() < tempSensorsAtBoot)
   {
     // if we lost a temperature sensor, then turn on the YELLOW LED for 500ms to indicate an issue,
@@ -199,7 +201,7 @@ void CollectTemperatureInformation(void)
     // Finally, check the value if it is the disconnected value of -127.
     // If it is, then reset the value to zero.
 
-    sensors.requestTemperatures();
+  
     presentTemperature0f = sensors.getTempC(temperatureProbe0_LONG); // request temperature in celsius
     if(presentTemperature0f == DEVICE_DISCONNECTED_C)
     {
@@ -224,17 +226,17 @@ void CollectTemperatureInformation(void)
       presentTemperature3f = 0.0f;
     }
 
-//  if (debug)
-//     {
+  if (debug)
+     {
 //          Serial.print("Battery 1 - Temp C: ");
 //          Serial.println(presentTemperature0f);
-//          Serial.print("Battery 2 - Temp C: ");
-//          Serial.println(presentTemperature1f);
+          Serial.print("Battery 2 - Temp C: ");
+          Serial.println(presentTemperature1f);
 //          Serial.print("Heatsink - Temp C: ");
 //          Serial.println(presentTemperature2f);
 //          Serial.print("Enclosure - Temp C: ");
 //          Serial.println(presentTemperature3f);
-//     }
+     }
 }
 
 //////////////////////////////////////////////////////////
@@ -436,6 +438,8 @@ void setup()
   SetupI2CCommunication();
   //WaitFor(150); // let system catch up 
   Serial.println("Entering main loop...");
+  sensors.setWaitForConversion(false);  // makes it async
+
 }
 
 //////////////////////////////////////////////////////////
@@ -450,20 +454,23 @@ void loop()
 
   if (millis() > millis_ctr)
   {
-    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
-    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
-    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    sensors.begin(); // must call sensors.begin() each time to reinitalize how many sensors are on the bus
+    sensors.requestTemperatures();
+    //sensors.setWaitForConversion(true);
+
+    //presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
+    //presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    //presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     
     CollectTemperatureInformation();                            // call the temperature collecting function
     CheckBattery1Voltage(millis_ctr);                           // call the function to check battery one's health
     CheckBattery2Voltage(millis_ctr);                            // call the function to check battery two's health
     CheckHostCommunication();                                   // call the function to check the communication state with the host
-
     if (debug)
     {
       //Serial.print("Current 0 ADC: ");
       //Serial.println(analogRead(CURRENT0_PIN));
-      Serial.print("Current 0 Conversion: ");
+      Serial.print("Current 0: ");
       Serial.println(presentCurrent0);
       Serial.print("Voltage 0: ");
       Serial.println(presentVoltage0);
