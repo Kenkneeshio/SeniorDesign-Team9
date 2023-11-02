@@ -73,6 +73,8 @@ const float BATT1_GAIN = 1.023454158;
 const float BATT1_OFFSET = -0.291684435;
 const float BATT2_GAIN = 1.021276596;
 const float BATT2_OFFSET = -0.2553191489;
+const float TEMP_GAIN = 0.9600614439;
+const float TEMP_OFFSET = 4.4162826429;
 
 //////////////////////////////////////////////////////////
 // DallasTemperature Sensor Serial Numbers
@@ -202,25 +204,25 @@ void CollectTemperatureInformation(void)
     // If it is, then reset the value to zero.
 
   
-    presentTemperature0f = sensors.getTempC(temperatureProbe0_LONG); // request temperature in celsius
+    presentTemperature0f = (sensors.getTempC(temperatureProbe0_LONG)) * TEMP_GAIN + TEMP_OFFSET; // request temperature in celsius
     if(presentTemperature0f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature0f = 0.0f;
     }
 
-    presentTemperature1f = sensors.getTempC(temperatureProbe1_LONG); // request temperature in celsius
+    presentTemperature1f = (sensors.getTempC(temperatureProbe1_LONG)) * TEMP_GAIN + TEMP_OFFSET; // request temperature in celsius
     if(presentTemperature1f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature1f = 0.0f;
     }
 
-    presentTemperature2f = sensors.getTempC(temperatureProbe2_SHORT); // request temperature in celsius
+    presentTemperature2f = (sensors.getTempC(temperatureProbe2_SHORT)) * TEMP_GAIN + TEMP_OFFSET; // request temperature in celsius
     if(presentTemperature2f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature2f = 0.0f;
     }
-
-    presentTemperature3f = sensors.getTempC(temperatureProbe3_SHORT); // request temperature in celsius
+            //100.18
+    presentTemperature3f = (sensors.getTempC(temperatureProbe3_SHORT)) * TEMP_GAIN + TEMP_OFFSET; // request temperature in celsius
     if(presentTemperature3f == DEVICE_DISCONNECTED_C)
     {
       presentTemperature3f = 0.0f;
