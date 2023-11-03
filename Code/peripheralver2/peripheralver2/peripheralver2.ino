@@ -440,7 +440,6 @@ void setup()
   SetupI2CCommunication();
   //WaitFor(150); // let system catch up 
   Serial.println("Entering main loop...");
-  sensors.setWaitForConversion(false);  // makes it async
 
 }
 
@@ -460,9 +459,9 @@ void loop()
     sensors.requestTemperatures();
     //sensors.setWaitForConversion(true);
 
-    //presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
-    //presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
-    //presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentCurrent0 = ADC2Current(analogRead(CURRENT0_PIN));    // read analog value from adc, and pass to ADC2Current to convert into a real current
+    presentVoltage0 = ADC2Voltage(analogRead(VOLTAGE0_PIN), 1); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
+    presentVoltage1 = ADC2Voltage(analogRead(VOLTAGE1_PIN), 2); // read analog value from adc, and pass to ADC2Voltage to convert into a real voltage
     
     CollectTemperatureInformation();                            // call the temperature collecting function
     CheckBattery1Voltage(millis_ctr);                           // call the function to check battery one's health
@@ -623,6 +622,9 @@ void SetupDallasTemperatureSensors(void)
   sensors.setResolution(temperatureProbe1_LONG, 12);
   sensors.setResolution(temperatureProbe2_SHORT, 12);
   sensors.setResolution(temperatureProbe3_SHORT, 12);
+  Serial.println("Done.");
+  Serial.print("Disabling library wait for conversion...");  
+  sensors.setWaitForConversion(false);  // makes it async
   Serial.println("Done.");
 }
 
