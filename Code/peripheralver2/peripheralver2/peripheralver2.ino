@@ -105,9 +105,6 @@ float presentTemperature2f = 0.0;
 float presentTemperature3f = 0.0;
 //////////////////////////////////////////////////////////
 
-  unsigned long start;
-  unsigned long stop2;
-
 //////////////////////////////////////////////////////////
 // Time Values
 // These values store how long it was in  milisceonds since the last communication with the host.
@@ -135,7 +132,10 @@ float ADC2Current(float analogValue)
   value = analogValue * (LOGIC_VOLTAGE / 1023.0); // first convert the analog value based on the logic level voltage
   // then use the equation from the INA139 datasheet , where iS = (Vout * 1k) / (rs * rl)
   value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
-  value = CURRENT_GAIN * value + CURRENT_OFFSET; 
+  if(value != 0.0)
+  {
+      value = CURRENT_GAIN * value + CURRENT_OFFSET; 
+  }
   return value;
 }
 
@@ -230,14 +230,14 @@ void CollectTemperatureInformation(void)
 
   if (debug)
      {
-//          Serial.print("Battery 1 - Temp C: ");
-//          Serial.println(presentTemperature0f);
+          Serial.print("Battery 1 - Temp C: ");
+          Serial.println(presentTemperature0f);
           Serial.print("Battery 2 - Temp C: ");
           Serial.println(presentTemperature1f);
-//          Serial.print("Heatsink - Temp C: ");
-//          Serial.println(presentTemperature2f);
-//          Serial.print("Enclosure - Temp C: ");
-//          Serial.println(presentTemperature3f);
+          Serial.print("Heatsink - Temp C: ");
+          Serial.println(presentTemperature2f);
+          Serial.print("Enclosure - Temp C: ");
+          Serial.println(presentTemperature3f);
      }
 }
 
@@ -473,9 +473,9 @@ void loop()
       //Serial.println(analogRead(CURRENT0_PIN));
       Serial.print("Current 0: ");
       Serial.println(presentCurrent0);
-      Serial.print("Voltage 0: ");
+      Serial.print("Battery 1: ");
       Serial.println(presentVoltage0);
-      Serial.print("Voltage 1: ");
+      Serial.print("Battery 2: ");
       Serial.println(presentVoltage1);
     }
 
