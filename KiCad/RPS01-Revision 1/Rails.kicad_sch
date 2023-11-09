@@ -6524,7 +6524,7 @@
     (property "Reference" "C_FF?" (at 113.284 120.65 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10.75n" (at 113.538 122.936 90)
+    (property "Value" "9.49n" (at 113.538 122.936 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 112.268 118.4148 0)
