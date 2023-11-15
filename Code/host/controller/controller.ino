@@ -49,7 +49,7 @@ union floatByte // two different data types in one area of memory.
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor.
-bool debug = true;
+bool debug = false;
 
 void setup()
 {
@@ -394,7 +394,7 @@ void loop()
       if (!isnan(temperature2.floatVal) && temperature2.floatVal > 0)
       {
         presentTemperature2 = temperature2.floatVal;
-        Serial.print("Temperature 2: ");
+        Serial.print("Heatsink: ");
         Serial.println(presentTemperature2);
       }
       else
@@ -440,7 +440,7 @@ void loop()
       if (!isnan(temperature3.floatVal) && temperature3.floatVal > 0)
       {
         presentTemperature3 = temperature3.floatVal;
-        Serial.print("Temperature 3: ");
+        Serial.print("Air: ");
         Serial.println(presentTemperature3);
       }
       else
