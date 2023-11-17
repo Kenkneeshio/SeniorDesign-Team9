@@ -4325,7 +4325,7 @@
     (property "Reference" "R_S1" (at 108.966 17.78 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "3m" (at 108.966 20.32 90)
+    (property "Value" "0.3m" (at 108.966 20.32 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Mechatronic Footprints:CSS2H-5930R" (at 108.966 24.638 90)
@@ -4348,7 +4348,7 @@
   (symbol (lib_id "Device:C") (at 121.92 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 58103f03-69cf-460e-bc28-e7ebcfce8414)
-    (property "Reference" "C1" (at 125.73 108.585 0)
+    (property "Reference" "C1_CS1" (at 125.73 108.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 125.73 111.125 0)
@@ -4365,7 +4365,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "C1") (unit 1)
+          (reference "C1_CS1") (unit 1)
         )
       )
     )
@@ -4374,7 +4374,7 @@
   (symbol (lib_id "Device:C") (at 88.9 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f95f9c4-f175-4198-bd2b-07cbb3f5b768)
-    (property "Reference" "Cf_2" (at 92.71 130.175 0)
+    (property "Reference" "C2_CS1" (at 92.71 130.175 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 92.71 132.715 0)
@@ -4391,7 +4391,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "Cf_2") (unit 1)
+          (reference "C2_CS1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
           (reference "Cf_1") (unit 1)
@@ -4516,10 +4516,10 @@
   (symbol (lib_id "Device:R") (at 111.76 109.22 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fe4c99d9-81b3-42e1-8234-4d1776e44aee)
-    (property "Reference" "R5" (at 114.3 108.585 0)
+    (property "Reference" "R1_CS1" (at 114.3 108.585 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "55.6k" (at 114.3 111.125 0)
+    (property "Value" "150k" (at 114.3 111.125 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 113.538 109.22 90)
@@ -4533,7 +4533,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/13e150ee-6c46-47a5-9c09-3749eb0dcbfe"
-          (reference "R5") (unit 1)
+          (reference "R1_CS1") (unit 1)
         )
       )
     )
