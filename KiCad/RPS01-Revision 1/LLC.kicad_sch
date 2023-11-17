@@ -335,46 +335,6 @@
         )
       )
     )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
   )
 
 
@@ -1402,6 +1362,20 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "LOGIC 5V" (shape bidirectional) (at 186.944 107.4928 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid d4182e3d-5a20-4a53-aee1-3546cd21ea6a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 186.944 120.279 90)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "LOGIC 5V" (shape bidirectional) (at 187.96 143.764 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid d5502955-8582-41cd-8263-da55828fa557)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 187.96 156.5502 90)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
   (global_label "LOGIC 5V" (shape bidirectional) (at 163.83 86.36 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e9173b8f-fd75-4bdc-a3c7-ecd57526e50f)
@@ -1505,39 +1479,6 @@
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
           (reference "R24") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 187.96 143.764 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 280136b0-74c1-4522-98c6-a43f21b1bef6)
-    (property "Reference" "#PWR?" (at 187.96 150.114 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 187.96 148.844 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 187.96 143.764 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 187.96 143.764 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6cb07957-a2b1-4d2d-aeca-938cdbc31013))
-    (instances
-      (project "MCU2"
-        (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR?") (unit 1)
-        )
-      )
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -1719,39 +1660,6 @@
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
           (reference "R23") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 186.944 107.4928 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid bd1a2e59-8258-4caf-8e8f-aa74cae2e93e)
-    (property "Reference" "#PWR?" (at 186.944 113.8428 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 186.944 112.5728 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 186.944 107.4928 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 186.944 107.4928 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b4ffed0f-da8d-4bc5-9d75-baca7e74d647))
-    (instances
-      (project "MCU2"
-        (path "/049009a7-95d1-4ccf-a10c-7859cfd6b188"
-          (reference "#PWR?") (unit 1)
-        )
-      )
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/c06f7478-c874-4c9c-9b0f-f3b722914738"
-          (reference "#PWR065") (unit 1)
         )
       )
     )
