@@ -5177,6 +5177,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4073772c-0046-47f7-bd0d-dbb6f897b46b)
   )
+  (text "R_12VB_FR1 - Feedback Resistor 1\nR_12VB_FR2 - Feedback Resistor 2\nC_12VB_FC - Feedback Capacitor"
+    (at 15.24 241.3 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 650657b3-8e3d-4dc7-89d0-547fed573cad)
+  )
   (text "603 package" (at 101.346 179.324 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 868e8a4e-ce24-4f38-9817-c0eb29728424)
@@ -7312,7 +7317,7 @@
   (symbol (lib_id "Device:C") (at 127 223.52 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 85bbf2b9-3ca8-4afd-8bb7-91170cf6da49)
-    (property "Reference" "C_FF?" (at 125.73 215.9 90)
+    (property "Reference" "C_FF?" (at 124.46 215.9 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "3.65n" (at 125.73 218.44 90)
@@ -7334,7 +7339,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C15") (unit 1)
+          (reference "C_12VB_FC") (unit 1)
         )
       )
     )
@@ -7964,10 +7969,10 @@
   (symbol (lib_id "Device:D_Schottky") (at 107.95 264.16 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid acb69c5a-0c21-4b50-8f9d-868f6ac802ed)
-    (property "Reference" "D?" (at 110.744 263.2075 90)
+    (property "Reference" "D?" (at 110.49 263.2075 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "SSB43L-E3/52T" (at 110.744 265.7475 90)
+    (property "Value" "SSB43L-E3/52T" (at 110.49 265.7475 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Mechatronic Footprints:CR_SMA_320-340AE_DIO" (at 107.95 264.16 0)
@@ -7986,7 +7991,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D_S6") (unit 1)
+          (reference "D_12VB_1") (unit 1)
         )
       )
     )
@@ -8264,7 +8269,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R_P6") (unit 1)
+          (reference "R_12VB_FR2") (unit 1)
         )
       )
     )
@@ -8409,7 +8414,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R_P5") (unit 1)
+          (reference "R_12VB_FR1") (unit 1)
         )
       )
     )

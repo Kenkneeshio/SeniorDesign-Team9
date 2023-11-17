@@ -1,4 +1,4 @@
-21778973061061316
+21794274146280581
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -61005,6 +61005,27 @@ LTST-C190KGKT
 2
 2
 Mechatronic Footprints
+LM340MPX_5_0_NOPB_MP04A_TEX
+
+LM340MPX-5.0/NOPB 
+0
+4
+4
+Mechatronic Footprints
+LM340MPX_5_0_NOPB_MP04A_TEX-L
+
+LM340MPX-5.0/NOPB 
+0
+4
+4
+Mechatronic Footprints
+LM340MPX_5_0_NOPB_MP04A_TEX-M
+
+LM340MPX-5.0/NOPB 
+0
+4
+4
+Mechatronic Footprints
 LOWESRCAPMP7.6X4.3_3.1N_KEM
 
 T521D475M063ATE075 
@@ -61074,6 +61095,27 @@ MBRD20200CT-13
 0
 3
 3
+Mechatronic Footprints
+OPA340NA_DBV5
+
+OPA340NA/3K 
+0
+5
+5
+Mechatronic Footprints
+OPA340NA_DBV5-L
+
+OPA340NA/3K 
+0
+5
+5
+Mechatronic Footprints
+OPA340NA_DBV5-M
+
+OPA340NA/3K 
+0
+5
+5
 Mechatronic Footprints
 PG-TDSON-8_INF
 
@@ -61172,6 +61214,27 @@ NCV1117ST33T3G
 0
 3
 3
+Mechatronic Footprints
+UA741CDT_D8_TEX_STM
+
+UA741CDT 
+0
+8
+8
+Mechatronic Footprints
+UA741CDT_D8_TEX_STM-L
+
+UA741CDT 
+0
+8
+8
+Mechatronic Footprints
+UA741CDT_D8_TEX_STM-M
+
+UA741CDT 
+0
+8
+8
 Mechatronic Footprints
 V0_PC100_Power_Board
 
