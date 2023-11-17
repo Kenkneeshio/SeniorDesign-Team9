@@ -808,7 +808,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R_V1_Buf_Enable") (unit 1)
+          (reference "R_V1_Buf_Enable1") (unit 1)
         )
       )
     )
@@ -923,7 +923,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R_V2_Buf_Enable") (unit 1)
+          (reference "R_V2_Buf_Enable1") (unit 1)
         )
       )
     )

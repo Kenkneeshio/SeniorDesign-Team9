@@ -5140,7 +5140,7 @@
           (reference "R6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R_V1_Prec_Enable") (unit 1)
+          (reference "R_V1_Prec_Enable1") (unit 1)
         )
       )
     )
@@ -5369,7 +5369,7 @@
   (symbol (lib_id "Device:R_Small") (at 154.432 259.334 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 195d6daa-35e4-47a8-b0b8-f6d7d98aebf9)
-    (property "Reference" "R1_12VB_DIV" (at 156.21 258.699 0)
+    (property "Reference" "R1_12VB_DIV1" (at 156.21 258.699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DNI" (at 156.21 261.239 0)
@@ -5386,7 +5386,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_12VB_DIV") (unit 1)
+          (reference "R1_12VB_DIV1") (unit 1)
         )
       )
     )
@@ -7084,7 +7084,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C_12VB_FC") (unit 1)
+          (reference "C_12VB_FC1") (unit 1)
         )
       )
     )
@@ -7118,7 +7118,7 @@
   (symbol (lib_id "Device:R_Small") (at 156.972 268.224 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8abb3073-b391-4cee-b8a5-0c6ea4bbdcae)
-    (property "Reference" "R2_12VB_DIV" (at 162.56 264.16 90)
+    (property "Reference" "R2_12VB_DIV1" (at 162.56 264.16 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNI" (at 165.1 266.7 90)
@@ -7135,7 +7135,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_12VB_DIV") (unit 1)
+          (reference "R2_12VB_DIV1") (unit 1)
         )
       )
     )
@@ -8223,7 +8223,7 @@
           (reference "R6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R_V2_Prec_Enable") (unit 1)
+          (reference "R_V2_Prec_Enable1") (unit 1)
         )
       )
     )
@@ -8593,7 +8593,7 @@
   (symbol (lib_id "Device:R_Small") (at 152.654 195.326 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d60af3b6-91fa-477b-991f-0b7b64771d79)
-    (property "Reference" "R1_5VB_DIV" (at 154.94 194.691 0)
+    (property "Reference" "R1_5VB_DIV1" (at 154.94 194.691 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DNI" (at 154.94 197.231 0)
@@ -8610,7 +8610,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_5VB_DIV") (unit 1)
+          (reference "R1_5VB_DIV1") (unit 1)
         )
       )
     )
@@ -9193,7 +9193,7 @@
   (symbol (lib_id "Device:R_Small") (at 155.194 205.232 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3c03fe1-0e56-4cd6-be94-4eaf06518b82)
-    (property "Reference" "R2_5VB_DIV" (at 160.02 200.66 90)
+    (property "Reference" "R2_5VB_DIV1" (at 160.02 200.66 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNI" (at 155.194 203.2 90)
@@ -9210,7 +9210,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_5VB_DIV") (unit 1)
+          (reference "R2_5VB_DIV1") (unit 1)
         )
       )
     )
