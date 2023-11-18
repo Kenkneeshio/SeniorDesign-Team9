@@ -407,7 +407,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/70788b2e-4f8b-415f-94db-6db5f6e45c82"
-          (reference "R27") (unit 1)
+          (reference "R_PULLUPTEMP1") (unit 1)
         )
       )
       (project "M_MUC"
