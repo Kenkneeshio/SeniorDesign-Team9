@@ -2147,7 +2147,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 143.51 36.83 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06a4fe6f-3d4b-47f0-95d1-804d2dba6455)
-    (property "Reference" "F_3LOGIC" (at 142.24 40.64 0)
+    (property "Reference" "F_3LOGIC1" (at 142.24 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2" (at 143.51 38.862 0)
@@ -2164,7 +2164,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_3LOGIC") (unit 1)
+          (reference "F_3LOGIC1") (unit 1)
         )
       )
     )
@@ -2399,7 +2399,7 @@
           (reference "C7") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C3_5PREC") (unit 1)
+          (reference "C3_5PREC1") (unit 1)
         )
       )
     )
@@ -2430,7 +2430,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C3_5LOGIC") (unit 1)
+          (reference "C3_5LOGIC1") (unit 1)
         )
       )
     )
@@ -2535,7 +2535,7 @@
   (symbol (lib_id "Device:R_Small") (at 531.622 117.094 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 195d6daa-35e4-47a8-b0b8-f6d7d98aebf9)
-    (property "Reference" "R3_12VB" (at 533.4 116.459 0)
+    (property "Reference" "R3_12VB1" (at 533.4 116.459 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DNI" (at 533.4 118.999 0)
@@ -2552,7 +2552,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R3_12VB") (unit 1)
+          (reference "R3_12VB1") (unit 1)
         )
       )
     )
@@ -2561,7 +2561,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 351.282 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1ffd0421-61de-42fa-b48f-76a178e8bec8)
-    (property "Reference" "F_5VB" (at 351.282 106.68 0)
+    (property "Reference" "F_5VB1" (at 351.282 106.68 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5" (at 351.282 108.458 0)
@@ -2578,7 +2578,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_5VB") (unit 1)
+          (reference "F_5VB1") (unit 1)
         )
       )
     )
@@ -2609,7 +2609,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_5VB") (unit 1)
+          (reference "C2_5VB1") (unit 1)
         )
       )
     )
@@ -2618,7 +2618,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 177.6573 124.714 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2130d854-8f96-4791-8ec3-7cd4087a9e25)
-    (property "Reference" "F_5LOGIC" (at 177.6573 120.904 0)
+    (property "Reference" "F_5LOGIC1" (at 177.6573 120.904 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "3" (at 177.6573 122.682 0)
@@ -2635,7 +2635,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_5LOGIC") (unit 1)
+          (reference "F_5LOGIC1") (unit 1)
         )
       )
     )
@@ -2692,7 +2692,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_12VB") (unit 1)
+          (reference "C2_12VB1") (unit 1)
         )
       )
     )
@@ -2904,7 +2904,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_3LOGIC") (unit 1)
+          (reference "C2_3LOGIC1") (unit 1)
         )
       )
     )
@@ -3104,7 +3104,7 @@
           (reference "C7") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5PREC") (unit 1)
+          (reference "C1_5PREC1") (unit 1)
         )
       )
     )
@@ -3138,7 +3138,7 @@
           (reference "C6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_5PREC") (unit 1)
+          (reference "C2_5PREC1") (unit 1)
         )
       )
     )
@@ -3169,7 +3169,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "CF_12VB") (unit 1)
+          (reference "CF_12VB1") (unit 1)
         )
       )
     )
@@ -3203,7 +3203,7 @@
   (symbol (lib_id "Device:R_Small") (at 534.162 125.984 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8abb3073-b391-4cee-b8a5-0c6ea4bbdcae)
-    (property "Reference" "R4_12VB" (at 539.75 121.92 90)
+    (property "Reference" "R4_12VB1" (at 539.75 121.92 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNI" (at 542.29 124.46 90)
@@ -3220,7 +3220,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R4_12VB") (unit 1)
+          (reference "R4_12VB1") (unit 1)
         )
       )
     )
@@ -3254,7 +3254,7 @@
           (reference "C6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C4_5PREC") (unit 1)
+          (reference "C4_5PREC1") (unit 1)
         )
       )
     )
@@ -3285,7 +3285,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_3LOGIC") (unit 1)
+          (reference "C1_3LOGIC1") (unit 1)
         )
       )
     )
@@ -3316,7 +3316,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D_5VB") (unit 1)
+          (reference "D_5VB1") (unit 1)
         )
       )
     )
@@ -3347,7 +3347,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5LOGIC") (unit 1)
+          (reference "C1_5LOGIC1") (unit 1)
         )
       )
     )
@@ -3356,7 +3356,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 525.272 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f5428e6-2867-4859-bf60-69ecea317423)
-    (property "Reference" "F_12VB" (at 525.272 107.95 0)
+    (property "Reference" "F_12VB1" (at 525.272 107.95 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5" (at 525.272 109.728 0)
@@ -3373,7 +3373,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_12VB") (unit 1)
+          (reference "F_12VB1") (unit 1)
         )
       )
     )
@@ -3429,7 +3429,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "CF_5VB") (unit 1)
+          (reference "CF_5VB1") (unit 1)
         )
       )
     )
@@ -3527,7 +3527,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D_12VB") (unit 1)
+          (reference "D_12VB1") (unit 1)
         )
       )
     )
@@ -3558,7 +3558,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5VB") (unit 1)
+          (reference "C1_5VB1") (unit 1)
         )
       )
     )
@@ -3622,7 +3622,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_5VB") (unit 1)
+          (reference "R1_5VB1") (unit 1)
         )
       )
     )
@@ -3656,7 +3656,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_12VB") (unit 1)
+          (reference "R2_12VB1") (unit 1)
         )
       )
     )
@@ -3770,7 +3770,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_12VB") (unit 1)
+          (reference "R1_12VB1") (unit 1)
         )
       )
     )
@@ -3833,7 +3833,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_5VB") (unit 1)
+          (reference "R2_5VB1") (unit 1)
         )
       )
     )
@@ -3976,7 +3976,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_5LOGIC") (unit 1)
+          (reference "C2_5LOGIC1") (unit 1)
         )
       )
     )
@@ -4018,7 +4018,7 @@
   (symbol (lib_id "Device:R_Small") (at 357.632 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d60af3b6-91fa-477b-991f-0b7b64771d79)
-    (property "Reference" "R3_5VB" (at 359.41 112.395 0)
+    (property "Reference" "R3_5VB1" (at 359.41 112.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DNI" (at 359.41 114.935 0)
@@ -4035,7 +4035,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R3_5VB") (unit 1)
+          (reference "R3_5VB1") (unit 1)
         )
       )
     )
@@ -4216,7 +4216,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_12VB") (unit 1)
+          (reference "C1_12VB1") (unit 1)
         )
       )
     )
@@ -4281,7 +4281,7 @@
   (symbol (lib_id "Device:R_Small") (at 360.172 122.936 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3c03fe1-0e56-4cd6-be94-4eaf06518b82)
-    (property "Reference" "R4_5VB" (at 364.998 118.364 90)
+    (property "Reference" "R4_5VB1" (at 364.998 118.364 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNI" (at 360.172 120.904 90)
@@ -4298,7 +4298,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R4_5VB") (unit 1)
+          (reference "R4_5VB1") (unit 1)
         )
       )
     )
@@ -4366,7 +4366,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C4_5LOGIC") (unit 1)
+          (reference "C4_5LOGIC1") (unit 1)
         )
       )
     )

@@ -339,7 +339,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "RBLUE") (unit 1)
+          (reference "RBLUE1") (unit 1)
         )
       )
       (project "M_MUC"
@@ -444,7 +444,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "RRED") (unit 1)
+          (reference "RRED1") (unit 1)
         )
       )
       (project "M_MUC"
@@ -483,7 +483,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "RGREEN") (unit 1)
+          (reference "RGREEN1") (unit 1)
         )
       )
       (project "M_MUC"

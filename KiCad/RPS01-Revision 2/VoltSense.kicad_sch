@@ -725,7 +725,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R2_VSENSE") (unit 1)
+          (reference "R2_VSENSE1") (unit 1)
         )
       )
     )
@@ -734,7 +734,7 @@
   (symbol (lib_id "Device:D_Zener") (at 144.78 124.46 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 262a8ca6-d264-40b4-ac71-65c4268fc1e1)
-    (property "Reference" "D2_VSENSE" (at 149.86 124.46 90)
+    (property "Reference" "D2_VSENSE1" (at 149.86 124.46 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MMSZ5247BT1G" (at 147.32 127 90)
@@ -751,7 +751,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "D2_VSENSE") (unit 1)
+          (reference "D2_VSENSE1") (unit 1)
         )
       )
     )
@@ -808,7 +808,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "REN1_VSENSE") (unit 1)
+          (reference "REN1_VSENSE1") (unit 1)
         )
       )
     )
@@ -862,7 +862,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R3_VSENSE") (unit 1)
+          (reference "R3_VSENSE1") (unit 1)
         )
       )
     )
@@ -923,7 +923,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "REN2_VSENSE") (unit 1)
+          (reference "REN2_VSENSE1") (unit 1)
         )
       )
     )
@@ -960,7 +960,7 @@
   (symbol (lib_id "Device:D_Zener") (at 154.6545 76.3781 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a4c248d-d956-4664-9aa9-f1c8baa260ef)
-    (property "Reference" "D1_VSENSE" (at 159.7345 76.3781 90)
+    (property "Reference" "D1_VSENSE1" (at 159.7345 76.3781 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MMSZ5247BT1G" (at 157.1945 78.9181 90)
@@ -977,7 +977,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "D1_VSENSE") (unit 1)
+          (reference "D1_VSENSE1") (unit 1)
         )
       )
     )
@@ -1006,7 +1006,7 @@
           (reference "Bat_Filt_C?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "CF2_VSENSE") (unit 1)
+          (reference "CF2_VSENSE1") (unit 1)
         )
       )
     )
@@ -1035,7 +1035,7 @@
           (reference "Bat_Filt_C?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "CF1_VSENSE") (unit 1)
+          (reference "CF1_VSENSE1") (unit 1)
         )
       )
     )
@@ -1117,7 +1117,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R1_VSENSE") (unit 1)
+          (reference "R1_VSENSE1") (unit 1)
         )
       )
     )
@@ -1146,7 +1146,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R4_VSENSE") (unit 1)
+          (reference "R4_VSENSE1") (unit 1)
         )
       )
     )
