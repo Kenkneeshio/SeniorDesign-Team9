@@ -505,6 +505,15 @@
     (uuid fe625a8c-4701-4b5b-b6c9-1dea4dfba928)
   )
 
+  (label "R_S_2_NEG" (at 142.24 59.944 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 0b1c92b6-336c-4aed-ad85-df32716d6b2f)
+  )
+  (label "R_S_2_POS" (at 114.808 53.848 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid af7b48aa-6f65-4a45-a32c-ad15815d776c)
+  )
+
   (global_label "CURRENT2" (shape bidirectional) (at 160.782 118.11 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid aff4d7dc-4b62-4fa2-9532-2bbf47150f9e)
