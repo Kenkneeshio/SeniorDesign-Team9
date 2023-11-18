@@ -339,7 +339,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R30") (unit 1)
+          (reference "RBLUE") (unit 1)
         )
       )
       (project "M_MUC"
@@ -444,7 +444,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R29") (unit 1)
+          (reference "RRED") (unit 1)
         )
       )
       (project "M_MUC"
@@ -458,7 +458,7 @@
   (symbol (lib_id "Device:R") (at 146.9136 53.6956 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e26fe691-a292-43fb-b6f3-27fcb39d0bf5)
-    (property "Reference" "R?" (at 153.1112 53.594 90)
+    (property "Reference" "R?" (at 149.86 53.34 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150 Green" (at 144.6276 50.546 90)
@@ -483,7 +483,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/66639be3-b7af-4c3b-a889-0b5ac725a84a"
-          (reference "R28") (unit 1)
+          (reference "RGREEN") (unit 1)
         )
       )
       (project "M_MUC"
