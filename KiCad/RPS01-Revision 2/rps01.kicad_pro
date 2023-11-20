@@ -194,7 +194,25 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "multiple_net_names|1107440|599440|16f13924-c6f0-4423-8447-d9b33b318d90|ee9879da-bdde-4bc8-9c5e-6e6d2728a181|||",
+      "multiple_net_names|1226820|977900|a0f4edc2-66ec-475e-82f3-81c34563e188|2ffdc7a8-c34c-43fb-95b3-6eb293c5d647|||",
+      "multiple_net_names|1239520|1358900|a975a22d-1c76-46c2-b0d1-6d1fcaf5dd8d|5475e032-d830-471b-916d-5920bb417707|||",
+      "multiple_net_names|1361440|1005840|ad171402-bdd6-413b-81f7-6f652eb4ff86|e9730912-e36c-477b-a35d-f6d2a7bebaec|||",
+      "multiple_net_names|1397000|355600|5a02e9cd-7d4a-4280-9b05-1ad428b8071f|9e00a5a8-1610-4b1f-beb6-84f04e25e8d6|||",
+      "multiple_net_names|1590040|1244442|aff4d7dc-4b62-4fa2-9532-2bbf47150f9e|0ec500ab-b83b-4824-a7bc-2bce83862965|||",
+      "multiple_net_names|1653540|599440|7be8cddc-2c91-4d6c-97a0-d0d13a168ae6|e0282c9e-4fd3-43d0-a1d2-8e3c96d6cb99|||",
+      "multiple_net_names|1676400|1041400|5e4f6e1f-68df-4a8d-b373-af682f7825fc|2a814a61-e639-49cf-bd14-550fff59a462|||",
+      "multiple_net_names|1696720|871220|3b9faf2f-84bc-4d95-9a96-62566c6671cd|a110f36f-b275-4ad7-9ef1-4443c0b2ebac|||",
+      "multiple_net_names|1959009|364462|51183580-8a89-4db3-9ea3-a7c0895aba34|6f8a4b0b-f23d-47b1-ab86-2007ff502fd9|||",
+      "multiple_net_names|2021840|1427480|c8ab878f-6a86-4d19-b027-3928670b11b0|7a52c037-7ebd-4dca-a0d6-a498d401c19e|||",
+      "multiple_net_names|228600|1117600|65dab1c6-9ef8-4b54-8eb3-c4dc6e52be1c|6e217d7e-9bf5-438e-a79e-bbc7acbe44c7|||",
+      "multiple_net_names|241300|952500|7730af2f-0a29-4396-8f0a-657321c28e93|2abd6484-8a9c-441b-ae0a-4b41a744b50a|||",
+      "multiple_net_names|3538220|2667000|886ed6a1-c47f-4404-bc55-0891337ed109|b67a72a1-bf77-4a74-b063-354f71dcac7c|||",
+      "multiple_net_names|596900|477520|5327f5b0-5216-4b20-ab0b-df94f336db5f|1e385f97-45f4-4b09-85d4-ec6b88bf96df|||",
+      "multiple_net_names|599440|701040|204cc524-72d0-4a95-a393-a727fb12cf44|7ed952cc-9716-49d0-b988-7cfa0e0ca785|||",
+      "multiple_net_names|850900|355600|7d0a3bdd-7c6a-4327-adc6-ce200591b10c|f7b80e6b-c31a-4d95-a329-f7c095913458|||"
+    ],
     "meta": {
       "version": 0
     },

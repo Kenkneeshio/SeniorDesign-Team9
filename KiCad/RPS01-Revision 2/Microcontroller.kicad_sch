@@ -513,6 +513,7 @@
     )
   )
 
+
   (junction (at 148.5927 167.386) (diameter 0) (color 0 0 0 0)
     (uuid 17cb9e66-8d6a-4f70-aec6-f91d8530139c)
   )
@@ -4333,10 +4334,6 @@
   (label "PC0" (at 147.9318 125.476 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5d534256-f78b-4edc-b43c-ebdbb651024f)
-  )
-  (label "VCC" (at 119.634 94.996 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 5f934686-d1a5-4086-a566-89a95a7602a0)
   )
   (label "PC2" (at 149.0861 129.286 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
