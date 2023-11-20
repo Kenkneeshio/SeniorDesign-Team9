@@ -1968,6 +1968,7 @@
     )
   )
 
+
   (junction (at 309.372 335.788) (diameter 0) (color 0 0 0 0)
     (uuid 023d2eab-a091-42b7-93e5-5eaf0063f138)
   )
@@ -4802,7 +4803,7 @@
   (symbol (lib_id "Device:C_Small") (at 547.37 260.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 03c42ad6-5515-408f-a1c1-eb5abb48453d)
-    (property "Reference" "C24" (at 550.926 259.7213 0)
+    (property "Reference" "C37" (at 550.926 259.7213 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7u Low ESR" (at 550.926 262.2613 0)
@@ -4819,7 +4820,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C24") (unit 1)
+          (reference "C37") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -4833,7 +4834,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 323.088 267.716 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0612e1cf-3633-411c-b392-9dc609ad7dce)
-    (property "Reference" "R14" (at 325.882 267.081 0)
+    (property "Reference" "R17" (at 325.882 267.081 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "30K" (at 325.882 269.621 0)
@@ -4850,7 +4851,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R14") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -4864,7 +4865,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 143.51 36.83 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06a4fe6f-3d4b-47f0-95d1-804d2dba6455)
-    (property "Reference" "F_3LOGIC1" (at 142.24 40.64 0)
+    (property "Reference" "F1" (at 142.24 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2" (at 143.51 38.862 0)
@@ -4881,7 +4882,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_3LOGIC1") (unit 1)
+          (reference "F1") (unit 1)
         )
       )
     )
@@ -4890,7 +4891,7 @@
   (symbol (lib_id "Device:C_Small") (at 554.736 221.234 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06f26cd7-4065-47b2-83a0-943b9ffa5b01)
-    (property "Reference" "C25" (at 558.546 220.218 0)
+    (property "Reference" "C38" (at 558.546 220.218 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22u 16V" (at 561.086 222.25 0)
@@ -4907,7 +4908,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C25") (unit 1)
+          (reference "C38") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5054,7 +5055,7 @@
           (reference "R6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R_5PREC_ENABLE1") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -5063,7 +5064,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 523.748 218.694 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0f432eaf-a5c1-44b9-b823-98d38d6d6f11)
-    (property "Reference" "R23" (at 524.002 221.742 90)
+    (property "Reference" "R31" (at 524.002 221.742 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 524.129 224.155 90)
@@ -5080,7 +5081,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R23") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5145,7 +5146,7 @@
           (reference "C7") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C3_5PREC1") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -5214,7 +5215,7 @@
   (symbol (lib_id "Device:C_Small") (at 502.666 260.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 14b0c868-3353-46f5-b4f3-4f558da5d548)
-    (property "Reference" "C18" (at 506.984 259.334 0)
+    (property "Reference" "C29" (at 506.984 259.334 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10000p" (at 508 261.62 0)
@@ -5231,7 +5232,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C18") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5267,7 +5268,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C3_5LOGIC1") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -5369,7 +5370,7 @@
   (symbol (lib_id "Device:R_Small") (at 531.622 117.094 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 195d6daa-35e4-47a8-b0b8-f6d7d98aebf9)
-    (property "Reference" "R3_12VB1" (at 533.4 116.459 0)
+    (property "Reference" "R32" (at 533.4 116.459 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0 DNI" (at 533.4 118.999 0)
@@ -5386,7 +5387,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R3_12VB1") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -5395,7 +5396,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 351.282 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1ffd0421-61de-42fa-b48f-76a178e8bec8)
-    (property "Reference" "F_5VB1" (at 351.282 106.68 0)
+    (property "Reference" "F3" (at 351.282 106.68 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5" (at 351.282 108.458 0)
@@ -5412,7 +5413,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_5VB1") (unit 1)
+          (reference "F3") (unit 1)
         )
       )
     )
@@ -5421,7 +5422,7 @@
   (symbol (lib_id "Device:C_Small") (at 431.8 309.118 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 20440c7a-c2a1-412a-8bdc-62d148b7e901)
-    (property "Reference" "C9" (at 431.8 303.784 90)
+    (property "Reference" "C19" (at 431.8 303.784 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" ".22u 16V" (at 431.8 305.816 90)
@@ -5438,7 +5439,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C9") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5474,7 +5475,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_5VB1") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -5483,7 +5484,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 177.6573 124.714 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2130d854-8f96-4791-8ec3-7cd4087a9e25)
-    (property "Reference" "F_5LOGIC1" (at 177.6573 120.904 0)
+    (property "Reference" "F2" (at 177.6573 120.904 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "3" (at 177.6573 122.682 0)
@@ -5500,7 +5501,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_5LOGIC1") (unit 1)
+          (reference "F2") (unit 1)
         )
       )
     )
@@ -5535,7 +5536,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 325.628 245.364 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 21e21619-3d2e-4318-b182-b7df0b60ffeb)
-    (property "Reference" "R15" (at 325.628 240.538 90)
+    (property "Reference" "R18" (at 325.628 240.538 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47.5K 1%" (at 325.628 243.078 90)
@@ -5552,7 +5553,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R15") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5566,7 +5567,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 297.942 228.092 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2247e50b-8e4f-4134-9021-e530a180ee65)
-    (property "Reference" "R13" (at 298.196 230.378 90)
+    (property "Reference" "R15" (at 298.196 230.378 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100 1%" (at 298.196 232.918 90)
@@ -5583,7 +5584,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R13") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5619,7 +5620,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_12VB1") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -5628,7 +5629,7 @@
   (symbol (lib_id "Device:C_Small") (at 513.08 260.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2371851a-f95a-482c-87da-497985eddc51)
-    (property "Reference" "C19" (at 517.398 259.334 0)
+    (property "Reference" "C32" (at 517.398 259.334 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.01u" (at 518.414 261.62 0)
@@ -5645,7 +5646,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C19") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5659,7 +5660,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 328.168 247.904 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2486960e-8e85-4555-adf0-12c50cb6da06)
-    (property "Reference" "R17" (at 330.962 247.269 0)
+    (property "Reference" "R20" (at 330.962 247.269 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "12.4K 1%" (at 330.962 249.809 0)
@@ -5676,7 +5677,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R17") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5846,7 +5847,7 @@
   (symbol (lib_id "Device:C_Small") (at 471.17 259.588 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3adefce6-0c33-48e1-8a75-f81de13df247)
-    (property "Reference" "C12" (at 474.98 258.572 0)
+    (property "Reference" "C23" (at 474.98 258.572 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" ".22u" (at 475.488 260.858 0)
@@ -5863,7 +5864,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C12") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -5938,7 +5939,7 @@
   (symbol (lib_id "Device:C_Small") (at 490.728 260.096 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 46737e94-fe8f-4d44-9253-8b437cbdcdf5)
-    (property "Reference" "C16" (at 495.046 259.08 0)
+    (property "Reference" "C27" (at 495.046 259.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1000p" (at 496.062 261.366 0)
@@ -5955,7 +5956,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C16") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6029,7 +6030,7 @@
   (symbol (lib_id "Device:D_Schottky") (at 327.152 339.598 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4aee56b7-3c7f-468d-b1d3-4a6b09740fd2)
-    (property "Reference" "D6" (at 319.786 336.042 90)
+    (property "Reference" "D7" (at 319.786 336.042 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "B0540W" (at 317.246 338.074 90)
@@ -6046,7 +6047,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D6") (unit 1)
+          (reference "D7") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6060,7 +6061,7 @@
   (symbol (lib_id "Device:C_Small") (at 542.29 221.234 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4c79b843-1aec-49c5-ac9b-b4abde5bfd41)
-    (property "Reference" "C23" (at 546.1 220.218 0)
+    (property "Reference" "C36" (at 546.1 220.218 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22u 16V" (at 548.64 222.25 0)
@@ -6077,7 +6078,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C23") (unit 1)
+          (reference "C36") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6151,7 +6152,7 @@
   (symbol (lib_id "Device:C_Small") (at 459.994 259.588 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4f75c7eb-bedb-4534-a45c-0815960f517b)
-    (property "Reference" "C11" (at 463.804 258.572 0)
+    (property "Reference" "C22" (at 463.804 258.572 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1n" (at 464.312 260.858 0)
@@ -6168,7 +6169,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C11") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6182,7 +6183,7 @@
   (symbol (lib_id "Device:C_Small") (at 480.568 259.842 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56bbf916-05a2-4760-a98b-272729aedfaa)
-    (property "Reference" "C14" (at 484.886 258.826 0)
+    (property "Reference" "C25" (at 484.886 258.826 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47p" (at 485.902 261.112 0)
@@ -6199,7 +6200,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C14") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6274,7 +6275,7 @@
   (symbol (lib_id "Device:D_Zener") (at 458.47 218.948 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5e0096e8-5d78-4656-89a8-c73f65f4b976)
-    (property "Reference" "D10" (at 454.406 218.948 90)
+    (property "Reference" "D11" (at 454.406 218.948 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "36V Zener" (at 448.31 221.996 90)
@@ -6291,7 +6292,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D10") (unit 1)
+          (reference "D11") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6305,7 +6306,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 291.338 256.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5fe010f7-d55b-4042-83d8-4b9deb742c93)
-    (property "Reference" "R10" (at 293.116 255.905 0)
+    (property "Reference" "R12" (at 293.116 255.905 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "51K" (at 293.116 258.445 0)
@@ -6322,7 +6323,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R10") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6336,7 +6337,7 @@
   (symbol (lib_id "Device:R_Small") (at 294.386 223.52 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 60419c30-8423-4711-be75-313a19a164fa)
-    (property "Reference" "R11" (at 288.798 222.25 0)
+    (property "Reference" "R13" (at 288.798 222.25 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "25m 2%" (at 288.798 224.79 0)
@@ -6353,7 +6354,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R11") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6477,7 +6478,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_3LOGIC1") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -6523,7 +6524,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 327.406 220.472 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6bf18f1d-0f96-42a5-94c7-ce2816123c3d)
-    (property "Reference" "R16" (at 327.406 215.392 90)
+    (property "Reference" "R19" (at 327.406 215.392 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "113K 1%" (at 327.406 217.932 90)
@@ -6540,7 +6541,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R16") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6656,7 +6657,7 @@
   (symbol (lib_id "Device:C_Small") (at 534.924 260.604 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6e2a6826-f2f9-490b-a2a8-54acf6cc12a4)
-    (property "Reference" "C22" (at 538.226 259.9753 0)
+    (property "Reference" "C35" (at 538.226 259.9753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 538.226 262.5153 0)
@@ -6673,7 +6674,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C22") (unit 1)
+          (reference "C35") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6848,7 +6849,7 @@
           (reference "RBLUE1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R5_3.3V_Enable1") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
       (project "M_MUC"
@@ -6862,7 +6863,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 329.946 223.012 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ad32284-3277-45bd-8511-50ba8e76e648)
-    (property "Reference" "R18" (at 332.74 222.377 0)
+    (property "Reference" "R21" (at 332.74 222.377 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "8.06K 1%" (at 332.74 224.917 0)
@@ -6879,7 +6880,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R18") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6918,7 +6919,7 @@
           (reference "C7") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5PREC1") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -6927,7 +6928,7 @@
   (symbol (lib_id "Device:C_Small") (at 301.498 223.52 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7ed38972-b036-4bfc-b6db-8ad87894418c)
-    (property "Reference" "C7" (at 305.816 222.758 0)
+    (property "Reference" "C15" (at 305.816 222.758 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "68p" (at 305.816 224.536 0)
@@ -6944,7 +6945,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C7") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -6958,7 +6959,7 @@
   (symbol (lib_id "Device:C_Small") (at 432.054 326.644 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7ed6a841-627b-4857-b3a0-02bdd49bc087)
-    (property "Reference" "C10" (at 432.054 321.31 90)
+    (property "Reference" "C20" (at 432.054 321.31 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" ".22u 16V" (at 432.054 323.342 90)
@@ -6975,7 +6976,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C10") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -7014,7 +7015,7 @@
           (reference "C6") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C2_5PREC1") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -7045,7 +7046,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "CF_12VB1") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -7084,7 +7085,7 @@
   (symbol (lib_id "Device:R_Small") (at 534.162 125.984 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8abb3073-b391-4cee-b8a5-0c6ea4bbdcae)
-    (property "Reference" "R4_12VB1" (at 539.75 121.92 90)
+    (property "Reference" "R33" (at 539.75 121.92 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7K DNI" (at 542.29 124.46 90)
@@ -7101,7 +7102,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R4_12VB1") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -7192,7 +7193,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_3LOGIC1") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -7268,7 +7269,7 @@
   (symbol (lib_id "Device:D_Schottky") (at 438.15 311.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 98949914-e18c-4be9-94a3-5596babee136)
-    (property "Reference" "D8" (at 437.134 306.07 0)
+    (property "Reference" "D9" (at 437.134 306.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "B0540W" (at 436.626 308.102 0)
@@ -7285,7 +7286,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D8") (unit 1)
+          (reference "D9") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -7352,7 +7353,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D_5VB1") (unit 1)
+          (reference "D6") (unit 1)
         )
       )
     )
@@ -7444,7 +7445,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5LOGIC1") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -7453,7 +7454,7 @@
   (symbol (lib_id "Device:Fuse_Small") (at 525.272 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f5428e6-2867-4859-bf60-69ecea317423)
-    (property "Reference" "F_12VB1" (at 525.272 107.95 0)
+    (property "Reference" "F4" (at 525.272 107.95 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5" (at 525.272 109.728 0)
@@ -7470,7 +7471,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "F_12VB1") (unit 1)
+          (reference "F4") (unit 1)
         )
       )
     )
@@ -7479,7 +7480,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 432.054 330.708 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9fa5b39f-ab08-45de-9333-181918f3d572)
-    (property "Reference" "R20" (at 432.054 333.248 90)
+    (property "Reference" "R26" (at 432.054 333.248 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 431.8 335.534 90)
@@ -7496,7 +7497,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R20") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -7587,7 +7588,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "CF_5VB1") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -7630,7 +7631,7 @@
   (symbol (lib_id "Device:D_Schottky") (at 438.404 328.676 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a6258a11-c10b-4522-9e1c-13daff540ea6)
-    (property "Reference" "D9" (at 437.388 323.596 0)
+    (property "Reference" "D10" (at 437.388 323.596 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "B0540W" (at 436.88 325.628 0)
@@ -7647,7 +7648,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D9") (unit 1)
+          (reference "D10") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -7724,7 +7725,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 431.8 313.182 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ac513cf5-83ca-421e-82f6-77ddc1545217)
-    (property "Reference" "R19" (at 431.8 315.722 90)
+    (property "Reference" "R25" (at 431.8 315.722 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 431.546 318.008 90)
@@ -7741,7 +7742,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R19") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -7777,7 +7778,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D_12VB1") (unit 1)
+          (reference "D12") (unit 1)
         )
       )
     )
@@ -7845,7 +7846,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_5VB1") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -7887,7 +7888,7 @@
   (symbol (lib_id "Device:R_US") (at 262.89 265.938 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b1289110-9539-471d-82d7-24b266f361ce)
-    (property "Reference" "R9" (at 265.684 265.303 0)
+    (property "Reference" "R11" (at 265.684 265.303 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 265.43 267.208 0)
@@ -7904,7 +7905,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R9") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8000,7 +8001,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_5VB1") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -8009,7 +8010,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 297.942 219.202 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b769d7dc-7664-4d01-b779-1496e80d8ca9)
-    (property "Reference" "R12" (at 297.942 214.376 90)
+    (property "Reference" "R14" (at 297.942 214.376 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100 1%" (at 297.942 216.916 90)
@@ -8026,7 +8027,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R12") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8065,7 +8066,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_12VB1") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -8074,7 +8075,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 466.09 215.138 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bcf826ef-b181-4538-8fc8-f3a442b968bb)
-    (property "Reference" "R22" (at 466.344 218.186 90)
+    (property "Reference" "R28" (at 466.344 218.186 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 466.471 220.599 90)
@@ -8091,7 +8092,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R22") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8105,7 +8106,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 459.994 254.508 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bd729ddd-88b7-4128-97d3-27a785529649)
-    (property "Reference" "R21" (at 464.312 253.746 0)
+    (property "Reference" "R27" (at 464.312 253.746 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1" (at 464.058 255.778 0)
@@ -8122,7 +8123,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R21") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8271,7 +8272,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R1_12VB1") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -8390,7 +8391,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R2_5VB1") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -8483,7 +8484,7 @@
   (symbol (lib_id "Device:C_Small") (at 496.824 217.678 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cecd15d2-b4f0-4b9c-9510-f91d6f1da1db)
-    (property "Reference" "C17" (at 500.38 218.186 0)
+    (property "Reference" "C28" (at 500.38 218.186 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10u 35V" (at 502.666 220.218 0)
@@ -8500,7 +8501,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C17") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8612,7 +8613,7 @@
   (symbol (lib_id "Device:R_Small") (at 357.632 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d60af3b6-91fa-477b-991f-0b7b64771d79)
-    (property "Reference" "R3_5VB1" (at 359.41 112.395 0)
+    (property "Reference" "R23" (at 359.41 112.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0 DNI" (at 359.41 114.935 0)
@@ -8629,7 +8630,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R3_5VB1") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -8663,7 +8664,7 @@
   (symbol (lib_id "Device:D_Schottky") (at 341.63 310.388 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ddd6aea9-1749-4166-aabd-4bf4ffb37f11)
-    (property "Reference" "D7" (at 341.9475 305.562 0)
+    (property "Reference" "D8" (at 341.9475 305.562 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N5819HW" (at 343.408 307.848 0)
@@ -8680,7 +8681,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "D7") (unit 1)
+          (reference "D8") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8694,7 +8695,7 @@
   (symbol (lib_id "Device:C_Small") (at 323.088 272.796 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dee3de12-21e6-4923-a5bf-784189ca2ead)
-    (property "Reference" "C8" (at 327.406 271.78 0)
+    (property "Reference" "C16" (at 327.406 271.78 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "3.3n" (at 328.422 274.066 0)
@@ -8711,7 +8712,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C8") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8725,7 +8726,7 @@
   (symbol (lib_id "Device:C_Small") (at 471.932 217.678 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid df038f71-ccd9-47b3-b8db-81c8c31c1719)
-    (property "Reference" "C13" (at 475.742 216.662 0)
+    (property "Reference" "C24" (at 475.742 216.662 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10u 35V" (at 478.282 218.694 0)
@@ -8742,7 +8743,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C13") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -8933,7 +8934,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C1_12VB1") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -8942,7 +8943,7 @@
   (symbol (lib_id "Device:C_Small") (at 484.378 217.678 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eddf2a99-40cc-4cab-927d-273c4c48cf90)
-    (property "Reference" "C15" (at 488.188 216.662 0)
+    (property "Reference" "C26" (at 488.188 216.662 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10u 35V" (at 490.728 218.694 0)
@@ -8959,7 +8960,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C15") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -9029,7 +9030,7 @@
   (symbol (lib_id "Device:R_Small") (at 360.172 122.936 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3c03fe1-0e56-4cd6-be94-4eaf06518b82)
-    (property "Reference" "R4_5VB1" (at 364.998 118.364 90)
+    (property "Reference" "R24" (at 364.998 118.364 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7K DNI" (at 360.172 120.904 90)
@@ -9046,7 +9047,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R4_5VB1") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -9055,7 +9056,7 @@
   (symbol (lib_id "Device:C_Small") (at 529.844 221.234 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f55f5faa-a0ab-4911-aa3e-f97b26df569f)
-    (property "Reference" "C21" (at 533.654 220.218 0)
+    (property "Reference" "C34" (at 533.654 220.218 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22u 16V" (at 536.194 222.25 0)
@@ -9072,7 +9073,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C21") (unit 1)
+          (reference "C34") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"
@@ -9239,7 +9240,7 @@
   (symbol (lib_id "Device:C_Small") (at 524.256 260.604 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fe6b97c8-6190-47a3-b1ec-7860b0bb18f1)
-    (property "Reference" "C20" (at 527.812 259.9753 0)
+    (property "Reference" "C33" (at 527.812 259.9753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 527.812 262.5153 0)
@@ -9256,7 +9257,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "C20") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
       (project "KENESP32LTC370TEST"

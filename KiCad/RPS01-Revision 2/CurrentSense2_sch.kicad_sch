@@ -330,6 +330,7 @@
     )
   )
 
+
   (junction (at 128.524 48.006) (diameter 0) (color 0 0 0 0)
     (uuid 0ee79289-d316-45b9-8af6-cdb23540644e)
   )
@@ -680,7 +681,7 @@
           (reference "RL?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R1_CS1") (unit 1)
+          (reference "R53") (unit 1)
         )
       )
     )
@@ -806,7 +807,7 @@
           (reference "R_S1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R_S2") (unit 1)
+          (reference "R52") (unit 1)
         )
       )
     )
@@ -835,7 +836,7 @@
           (reference "Cf_?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "C1_CS1") (unit 1)
+          (reference "C41") (unit 1)
         )
       )
     )
@@ -892,7 +893,7 @@
           (reference "R_S1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R_S1") (unit 1)
+          (reference "R51") (unit 1)
         )
       )
     )

@@ -288,6 +288,7 @@
     )
   )
 
+
   (junction (at 45.72 34.036) (diameter 0) (color 0 0 0 0)
     (uuid 19aa9df8-0f1d-41c8-832e-f0e60da285d7)
   )
@@ -725,7 +726,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R47") (unit 1)
         )
       )
     )
@@ -734,7 +735,7 @@
   (symbol (lib_id "Device:D_Zener") (at 139.192 92.202 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 262a8ca6-d264-40b4-ac71-65c4268fc1e1)
-    (property "Reference" "D" (at 144.272 92.202 90)
+    (property "Reference" "D13" (at 144.272 92.202 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MMSZ5247BT1G" (at 141.732 94.742 90)
@@ -751,7 +752,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "D") (unit 1)
+          (reference "D13") (unit 1)
         )
       )
     )
@@ -808,7 +809,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R50") (unit 1)
         )
       )
     )
@@ -862,7 +863,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R46") (unit 1)
         )
       )
     )
@@ -923,7 +924,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R49") (unit 1)
         )
       )
     )
@@ -960,7 +961,7 @@
   (symbol (lib_id "Device:D_Zener") (at 149.0665 44.1201 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a4c248d-d956-4664-9aa9-f1c8baa260ef)
-    (property "Reference" "D" (at 154.1465 44.1201 90)
+    (property "Reference" "D14" (at 154.1465 44.1201 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MMSZ5247BT1G" (at 151.6065 46.6601 90)
@@ -977,7 +978,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "D") (unit 1)
+          (reference "D14") (unit 1)
         )
       )
     )
@@ -1006,7 +1007,7 @@
           (reference "Bat_Filt_C?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "C") (unit 1)
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -1035,7 +1036,7 @@
           (reference "Bat_Filt_C?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "C") (unit 1)
+          (reference "C40") (unit 1)
         )
       )
     )
@@ -1117,7 +1118,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R45") (unit 1)
         )
       )
     )
@@ -1146,7 +1147,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/86aa0a4b-8e23-451d-9b8a-c1446d1d5d38"
-          (reference "R") (unit 1)
+          (reference "R48") (unit 1)
         )
       )
     )
