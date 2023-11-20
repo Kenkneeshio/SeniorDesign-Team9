@@ -358,11 +358,6 @@
     (uuid e35c1843-583c-44d3-a06e-0259d945add2)
   )
 
-  (text "Missing two PCB mounting TEMP sensors" (at 127 105.918 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d1091184-7fe6-4205-a551-a41348fea776)
-  )
-
   (global_label "LOGIC 5V" (shape bidirectional) (at 141.224 93.472 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid a417e5d6-d8eb-4303-a0b9-3a3361afee3d)
