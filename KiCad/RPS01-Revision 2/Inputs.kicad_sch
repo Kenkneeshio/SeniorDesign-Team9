@@ -142,7 +142,6 @@
     )
   )
 
-
   (junction (at 59.69 51.816) (diameter 0) (color 0 0 0 0)
     (uuid 432067f8-f402-4b94-8086-4f0efc310710)
   )
@@ -298,7 +297,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR0100") (unit 1)
         )
       )
       (project "M_MUC"
@@ -336,7 +335,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "#PWR081") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
       (project "M_MUC"
@@ -375,7 +374,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "R33") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
       (project "M_MUC"
@@ -414,7 +413,7 @@
           (reference "R?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/423e72dd-bb18-4d03-a22d-0f9c41f98256"
-          (reference "R32") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
       (project "M_MUC"
