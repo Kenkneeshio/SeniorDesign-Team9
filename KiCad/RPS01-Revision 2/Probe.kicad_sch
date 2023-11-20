@@ -460,7 +460,7 @@
   (symbol (lib_id "power:+5V") (at 71.882 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2a9e0f32-c286-4df6-bc84-a50ab64e196a)
-    (property "Reference" "#PWR042" (at 71.882 151.13 0)
+    (property "Reference" "#PWR0103" (at 71.882 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 71.882 143.51 0)
@@ -476,7 +476,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -485,7 +485,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 143.002 96.774 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f1c2513-5dc7-45b5-a84d-2a202427b888)
-    (property "Reference" "H3" (at 146.05 94.869 0)
+    (property "Reference" "H2" (at 146.05 94.869 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole_Pad" (at 146.05 97.409 0)
@@ -501,7 +501,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "H3") (unit 1)
+          (reference "H2") (unit 1)
         )
       )
     )
@@ -510,7 +510,7 @@
   (symbol (lib_id "power:GND") (at 143.256 112.014 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 40ed384f-2098-48e8-a45e-9624977993fa)
-    (property "Reference" "#PWR090" (at 143.256 118.364 0)
+    (property "Reference" "#PWR0108" (at 143.256 118.364 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.256 116.586 0)
@@ -526,7 +526,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -535,7 +535,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 143.256 109.474 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 479e298f-ee92-46fa-b5e1-92fbdf775d00)
-    (property "Reference" "H5" (at 146.304 107.569 0)
+    (property "Reference" "H3" (at 146.304 107.569 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole_Pad" (at 146.304 110.109 0)
@@ -551,7 +551,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "H5") (unit 1)
+          (reference "H3") (unit 1)
         )
       )
     )
@@ -560,7 +560,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 92.964 138.938 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 48929978-0615-435c-a49f-59f70a2c3cb0)
-    (property "Reference" "TP13" (at 97.79 136.7155 0)
+    (property "Reference" "TP14" (at 97.79 136.7155 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "3.3V" (at 97.79 139.2555 0)
@@ -576,7 +576,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP13") (unit 1)
+          (reference "TP14") (unit 1)
         )
       )
     )
@@ -585,7 +585,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 169.164 84.328 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4a08b1b5-afa2-480f-a537-35b748182e7d)
-    (property "Reference" "H2" (at 172.72 82.423 0)
+    (property "Reference" "H4" (at 172.72 82.423 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole_Pad" (at 172.72 84.963 0)
@@ -601,7 +601,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "H2") (unit 1)
+          (reference "H4") (unit 1)
         )
       )
     )
@@ -610,7 +610,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 92.71 165.608 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 53a44e94-8e29-491a-9814-4f5c778a73a6)
-    (property "Reference" "TP17" (at 96.52 163.3855 0)
+    (property "Reference" "TP13" (at 96.52 163.3855 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "GND" (at 96.52 165.9255 0)
@@ -626,7 +626,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP17") (unit 1)
+          (reference "TP13") (unit 1)
         )
       )
     )
@@ -635,7 +635,7 @@
   (symbol (lib_id "power:GND") (at 169.164 99.314 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 56197f58-e904-4302-bfa1-83cce9823cf6)
-    (property "Reference" "#PWR089" (at 169.164 105.664 0)
+    (property "Reference" "#PWR0110" (at 169.164 105.664 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 169.164 103.886 0)
@@ -651,7 +651,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR089") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -685,7 +685,7 @@
   (symbol (lib_id "power:GND") (at 143.002 86.868 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6278e55a-9085-48f4-80c1-e2f3905c39da)
-    (property "Reference" "#PWR047" (at 143.002 93.218 0)
+    (property "Reference" "#PWR0106" (at 143.002 93.218 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.002 91.44 0)
@@ -701,7 +701,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -710,7 +710,7 @@
   (symbol (lib_id "power:GND") (at 72.136 165.862 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 62bea8c8-691d-46bc-b6a6-5b381ca5abf2)
-    (property "Reference" "#PWR046" (at 72.136 172.212 0)
+    (property "Reference" "#PWR0105" (at 72.136 172.212 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 72.136 171.45 0)
@@ -726,7 +726,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
@@ -735,7 +735,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 169.164 96.774 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 66a20d29-ad14-42ca-a4fa-4f791b904eb3)
-    (property "Reference" "H4" (at 172.72 94.869 0)
+    (property "Reference" "H5" (at 172.72 94.869 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole_Pad" (at 172.72 97.409 0)
@@ -751,7 +751,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "H4") (unit 1)
+          (reference "H5") (unit 1)
         )
       )
     )
@@ -760,7 +760,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.138 90.678 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81053d3c-3411-4df0-8ef0-f58b26519c69)
-    (property "Reference" "TP4" (at 92.964 88.4555 0)
+    (property "Reference" "TP6" (at 92.964 88.4555 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SCL" (at 92.964 90.9955 0)
@@ -776,7 +776,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP4") (unit 1)
+          (reference "TP6") (unit 1)
         )
       )
     )
@@ -785,7 +785,7 @@
   (symbol (lib_id "power:+12V") (at 71.882 154.432 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 898053c8-d09b-47bf-b5df-81a666d616e0)
-    (property "Reference" "#PWR043" (at 71.882 158.242 0)
+    (property "Reference" "#PWR0104" (at 71.882 158.242 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 71.882 151.13 0)
@@ -801,7 +801,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -810,7 +810,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 92.964 159.258 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 958c6c26-2e5e-4054-adb5-3452d7a9e204)
-    (property "Reference" "TP16" (at 97.79 157.0355 0)
+    (property "Reference" "TP17" (at 97.79 157.0355 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "19V" (at 97.79 159.5755 0)
@@ -826,7 +826,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP16") (unit 1)
+          (reference "TP17") (unit 1)
         )
       )
     )
@@ -835,7 +835,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.392 130.556 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e2e5619-b349-420f-bfef-29acf644bfc1)
-    (property "Reference" "TP10" (at 92.964 128.3335 0)
+    (property "Reference" "TP12" (at 92.964 128.3335 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "LOGIC 5V" (at 92.964 130.8735 0)
@@ -851,7 +851,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP10") (unit 1)
+          (reference "TP12") (unit 1)
         )
       )
     )
@@ -860,7 +860,7 @@
   (symbol (lib_id "power:GND") (at 169.164 86.868 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a2e4fbe8-ea75-4688-bbbc-468a31c74e55)
-    (property "Reference" "#PWR048" (at 169.164 93.218 0)
+    (property "Reference" "#PWR0109" (at 169.164 93.218 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 169.164 91.44 0)
@@ -876,7 +876,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -885,7 +885,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.138 84.328 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a44912dd-ca95-4067-83ea-5187a3fb74c1)
-    (property "Reference" "TP3" (at 92.964 82.1055 0)
+    (property "Reference" "TP5" (at 92.964 82.1055 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SDA" (at 92.964 84.6455 0)
@@ -901,7 +901,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP3") (unit 1)
+          (reference "TP5") (unit 1)
         )
       )
     )
@@ -910,7 +910,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.392 110.236 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a9ef1bae-8aab-459d-88fe-2e29691f65f1)
-    (property "Reference" "TP7" (at 92.964 108.0135 0)
+    (property "Reference" "TP9" (at 92.964 108.0135 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "VOLT1" (at 92.964 110.5535 0)
@@ -926,7 +926,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP7") (unit 1)
+          (reference "TP9") (unit 1)
         )
       )
     )
@@ -935,7 +935,7 @@
   (symbol (lib_id "power:GND") (at 169.418 112.014 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0cf72c1-5cfb-4f42-a25e-5e67f8a90659)
-    (property "Reference" "#PWR091" (at 169.418 118.364 0)
+    (property "Reference" "#PWR0111" (at 169.418 118.364 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 169.418 116.586 0)
@@ -951,7 +951,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
       )
     )
@@ -960,7 +960,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 92.964 152.654 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b233f70d-5a60-4f93-8b3c-612d9fd19121)
-    (property "Reference" "TP15" (at 97.79 150.4315 0)
+    (property "Reference" "TP16" (at 97.79 150.4315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "12V" (at 97.79 152.9715 0)
@@ -976,7 +976,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP15") (unit 1)
+          (reference "TP16") (unit 1)
         )
       )
     )
@@ -985,7 +985,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.392 123.952 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bc1e83a3-5c4b-49d9-968d-6f16aa5d2e38)
-    (property "Reference" "TP9" (at 92.964 121.7295 0)
+    (property "Reference" "TP11" (at 92.964 121.7295 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AREF" (at 92.964 124.2695 0)
@@ -1001,7 +1001,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP9") (unit 1)
+          (reference "TP11") (unit 1)
         )
       )
     )
@@ -1010,7 +1010,7 @@
   (symbol (lib_id "power:+3.3V") (at 71.882 140.462 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dc3b078e-bd15-4913-bc85-3a6091c49f9b)
-    (property "Reference" "#PWR041" (at 71.882 144.272 0)
+    (property "Reference" "#PWR0102" (at 71.882 144.272 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 71.882 137.16 0)
@@ -1026,7 +1026,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -1035,7 +1035,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.392 117.094 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid de1b2a00-0b0f-43d3-89df-4cb3cdd7a6f9)
-    (property "Reference" "TP8" (at 92.964 114.8715 0)
+    (property "Reference" "TP10" (at 92.964 114.8715 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "VOLT2" (at 92.964 117.4115 0)
@@ -1051,7 +1051,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP8") (unit 1)
+          (reference "TP10") (unit 1)
         )
       )
     )
@@ -1060,7 +1060,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.138 103.632 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e55c0716-37e5-4cd2-80d7-400fbc807d9d)
-    (property "Reference" "TP6" (at 92.964 101.4095 0)
+    (property "Reference" "TP8" (at 92.964 101.4095 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "CURRENT2" (at 92.964 103.9495 0)
@@ -1076,7 +1076,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP6") (unit 1)
+          (reference "TP8") (unit 1)
         )
       )
     )
@@ -1085,7 +1085,7 @@
   (symbol (lib_id "power:GND") (at 143.002 99.314 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea20e0d1-1939-49a5-9b4a-eabe2dd8b98e)
-    (property "Reference" "#PWR054" (at 143.002 105.664 0)
+    (property "Reference" "#PWR0107" (at 143.002 105.664 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.002 103.886 0)
@@ -1101,7 +1101,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -1110,7 +1110,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 92.964 145.796 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea304a46-af67-4f8d-a5db-bfcf628a219d)
-    (property "Reference" "TP14" (at 97.79 143.5735 0)
+    (property "Reference" "TP15" (at 97.79 143.5735 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5V" (at 97.79 146.1135 0)
@@ -1126,7 +1126,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP14") (unit 1)
+          (reference "TP15") (unit 1)
         )
       )
     )
@@ -1135,7 +1135,7 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.138 97.028 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f99fa538-afe6-4781-91cf-15cb13d94eb6)
-    (property "Reference" "TP5" (at 92.964 94.8055 0)
+    (property "Reference" "TP7" (at 92.964 94.8055 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "CURRENT1" (at 92.964 97.3455 0)
@@ -1151,7 +1151,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/577d3fc4-735f-4981-a3a1-4300f23b9ae6"
-          (reference "TP5") (unit 1)
+          (reference "TP7") (unit 1)
         )
       )
     )

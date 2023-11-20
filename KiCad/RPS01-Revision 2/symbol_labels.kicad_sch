@@ -9547,7 +9547,7 @@
   (symbol (lib_id "brendan_sym:LOGO") (at 43.18 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 403923d6-2b6a-4b82-beb3-4dde1d214098)
-    (property "Reference" "#G1" (at 43.18 129.6684 0)
+    (property "Reference" "#G3" (at 43.18 129.6684 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "LOGO" (at 43.18 131.9516 0)
@@ -9562,7 +9562,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/96f82f26-4568-4e3f-8290-ab5bfa59ce28"
-          (reference "#G1") (unit 1)
+          (reference "#G3") (unit 1)
         )
       )
     )
@@ -9598,7 +9598,7 @@
   (symbol (lib_id "sdsu_sym:LOGO") (at 31.75 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 50833828-46fa-47dc-8a4c-1d352dd0f787)
-    (property "Reference" "#G4" (at 31.75 131.9552 0)
+    (property "Reference" "#G2" (at 31.75 131.9552 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "LOGO" (at 31.75 132.2048 0)
@@ -9613,7 +9613,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/96f82f26-4568-4e3f-8290-ab5bfa59ce28"
-          (reference "#G4") (unit 1)
+          (reference "#G2") (unit 1)
         )
       )
     )
@@ -9622,7 +9622,7 @@
   (symbol (lib_id "ken_sym:LOGO") (at 43.18 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 65edfff9-c39f-4af6-978a-04b1f15c63c3)
-    (property "Reference" "#G2" (at 43.18 135.752 0)
+    (property "Reference" "#G4" (at 43.18 135.752 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "LOGO" (at 43.18 141.108 0)
@@ -9637,7 +9637,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/96f82f26-4568-4e3f-8290-ab5bfa59ce28"
-          (reference "#G2") (unit 1)
+          (reference "#G4") (unit 1)
         )
       )
     )
@@ -9646,7 +9646,7 @@
   (symbol (lib_id "peter_sym:LOGO") (at 27.94 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fb86e4c0-a195-4fe0-a8c9-4329dc4be94a)
-    (property "Reference" "#G3" (at 27.94 137.022 0)
+    (property "Reference" "#G1" (at 27.94 137.022 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "LOGO" (at 27.94 142.378 0)
@@ -9661,7 +9661,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/96f82f26-4568-4e3f-8290-ab5bfa59ce28"
-          (reference "#G3") (unit 1)
+          (reference "#G1") (unit 1)
         )
       )
     )

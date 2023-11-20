@@ -330,7 +330,6 @@
     )
   )
 
-
   (junction (at 128.524 48.006) (diameter 0) (color 0 0 0 0)
     (uuid 0ee79289-d316-45b9-8af6-cdb23540644e)
   )
@@ -624,7 +623,7 @@
           (reference "#PWR03") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR098") (unit 1)
         )
       )
     )
@@ -652,7 +651,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR099") (unit 1)
         )
       )
     )
@@ -681,7 +680,7 @@
           (reference "RL?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R1_CS2") (unit 1)
+          (reference "R1_CS1") (unit 1)
         )
       )
     )
@@ -712,7 +711,7 @@
           (reference "TP2") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "TP12") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -743,7 +742,7 @@
           (reference "TP1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "TP11") (unit 1)
+          (reference "TP4") (unit 1)
         )
       )
     )
@@ -778,7 +777,7 @@
           (reference "U?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "U19") (unit 1)
+          (reference "U22") (unit 1)
         )
       )
     )
@@ -836,7 +835,7 @@
           (reference "Cf_?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "C1_CS2") (unit 1)
+          (reference "C1_CS1") (unit 1)
         )
       )
     )
@@ -864,7 +863,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "#PWR078") (unit 1)
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -893,7 +892,7 @@
           (reference "R_S1") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/83d3dc76-6aeb-422d-8708-14a32de244f0"
-          (reference "R_S3") (unit 1)
+          (reference "R_S1") (unit 1)
         )
       )
     )

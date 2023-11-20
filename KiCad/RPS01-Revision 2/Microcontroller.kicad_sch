@@ -513,7 +513,6 @@
     )
   )
 
-
   (junction (at 148.5927 167.386) (diameter 0) (color 0 0 0 0)
     (uuid 17cb9e66-8d6a-4f70-aec6-f91d8530139c)
   )
@@ -4506,7 +4505,7 @@
   (symbol (lib_id "power:GND") (at 148.59 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 012deba4-4b31-4f19-a84b-b0e1380f1fa2)
-    (property "Reference" "#PWR037" (at 148.59 181.61 0)
+    (property "Reference" "#PWR021" (at 148.59 181.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 148.59 180.3409 0)
@@ -4522,7 +4521,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -4552,7 +4551,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -4582,7 +4581,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -4612,7 +4611,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -4621,7 +4620,7 @@
   (symbol (lib_id "power:GND") (at 139.065 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 47853d83-cc51-4cb9-99cf-9497dba8ed89)
-    (property "Reference" "#PWR031" (at 139.065 181.61 0)
+    (property "Reference" "#PWR020" (at 139.065 181.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 139.065 180.0913 0)
@@ -4637,7 +4636,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -4646,7 +4645,7 @@
   (symbol (lib_id "power:GND") (at 106.045 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4c1af427-3ed1-42d4-baef-3c323777271f)
-    (property "Reference" "#PWR038" (at 106.045 95.25 0)
+    (property "Reference" "#PWR018" (at 106.045 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 106.045 93.98 0)
@@ -4662,7 +4661,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -4693,7 +4692,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C8") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -4754,7 +4753,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "U10") (unit 1)
+          (reference "U9") (unit 1)
         )
       )
     )
@@ -4785,7 +4784,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C4") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -4815,7 +4814,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -4824,7 +4823,7 @@
   (symbol (lib_id "Device:R_Small") (at 139.065 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 609b7494-c39e-492f-9ed6-207c8a44ad9b)
-    (property "Reference" "R6" (at 140.264 173.1136 0)
+    (property "Reference" "R7" (at 140.264 173.1136 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7k" (at 138.994 175.6536 0)
@@ -4841,7 +4840,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -4850,7 +4849,7 @@
   (symbol (lib_id "Device:R_Small") (at 148.59 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72c6853e-6038-4fb2-a32b-b7eccedf2d16)
-    (property "Reference" "R7" (at 149.86 173.355 0)
+    (property "Reference" "R8" (at 149.86 173.355 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7k" (at 148.8054 175.6026 0)
@@ -4867,7 +4866,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "R7") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -4901,7 +4900,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "J12") (unit 1)
+          (reference "J11") (unit 1)
         )
       )
     )
@@ -4936,7 +4935,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "J11") (unit 1)
+          (reference "J12") (unit 1)
         )
       )
     )
@@ -4998,7 +4997,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C2") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -5028,7 +5027,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -5059,7 +5058,7 @@
       )
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/a2e49fe6-126d-427d-b045-54fb7f662aa7"
-          (reference "C3") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )

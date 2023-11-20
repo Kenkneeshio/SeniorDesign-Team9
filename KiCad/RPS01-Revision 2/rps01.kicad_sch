@@ -318,7 +318,6 @@
     )
   )
 
-
   (junction (at 75.692 56.642) (diameter 0) (color 0 0 0 0)
     (uuid 00eac0a9-588e-41f4-ac43-5f7edb49a1f9)
   )
@@ -17606,7 +17605,7 @@
   (symbol (lib_id "power:GND") (at 251.0282 34.036 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 09d77c01-8d9f-4667-befa-cc8a2b1c23c1)
-    (property "Reference" "#PWR01" (at 251.0282 40.386 0)
+    (property "Reference" "#PWR06" (at 251.0282 40.386 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 251.0282 39.116 0)
@@ -17622,7 +17621,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -17631,7 +17630,7 @@
   (symbol (lib_id "power:GND") (at 251.2314 66.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 15548030-8914-4133-af4d-3bb89d44401c)
-    (property "Reference" "#PWR05" (at 251.2314 72.39 0)
+    (property "Reference" "#PWR07" (at 251.2314 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 251.2314 71.7296 0)
@@ -17647,7 +17646,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -17681,7 +17680,7 @@
   (symbol (lib_id "power:GND") (at 43.942 66.294 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 38d9cd18-2cef-4bb1-981d-a713bd30d583)
-    (property "Reference" "#PWR06" (at 43.942 72.644 0)
+    (property "Reference" "#PWR01" (at 43.942 72.644 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 43.942 71.374 0)
@@ -17697,7 +17696,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -17725,7 +17724,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -17734,7 +17733,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 265.176 147.574 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4ef73a55-1fe0-4906-b7a0-d007853d4fe5)
-    (property "Reference" "J9" (at 266.7 145.669 0)
+    (property "Reference" "J10" (at 266.7 145.669 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "XT30PW 19V" (at 266.7 148.209 0)
@@ -17751,7 +17750,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J9") (unit 1)
+          (reference "J10") (unit 1)
         )
       )
     )
@@ -17760,7 +17759,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 256.9718 50.292 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6e7c8f30-0da9-4f5d-8776-217b51ccbc5c)
-    (property "Reference" "J3" (at 258.2418 49.657 0)
+    (property "Reference" "J4" (at 258.2418 49.657 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XT90  Battery VOUT 2" (at 258.2418 47.117 0)
@@ -17777,7 +17776,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J3") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -17806,7 +17805,7 @@
           (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J6") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -17815,7 +17814,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 38.862 66.294 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 77108c4c-060f-4cea-b10d-dac7b48dc5e3)
-    (property "Reference" "J5" (at 26.416 64.262 0)
+    (property "Reference" "J1" (at 26.416 64.262 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BATT IN 2 XT90 " (at 30.48 66.294 0)
@@ -17832,7 +17831,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J5") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -17860,7 +17859,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -17889,7 +17888,7 @@
           (reference "J?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J8") (unit 1)
+          (reference "J6") (unit 1)
         )
       )
     )
@@ -17898,7 +17897,7 @@
   (symbol (lib_id "power:GND") (at 250.698 50.292 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8c0c6e8b-1aa3-4692-b9c1-f985ae0695a6)
-    (property "Reference" "#PWR04" (at 250.698 56.642 0)
+    (property "Reference" "#PWR05" (at 250.698 56.642 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 250.698 55.372 0)
@@ -17914,7 +17913,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -17942,7 +17941,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -17951,7 +17950,7 @@
   (symbol (lib_id "Connector:Conn_01x04_Pin") (at 264.16 159.258 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b022425c-c1b2-4bd4-a733-3948c4c4602f)
-    (property "Reference" "J10" (at 265.176 157.353 0)
+    (property "Reference" "J9" (at 265.176 157.353 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "IIC Connector" (at 265.176 159.893 0)
@@ -17970,7 +17969,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J10") (unit 1)
+          (reference "J9") (unit 1)
         )
       )
     )
@@ -17979,7 +17978,7 @@
   (symbol (lib_id "power:GND") (at 214.884 163.83 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b10e8d94-535d-44c3-a2d2-9aae84b375dd)
-    (property "Reference" "#PWR011" (at 208.534 163.83 0)
+    (property "Reference" "#PWR04" (at 208.534 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 211.074 164.465 90)
@@ -17995,7 +17994,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -18049,7 +18048,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -18112,7 +18111,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 257.302 34.036 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f0806bf4-b9c2-4e09-9a7e-db63cdfbae5f)
-    (property "Reference" "J1" (at 258.572 33.401 0)
+    (property "Reference" "J5" (at 258.572 33.401 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "XT90 Battery VOUT 1" (at 258.572 30.861 0)
@@ -18129,7 +18128,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J1") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -18138,7 +18137,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 256.3114 66.04 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f3ef2a6f-7d3d-45af-b8c3-3d84f04a9de6)
-    (property "Reference" "J4" (at 257.81 64.135 0)
+    (property "Reference" "J3" (at 257.81 64.135 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "XT30PW Batt VOUT" (at 257.81 66.675 0)
@@ -18155,7 +18154,7 @@
     (instances
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6"
-          (reference "J4") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
