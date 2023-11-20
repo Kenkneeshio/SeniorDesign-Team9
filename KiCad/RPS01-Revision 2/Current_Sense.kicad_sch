@@ -4320,7 +4320,7 @@
     )
   )
 
-  (hierarchical_label "LOAD" (shape input) (at 139.7 35.56 0) (fields_autoplaced)
+  (hierarchical_label "VOUT" (shape input) (at 139.7 35.56 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 9e00a5a8-1610-4b1f-beb6-84f04e25e8d6)
   )
