@@ -2515,10 +2515,6 @@
     (stroke (width 0) (type default))
     (uuid 60c60ee1-92ff-425f-8060-de6bb3a03989)
   )
-  (wire (pts (xy 458.47 215.138) (xy 463.55 215.138))
-    (stroke (width 0) (type default))
-    (uuid 61eb6024-a949-4102-9d79-fee3d30a2a7b)
-  )
   (wire (pts (xy 292.862 228.092) (xy 294.386 228.092))
     (stroke (width 0) (type default))
     (uuid 635dbcd3-e3c5-495a-a177-fd4be9a830fc)
@@ -2911,7 +2907,7 @@
     (stroke (width 0) (type default))
     (uuid b4d265aa-6f54-4d56-8871-3e3564be4094)
   )
-  (wire (pts (xy 468.63 215.138) (xy 471.932 215.138))
+  (wire (pts (xy 458.47 215.138) (xy 471.932 215.138))
     (stroke (width 0) (type default))
     (uuid b57460e5-003b-49a1-af7f-a4768427a24d)
   )
@@ -7909,37 +7905,6 @@
       (project "rps01"
         (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
           (reference "R30") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Small_US") (at 466.09 215.138 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bcf826ef-b181-4538-8fc8-f3a442b968bb)
-    (property "Reference" "R28" (at 466.344 218.186 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "10" (at 466.471 220.599 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (at 466.09 215.138 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 466.09 215.138 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7724f9c3-7269-421a-ad2a-c6c39493db98))
-    (pin "2" (uuid 6d510bfa-08f2-4611-90e5-e08b593ce25f))
-    (instances
-      (project "rps01"
-        (path "/14930f15-c0a0-4b55-93e6-b112548415f6/6ed54b0f-f89c-4a82-b1ab-c92c0c126d05"
-          (reference "R28") (unit 1)
-        )
-      )
-      (project "KENESP32LTC370TEST"
-        (path "/5e9cfb74-656a-48c0-8f94-6c53cb1501bf"
-          (reference "R207") (unit 1)
         )
       )
     )
