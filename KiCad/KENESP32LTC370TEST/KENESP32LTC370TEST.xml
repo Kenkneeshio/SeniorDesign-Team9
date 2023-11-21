@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\kenny\Documents\GitHub\SeniorDesign-Team9\KiCad\KENESP32LTC370TEST\KENESP32LTC370TEST.kicad_sch</source>
-    <date>10/31/2023 8:57:01 PM</date>
+    <date>11/20/2023 6:40:01 PM</date>
     <tool>Eeschema 7.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -26,6 +26,7 @@
   <components>
     <comp ref="C1">
       <value>10u 35V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -36,6 +37,7 @@
     </comp>
     <comp ref="C2">
       <value>10u 35V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -46,6 +48,7 @@
     </comp>
     <comp ref="C3">
       <value>10u 35V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -56,6 +59,7 @@
     </comp>
     <comp ref="C4">
       <value>.22u 16V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -66,6 +70,7 @@
     </comp>
     <comp ref="C5">
       <value>22u 16V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -76,6 +81,7 @@
     </comp>
     <comp ref="C6">
       <value>22u 16V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -86,6 +92,7 @@
     </comp>
     <comp ref="C9">
       <value>22u 16V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -96,6 +103,7 @@
     </comp>
     <comp ref="C10">
       <value>.22u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -104,8 +112,20 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d5f1247a-497c-495d-98cd-76eac7365869</tstamps>
     </comp>
+    <comp ref="C11">
+      <value>68p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48590896-9862-49be-b756-dae9c87d2949</tstamps>
+    </comp>
     <comp ref="C12">
       <value>3.3n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -116,6 +136,7 @@
     </comp>
     <comp ref="C13">
       <value>47p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -124,8 +145,20 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>5d1a5a84-2368-4079-b7e3-089a438eb8d0</tstamps>
     </comp>
+    <comp ref="C14">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>019e7e4d-3a9c-4a11-8e56-19a5e5e2f201</tstamps>
+    </comp>
     <comp ref="C15">
       <value>1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -136,6 +169,7 @@
     </comp>
     <comp ref="C18">
       <value>4.7u Low ESR</value>
+      <footprint>Mechatronic Footprints:LOWESRCAPMP7.6X4.3_3.1N_KEM</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -146,6 +180,7 @@
     </comp>
     <comp ref="C19">
       <value>1000p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -156,6 +191,7 @@
     </comp>
     <comp ref="C21">
       <value>10000p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -166,6 +202,7 @@
     </comp>
     <comp ref="C22">
       <value>.22u 16V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -176,6 +213,7 @@
     </comp>
     <comp ref="C23">
       <value>0.01u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -186,6 +224,7 @@
     </comp>
     <comp ref="C24">
       <value>1n</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -194,18 +233,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>59b9fda0-2862-4031-b0f5-040aa259d3da</tstamps>
     </comp>
-    <comp ref="CC14">
-      <value>0.1u</value>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
-      <property name="ki_keywords" value="capacitor cap"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>019e7e4d-3a9c-4a11-8e56-19a5e5e2f201</tstamps>
-    </comp>
     <comp ref="D1">
       <value>4.7V Zener</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
       <libsource lib="Device" part="D_Zener" description="Zener diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -216,6 +246,7 @@
     </comp>
     <comp ref="D3">
       <value>36V Zener</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
       <libsource lib="Device" part="D_Zener" description="Zener diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -226,6 +257,7 @@
     </comp>
     <comp ref="D4">
       <value>B0540W</value>
+      <footprint>Mechatronic Footprints:CR_SMA_320-340AE_DIO</footprint>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -236,6 +268,7 @@
     </comp>
     <comp ref="D5">
       <value>1N5819HW</value>
+      <footprint>Mechatronic Footprints:CR_SMA_320-340AE_DIO</footprint>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -246,6 +279,7 @@
     </comp>
     <comp ref="D6">
       <value>B0540W</value>
+      <footprint>Mechatronic Footprints:CR_SMA_320-340AE_DIO</footprint>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -256,6 +290,7 @@
     </comp>
     <comp ref="D7">
       <value>B0540W</value>
+      <footprint>Mechatronic Footprints:CR_SMA_320-340AE_DIO</footprint>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -266,6 +301,7 @@
     </comp>
     <comp ref="J1">
       <value>Header Pins</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
       <libsource lib="Connector" part="Conn_01x10_Pin" description="Generic connector, single row, 01x10, script generated"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -274,8 +310,31 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>85bdfe7b-6c28-42cc-b788-d9d68c1370bf</tstamps>
     </comp>
+    <comp ref="J2">
+      <value>Power In</value>
+      <footprint>Connector_AMASS:AMASS_XT30U-M_1x02_P5.0mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12c2df18-4cc8-43c6-9d5c-a89ae0ac3ef9</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Power Out</value>
+      <footprint>Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x02_Socket" description="Generic connector, single row, 01x02, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7ef8f47-c413-4bbd-ae5e-cd9c7a258d4b</tstamps>
+    </comp>
     <comp ref="L1">
       <value>10u</value>
+      <footprint>Mechatronic Footprints:IND_410680_WRE</footprint>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -286,7 +345,7 @@
     </comp>
     <comp ref="Q1">
       <value>BSC009NE2LS5IATMA1 A (TG2)(1A)(BUCK)</value>
-      <footprint>PG-TDSON-8_INF</footprint>
+      <footprint>Mechatronic Footprints:PG-TDSON-8_INF</footprint>
       <datasheet>BSC009NE2LS5IATMA1</datasheet>
       <libsource lib="Mechatronics 19V MOSFET" part="BSC009NE2LS5IATMA1" description=""/>
       <property name="Sheetname" value=""/>
@@ -297,7 +356,7 @@
     </comp>
     <comp ref="Q2">
       <value>BSC009NE2LS5IATMA1 B (BG2)(1B)(BUCK)</value>
-      <footprint>PG-TDSON-8_INF</footprint>
+      <footprint>Mechatronic Footprints:PG-TDSON-8_INF</footprint>
       <datasheet>BSC009NE2LS5IATMA1</datasheet>
       <libsource lib="Mechatronics 19V MOSFET" part="BSC009NE2LS5IATMA1" description=""/>
       <property name="Sheetname" value=""/>
@@ -308,7 +367,7 @@
     </comp>
     <comp ref="Q3">
       <value>BSC009NE2LS5IATMA1 C (BG1)(2A)(BOOST)</value>
-      <footprint>PG-TDSON-8_INF</footprint>
+      <footprint>Mechatronic Footprints:PG-TDSON-8_INF</footprint>
       <datasheet>BSC009NE2LS5IATMA1</datasheet>
       <libsource lib="Mechatronics 19V MOSFET" part="BSC009NE2LS5IATMA1" description=""/>
       <property name="Sheetname" value=""/>
@@ -319,7 +378,7 @@
     </comp>
     <comp ref="Q4">
       <value>BSC009NE2LS5IATMA1 D (TG1)(2B)(BOOST)</value>
-      <footprint>PG-TDSON-8_INF</footprint>
+      <footprint>Mechatronic Footprints:PG-TDSON-8_INF</footprint>
       <datasheet>BSC009NE2LS5IATMA1</datasheet>
       <libsource lib="Mechatronics 19V MOSFET" part="BSC009NE2LS5IATMA1" description=""/>
       <property name="Sheetname" value=""/>
@@ -328,8 +387,20 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>89cc8719-fe3e-477e-bf01-bbe49f769c31</tstamps>
     </comp>
+    <comp ref="R5">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9c427bf9-b320-45d5-87fd-7c0a472d2fae</tstamps>
+    </comp>
     <comp ref="R7">
       <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -340,6 +411,7 @@
     </comp>
     <comp ref="R8">
       <value>10</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -348,8 +420,31 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>a094d1c3-5c4b-4873-8a02-5b0ed5e8c933</tstamps>
     </comp>
+    <comp ref="R9">
+      <value>100 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>abb423bb-daf2-492c-b357-fac5e55fa515</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>100 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a3785c7-30d3-44a7-8044-a882ffed089e</tstamps>
+    </comp>
     <comp ref="R11">
       <value>30K</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -360,6 +455,7 @@
     </comp>
     <comp ref="R12">
       <value>113K 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -370,6 +466,7 @@
     </comp>
     <comp ref="R13">
       <value>8.06K 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -380,6 +477,7 @@
     </comp>
     <comp ref="R15">
       <value>51K</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -390,16 +488,18 @@
     </comp>
     <comp ref="R19">
       <value>25m 2%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
       <property name="ki_description" value="Resistor, small symbol"/>
       <property name="ki_keywords" value="R resistor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c2b65d15-aede-4c6d-8931-86a11c4d02fa</tstamps>
+      <tstamps>bc390414-45d9-4085-922b-49467890088e</tstamps>
     </comp>
     <comp ref="R20">
       <value>12.4K 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -410,6 +510,7 @@
     </comp>
     <comp ref="R23">
       <value>47.5K 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -420,6 +521,7 @@
     </comp>
     <comp ref="R24">
       <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -430,6 +532,7 @@
     </comp>
     <comp ref="R25">
       <value>1</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -440,6 +543,7 @@
     </comp>
     <comp ref="R26">
       <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="KENESP32LTC370TEST.kicad_sch"/>
@@ -450,7 +554,7 @@
     </comp>
     <comp ref="U1">
       <value>LTC3780EUH-TRPBF</value>
-      <footprint>QFN-32_UH_LIT</footprint>
+      <footprint>Mechatronic Footprints:QFN-32_UH_LIT</footprint>
       <datasheet>LTC3780EUH-TRPBF</datasheet>
       <libsource lib="Mechatronics LTC3780 Small" part="LTC3780EUH-TRPBF" description=""/>
       <property name="Sheetname" value=""/>
@@ -461,6 +565,22 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="Connector" part="Conn_01x02_Socket">
+      <description>Generic connector, single row, 01x02, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Socket</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector" part="Conn_01x10_Pin">
       <description>Generic connector, single row, 01x10, script generated</description>
       <docs>~</docs>
@@ -680,16 +800,10 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+      <uri>D:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
     </library>
     <library logical="Device">
-      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
-    </library>
-    <library logical="Mechatronics 19V MOSFET">
-      <uri>C:/Users/kenny/Documents/GitHub/SeniorDesign-Team9/KiCad/Symbols Footprints and Models/19VMOSFET_ul_BSC009NE2LS5IATMA1/KiCADv6/2023-09-11_00-08-42.kicad_sym</uri>
-    </library>
-    <library logical="Mechatronics LTC3780 Small">
-      <uri>C:/Users/kenny/Documents/GitHub/SeniorDesign-Team9/KiCad/Symbols Footprints and Models/LTC3780-32-QFN/2023-03-29_08-40-25.kicad_sym</uri>
+      <uri>D:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -719,76 +833,12 @@
       <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="FCB" pintype="input"/>
     </net>
-    <net code="7" name="INTVCC">
-      <node ref="C18" pin="1" pintype="passive"/>
-      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
-      <node ref="R23" pin="1" pintype="passive"/>
-      <node ref="R7" pin="1" pintype="passive"/>
-      <node ref="U1" pin="21" pinfunction="INTVCC" pintype="output"/>
-    </net>
-    <net code="8" name="ITH">
-      <node ref="C13" pin="2" pintype="passive"/>
-      <node ref="R11" pin="1" pintype="passive"/>
-      <node ref="U1" pin="3" pinfunction="ITH" pintype="unspecified"/>
-    </net>
-    <net code="9" name="Net-(C12-Pad2)">
-      <node ref="C12" pin="2" pintype="passive"/>
-      <node ref="R11" pin="2" pintype="passive"/>
-    </net>
-    <net code="10" name="Net-(C24-Pad2)">
-      <node ref="C24" pin="2" pintype="passive"/>
-      <node ref="R25" pin="1" pintype="passive"/>
-    </net>
-    <net code="11" name="Net-(D4-K)">
-      <node ref="C4" pin="1" pintype="passive"/>
-      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R24" pin="2" pintype="passive"/>
-    </net>
-    <net code="12" name="Net-(D7-K)">
-      <node ref="C22" pin="1" pintype="passive"/>
-      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R26" pin="2" pintype="passive"/>
-    </net>
-    <net code="13" name="PGOOD">
-      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="R7" pin="2" pintype="passive"/>
-      <node ref="U1" pin="30" pinfunction="PGOOD" pintype="output"/>
-    </net>
-    <net code="14" name="PLLFLTR">
-      <node ref="C21" pin="2" pintype="passive"/>
-      <node ref="R20" pin="1" pintype="passive"/>
-      <node ref="R23" pin="2" pintype="passive"/>
-      <node ref="U1" pin="8" pinfunction="PLLFLTR" pintype="unspecified"/>
-    </net>
-    <net code="15" name="PLLIN">
-      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
-      <node ref="U1" pin="10" pinfunction="PLLIN" pintype="input"/>
-    </net>
-    <net code="16" name="RUN">
-      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
-      <node ref="R15" pin="2" pintype="passive"/>
-      <node ref="U1" pin="6" pinfunction="RUN" pintype="input"/>
-    </net>
-    <net code="17" name="SENSE+">
-      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
-      <node ref="Q2" pin="1" pinfunction="1" pintype="unspecified"/>
-      <node ref="Q2" pin="2" pinfunction="2" pintype="unspecified"/>
-      <node ref="Q2" pin="3" pinfunction="3" pintype="unspecified"/>
-      <node ref="Q3" pin="1" pinfunction="1" pintype="unspecified"/>
-      <node ref="Q3" pin="2" pinfunction="2" pintype="unspecified"/>
-      <node ref="Q3" pin="3" pinfunction="3" pintype="unspecified"/>
-      <node ref="R19" pin="1" pintype="passive"/>
-      <node ref="U1" pin="1" pinfunction="SENSE+" pintype="input"/>
-    </net>
-    <net code="18" name="SENSE-">
+    <net code="7" name="GND">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C10" pin="1" pintype="passive"/>
       <node ref="C12" pin="1" pintype="passive"/>
       <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
       <node ref="C15" pin="2" pintype="passive"/>
       <node ref="C18" pin="2" pintype="passive"/>
       <node ref="C19" pin="1" pintype="passive"/>
@@ -800,27 +850,103 @@
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="C9" pin="1" pintype="passive"/>
-      <node ref="CC14" pin="2" pintype="passive"/>
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R19" pin="2" pintype="passive"/>
       <node ref="R20" pin="2" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="PGND" pintype="power_in"/>
-      <node ref="U1" pin="2" pinfunction="SENSE-" pintype="input"/>
       <node ref="U1" pin="33" pinfunction="EPAD" pintype="unspecified"/>
       <node ref="U1" pin="5" pinfunction="SGND" pintype="power_in"/>
     </net>
-    <net code="19" name="SS">
+    <net code="8" name="INTVCC">
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="INTVCC" pintype="output"/>
+    </net>
+    <net code="9" name="ITH">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="ITH" pintype="unspecified"/>
+    </net>
+    <net code="10" name="Net-(C12-Pad2)">
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(C24-Pad2)">
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D4-K)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(D7-K)">
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="PGOOD">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="PGOOD" pintype="output"/>
+    </net>
+    <net code="15" name="PLLFLTR">
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="PLLFLTR" pintype="unspecified"/>
+    </net>
+    <net code="16" name="PLLIN">
+      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="PLLIN" pintype="input"/>
+    </net>
+    <net code="17" name="RUN">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="RUN" pintype="input"/>
+    </net>
+    <net code="18" name="SENSE+">
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SENSE+" pintype="input"/>
+    </net>
+    <net code="19" name="SENSE-">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SENSE-" pintype="input"/>
+    </net>
+    <net code="20" name="SHUNT+">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="Q2" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="Q2" pin="3" pinfunction="3" pintype="unspecified"/>
+      <node ref="Q3" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="Q3" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="Q3" pin="3" pinfunction="3" pintype="unspecified"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="SS">
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="U1" pin="31" pinfunction="SS" pintype="input"/>
     </net>
-    <net code="20" name="STBYMD">
+    <net code="22" name="STBYMD">
       <node ref="C23" pin="2" pintype="passive"/>
       <node ref="U1" pin="11" pinfunction="STBYMD" pintype="unspecified"/>
     </net>
-    <net code="21" name="SW1">
+    <net code="23" name="SW1">
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
@@ -833,7 +959,7 @@
       <node ref="Q4" pin="3" pinfunction="3" pintype="unspecified"/>
       <node ref="U1" pin="24" pinfunction="SW1" pintype="unspecified"/>
     </net>
-    <net code="22" name="SW2">
+    <net code="24" name="SW2">
       <node ref="C22" pin="2" pintype="passive"/>
       <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
@@ -847,71 +973,77 @@
       <node ref="R25" pin="2" pintype="passive"/>
       <node ref="U1" pin="17" pinfunction="SW2" pintype="unspecified"/>
     </net>
-    <net code="23" name="TG1">
+    <net code="25" name="TG1">
       <node ref="Q4" pin="4" pinfunction="4" pintype="unspecified"/>
       <node ref="U1" pin="26" pinfunction="TG1" pintype="unspecified"/>
     </net>
-    <net code="24" name="TG2">
+    <net code="26" name="TG2">
       <node ref="Q1" pin="4" pinfunction="4" pintype="unspecified"/>
       <node ref="U1" pin="15" pinfunction="TG2" pintype="unspecified"/>
     </net>
-    <net code="25" name="VIN">
+    <net code="27" name="VCC">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="VIN" pintype="input"/>
+    </net>
+    <net code="28" name="VIN">
       <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
-      <node ref="CC14" pin="1" pintype="passive"/>
-      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="Q1" pin="5" pinfunction="5" pintype="unspecified"/>
       <node ref="Q1" pin="6" pinfunction="6" pintype="unspecified"/>
       <node ref="Q1" pin="7" pinfunction="7" pintype="unspecified"/>
       <node ref="Q1" pin="8" pinfunction="8" pintype="unspecified"/>
       <node ref="R15" pin="1" pintype="passive"/>
-      <node ref="U1" pin="23" pinfunction="VIN" pintype="input"/>
+      <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="26" name="VOS+">
+    <net code="29" name="VOS+">
       <node ref="R12" pin="1" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
     </net>
-    <net code="27" name="VOSENSE">
+    <net code="30" name="VOSENSE">
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="R13" pin="1" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="VOSENSE" pintype="input"/>
     </net>
-    <net code="28" name="VOUT">
+    <net code="31" name="VOUT">
       <node ref="C5" pin="2" pintype="passive"/>
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="C9" pin="2" pintype="passive"/>
       <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="Q4" pin="5" pinfunction="5" pintype="unspecified"/>
       <node ref="Q4" pin="6" pinfunction="6" pintype="unspecified"/>
       <node ref="Q4" pin="7" pinfunction="7" pintype="unspecified"/>
       <node ref="Q4" pin="8" pinfunction="8" pintype="unspecified"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="29" name="unconnected-(U1-NC-Pad9)">
+    <net code="32" name="unconnected-(U1-NC-Pad9)">
       <node ref="U1" pin="9" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U1-NC-Pad12)">
+    <net code="33" name="unconnected-(U1-NC-Pad12)">
       <node ref="U1" pin="12" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U1-NC-Pad13)">
+    <net code="34" name="unconnected-(U1-NC-Pad13)">
       <node ref="U1" pin="13" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="32" name="unconnected-(U1-NC-Pad16)">
+    <net code="35" name="unconnected-(U1-NC-Pad16)">
       <node ref="U1" pin="16" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="33" name="unconnected-(U1-NC-Pad25)">
+    <net code="36" name="unconnected-(U1-NC-Pad25)">
       <node ref="U1" pin="25" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="34" name="unconnected-(U1-NC-Pad28)">
+    <net code="37" name="unconnected-(U1-NC-Pad28)">
       <node ref="U1" pin="28" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U1-NC-Pad29)">
+    <net code="38" name="unconnected-(U1-NC-Pad29)">
       <node ref="U1" pin="29" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="36" name="unconnected-(U1-NC-Pad32)">
+    <net code="39" name="unconnected-(U1-NC-Pad32)">
       <node ref="U1" pin="32" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
