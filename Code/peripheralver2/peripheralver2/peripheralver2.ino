@@ -92,6 +92,10 @@ DeviceAddress temperatureProbe1_LONG = { 0x28, 0x47, 0x3F, 0x81, 0xE3, 0x9F, 0x3
 DeviceAddress temperatureProbe2_SHORT = { 0x28, 0x5B, 0x8A, 0x81, 0xE3, 0xF8, 0x3C, 0x39 };  // Serial Number for Internal Temperature Probe
 DeviceAddress temperatureProbe3_SHORT = { 0x28, 0x37, 0xCF, 0x81, 0xE3, 0xAF, 0x3C, 0xA5 };  // Serial Number for Internal Temperature Probe
 
+
+//289C5681E3D93C59 
+//28FE8D81E3733CD3
+
 //////////////////////////////////////////////////////////
 int tempSensorsAtBoot;  // Number of temperature devices found
 OneWire oneWire(ONE_WIRE_BUS);
