@@ -509,7 +509,7 @@ void loop() {
  */
 //////////////////////////////////////////////////////////
 void CheckBattery1Voltage(uint32_t counter) {
-  if (12 > presentVoltage0 || presentVoltage0 > 16.8)  // if battery voltage is greater than zero but less than 16.8
+  if (12 > presentVoltage0 || presentVoltage0 > 17)  // if battery voltage is greater than zero but less than 16.8
   {
     // Battery should not be less than 12V or greater than 16.8V
     counter = millis();
@@ -531,7 +531,7 @@ void CheckBattery1Voltage(uint32_t counter) {
  */
 //////////////////////////////////////////////////////////
 void CheckBattery2Voltage(uint32_t counter) {
-  if (12 > presentVoltage1 || presentVoltage1 > 16.8)  // if battery voltage is greater than zero but less than 16.8
+  if (12 > presentVoltage1 || presentVoltage1 > 17)  // if battery voltage is greater than zero but less than 16.8
   {
     // Battery should not be less than 12V or greater than 16.8V
     counter = millis();
