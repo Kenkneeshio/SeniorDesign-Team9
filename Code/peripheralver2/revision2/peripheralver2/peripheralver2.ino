@@ -493,7 +493,7 @@ void loop() {
       Serial.print("Battery 2: ");
       Serial.print(presentVoltage1);
       Serial.println("V");
-      
+      //delay(3000);
     }
 
     millis_ctr = millis();

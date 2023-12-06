@@ -49,7 +49,7 @@ union floatByte // two different data types in one area of memory.
 //////////////////////////////////////////////////////////
 // Debug
 // Enable this for logging of all messages to the Serial monitor.
-bool debug = true;
+bool debug = false;
 
 void setup()
 {
@@ -121,14 +121,15 @@ void loop()
       }
       else
       {
-        Serial.println("Invalid Data received: ");
-        Serial.print(data[0]);
-        Serial.print(" ");
-        Serial.print(data[1]);
-        Serial.print(" ");
-        Serial.print(data[2]);
-        Serial.print(" ");
-        Serial.println(data[3]);
+        // Serial.println("Invalid Data received: ");
+        // Serial.print(data[0]);
+        // Serial.print(" ");
+        // Serial.print(data[1]);
+        // Serial.print(" ");
+        // Serial.print(data[2]);
+        // Serial.print(" ");
+        // Serial.println(data[3]);
+        Serial.println("Unable to read below 1.5A.");
       }
 
       break;
