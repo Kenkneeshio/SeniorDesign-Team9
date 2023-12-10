@@ -60,19 +60,45 @@ const int WHITE = 6;   // BOOT SEQUENCE INDICATOR
 const int OFF = 7;     //
 //////////////////////////////////////////////////////////
 const float LOGIC_VOLTAGE = 4.979;
-const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
-const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
-const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
-const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
-const float SHUNT_RESISTOR = 0.000339290391;
-const float LOAD_RESISTOR = 150186;
 
-const float CURRENT_GAIN = 0.9523809524;
-const float CURRENT_OFFSET = 1.085714286;
-const float BATT1_GAIN = 1.023454158;
-const float BATT1_OFFSET = -0.291684435;
-const float BATT2_GAIN = 1.021276596;
-const float BATT2_OFFSET = -0.2553191489;
+const float BATT2_VOLTAGE_DIVIDER_R2 = 510000;
+const float BATT2_VOLTAGE_DIVIDER_R1 = 1200000;
+const float BATT1_VOLTAGE_DIVIDER_R2 = 510000;
+const float BATT1_VOLTAGE_DIVIDER_R1 = 1200000;
+// const float BATT2_VOLTAGE_DIVIDER_R2 = 509940;
+// const float BATT2_VOLTAGE_DIVIDER_R1 = 1199990;
+// const float BATT1_VOLTAGE_DIVIDER_R2 = 509870;
+// const float BATT1_VOLTAGE_DIVIDER_R1 = 1199850;
+
+const float SHUNT_RESISTOR = 0.0003;//V0 = (Is *Rs *RL)/ 1k       rs = 0.002910067
+const float LOAD_RESISTOR = 150000;
+
+
+// const float SHUNT_RESISTOR = 0.000339290391;
+// const float LOAD_RESISTOR = 150186;
+
+const float CURRENT_GAIN = 1.22;
+const float CURRENT_OFFSET = -1.48;
+const float BATT1_GAIN = 0.9875;
+const float BATT1_OFFSET = -0.07;
+const float BATT2_GAIN = 0.987;
+const float BATT2_OFFSET = -0.07;
+// const float TEMP_GAIN1 = 1;
+// const float TEMP_OFFSET1 = 0;
+// const float TEMP_GAIN2 = 1;
+// const float TEMP_OFFSET2 = 0;
+// const float TEMP_GAIN3 = 1;
+// const float TEMP_OFFSET3 = 0;
+// const float TEMP_GAIN4 = 1;
+// const float TEMP_OFFSET4 = 0;
+
+
+// const float CURRENT_GAIN = 0.9523809524;
+// const float CURRENT_OFFSET = 1.085714286;
+// const float BATT1_GAIN = 1.023454158;
+// const float BATT1_OFFSET = -0.291684435;
+// const float BATT2_GAIN = 1.021276596;
+// const float BATT2_OFFSET = -0.2553191489;
 const float TEMP_GAIN1 = 1.005732676;
 const float TEMP_OFFSET1 = -0.6336115859;
 const float TEMP_GAIN2 = 0.9975062344;
@@ -139,7 +165,7 @@ float ADC2Current(float analogValue) {
   // then use the equation from the INA139 datasheet , where iS = (Vout * 1k) / (rs * rl)
   value = (value * (1000) / ((LOAD_RESISTOR) * (SHUNT_RESISTOR)));
   if (value != 0.0) {
-    value = CURRENT_GAIN * value + CURRENT_OFFSET;
+   value = (value - CURRENT_OFFSET)/CURRENT_GAIN;//if value is below 1.5A print value under
   }
   return value;
 }
@@ -163,14 +189,14 @@ float ADC2Voltage(float analogValue, int batteryNumber) {
       //    Serial.print("Battery 1 ADC: ");
       //    Serial.println(analogValue);
       value = (value * (BATT1_VOLTAGE_DIVIDER_R2 + BATT1_VOLTAGE_DIVIDER_R1) / (BATT1_VOLTAGE_DIVIDER_R2));
-      value = BATT1_GAIN * value + BATT1_OFFSET;
+      value = (value - BATT1_OFFSET)/BATT1_GAIN; //BATT1_GAIN * value + BATT1_OFFSET;
       break;
 
     case 2:
       //    Serial.print("Battery 2 ADC: ");
       //    Serial.println(analogValue);
       value = (value * (BATT2_VOLTAGE_DIVIDER_R2 + BATT2_VOLTAGE_DIVIDER_R1) / (BATT2_VOLTAGE_DIVIDER_R2));
-      value = BATT2_GAIN * value + BATT2_OFFSET;
+      value = (value - BATT2_OFFSET)/BATT2_GAIN;
       break;
   }
 
@@ -231,11 +257,11 @@ void CollectTemperatureInformation(void) {
     Serial.print("Battery 2 - Temp C: ");
     Serial.println(presentTemperature1f);
     
-     //Serial.print("HeatSink - Temp C: ");
-     //Serial.println(presentTemperature2f);
+     Serial.print("HeatSink - Temp C: ");
+     Serial.println(presentTemperature2f);
      Serial.print("Air - Temp C: ");
     Serial.println(presentTemperature3f);
-     
+    
   }
 }
 
@@ -456,14 +482,18 @@ void loop() {
     CheckBattery2Voltage(millis_ctr);  // call the function to check battery two's health
     CheckHostCommunication();          // call the function to check the communication state with the host
     if (debug) {
-      //Serial.print("Current 0 ADC: ");
-      //Serial.println(analogRead(CURRENT0_PIN));
-      //Serial.print("Current 0: ");
-      //Serial.println(presentCurrent0);
-      //Serial.print("Battery 1: ");
-      // Serial.println(presentVoltage0);
-      // Serial.print("Battery 2: ");
-      // Serial.println(presentVoltage1);
+     Serial.print("Current 0 ADC: ");
+      Serial.println(analogRead(CURRENT0_PIN));
+      Serial.print("Current 0: ");
+      Serial.print(presentCurrent0);
+      Serial.println("A");
+      Serial.print("Battery 1: ");
+      Serial.print(presentVoltage0);
+         Serial.println("V");
+      Serial.print("Battery 2: ");
+      Serial.print(presentVoltage1);
+      Serial.println("V");
+      //delay(3000);
     }
 
     millis_ctr = millis();
@@ -479,7 +509,7 @@ void loop() {
  */
 //////////////////////////////////////////////////////////
 void CheckBattery1Voltage(uint32_t counter) {
-  if (12 > presentVoltage0 || presentVoltage0 > 16.8)  // if battery voltage is greater than zero but less than 16.8
+  if (12 > presentVoltage0 || presentVoltage0 > 17)  // if battery voltage is greater than zero but less than 16.8
   {
     // Battery should not be less than 12V or greater than 16.8V
     counter = millis();
@@ -501,7 +531,7 @@ void CheckBattery1Voltage(uint32_t counter) {
  */
 //////////////////////////////////////////////////////////
 void CheckBattery2Voltage(uint32_t counter) {
-  if (12 > presentVoltage1 || presentVoltage1 > 16.8)  // if battery voltage is greater than zero but less than 16.8
+  if (12 > presentVoltage1 || presentVoltage1 > 17)  // if battery voltage is greater than zero but less than 16.8
   {
     // Battery should not be less than 12V or greater than 16.8V
     counter = millis();
