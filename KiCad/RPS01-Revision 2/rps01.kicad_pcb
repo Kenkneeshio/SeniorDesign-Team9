@@ -10516,7 +10516,7 @@
       (net 86 "SW2") (pinfunction "1") (pintype "passive") (tstamp b8b52d0f-493d-4a42-851d-5661b4f55ad5))
     (pad "2" smd rect (at -14.5415 5.074999) (size 4.5212 4.2418) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 79 "SW1") (pinfunction "2") (pintype "passive") (tstamp fdeb9222-efba-4751-a8c0-4b02afc9c2f6))
-    (model "C:/Users/tomix/Documents/GitHub/SeniorDesign-Team9/CAD Models/74436410680/74436410680.x3d"
+    (model "C:/Users/tomix/Documents/GitHub/SeniorDesign-Team9_2/SeniorDesign-Team9/CAD Models/74436410680/74436410680.x3d"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))

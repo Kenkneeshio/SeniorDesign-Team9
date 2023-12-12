@@ -1720,7 +1720,6 @@
     )
   )
 
-
   (junction (at 309.372 335.788) (diameter 0) (color 0 0 0 0)
     (uuid 023d2eab-a091-42b7-93e5-5eaf0063f138)
   )
@@ -2988,7 +2987,7 @@
     (fill (type none))
     (uuid 94831aaa-1c2f-4c01-9d99-74f3c7885815)
   )
-  (rectangle (start 44.45 69.85) (end 199.39 149.86)
+  (rectangle (start 44.45 69.85) (end 162.56 149.86)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid 9f1b8655-fb16-4e88-936b-832c03e4b5cb)
